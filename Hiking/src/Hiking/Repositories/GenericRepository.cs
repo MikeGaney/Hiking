@@ -12,6 +12,8 @@ namespace Hiking.Repositories
     {
         private ApplicationDbContext _db;
 
+        //testing
+
         public GenericRepository(ApplicationDbContext db)
         {
             this._db = db;
