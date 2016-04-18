@@ -120,6 +120,7 @@ namespace Hiking
 
             // initialize sample data
             SampleData.Initialize(app.ApplicationServices).Wait();
+            SampleDataTrail.Initialize(app.ApplicationServices);
 
         }
 
