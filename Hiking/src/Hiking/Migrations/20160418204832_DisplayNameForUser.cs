@@ -4,7 +4,7 @@ using Microsoft.Data.Entity.Migrations;
 
 namespace Hiking.Migrations
 {
-    public partial class start : Migration
+    public partial class DisplayNameForUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,41 +13,8 @@ namespace Hiking.Migrations
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserLogin<string>_ApplicationUser_UserId", table: "AspNetUserLogins");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_IdentityRole_RoleId", table: "AspNetUserRoles");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_ApplicationUser_UserId", table: "AspNetUserRoles");
-            migrationBuilder.AlterColumn<string>(
-                name: "UserId",
-                table: "AspNetUserLogins",
-                nullable: false);
-            migrationBuilder.AlterColumn<string>(
-                name: "UserId",
-                table: "AspNetUserClaims",
-                nullable: false);
-            migrationBuilder.AlterColumn<string>(
-                name: "RoleId",
-                table: "AspNetRoleClaims",
-                nullable: false);
-            migrationBuilder.AddColumn<int>(
-                name: "Age",
-                table: "AspNetUsers",
-                nullable: false,
-                defaultValue: 0);
             migrationBuilder.AddColumn<string>(
-                name: "Bio",
-                table: "AspNetUsers",
-                nullable: true);
-            migrationBuilder.AddColumn<string>(
-                name: "Expertise",
-                table: "AspNetUsers",
-                nullable: true);
-            migrationBuilder.AddColumn<string>(
-                name: "FirstName",
-                table: "AspNetUsers",
-                nullable: true);
-            migrationBuilder.AddColumn<string>(
-                name: "LastName",
-                table: "AspNetUsers",
-                nullable: true);
-            migrationBuilder.AddColumn<string>(
-                name: "ProfilePic",
+                name: "DisplayName",
                 table: "AspNetUsers",
                 nullable: true);
             migrationBuilder.AddForeignKey(
@@ -94,24 +61,7 @@ namespace Hiking.Migrations
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserLogin<string>_ApplicationUser_UserId", table: "AspNetUserLogins");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_IdentityRole_RoleId", table: "AspNetUserRoles");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_ApplicationUser_UserId", table: "AspNetUserRoles");
-            migrationBuilder.DropColumn(name: "Age", table: "AspNetUsers");
-            migrationBuilder.DropColumn(name: "Bio", table: "AspNetUsers");
-            migrationBuilder.DropColumn(name: "Expertise", table: "AspNetUsers");
-            migrationBuilder.DropColumn(name: "FirstName", table: "AspNetUsers");
-            migrationBuilder.DropColumn(name: "LastName", table: "AspNetUsers");
-            migrationBuilder.DropColumn(name: "ProfilePic", table: "AspNetUsers");
-            migrationBuilder.AlterColumn<string>(
-                name: "UserId",
-                table: "AspNetUserLogins",
-                nullable: true);
-            migrationBuilder.AlterColumn<string>(
-                name: "UserId",
-                table: "AspNetUserClaims",
-                nullable: true);
-            migrationBuilder.AlterColumn<string>(
-                name: "RoleId",
-                table: "AspNetRoleClaims",
-                nullable: true);
+            migrationBuilder.DropColumn(name: "DisplayName", table: "AspNetUsers");
             migrationBuilder.AddForeignKey(
                 name: "FK_IdentityRoleClaim<string>_IdentityRole_RoleId",
                 table: "AspNetRoleClaims",

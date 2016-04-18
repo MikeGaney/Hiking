@@ -15,5 +15,6 @@ namespace Hiking.Models
         public string ProfilePic { get; set; }
         public int Expertise { get; set; }
         public string Bio { get; set; }
+        public string DisplayName { get; set; }
     }
 }

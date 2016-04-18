@@ -8,8 +8,8 @@ using Hiking.Models;
 namespace Hiking.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160417202340_start")]
-    partial class start
+    [Migration("20160418203203_UpdateEverything")]
+    partial class UpdateEverything
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace Hiking.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("Expertise");
+                    b.Property<int>("Expertise");
 
                     b.Property<string>("FirstName");
 
@@ -75,6 +75,62 @@ namespace Hiking.Migrations
                         .HasAnnotation("Relational:Name", "UserNameIndex");
 
                     b.HasAnnotation("Relational:TableName", "AspNetUsers");
+                });
+
+            modelBuilder.Entity("Hiking.Models.Trail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BackgroundImage");
+
+                    b.Property<bool>("Bears");
+
+                    b.Property<bool>("Biking");
+
+                    b.Property<bool>("Camping");
+
+                    b.Property<bool>("Cougars");
+
+                    b.Property<decimal>("DifficultyLevel");
+
+                    b.Property<decimal>("Distance");
+
+                    b.Property<string>("Elevation");
+
+                    b.Property<bool>("Fishing");
+
+                    b.Property<bool>("Horses");
+
+                    b.Property<string>("Image");
+
+                    b.Property<bool>("Lakes");
+
+                    b.Property<string>("Location");
+
+                    b.Property<bool>("Lookouts");
+
+                    b.Property<string>("Map");
+
+                    b.Property<bool>("MyProperty");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("OpenSeason");
+
+                    b.Property<string>("Overview");
+
+                    b.Property<bool>("PassRequired");
+
+                    b.Property<int>("Rating");
+
+                    b.Property<bool>("Rivers");
+
+                    b.Property<decimal>("Time");
+
+                    b.Property<bool>("Waterfalls");
+
+                    b.HasKey("Id");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
