@@ -9,5 +9,11 @@ namespace Hiking.Models
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser
     {
+        public string FirstName { get; set; }
+        public string  LastName { get; set; }
+        public int Age { get; set; }
+        public string ProfilePic { get; set; }
+        public int Expertise { get; set; }
+        public string Bio { get; set; }
     }
 }
