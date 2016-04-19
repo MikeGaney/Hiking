@@ -4,13 +4,17 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <base href="/" />
+    <link href="~/css/trailsdetailss.css" rel="stylesheet" />
+
 </head>
 <body ng-controller="AccountController as account">
     <div class="container">
         <h1>Hiking</h1>
         <div>
-          <a href="/">Home</a> /
-           <a href="/about">About</a>
+            <a href="/">Home</a> /
+            <a href="/trails">Trails</a> /
+          <a href="/trailDetail/5">Trail Detail</a> /
+           <a href="/about">About</a> 
 
            / <a href="/secret">Secret</a> /
            <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
@@ -35,7 +39,12 @@
     <!-- App Files-->
     <script src="~/ngapp/app.js"></script>
     <script src="~/ngapp/controllers/controllers.js"></script>
+    <script src="~/ngapp/controllers/trailscontroller.js"></script>
+    <script src="~/ngapp/controllers/traildetailscontroller.js"></script>
+
+    <!-- Service Files-->
     <script src="~/ngapp/services/services.js"></script>
+    <script src="~/ngapp/services/trailservice.js"></script>
 
 
     <!-- Security -->
