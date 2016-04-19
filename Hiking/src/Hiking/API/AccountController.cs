@@ -13,6 +13,7 @@ using Hiking.Models;
 using Hiking.Services;
 using Hiking.ViewModels.Account;
 using Hiking.ViewModels.Profile;
+using Hiking.Repositories;
 
 namespace Hiking.Controllers
 {
@@ -25,19 +26,22 @@ namespace Hiking.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private IGenericRepository repo;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            IGenericRepository _repo)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            this.repo = _repo;
         }
 
 
@@ -51,8 +55,11 @@ namespace Hiking.Controllers
 
         [HttpPost]
         [Route("editprofile")]
-        public async Task<IActionResult> EditProfile(EditProfileViewModel data) {
-            var user = await _userManager.FindByIdAsync(data.Id);
+        public IActionResult EditProfile([FromBody]EditProfileViewModel data) {
+            //var user = await _userManager.FindByIdAsync(data.Id);
+
+            var user = repo.Query<ApplicationUser>().Where(u => u.Id == data.Id).FirstOrDefault();
+
             user.FirstName = data.FirstName;
             user.LastName = data.LastName;
             user.Age = data.Age;
@@ -60,7 +67,8 @@ namespace Hiking.Controllers
             user.Expertise = data.Expertise;
             user.DisplayName = data.DisplayName;
             user.Bio = data.Bio;
-            
+
+            repo.SaveChanges();
 
             return Ok();
         }

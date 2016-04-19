@@ -22,10 +22,14 @@
     }
     export class EditProfileController {
         public editProfile;
+        public profileToSave;
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
-            private $state: ng.ui.IStateService) {
+            private $state: ng.ui.IStateService)
+        {
+            this.editProfile = {};
+            this.profileToSave = {};
             this.GetProfile();
         }
 
@@ -40,7 +44,18 @@
             });
         }
 
-        save() {
+        save()
+        {
+            console.log(this.editProfile);
+            this.profileToSave = {
+                firstName: this.editProfile.firstName,
+                lastName: this.editProfile.lastName,
+                age: this.editProfile.age,
+                profilePic: this.editProfile.profilePic,
+                bio: this.editProfile.bio,
+                displayName: this.editProfile.displayName,
+                expertise: this.editProfile.expertise
+            };
             this.profileService.editProfile(this.editProfile).then(() => {
                 this.$state.go('viewprofile');
             })
