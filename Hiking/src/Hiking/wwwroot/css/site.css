@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+.input{
+    max-width: none !important;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {

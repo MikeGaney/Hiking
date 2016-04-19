@@ -8,8 +8,8 @@ using Hiking.Models;
 namespace Hiking.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160418204740_addtrails")]
-    partial class addtrails
+    [Migration("20160419165929_MergeUpdateOfDatabase")]
+    partial class MergeUpdateOfDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,13 +23,25 @@ namespace Hiking.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<int>("Age");
+
+                    b.Property<string>("Bio");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
+
+                    b.Property<string>("DisplayName");
 
                     b.Property<string>("Email")
                         .HasAnnotation("MaxLength", 256);
 
                     b.Property<bool>("EmailConfirmed");
+
+                    b.Property<int>("Expertise");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -46,6 +58,8 @@ namespace Hiking.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("ProfilePic");
 
                     b.Property<string>("SecurityStamp");
 

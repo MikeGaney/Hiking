@@ -1,13 +1,13 @@
 {
   "compileOnSave": true,
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "removeComments": false,
-    "sourceMap": true,
-    "target": "es5"
-    //"outFile": "all.js"
-  },
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "es5",
+        "outFile": "wwwroot/all.js"
+    },
   "exclude": [
     "node_modules",
     "typings/main",

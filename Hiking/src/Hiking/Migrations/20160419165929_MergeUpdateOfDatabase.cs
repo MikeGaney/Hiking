@@ -4,7 +4,7 @@ using Microsoft.Data.Entity.Migrations;
 
 namespace Hiking.Migrations
 {
-    public partial class addtrails : Migration
+    public partial class MergeUpdateOfDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

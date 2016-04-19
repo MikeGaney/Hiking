@@ -9,7 +9,9 @@
             this.trailResource = $resource('/api/trails/:id');
         }
 
-        public getTrails() {
+        public getTrails()
+        {
+            console.log("getting list of trails from server");
             return this.trailResource.query();
         }
 
