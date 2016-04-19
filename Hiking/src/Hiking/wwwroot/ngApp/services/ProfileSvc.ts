@@ -7,7 +7,7 @@
         }
         getProfile(id) {
             let getProfileResource = this.$resource('/api/account/getprofile');
-            return getProfileResource.get({id:id});
+            return getProfileResource.get({id:id}).$promise;
         }
         editProfile(profileToEdit) {
             let editProfileResource = this.$resource('/api/account/editprofile');

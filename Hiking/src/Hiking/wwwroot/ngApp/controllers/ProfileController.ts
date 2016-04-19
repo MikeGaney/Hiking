@@ -5,24 +5,44 @@
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService) {
+            this.GetProfile();
+            
+        }
 
+        GetProfile()
+        {
             let id = this.accountService.getUserId();
-            console.log(id);
-            this.viewProfile = profileService.getProfile(id);
+            //console.log(id);
+            this.profileService.getProfile(id).then((data) =>
+            {
+                this.viewProfile = data;
+                //console.log(data);
+            });
         }
     }
     export class EditProfileController {
         public editProfile;
         constructor(
             private profileService: Hiking.Services.ProfileService,
-            private $stateParams: ng.ui.IStateParamsService,
+            private accountService: Hiking.Services.AccountService,
             private $state: ng.ui.IStateService) {
-            let profileId = this.$stateParams['id'];
-            this.editProfile = this.profileService.getProfile(profileId);
+            this.GetProfile();
         }
+
+        GetProfile()
+        {
+            let id = this.accountService.getUserId();
+            //console.log(id);
+            this.profileService.getProfile(id).then((data) =>
+            {
+                this.editProfile = data;
+                //console.log(data);
+            });
+        }
+
         save() {
             this.profileService.editProfile(this.editProfile).then(() => {
-                this.$state.go('viewprofile', {'id':this.editProfile.id});
+                this.$state.go('viewprofile');
             })
         }
     }

@@ -50,8 +50,8 @@ namespace Hiking {
                 controllerAs: 'controller'
             })
             .state('editprofile', {
-                url: '/editprofile/:id',
-                templateUrl: '/ngApp/Users/views/editprofile.html',
+                url: '/editprofile',
+                templateUrl: '/ngApp/Users/views/EditProfile.html',
                 controller: Hiking.Controllers.EditProfileController,
                 controllerAs: 'controller'
             })
