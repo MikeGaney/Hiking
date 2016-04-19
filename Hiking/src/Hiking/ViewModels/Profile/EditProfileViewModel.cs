@@ -1,16 +1,15 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace Hiking.Models
+namespace Hiking.ViewModels.Profile
 {
-    // Add profile data for application users by adding properties to the ApplicationUser class
-    public class ApplicationUser : IdentityUser
+    public class EditProfileViewModel
     {
+        public string Id { get; set; }
         public string FirstName { get; set; }
-        public string  LastName { get; set; }
+        public string LastName { get; set; }
         public int Age { get; set; }
         public string ProfilePic { get; set; }
         public int Expertise { get; set; }

@@ -1,0 +1,22 @@
+﻿body {
+    background-color: antiquewhite;
+    position: relative;
+}
+#profilePic {
+    position: relative;
+    border-color: slategray;
+    border: 3px;
+    height: 350px;
+    width: 800px;
+    
+    }
+#asides{
+    position: absolute;
+    display: block;
+    background-color: slategray;
+    color: white;
+    height: 150px;
+    width: 375px;
+    right: 10px;
+    top: 20px;
+}

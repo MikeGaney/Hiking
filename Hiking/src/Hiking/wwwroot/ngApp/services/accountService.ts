@@ -6,6 +6,11 @@ namespace Hiking.Services {
         private storeUserInfo(userInfo) {
             // store user name
             this.$window.sessionStorage.setItem('userName', userInfo.userName);
+            this.$window.sessionStorage.setItem('displayName', userInfo.displayName);
+            this.$window.sessionStorage.setItem('firstName', userInfo.firstName);
+            this.$window.sessionStorage.setItem('lastName', userInfo.lastName);
+            this.$window.sessionStorage.setItem('userId', userInfo.userId);
+
 
             // store claims
             this.$window.sessionStorage.setItem('claims', JSON.stringify(userInfo.claims));
@@ -13,6 +18,9 @@ namespace Hiking.Services {
 
         public getUserName() {
             return this.$window.sessionStorage.getItem('userName');
+        }
+        public getUserId() {
+            return this.$window.sessionStorage.getItem('userId');
         }
 
 
