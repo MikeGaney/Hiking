@@ -7,7 +7,7 @@
     <link href="~/ngapp/users/css/register.css" rel="stylesheet" />
     <base href="/" />
 </head>
-<body ng-controller="AccountController as controller">
+<body ng-controller="accountController as controller">
     <div class="container">
         
         @* start of Navbar *@
@@ -33,6 +33,7 @@
                     </ul>
                    
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/viewprofile">View Profile</a></li>
                         <li><a ng-click="controller.showRegisterModal()">Register</a></li>
                         <li><a ng-click="controller.showLoginModal()">Login</a></li>
                         <li><a href="#">Another Link</a></li>

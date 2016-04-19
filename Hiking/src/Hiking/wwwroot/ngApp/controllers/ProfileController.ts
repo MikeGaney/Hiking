@@ -7,6 +7,7 @@
             private accountService: Hiking.Services.AccountService) {
 
             let id = this.accountService.getUserId();
+            console.log(id);
             this.viewProfile = profileService.getProfile(id);
         }
     }
