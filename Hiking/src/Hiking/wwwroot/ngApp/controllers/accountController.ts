@@ -62,7 +62,7 @@ namespace Hiking.Controllers {
         }
     }
 
-    angular.module('Hiking').controller('AccountController', AccountController);
+    angular.module('Hiking').controller('accountController', AccountController);
 
 
     export class LoginController {

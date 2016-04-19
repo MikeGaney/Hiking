@@ -72,7 +72,11 @@ namespace Hiking.Controllers
             var vm = new UserViewModel
             {
                 UserName = user.UserName,
-                Claims = claims.ToDictionary(c => c.Type, c => c.Value)
+                Claims = claims.ToDictionary(c => c.Type, c => c.Value),
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                DisplayName = user.DisplayName,
+                UserId = user.Id
             };
             return vm;
         }
