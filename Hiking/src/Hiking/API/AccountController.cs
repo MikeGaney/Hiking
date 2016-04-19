@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Hiking.Models;
 using Hiking.Services;
 using Hiking.ViewModels.Account;
+using Hiking.ViewModels.Profile;
 
 namespace Hiking.Controllers
 {
@@ -39,6 +40,30 @@ namespace Hiking.Controllers
             _logger = loggerFactory.CreateLogger<AccountController>();
         }
 
+
+        [HttpGet("{id}")]
+        [Route("getprofile")]
+        public async Task<IActionResult> GetProfile(string id){
+            var user = await _userManager.FindByIdAsync(id);
+            return Ok(user);
+        }
+
+
+        [HttpPost]
+        [Route("editprofile")]
+        public async Task<IActionResult> EditProfile(EditProfileViewModel data) {
+            var user = await _userManager.FindByIdAsync(data.Id);
+            user.FirstName = data.FirstName;
+            user.LastName = data.LastName;
+            user.Age = data.Age;
+            user.ProfilePic = data.ProfilePic;
+            user.Expertise = data.Expertise;
+            user.DisplayName = data.DisplayName;
+            user.Bio = data.Bio;
+            
+
+            return Ok();
+        }
 
         private async Task<UserViewModel> GetUser(string userName)
         {

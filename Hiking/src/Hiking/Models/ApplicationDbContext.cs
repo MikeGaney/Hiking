@@ -11,7 +11,6 @@ namespace Hiking.Models
     {
         public DbSet<Trail> Trails { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
