@@ -1,83 +1,99 @@
-﻿
+﻿<div class="col-lg-12 detailsPage">
 
-<div class="col-lg-12 detailsPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 detailsLeftColumn">
 
-
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12" >
-            <div class="row">
-                <div class="col-md-4 col-sm-4 detailsLeftColumn">
-                     
                         <!-- Legend -->
-                            <div>
-                               <h2>Legend</h2>
-                            </div>
-                       
+                        <div class="legend">
+                            <h2>Legend</h2>
+                            <hr />
+                            <h4>*******</h4>
+                            <h4>****</h4>
+                            <h4>******</h4>
+                            <h4>****</h4>
+                            <h4>*******</h4>
+                            <h4>**</h4>
+                        </div>
+
                         <!-- Social Media -->
-                            <div>
-                                <h2>Social Media</h2>
-                            </div>
+                        <div class="legend">
+                            <h2>Social Media</h2>
+                            <hr />
+                            <h4>****</h4>
+                            <h4>***</h4>
+                        </div>
 
-                       <!-- Weather Link -->
-                            <div>
-                                <h2>Local Weather</h2>
-                            </div>
+                        <!-- Weather Link -->
+                        <div class="legend">
+                            <h2>Local Weather</h2>
+                            <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                        </div>
 
-                      <!-- Meet Up Info -->
-                            <div>
-                               <h2>Upcomming Events</h2>         
-                           </div>
+                        <!-- Meet Up Info -->
+                        <div class="legend">
+                            <h2>Upcomming Events</h2>
+                            <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
+                        </div>
 
-                    <!-- Rating -->
-                           <div>
-                              <h2>Trail Rating</h2>
-                           </div>
+                        <!-- Rating -->
+                        <div class="legend">
+                            <h2>Trail Rating</h2>
+                            <img src="http://catherinedunn.co.uk/wp-content/uploads/2016/03/4-stars.png" alt="" class="src" width="200" />
+                        </div>
 
-                    <!-- Open Seasons -->
-                           <div>
-                               <h2>Dates of Operation</h2>
-                           </div>
-                       
+                        <!-- Open Seasons -->
+                        <div class="legend">
+                            <h2>Dates of Operation</h2>
+                        </div>
+
                     </div>
 
 
 
 
-                <div class="col-md-8 detailsRightColumn">
-                    
-                    <!-- Trail Title -->
-                    <div>
-                        <h2>{{controller.trail.name}}</h2>
+                    <div class="col-md-8 detailsRightColumn">
+
+                        <!-- Trail Title -->
+                        <div class="legend1">
+                            <h2 class="name">{{controller.trail.name}}</h2>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="map">
+                            <img src="{{controller.trail.map}}" width="600" />
+                        </div>
+
+                        <!-- Details -->
+                        <div class="sidebar">
+                            <h4>Location: {{controller.trail.location}}</h4>
+                            <hr />
+                            <h4>Distance: {{controller.trail.distance}} miles</h4>
+                            <hr />
+                            <h4>Average Time: {{controller.trail.time}} hours</h4>
+                            <hr />
+                            <h4>Elevation: {{controller.trail.elevation}}</h4>
+                            <button href="" class="saveToPack">Save Hike To Pack</button>
+                        </div>
+
+                        <!-- Overview -->
+                        <div class="legend overview">
+                            <h4>{{controller.trail.overview}}</h4>
+                        </div>
+
+
+                        <!-- User Comments -->
+                        <div>
+                            <h2></h2>
+                        </div>
+
+
                     </div>
 
-                    <!-- Map -->
-                    <div>
-                      <img src="{{controller.trail.map}}" width="200"/>
-                    </div>
-
-                    <!-- Details -->
-                    <div>
-                        <h4>{{controller.trail.distance}}:miles {{controller.trail.time}}:hours {{controller.trail.elevation}}</h4>
-                        <h5>{{controller.trail.location}}</h5>
-                    </div>
-
-                    <!-- Overview -->
-                    <div>
-                        <h2></h2>
-                    </div>
-
-                    <!-- User Comments -->
-                    <div>
-                        <h2></h2>
-                    </div>
-
-                   
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-    </div>
