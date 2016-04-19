@@ -15,6 +15,5 @@
 /// <reference path="ngapp/controllers/controllers.js" />
 /// <reference path="ngapp/controllers/profilecontroller.js" />
 /// <reference path="ngapp/services/accountservice.js" />
-/// <reference path="ngapp/services/editprofilesvc.js" />
 /// <reference path="ngapp/services/profilesvc.js" />
 /// <reference path="ngapp/services/services.js" />
