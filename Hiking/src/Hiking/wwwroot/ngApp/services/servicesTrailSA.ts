@@ -1,5 +1,5 @@
 namespace Hiking.Services {
-    export class TrailService {
+    export class TrailsService {
 
         public trailsResource;
 

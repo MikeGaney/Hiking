@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hiking.Services
 {
-    public class SATrailsService
+    public class SATrailsService : ISATrailsService
     {
         private IGenericRepository _repo;
         public SATrailsService(IGenericRepository repo)
