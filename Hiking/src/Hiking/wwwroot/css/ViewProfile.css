@@ -1,5 +1,6 @@
 ﻿body {
     background-color: antiquewhite;
+    position: relative;
 }
 #profilePic {
     position: relative;
@@ -7,14 +8,15 @@
     border: 3px;
     height: 350px;
     width: 800px;
-    z-index: 1;
+    
     }
-.aside{
-    position: relative;
+#asides{
+    position: absolute;
+    display: block;
     background-color: slategray;
     color: white;
     height: 150px;
     width: 375px;
-    float: right;
-    z-index: 2;
+    right: 10px;
+    top: 20px;
 }
