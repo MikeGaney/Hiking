@@ -44,14 +44,14 @@ namespace Hiking {
                 controllerAs: 'controller'
             })
             .state('viewprofile', {
-                url: '/viewprofile/:id',
-                templateUrl: '/ngApp/views/viewprofile.html',
+                url: '/viewprofile',
+                templateUrl: '/ngApp/Users/views/viewprofile.html',
                 controller: Hiking.Controllers.ViewProfileController,
                 controllerAs: 'controller'
             })
             .state('editprofile', {
-                url: '/editprofile/:id',
-                templateUrl: '/ngApp/views/editprofile.html',
+                url: '/editprofile',
+                templateUrl: '/ngApp/Users/views/EditProfile.html',
                 controller: Hiking.Controllers.EditProfileController,
                 controllerAs: 'controller'
             })

@@ -7,6 +7,11 @@ namespace Hiking.Controllers {
             return this.accountService.getUserName();
         }
 
+        public getUserID()
+        {
+            return this.accountService.getUserId();
+        }
+
         public getClaim(type) {
             return this.accountService.getClaim(type);
         }
