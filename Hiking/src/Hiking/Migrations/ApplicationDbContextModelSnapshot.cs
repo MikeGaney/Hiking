@@ -22,13 +22,25 @@ namespace Hiking.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<int>("Age");
+
+                    b.Property<string>("Bio");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
+
+                    b.Property<string>("DisplayName");
 
                     b.Property<string>("Email")
                         .HasAnnotation("MaxLength", 256);
 
                     b.Property<bool>("EmailConfirmed");
+
+                    b.Property<int>("Expertise");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -45,6 +57,8 @@ namespace Hiking.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("ProfilePic");
 
                     b.Property<string>("SecurityStamp");
 

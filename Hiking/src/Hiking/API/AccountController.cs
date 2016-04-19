@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using Hiking.Models;
 using Hiking.Services;
 using Hiking.ViewModels.Account;
+using Hiking.ViewModels.Profile;
+using Hiking.Repositories;
 
 namespace Hiking.Controllers
 {
@@ -24,21 +26,52 @@ namespace Hiking.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private IGenericRepository repo;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            IGenericRepository _repo)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            this.repo = _repo;
         }
 
+
+        [HttpGet("{id}")]
+        [Route("getprofile")]
+        public async Task<IActionResult> GetProfile(string id){
+            var user = await _userManager.FindByIdAsync(id);
+            return Ok(user);
+        }
+
+
+        [HttpPost]
+        [Route("editprofile")]
+        public IActionResult EditProfile([FromBody]EditProfileViewModel data) {
+            //var user = await _userManager.FindByIdAsync(data.Id);
+
+            var user = repo.Query<ApplicationUser>().Where(u => u.Id == data.Id).FirstOrDefault();
+
+            user.FirstName = data.FirstName;
+            user.LastName = data.LastName;
+            user.Age = data.Age;
+            user.ProfilePic = data.ProfilePic;
+            user.Expertise = data.Expertise;
+            user.DisplayName = data.DisplayName;
+            user.Bio = data.Bio;
+
+            repo.SaveChanges();
+
+            return Ok();
+        }
 
         private async Task<UserViewModel> GetUser(string userName)
         {
@@ -47,7 +80,11 @@ namespace Hiking.Controllers
             var vm = new UserViewModel
             {
                 UserName = user.UserName,
-                Claims = claims.ToDictionary(c => c.Type, c => c.Value)
+                Claims = claims.ToDictionary(c => c.Type, c => c.Value),
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                DisplayName = user.DisplayName,
+                UserId = user.Id
             };
             return vm;
         }

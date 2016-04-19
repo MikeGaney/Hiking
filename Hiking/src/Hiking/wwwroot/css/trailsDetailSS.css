@@ -1,21 +1,19 @@
-﻿
-
-.detailsPage {
-    background-image:url(https://upload.wikimedia.org/wikipedia/commons/8/83/Crater_Lake_Panorama,_Aug_2013.jpg);
-    background-size: cover;
+﻿.detailsPage {
+    background-image:url(http://1.bp.blogspot.com/-fgYkymZ9P_g/T9-ZJow7f2I/AAAAAAAAA9E/lX_ITY0mioM/s1600/IMG_0037.JPG);
+    background-size:cover;
+    /*height: 1500px;*/
     background-repeat: no-repeat;
-    margin-left: 0;
 }
 
 
 .detailsLeftColumn {
    float: left;
    width: 25%;
-   margin-right: 0;
-   margin-top: 0;
+   margin-left: 75px;
+   margin-top: 100;
    padding-right: 0;
-   background-color: rgba(255, 255, 255, 0.66);
-   color: #808080;
+   background-color: rgba(255, 255, 255, 0.33);
+   color: rgba(0, 0, 0, 0.80);
    font-family: 'Russo One', sans-serif;
    text-transform: uppercase;
    font-size: small;
@@ -27,12 +25,12 @@
 
 .detailsRightColumn {
    float: right;
-   width: 0;
-   margin-right: 0;
-   margin-top: 0;
+   width: 60%;
+   margin-right: 75px;
+   margin-top: 100px;
    padding-right: 0;
-   background-color: rgba(255, 255, 255, 0.66);
-   color: #000000;
+   background-color: rgba(255, 255, 255, 0.33);
+   color: rgba(0, 0, 0, 0.80);
    font-family: 'Russo One', sans-serif;
    text-transform: uppercase;
    font-size: small;
@@ -40,4 +38,69 @@
    text-align: center;
    border-radius: 0;  
 
+}
+
+.legend {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:95%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.legend1 {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:94%;
+    height: 60px;
+    margin: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  
+    
+}
+
+.name {
+    font-size: 40px;
+    font-weight: 200;
+    padding: 10px;
+}
+
+.map {
+    margin-left: -280px;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.66);
+    width:240px;
+    height: 600px;
+    margin-top: -620px;
+    margin-right: 39px;
+    padding-top: 80px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.overview {
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px;
+    margin-left: 20;
+    width: 94%;
+}
+
+.weatherbtn {
+width: 100%;
+height: 50px;
+font-size: x-large;
+}
+
+.saveToPack {
+width: 100%;
+height: 50px;
+font-size: inherit;
+margin-top: 85px;
+background-color: lawngreen;
 }
