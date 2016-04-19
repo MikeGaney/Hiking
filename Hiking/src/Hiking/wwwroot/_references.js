@@ -12,7 +12,5 @@
 /// <reference path="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />
 /// <reference path="ngapp/app.js" />
 /// <reference path="ngapp/controllers/accountcontroller.js" />
-/// <reference path="ngapp/controllers/addeditdeletetrailclientcontroller.js" />
 /// <reference path="ngapp/controllers/controllers.js" />
 /// <reference path="ngapp/services/accountservice.js" />
-/// <reference path="ngapp/services/servicestrailsa.js" />
