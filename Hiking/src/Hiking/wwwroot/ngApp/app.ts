@@ -13,6 +13,12 @@ namespace Hiking {
                 controller: Hiking.Controllers.HomeController,
                 controllerAs: 'controller'
             })
+            .state( 'changes', {
+                url: '/changes/:id?',
+                templateUrl: '/ngApp/views/AddEditDeleteTrail.html',
+                controller: Hiking.Controllers.AddEditDeleteTrailClientController,
+                controllerAs: 'controller'
+            })
             .state('secret', {
                 url: '/secret',
                 templateUrl: '/ngApp/views/secret.html',
