@@ -1,104 +1,130 @@
-﻿
+﻿<div class="col-md-12 changesPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="changesArea">
+                    <form ng-submit="controller.addNewTrail()">
 
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <form ng-submit="controller.addNewTrail()">
-        <div class="form-group">
-            <h3>Title</h3>
-            <input type="text" class="form-control" placeholder="Title" ng-model="controller.trails.name"> <br />
+                        <div class="form-group">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3>Map Area</h3>
+                                    <h6>Title of Map</h6>
+                                    <input type="text" class="form-control" placeholder="Title" ng-model="controller.trails.name"> <br />
+                                    <br />
+                                    <h6>Map</h6>
+                                    <input type="text" class="form-control" placeholder="Map" ng-model="controller.trails.map"> <br />
+
+                                    <br />
+                                    <h6>Image</h6>
+                                    <input type="text" class="form-control" placeholder="image" ng-model="controller.trails.image"> <br />
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <h3>Trail Info</h3>
+                                    <h6>Time</h6>
+                                    <input type="text" class="form-control" placeholder="Time" ng-model="controller.trails.time"> <br />
+                                    <br />
+                                    <h6>Distance</h6>
+                                    <input type="number" class="form-control" placeholder="Distance" ng-model="controller.trails.distance"> <br />
+                                    <br />
+                                    <h6>Elevation</h6>
+                                    <input type="text" class="form-control" placeholder="Elevation" ng-model="controller.trails.elevation"> <br />
+                                    <br />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>OverView of Trail</h3>
+                                    <textarea class="form-control overviewTxt" rows="4" ng-model="controller.trails.overview"></textarea> <br />
+
+
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>Rating</h3>
+                                    <input type="number" class="form-control" placeholder="Rating" ng-model="controller.trails.rating"> <br />
+
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>Status</h3>
+                                    <input type="text" class="form-control" placeholder="Open/Closed" ng-model="controller.trails.openSeason"> <br />
+                                </div>
+                                <div class="col-md-4 ">
+                                    <h3>Difficulty</h3>
+                                    <input type="text" class="form-control" placeholder="Difficulty" ng-model="controller.trails.difficultyLevel"> <br />
+                                </div>
+
+                            </div>
+                        </div>
+                        <h3>Legend</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6>Fishing</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.fishing">
+
+                                <br />
+                                <h6>Biking</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.biking">
+
+                                <br />
+                                <h6>Horseback Riding</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.horses">
+
+                                <br />
+                                <h6>Camping</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.camping">
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <h6>Pass Required</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.passRequired">
+                                <br />
+                                <h6>Lakes</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.lakes">
+                                <br />
+                                <h6>Rivers</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.rivers">
+                                <br />
+                                <h6>Waterfalls</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.waterfalls">
+                                <br />
+
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Scenic Views</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.lookouts">
+                                <br />
+                                <h6>Bears</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.bears">
+                                <br />
+                                <h6>Cougars</h6>
+                                <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.cougars">
+
+
+                                <br />
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <button type="submit" class="btn btn-lg btn-warning">Save</button>
+                                    <button type="button" class="btn btn-lg btn-danger" ng-click="controller.deleteTrail()">Delete</button>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
         </div>
-        <hr />
-        <h3>Map Area</h3>
-        <h6>Map</h6>
-        <input type="text" class="form-control" placeholder="Map" ng-model="controller.trails.map"> <br />
-
-        <br />
-        <h6>Image</h6>
-        <input type="text" class="form-control" placeholder="image" ng-model="controller.trails.image"> <br />
-        <hr />
-        <h3>Trail Info</h3>
-        <h6>Time</h6>
-        <input type="text" class="form-control" placeholder="Time" ng-model="controller.trails.time"> <br />
-        <br />
-        <h6>Distance</h6>
-        <input type="number" class="form-control" placeholder="Distance" ng-model="controller.trails.distance"> <br />
-        <br />
-        <h6>Elevation</h6>
-        <input type="text" class="form-control" placeholder="Elevation" ng-model="controller.trails.elevation"> <br />
-        <br />
-        <hr />
-        <h3>OverView of Trail</h3>
-        <input type="text" class="form-control" placeholder="OverView" ng-model="controller.trails.overview"> <br />
-        <h6>Difficulty</h6>
-        <input type="text" class="form-control" placeholder="Difficulty" ng-model="controller.trails.difficultyLevel"> <br />
-        <hr />
-       
-        <h3>Rating</h3>
-        <input type="number" class="form-control" placeholder="Rating" ng-model="controller.trails.rating"> <br />
-        <hr />
-        <h3>Status (Open/Closed)</h3>
-        <input type="text" class="form-control" placeholder="Status"ng-model="controller.trails.openSeason"> <br />
-        <hr />
-        <h3>Legend</h3>
-            <div class="row">
-                <div class="col-md-4" style="padding-left: 0">
-                    <h6>Fishing</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.fishing">
-
-                    <br />
-                    <h6>Biking</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.biking">
-
-                    <br />
-                    <h6>Horseback Riding</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.horses">
-
-                    <br />
-                    <h6>Camping</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.camping">
-                </div>
-
-
-                <div class="col-md-4">
-                    <h6>Pass Required</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.passRequired">
-                    <br />
-                    <h6>Lakes</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.lakes">
-                    <br />
-                    <h6>Rivers</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.rivers">
-                    <br />
-                    <h6>Waterfalls</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.waterfalls">
-                    <br />
-
-                </div>
-                <div class="col-md-4" style="padding-right: 0">
-                    <h6>Scenic Views</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.lookouts">
-                    <br />
-                    <h6>Bears</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.bears">
-                    <br />
-                    <h6>Cougars</h6>
-                    <input type="text" class="form-control" placeholder="True or False" ng-model="controller.trails.cougars">
-
-
-                    <br />
-
-                </div>
-
-                <hr />
-                <button type="submit" class="btn btn-info">Save</button>
-                <button type="button" class="btn btn-danger">Delete</button>
-                <br />
-                <hr />
-            </div>
-            </form>
     </div>
 </div>
-    
+
 
 
 

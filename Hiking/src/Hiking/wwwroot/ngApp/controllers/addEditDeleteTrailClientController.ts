@@ -16,9 +16,16 @@
             console.log( this.trails );
             this.trailsService.saveOneTrail( this.trails ).then(() => {
                 this.$state.go( 'home' );
+
             });
         }
 
-
+        deleteTrail() {
+            debugger;
+            let trailId = this.$stateParams["id"];
+            this.trailsService.deleteTrail( trailId ).then(() => {
+                this.$state.go( 'home' );
+            });
+        }
     }
 }

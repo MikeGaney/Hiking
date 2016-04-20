@@ -57,8 +57,10 @@ namespace Hiking.API
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            _service.DeleteTrail(id);
+            return Ok();
         }
     }
 }
