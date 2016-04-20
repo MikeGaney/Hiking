@@ -1,4 +1,144 @@
-﻿.detailsPage {
+﻿
+
+/************** Browse Page ******************/
+
+.browsePage {
+    background-image:url(https://static.pexels.com/photos/2079/nature-forest-waterfall-jungle.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Merriweather', serif;
+    color: slategrey;
+}
+
+.browseSearch {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: -550px;
+    margin-bottom: 25px;
+    margin-right: 60px;
+    width: 68%;
+    padding: 25px;
+}
+
+.browseSearch2 {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:100%;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#searchTitle {
+    margin-left: 250;
+    font-size: -webkit-xxx-large;
+    color: firebrick;
+}
+
+.inputMM {
+    border-radius: 0;
+
+}
+
+.searchLabels {
+    padding-top: 7px;
+    padding-left: 30px;
+}
+
+.Activities {
+    float: right;
+    margin-top: -195px;
+    margin-right: 20px;
+    border-style: outset;
+    width: 400px;
+    height: 180px;
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.actLabel {
+    margin-left: 60px;
+    font-size:large;
+    font-weight:400;
+}
+
+.Activities2 {
+    float: left;
+}
+
+.Activities3 {
+    float: right;
+}
+
+.searchBtn {
+    width: 100%;
+    height: 50px;
+    font-size: inherit;
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius:0;
+    border-style: outset;
+    border-width:initial;
+    border-color: aliceblue;
+    font-size: x-large;
+}
+
+.trailBox {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-bottom: 25px;
+    margin-right:75px;
+}
+
+.imagesBrowse {
+    margin: 20px 20px 20px 10px;
+    height: 200px;
+}
+
+.trailBrowse1 {
+    background-color: rgba(255, 255, 255, 0.66);
+    float: right;
+    width: 45%;
+    height: 200px;
+    margin-top: -220px;
+    margin-right: 220px;
+    padding: 20px;
+    color: firebrick;
+    font-family: 'Merriweather', serif;
+    text-transform: ;
+    font-size: small;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 0; 
+}
+
+.trailBrowse2 {
+    background-color: rgba(255, 255, 255, 0.66);
+    float: right;
+    width: 20%;
+    height: 200px;
+    margin-top: -220px;
+    margin-left: 500px;
+    padding: 20px;
+    color: slategrey;
+    font-family: 'Merriweather', serif;
+    text-transform: ;
+    font-size: small;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 0; 
+}
+
+.browseSideBar {
+    float: left;
+    width: inherit;
+    margin-top: 100px;
+    margin-left: 75px;
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+/****************** Details Page *************/
+
+.detailsPage {
     background-image:url(http://1.bp.blogspot.com/-fgYkymZ9P_g/T9-ZJow7f2I/AAAAAAAAA9E/lX_ITY0mioM/s1600/IMG_0037.JPG);
     background-size:cover;
     /*height: 1500px;*/
@@ -10,12 +150,12 @@
    float: left;
    width: 25%;
    margin-left: 75px;
-   margin-top: 100;
+   margin-top: 100px;
    padding-right: 0;
    background-color: rgba(255, 255, 255, 0.33);
    color: rgba(0, 0, 0, 0.80);
-   font-family: 'Russo One', sans-serif;
-   text-transform: uppercase;
+   font-family: 'Merriweather', serif;
+   text-transform: ;
    font-size: small;
    font-weight: 400;
    text-align: center;
@@ -31,8 +171,8 @@
    padding-right: 0;
    background-color: rgba(255, 255, 255, 0.33);
    color: rgba(0, 0, 0, 0.80);
-   font-family: 'Russo One', sans-serif;
-   text-transform: uppercase;
+   font-family: 'Merriweather', serif;
+   text-transform: ;
    font-size: small;
    font-weight: 400;
    text-align: center;
@@ -69,6 +209,8 @@
 .map {
     margin-left: -280px;
     margin-bottom: 20px;
+   
+
 }
 
 .sidebar {
@@ -104,3 +246,5 @@ font-size: inherit;
 margin-top: 85px;
 background-color: lawngreen;
 }
+
+

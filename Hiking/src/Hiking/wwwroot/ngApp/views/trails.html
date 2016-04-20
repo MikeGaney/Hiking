@@ -1,5 +1,184 @@
-﻿<h1>Trail Browse/Search State</h1>
+﻿
 
-<p ng-repeat="trail in controller.trails">
-    {{trail.name}} - <a href="/trailDetail/{{trail.id}}">Details</a>
-</p>
+<div class="col-lg-12 browsePage">
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+
+                    <!--  SideBar  -->
+                    <div class="col-md-4 browseSideBar">
+                        <!-- Social Media -->
+                        <div class="legend">
+                            <h2>Social Media</h2>
+                            <hr />
+                            <h4>****</h4>
+                            <h4>***</h4>
+                        </div>
+
+                        <!-- Weather Link -->
+                        <div class="legend">
+                            <h2>Local Weather</h2>
+                            <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                        </div>
+
+                        <!-- Meet Up Info -->
+                        <div class="legend">
+                            <h2>Upcomming Events</h2>
+                            <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                    <!--  Search Feature  -->
+                    <div class="col-3 col-tablet-3 col-sm-4 col-md-8 browseSearch">
+                        
+                            <form class="form-horizontal browseSearch2" ng-submit="">
+                                <div class="row form-group">
+                                    <h1 id="searchTitle">Find your destination</h1>
+                                </div>
+                                <hr />
+                                <div class="row form-group search1">
+                                    <div class="col-md-2">
+                                        <label class="searchLabels">Name</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control inputMM" ng-model="" />
+                                    </div>
+                                </div>
+                                <div class="row form-group search1">
+                                    <div class="col-md-2">
+                                        <label class="searchLabels">Region</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <select class="form-control inputMM" ng-model="">
+                                            <option value="">Include All Areas</option>
+                                            <option value="Central Washington">Central Washington</option>
+                                            <option value="Eastern Washington">Eastern Washington</option>
+                                            <option value="North Cascades">North Cascades</option>
+                                            <option value="Mount Rainier Area">Mount Rainier Area</option>
+                                            <option value="Puget Sound and Islands">Puget Sound and Islands</option>
+                                            <option value="Olympic Peninsula">Olympic Peninsula</option>
+                                            <option value="Snoqualmie Region">Snoqualmie Region</option>
+                                            <option value="South Cascades">South Cascades</option>
+                                            <option value="Central Cascades">Central Cascades</option>
+                                            <option value="Issaquah Alps">Issaquah Alps</option>
+                                            <option value="Southwest Washington">Southwest Washington</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group search2">
+                                    <div class="col-md-2">
+                                        <label class="searchLabels">User Rating</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <select class="form-control inputMM" ng-model="">
+                                            <option value="">No Minimum</option>
+                                            <option value="1">0-1 Stars</option>
+                                            <option value="2">0-2 Stars</option>
+                                            <option value="3">0-3 Stars</option>
+                                            <option value="4">0-4 Stars</option>
+                                            <option value="5">0-5 Stars</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group search2">
+                                    <div class="col-md-2">
+                                        <label class="searchLabels">Difficulty</label>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <select class="form-control inputMM" ng-model="">
+                                            <option value="">No Minimum</option>
+                                            <option value="1">Level 1</option>
+                                            <option value="2">Level 2 & below</option>
+                                            <option value="3">Level 3 & below</option>
+                                            <option value="4">Level 4 & below </option>
+                                            <option value="5">Level 5 & below</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="row Activities">
+                                    <div class="col-md-2 actLabel">
+                                        <label>Features</label>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="row Activities2" align="left">
+                                            <div>
+                                                <input type="checkbox" value="Camping" />
+                                                <label><span>Camping</span></label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="Fishing" />
+                                                <label><span>Fishing</span></label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="Biking" />
+                                                <label><span>Biking</span></label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="Horses" />
+                                                <label><span>Horseback Friendly</span></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="row Activities3" align="left">
+                                            <div>
+                                                <input type="checkbox" value="Lakes" />
+                                                <label><span>Lakes</span></label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="Rivers" />
+                                                <label><span>Rivers</span></label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="Waterfall" />
+                                                <label><span>Waterfall</span></label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" value="Lookouts" />
+                                                <label><span>Lookouts</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="row form-group">
+                                        <button class="btn searchBtn"><a href="#">Search Trails</a></button>
+                                    </div>
+                                </form>
+                           
+                        </div>                   
+
+
+
+                <!--  Browse Trails  -->
+             
+                <div class="row" ng-repeat="trail in controller.trails">
+                    <div class="col-3 col-tablet-3 col-sm-4 col-md-8 trailBox">
+                        <div>
+                            <a href="#"><img src="{{trail.image}}" width="300" alt="" class="imagesBrowse img-responsive" /></a>
+                        </div>
+                        <div class="trailBrowse1">
+                            <h2>{{trail.name}}</h2>
+                            <h3>{{trail.location}}</h3>
+                        </div>
+                        <div class="trailBrowse2">
+                            <h5>Distance: {{trail.distance}} miles</h5>
+                            <h5>Average Time: {{trail.time}} hours</h5>
+                            <h5>Elevation: {{trail.elevation}}</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
