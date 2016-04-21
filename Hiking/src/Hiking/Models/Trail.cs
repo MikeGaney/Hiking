@@ -32,6 +32,7 @@ namespace Hiking.Models
         public bool Cougars { get; set; }
         public int Rating { get; set; }
         public string OpenSeason { get; set; }
+        public ICollection<Comment> Comments { get; set; }
 
     }
 }
