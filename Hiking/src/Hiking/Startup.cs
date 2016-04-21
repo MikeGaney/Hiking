@@ -42,6 +42,8 @@ namespace Hiking
         {
             services.AddScoped<IGenericRepository, GenericRepository>();
             services.AddScoped<ISATrailsService, SATrailsService>();
+            services.AddScoped<IBlogService, BlogService>();
+
             // Add framework services.
             services.AddEntityFramework()
                 .AddSqlServer()
@@ -124,6 +126,7 @@ namespace Hiking
             // initialize sample data
             SampleData.Initialize(app.ApplicationServices).Wait();
             SampleDataTrail.Initialize(app.ApplicationServices);
+            SampleDataBlog.Initialize(app.ApplicationServices);
 
         }
 

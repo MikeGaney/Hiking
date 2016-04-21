@@ -1,0 +1,49 @@
+﻿<h1>Blog Details Page</h1>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <h2>{{controller.blog.title}}</h2>
+        </div>
+        <div class="row">
+            <h4><a href="/blogEdit/{{controller.blog.id}}">Edit</a></h4>
+            <h4><a ng-click="controller.showDeleteConfirmationModal()">Delete</a></h4>
+        </div>
+        <div class="row">
+            <p>{{controller.blog.message}}</p>
+        </div>
+        <div class="row">
+            <label>User: </label>
+            <label>{{controller.blog.userID}}</label>
+        </div>
+        <div class="row">
+            <label>Views: </label>
+            <label>{{controller.blog.views}}</label>
+        </div>
+        <div class="row">
+            <label>Date: </label>
+            <label>{{controller.blog.creationDate | date:'MMMM dd @ h:mma'}}</label>
+        </div>
+        <div class="row">
+            <h4>Comments</h4>
+        </div>
+        <div class="row" ng-repeat="comment in controller.blog.comments">
+            <label>Comment ID:</label>
+            <label>{{comment.id}}</label>
+            <a ng-click="controller.showDeleteCommentConfirmationModal(comment.id)">Delete</a><br />
+            <p>{{comment.message}}</p>
+            <label>User: </label>
+            <label>{{comment.userID}}</label> <br />
+            <label>Date: </label>
+            <label>{{comment.creationDate | date:'MMMM dd @ h:mma'}}</label>
+        </div>
+        <hr />
+        <div class="row">
+            <h4>Add Comment</h4>
+            <form ng-submit="controller.AddComment()">
+                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                <input type="submit" value="Add Comment" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+</div>

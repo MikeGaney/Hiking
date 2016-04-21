@@ -73,6 +73,30 @@ namespace Hiking {
                 controller: Hiking.Controllers.EditProfileController,
                 controllerAs: 'controller'
             })
+            .state('blogs', {
+                url: '/blogs',
+                templateUrl: '/ngApp/Blogs/views/blogs.html',
+                controller: Hiking.Controllers.BlogsController,
+                controllerAs: 'controller'
+            })
+            .state('blogDetails', {
+                url: '/blogs/:id',
+                templateUrl: '/ngApp/Blogs/views/blogDetails.html',
+                controller: Hiking.Controllers.BlogDetailsController,
+                controllerAs: 'controller'
+            })
+            .state('addBlog', {
+                url: '/blog/add',
+                templateUrl: '/ngApp/Blogs/views/addBlog.html',
+                controller: Hiking.Controllers.AddBlogController,
+                controllerAs: 'controller'
+            })
+            .state('editBlog', {
+                url: '/blogEdit/:id',
+                templateUrl: '/ngApp/Blogs/views/editBlog.html',
+                controller: Hiking.Controllers.EditBlogController,
+                controllerAs: 'controller'
+            })
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'
