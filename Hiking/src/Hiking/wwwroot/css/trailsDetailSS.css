@@ -3,7 +3,8 @@
 /************** Browse Page ******************/
 
 .browsePage {
-    background-image:url(https://static.pexels.com/photos/2079/nature-forest-waterfall-jungle.jpg);
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
+    /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Salto_del_Angel-Canaima-Venezuela08.JPG);*/
     background-repeat: no-repeat;
     font-family: 'Merriweather', serif;
     color: slategrey;
@@ -12,7 +13,7 @@
 .browseSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: -550px;
+    margin-top: 80px;
     margin-bottom: 25px;
     margin-right: 60px;
     width: 68%;
@@ -28,8 +29,8 @@
 }
 
 #searchTitle {
-    margin-left: 250;
-    font-size: -webkit-xxx-large;
+    margin-left: 200px;
+    font-size: 50px;
     color: firebrick;
 }
 
@@ -130,10 +131,40 @@
 
 .browseSideBar {
     float: left;
-    width: inherit;
-    margin-top: 100px;
-    margin-left: 75px;
+    width: 22%;
+    margin-top: 80px;
+    margin-left: 60px;
     background-color: rgba(255, 255, 255, 0.33);
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+}
+
+.browseLegend {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:95%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.browseSBtitles {
+    font-size: 18px;
+    text-align:center;
+}
+
+.browseSBbtns {
+    width: 100%;
+    height: 50px;
+    font-size: inherit;
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius:0;
+    border-style: outset;
+    border-width:initial;
+    border-color: aliceblue;
+    font-size: x-large;
 }
 
 /****************** Details Page *************/
