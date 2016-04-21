@@ -21,6 +21,13 @@ namespace Hiking.Services
             return;
         }
 
+        public void DeleteTrail(int id)
+        {
+            var TrailToDelete = _repo.Query<Trail>().FirstOrDefault(t=>t.Id==id);
+            _repo.Delete<Trail>(TrailToDelete);
+            _repo.SaveChanges();
+        }
+
         public void EditTrail(Trail trail)
         {
             var HoldTrail = _repo.Query<Trail>().Where(t => t.Id == trail.Id).FirstOrDefault();

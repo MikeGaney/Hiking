@@ -18,6 +18,9 @@ namespace Hiking.Services {
             return this.trailsResource.save( trails ).$promise;
 
         }
+        public deleteTrail( id ) {
+            return this.trailsResource.remove( { id: id }).$promise;
+        }
     }
     angular.module( "Hiking" ).service( "trailsService", TrailsService );
 }

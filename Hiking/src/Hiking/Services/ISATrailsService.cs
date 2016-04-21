@@ -10,5 +10,8 @@ namespace Hiking.Services
 
         Trail GetOneTrail(int id);
         void EditTrail(Trail trail);
+
+        void DeleteTrail(int id);
+         
     }
 }

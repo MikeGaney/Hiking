@@ -1,61 +1,127 @@
-﻿body {
+﻿.profileWindow{
+    background-image:url(http://www.ilikewallpaper.net/ipad-air-wallpapers/download/28035/Spring-Art-Dark-Blue-Watercolor-Pattern-ipad-air-wallpaper-ilikewallpaper_com.jpg);
+    background-size:cover;
+    /*height: 1500px;*/
+    background-repeat: no-repeat;
+    min-width: 1600px;
+}
+#bodydiv {
     position: relative;
     font-family: 'Arvo', serif;
+    
 }
+
 #profilePic {
     position: relative;
     border-color: lightgray;
-    border: 3px;
-    height: 350px;
-    width: 800px;
-    
+    height: 600px;
+    width: 1100px; 
+    border: 20px solid rgba(0,0,0,.3);
+
     }
 img {
-    width: 135%;
+    width: 100%;
+    height:100%;
+    
 }
 #name{
     position: absolute;
     display: block;
+    box-shadow: 7px 7px 7px #404040;
     height: 150px;
-    width: 625px;
-    left: 20px;
+    width: 650px;
+    left: 80px;
     top: 550px;
-    background-color: lightgray;
+    background-color: rgba(115, 115, 115, .90);
     color: white;
     font-size: 60pt;
     text-align: center;
-    padding-top: 15px;
+    text-shadow: 2px 2px #333333;
+    padding: 15px;
+}
+#bio {
+    /*background-color: rgba(187, 187, 119, .70);*/
+    background-color:  rgba(153, 51, 0, .70);
+    color: rgba(255, 255, 255, 1.0);
+    box-shadow: 7px 7px 7px #404040;
+    position: relative;
+    margin-top: 150px;
+    display: inline-block;
+    height: 500px;
+    width: 1100px;
+    border: 20px solid rgba(0,0,0,.2);
+    font-size: 16pt;
+    padding:15px;
+    text-shadow: 2px 2px #333333;
+}
+#circle{
+    background-color: rgba(115, 115, 115, .90);
+    /*background-color: rgba(102, 101, 71, 1.0);*/
+    float: right;
+    position: relative;
+    margin-left:40px;
+    margin-top: 150px;
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+    box-shadow: 7px 7px 7px #404040;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px #333333;
+    padding: 70px;
 }
 #asides{ /*background-color: lightblue;*/
     position: absolute;
     display: block;
-    height: 650px;
+    height: 700px;
     width: 625px;
     right: -50px;
     top: 20px;
-    font-size: x-large;
+    font-size: 16px;
     color: white;
 }
 
 #aside1{
     position: absolute;
-    display: block;   
+    display: block;
+    box-shadow: 7px 7px 7px #404040;   
     height: 225px;
     width: 625px;
     left: 0;
     right: -50px;
     top: 90px;
-    background-color: lightgray;
+    /*background-color:  rgba(153, 51, 0, 1.0);*/
+    background-color: rgba(187, 187, 119, .90);
+    border-top-style: solid ;
+    border-color: black;
+    border: 5px;
+    padding-left: 10px;
+    padding-top: 7px;
+    text-shadow: 2px 2px #333333;
 }
 #aside2{
     position: absolute;
     display: block;
+    box-shadow: 7px 7px 7px #404040;
     margin-top: 150px;
     height: 225px;
     width: 625px;
     left: 0;
     right: -50px;
     top: 250px;
-    background-color: lightgray;
+    background-color: rgba(187, 187, 119, .90);
+    padding-left: 10px;
+    padding-top: 7px;
+    text-shadow: 2px 2px #333333;
+}
+.toEditbtn{
+    background-color: rgba(187, 187, 119, 1.0);
+    float: right;
+    margin-top: 30px;
+    border-radius: 7px;
+    box-shadow: 7px 7px 7px #404040;
+    padding: 4px;
+
 }
 

@@ -56,6 +56,7 @@
                 displayName: this.editProfile.displayName,
                 expertise: this.editProfile.expertise
             };
+            console.log(this.profileToSave);
             this.profileService.editProfile(this.editProfile).then(() => {
                 this.$state.go('viewprofile');
             })
