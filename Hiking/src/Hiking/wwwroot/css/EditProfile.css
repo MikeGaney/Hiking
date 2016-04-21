@@ -1,0 +1,112 @@
+﻿.profileEditWindow{
+    background-image:url(http://www.ilikewallpaper.net/ipad-air-wallpapers/download/28035/Spring-Art-Dark-Blue-Watercolor-Pattern-ipad-air-wallpaper-ilikewallpaper_com.jpg);
+    background-size:cover;
+    /*height: 1500px;*/
+    background-repeat: no-repeat;
+    min-width: 1600px;
+}
+#editProfForm{
+    font-size: 16pt;
+    color: slategray;
+}
+#leftSide{
+    background-color: rgba(230, 230, 230, 0.70);
+    color: rgba(0, 0, 0, 1.0);
+    position: relative;
+    display: inline-block;
+    height: 1200px;
+    width: 700px;
+    border: 20px solid rgba(0,0,0,.2);
+    font-size: 16pt;
+    /*padding:15px;*/
+  
+
+}
+#rightSide{
+    background-color: rgba(230, 230, 230, 0.70);
+    color: rgba(0, 0, 0, 1.0);
+    position: relative;
+    display: inline-block;
+    height: 1200px;
+    width: 875px;
+    border: 20px solid rgba(0,0,0,.2);
+    font-size: 16pt;
+    padding: 15px;
+    margin-left: 20px;
+    
+}
+.form-control{
+    width: 600px;
+}
+#profPic{
+    box-shadow: 7px 7px 7px #737373;
+    height: 475px;
+    width: 585px;
+    border: solid #737373;
+    border-width: 3px;
+    margin-top: 15px;
+}
+#profPicInput{
+    display: inline-block;
+    margin-top: 20px;
+    width: 500px;
+}
+#nameInput{
+    margin-top: 30px;
+}
+#expertWrapper {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+#bioWrapper{
+    width: 750px; 
+    height: 600px;
+    margin-bottom: 80px;
+}
+#bioInput{
+    box-shadow: 7px 7px 7px #737373;
+    border: solid #737373;
+    background-color: rgba(230, 230, 230, 0.80);
+    border-width: 3px;
+    width: 750px;
+    height: 550px;
+    padding: 5px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+#bioLabel{
+   
+
+}
+#pwProfile{
+    display: inline-block;
+    margin-top: 65px;
+    width: 800px;
+    height: 200px;
+}
+#submitWrapper{
+    position:relative;
+    /*background-color: lightblue;*/
+    width: 800px;
+    height: 230px;
+    margin-right:0;
+    margin-bottom: 20px;
+
+}
+#saveBtn{
+    position:relative;
+    width:125px;
+    margin-bottom: 20px;
+    margin-top: 175px;
+    margin-left: 675px;
+    
+}
+#deleteBtn{
+    position:relative;
+    width:125px;
+    /*margin-top: 175px;*/
+    margin-left: 675px;
+
+}

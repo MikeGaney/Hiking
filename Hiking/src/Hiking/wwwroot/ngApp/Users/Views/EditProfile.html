@@ -1,6 +1,6 @@
-﻿<h1>Edit Profile</h1>
+﻿
 
-<div class="row">
+<!--<div class="row">
     <div class="col-md-6 col-md-offset-3">
         <form ng-submit="controller.save()">
             <div class="form-group">
@@ -25,4 +25,76 @@
         </form>
     </div>
 
+</div>-->
+<div class="profileEditWindow">
+    <h1><strong>Edit Profile</strong></h1>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <form ng-submit="controller.save()" id="editProfForm">
+            <!--Left Side-->
+            <div class="col-md-5 form-group" id="leftSide">
+                <div id="profPic">
+                    <img src= {{controller.editProfile.profilePic}} />
+                </div>
+                <div class="form-group" id="profPicInput">
+                    <label>Change Profile Picture</label>
+                    <input type="text" ng-model="controller.editProfile.profilePic" class="form-control" />
+                    
+                    <button class="btn btn-primary form-group">Upload</button>
+                </div>
+                
+                <div class="form-group" id="nameInput">
+                    <label>Change Name</label>
+                    <input type="text" ng-model="controller.editProfile.firstName" class="form-control" />
+                    <input type="text" ng-model="controller.editProfile.lastName" class="form-control" />
+                </div>
+                <div class="form-group" id="displayNameInput">
+                    <label>Change Display Name</label>
+                    <input type="text" ng-model="controller.editProfile.displayName" class="form-control" />
+                </div>
+                <div class="form-group" id="ageInput">
+                    <label>Change Age</label>
+                    <input type="text" ng-model="controller.editProfile.age" class="form-control" />
+                </div>
+                
+                <div class="form-group" id="expertWrapper">
+                    <div class="form-group" id="expLevel">
+                        <label>Expertise Level:</label>
+                        <br />
+                        <input type="radio" name="expertise" value="1"ng-model="controller.editProfile.expertise" /> Beginner (1)<br />
+                        <input type="radio" name="expertise" value="2"ng-model="controller.editProfile.expertise" /> Intermediate (2) <br />
+                        <input type="radio" name="expertise" value="3" ng-model="controller.editProfile.expertise"/>
+                        Expert (3)
+                    </div>
+
+                </div>
+
+            </div>
+            <!--RightSide-->
+            <div class="col-md-6 form-group" id="rightSide">
+                <div class="form-group" id="bioWrapper">
+                    <textarea class="form-group" id="bioInput" ng-model="controller.editProfile.bio" wrap="hard" maxlength="1000"></textarea>
+                    <br />
+                    <label id="bioLabel">Change Bio</label>
+                </div>
+                <div class="form-group" id="pwProf">
+                    <label>Change Password</label>
+
+
+                    <input type="password" name="oldPassword" class="form-control" placeholder="Current Password" />
+                    <input type="password" name="newPassword1" class="form-control" placeholder="New Password" />
+                    <input type="password" name="newPassword2" class="form-control" placeholder="Confirm New Password" />
+                </div>
+                <div id="submitWrapper">
+                    <div >
+                        <input type="submit" value="Save Changes" class="btn btn-success"id="saveBtn" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Delete Profile" class="btn btn-danger" id="deleteBtn" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="col-md-1"></div>
+    </div>
 </div>
