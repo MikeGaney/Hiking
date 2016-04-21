@@ -40,8 +40,9 @@ namespace Hiking
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //used for generic repositories
             services.AddScoped<IGenericRepository, GenericRepository>();
+            services.AddScoped<ISATrailsService, SATrailsService>();
+            services.AddScoped<IBlogService, BlogService>();
 
             // Add framework services.
             services.AddEntityFramework()
@@ -125,6 +126,7 @@ namespace Hiking
             // initialize sample data
             SampleData.Initialize(app.ApplicationServices).Wait();
             SampleDataTrail.Initialize(app.ApplicationServices);
+            SampleDataBlog.Initialize(app.ApplicationServices);
 
         }
 

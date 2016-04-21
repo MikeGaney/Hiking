@@ -10,8 +10,17 @@ namespace Hiking.Services {
         public getAllTrails() {
             return this.trailsResource.query();
         }
-        public getOneTrail(id) {
-            return this.trailsResource.get();
+        public getOneTrail( id ) {
+            return this.trailsResource.get( { id: id });
+        }
+        public saveOneTrail( trails ) {
+            console.log( trails );
+            return this.trailsResource.save( trails ).$promise;
+
+        }
+        public deleteTrail( id ) {
+            return this.trailsResource.remove( { id: id }).$promise;
         }
     }
+    angular.module( "Hiking" ).service( "trailsService", TrailsService );
 }

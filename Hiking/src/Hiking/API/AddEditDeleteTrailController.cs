@@ -27,15 +27,26 @@ namespace Hiking.API
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Trail Get(int id)
         {
-            return "value";
+            var OneTrail = _service.GetOneTrail(id);
+            return OneTrail;
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody] Trail value)
         {
+            if (value.Id == 0)
+            {
+            _service.AddTrail(value);
+
+            }
+            else
+            {
+                _service.EditTrail(value);
+            }
+            return Ok();
         }
 
         // PUT api/values/5
@@ -46,8 +57,10 @@ namespace Hiking.API
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            _service.DeleteTrail(id);
+            return Ok();
         }
     }
 }

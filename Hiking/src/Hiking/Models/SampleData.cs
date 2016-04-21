@@ -31,7 +31,7 @@ namespace Hiking.Models
                     ProfilePic = "http://images.nationalgeographic.com/wpf/media-live/photos/000/707/overrides/alberta-canada-hiking-bugaboos_70729_600x450.jpg",
                     Expertise = 1,
                     Bio = "Love the outside.",
-                    DisplayName = "HelloKitty"
+                    DisplayName = "SporkOfFear"
                 };
                 await userManager.CreateAsync(sarah, "Secret123!");
 

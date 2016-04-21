@@ -8,9 +8,10 @@ using Hiking.Models;
 namespace Hiking.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160420174118_BlogModelUpdateDateAndViews")]
+    partial class BlogModelUpdateDateAndViews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -103,11 +104,7 @@ namespace Hiking.Migrations
 
                     b.Property<int?>("BlogID");
 
-                    b.Property<DateTime>("CreationDate");
-
                     b.Property<string>("Message");
-
-                    b.Property<int?>("TrailId");
 
                     b.Property<string>("UserID");
 
@@ -257,10 +254,6 @@ namespace Hiking.Migrations
                     b.HasOne("Hiking.Models.Blog")
                         .WithMany()
                         .HasForeignKey("BlogID");
-
-                    b.HasOne("Hiking.Models.Trail")
-                        .WithMany()
-                        .HasForeignKey("TrailId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRoleClaim<string>", b =>

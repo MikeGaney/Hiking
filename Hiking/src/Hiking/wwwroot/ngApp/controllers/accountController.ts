@@ -63,7 +63,7 @@ namespace Hiking.Controllers {
             this.getExternalLogins().then((results) => {
                 this.externalLogins = results;
             });
-                console.log("account controller");
+                //console.log("account controller");
         }
     }
 
