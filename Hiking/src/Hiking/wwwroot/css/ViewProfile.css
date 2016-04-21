@@ -1,22 +1,61 @@
 ﻿body {
-    background-color: antiquewhite;
     position: relative;
+    font-family: 'Arvo', serif;
 }
 #profilePic {
     position: relative;
-    border-color: slategray;
+    border-color: lightgray;
     border: 3px;
     height: 350px;
     width: 800px;
     
     }
-#asides{
+img {
+    width: 135%;
+}
+#name{
     position: absolute;
     display: block;
-    background-color: slategray;
-    color: white;
     height: 150px;
-    width: 375px;
-    right: 10px;
-    top: 20px;
+    width: 625px;
+    left: 20px;
+    top: 550px;
+    background-color: lightgray;
+    color: white;
+    font-size: 60pt;
+    text-align: center;
+    padding-top: 15px;
 }
+#asides{ /*background-color: lightblue;*/
+    position: absolute;
+    display: block;
+    height: 650px;
+    width: 625px;
+    right: -50px;
+    top: 20px;
+    font-size: x-large;
+    color: white;
+}
+
+#aside1{
+    position: absolute;
+    display: block;   
+    height: 225px;
+    width: 625px;
+    left: 0;
+    right: -50px;
+    top: 90px;
+    background-color: lightgray;
+}
+#aside2{
+    position: absolute;
+    display: block;
+    margin-top: 150px;
+    height: 225px;
+    width: 625px;
+    left: 0;
+    right: -50px;
+    top: 250px;
+    background-color: lightgray;
+}
+
