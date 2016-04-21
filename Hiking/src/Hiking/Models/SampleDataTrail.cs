@@ -40,7 +40,6 @@ namespace Hiking.Models
                         Cougars = true,
                         Rating = 4,
                         OpenSeason = "",
-
                     },
 
                      new Trail

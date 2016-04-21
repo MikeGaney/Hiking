@@ -20,13 +20,16 @@
     margin-top: 50px;
     margin-left: 0px;
     background-color: rgba(255, 255, 255, 0.33);
+    position: fixed;
+    display: inline-block
 }
 
 .browsePage {
-    background-image:url(https://static.pexels.com/photos/2079/nature-forest-waterfall-jungle.jpg);
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
     background-repeat: no-repeat;
     font-family: 'Merriweather', serif;
     color: slategrey;
+    /*height: 100%;*/
 }
 
 .blogs{
@@ -36,10 +39,13 @@
     padding-top: 12px;
     padding-right: 40px;
     padding-bottom: 15px;
+    float: right;
+    margin-right: 40px;
 }
 
 .singleBlog{
-    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.66);
+    /*border: 1px solid black;*/
     width: 100%;
     max-height: 120px;
     height: 120px;
@@ -89,4 +95,111 @@
 .profileImage{
     height: 105px;
     width: 100px;
-}   
+}
+
+@media only screen and (max-width: 1150px) {
+    /* For mobile phones: */
+
+    .browseSideBar{
+        position: static;
+        display: none;
+    }
+
+    .mobileHeader{
+        display:block;
+    }
+
+    .blogs{
+        margin-left: 0;
+        float: left;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/*       Blog Details Page       */
+.details{
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-top: 12px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    float: right;
+    margin-right: 40px;
+    color: black;
+}
+
+.blogTitle{
+    border: 1px solid black;
+}
+
+.blogTitleText{
+    border: 1px solid black;
+    display: inline-block;
+    width: 83%;
+    padding: 5px 10px;
+    height: 200px;
+}
+
+.blogTitleTextH2{
+    margin: 0;
+}
+
+.blogTitleUser{
+    border: 1px solid black;
+    display: inline-block;
+    width: 151px;
+    /*float: right;*/
+    height: 200px;
+}
+
+.blogDetailsProfilePic{
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+}
+
+.blogBody{
+    border: 1px solid black;
+}
+
+.blogBodyText{
+    border: 1px solid black;
+}
+
+.blogComments{
+    border: 1px solid black;
+}
+
+.commentTitle{
+    border: 1px solid black;
+}
+
+.comment{
+    border: 1px solid black;
+}
+
+.commentText{
+    border: 1px solid black;
+}
+
+.commentDetails{
+    border: 1px solid black;
+}
+
+.commentDetailsUser{
+    border: 1px solid black;
+}
+
+.commentDetailsUserPic{
+    height: 75px;
+    width: 75px;
+}
+
+.commentDetailsDate{
+    border: 1px solid black;
+}

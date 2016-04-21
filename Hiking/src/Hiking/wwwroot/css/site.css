@@ -30,3 +30,7 @@
         z-index: 10 !important;
     }
 }
+
+.navbar{
+    margin-bottom: 0;
+}
