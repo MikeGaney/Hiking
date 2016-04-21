@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group" id="profPicInput">
                     <h4>Enter URL here:</h4>
-                    <input type="text" ng-model="controller.editProfile.profilePic" class="form-control" />
+                    <input type="text" ng-model="controller.editProfile.profilePic" class="form-control fromControl" />
                     
                     <!--<button class="btn btn-primary form-group">Upload</button>-->
                 </div>
@@ -47,17 +47,17 @@
                 <div class="form-group" id="nameInput">
                     <label>Change Name</label>
                     <h4>First Name</h4>
-                    <input type="text" ng-model="controller.editProfile.firstName" class="form-control" />
+                    <input type="text" ng-model="controller.editProfile.firstName" class="form-control fromControl" />
                     <h4>Last Name</h4>
-                    <input type="text" ng-model="controller.editProfile.lastName" class="form-control" />
+                    <input type="text" ng-model="controller.editProfile.lastName" class="form-control fromControl" />
                 </div>
                 <div class="form-group" id="displayNameInput">
                     <label>Change Trail Name</label>
-                    <input type="text" ng-model="controller.editProfile.displayName" class="form-control" maxlength="12" />
+                    <input type="text" ng-model="controller.editProfile.displayName" class="form-control fromControl" maxlength="12" />
                 </div>
                 <div class="form-group" id="ageInput">
                     <label>Change Age</label>
-                    <input type="text" ng-model="controller.editProfile.age" class="form-control" />
+                    <input type="text" ng-model="controller.editProfile.age" class="form-control fromControl" />
                 </div>
                 
                 <div class="form-group" id="expertWrapper">
@@ -83,11 +83,11 @@
                     <label>Change Password</label>
 
 
-                    <input type="password" name="oldPassword" class="form-control" placeholder="Current Password" />
-                    <hr />
-                    <input type="password" name="newPassword1" class="form-control" placeholder="New Password" />
-                    <hr />
-                    <input type="password" name="newPassword2" class="form-control" placeholder="Confirm New Password" />
+                    <input type="password" name="oldPassword" class="form-control fromControl" placeholder="Current Password" />
+                    <hr class="editHr"/>
+                    <input type="password" name="newPassword1" class="form-control fromControl" placeholder="New Password" />
+                    <hr class="editHr"/>
+                    <input type="password" name="newPassword2" class="form-control fromControl" placeholder="Confirm New Password" />
 
                 </div>
                 <div id="submitWrapper">
