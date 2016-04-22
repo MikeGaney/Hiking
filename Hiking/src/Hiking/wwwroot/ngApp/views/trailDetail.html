@@ -40,14 +40,6 @@
 
                         </div>
 
-                        <!-- Social Media -->
-                        <div class="legend">
-                            <h2>Social Media</h2>
-                            <hr />
-                            <h4>****</h4>
-                            <h4>***</h4>
-                        </div>
-
                         <!-- Weather Link -->
                         <div class="legend">
                             <h2>Local Weather</h2>
@@ -80,12 +72,12 @@
 
                         <!-- Trail Title -->
                         <div class="legend1">
-                            <h2 class="name">{{controller.trail.name}} <a href="/changes/{{controller.trail.id}}">Edit</a></h2>
+                            <h2 class="name">{{controller.trail.name}} </h2>
                         </div>
 
                         <!-- Map -->
                         <div class="map">
-                            <img src="{{controller.trail.map}}" width="600" />
+                            <img src="{{controller.trail.map}}" width="600" class="imagesDetails img-responsive" />
                         </div>
 
                         <!-- Details -->
@@ -106,7 +98,7 @@
                         </div>
                         <!-- Overview -->
                         <div class="legend overview">
-                            <h4>{{controller.trail.overview}}</h4>
+                            <h4>{{controller.trail.overview}}<button><a href="/changes/{{controller.trail.id}}">Edit</a></button></h4>
                         </div>
 
 
