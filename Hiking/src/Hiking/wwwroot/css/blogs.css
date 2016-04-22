@@ -14,7 +14,7 @@
     margin-bottom: 20px;
 }
 
-.browseSideBar {
+.browseSideBarBlogs {
     float: left;
     /*width: inherit;*/
     margin-top: 50px;
@@ -100,7 +100,7 @@
 @media only screen and (max-width: 1150px) {
     /* For mobile phones: */
 
-    .browseSideBar{
+    .browseSideBarBlogs {
         position: static;
         display: none;
     }

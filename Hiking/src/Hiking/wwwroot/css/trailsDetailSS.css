@@ -13,7 +13,7 @@
 .browseSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 25px;
     margin-right: 60px;
     width: 68%;
@@ -24,8 +24,8 @@
     background-color: rgba(255, 255, 255, 0.66);
     width:100%;
     padding: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #searchTitle {
@@ -132,13 +132,20 @@
 .browseSideBar {
     float: left;
     width: 22%;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-left: 60px;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
     padding-top: 10px;
     position: fixed;
+}
+
+.sidebarTitle {
+     color: firebrick;
+     font-weight:700;
+     text-align: center;
+     text-shadow: 5px 2px 1px rgba(0, 0, 0, 0.60);
 }
 
 .browseLegend {
@@ -259,8 +266,13 @@
 .map {
     margin-left: -280px;
     margin-bottom: 20px;
-   
+}
 
+.imagesDetails {
+    height: 600px;
+    margin-left: 300px;
+    overflow:hidden;
+    background-repeat:no-repeat;
 }
 
 .sidebar {
@@ -293,7 +305,7 @@ font-size: x-large;
 width: 100%;
 height: 50px;
 font-size: inherit;
-margin-top: 85px;
+margin-top: 130px;
 background-color: lawngreen;
 }
 
