@@ -10,7 +10,7 @@
     font-family: 'Arvo', serif;
     
 }
-
+/*new*/
 #profilePic {
     position: relative;
     border-color: lightgray;
@@ -21,9 +21,9 @@
     }
 .image {
     width: 100%;
-    height:100%;
-    
-#name{
+    height: 100%;
+}
+#name {
     position: absolute;
     display: block;
     box-shadow: 7px 7px 7px #404040;
