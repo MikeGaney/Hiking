@@ -43,6 +43,7 @@ namespace Hiking
             services.AddScoped<IGenericRepository, GenericRepository>();
             services.AddScoped<ISATrailsService, SATrailsService>();
             services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IBackpackService, BackpackService>();
 
             // Add framework services.
             services.AddEntityFramework()
