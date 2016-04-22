@@ -300,15 +300,15 @@ namespace Hiking.Models
               db.SaveChanges();
             }
 
-            var trails = db.Trails.ToList();
-            Random rnd = new Random();
+            //var trails = db.Trails.ToList();
+            //Random rnd = new Random();
 
-            var trl = trails[rnd.Next(trails.Count)];
+            //var trl = trails[rnd.Next(trails.Count)];
 
-            foreach (var trail in trails)
-            {
+            //foreach (var trail in trails)
+            //{
                 
-            }
+            //}
 
         }
     }
