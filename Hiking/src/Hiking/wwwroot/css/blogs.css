@@ -6,22 +6,30 @@
     border: 1px solid red;
 }
 
-.legend {
+.legendBlogs {
     background-color: rgba(255, 255, 255, 0.66);
-    width:95%;
+    width:100%;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .browseSideBarBlogs {
-    float: left;
-    /*width: inherit;*/
-    margin-top: 50px;
-    margin-left: 0px;
+    /*float: left;
+    margin-top: 80px;
+    margin-left: 60px;
     background-color: rgba(255, 255, 255, 0.33);
     position: fixed;
-    display: inline-block
+    display: inline-block*/
+    float: left;
+    width: 22%;
+    margin-top: 80px;
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.33);
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
 }
 
 .browsePage {
@@ -34,7 +42,7 @@
 
 .blogs{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 50px;
+    margin-top: 80px;
     margin-left: 30px;
     padding-top: 12px;
     padding-right: 40px;
@@ -97,16 +105,40 @@
     width: 100px;
 }
 
+.mobileHeader{
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.33);
+    display: none;
+}
+
+.mobileHeaderLinks{
+    min-width: 150px;
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+.mobileSections{
+    width: 24%;
+    display: inline-block
+}
+
 @media only screen and (max-width: 1150px) {
     /* For mobile phones: */
 
-    .browseSideBarBlogs {
+    .browseSideBarBlogs{
         position: static;
         display: none;
     }
 
     .mobileHeader{
         display:block;
+    }
+
+    .details{
+        margin-left: 0 !important;
+        float: left !important;
     }
 
     .blogs{
@@ -121,12 +153,10 @@
 
 /*       Blog Details Page       */
 .details{
-    border: 1px solid black;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 50px;
+    margin-top: 80px;
     margin-left: 30px;
     padding-top: 12px;
-    padding-right: 40px;
     padding-bottom: 15px;
     float: right;
     margin-right: 40px;
@@ -134,65 +164,89 @@
 }
 
 .blogTitle{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.66);
 }
 
 .blogTitleText{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: inline-block;
-    width: 83%;
-    padding: 5px 10px;
-    height: 200px;
+    width: 80%;
+    height: 100px;
 }
 
-.blogTitleTextH2{
+/*.blogTitleTextH2{
     margin: 0;
-}
+    font-size: 30px;
+}*/
 
 .blogTitleUser{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: inline-block;
-    width: 151px;
-    /*float: right;*/
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    float: right;
+    /*width: 151px;
+    height: 150px;*/
 }
 
 .blogDetailsProfilePic{
-    height: 150px;
-    width: 150px;
-    vertical-align: top;
+    height: 100px;
+    width: 100px;
+    /*vertical-align: middle;*/
 }
 
 .blogBody{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.66);
 }
 
 .blogBodyText{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .blogComments{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    margin-top: 20px;
 }
 
 .commentTitle{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.66);
+    margin-bottom: 20px;
+    height: 75px;
+    padding-top: 1px;
 }
 
 .comment{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    background-color: rgba(255, 255, 255, 0.66);
+    min-height: 130px;
+    margin-bottom: 20px;
 }
 
 .commentText{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    display: inline-block;
+    width: 80%;
+    margin-top: 10px;
 }
 
 .commentDetails{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    display: inline-block;
+    float: right;
+    width: 110px;
 }
 
 .commentDetailsUser{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    /*margin-top: 15px;*/
 }
 
 .commentDetailsUserPic{
@@ -201,5 +255,9 @@
 }
 
 .commentDetailsDate{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+}
+
+.addCommentBtn{
+    margin-top: 10px;
 }

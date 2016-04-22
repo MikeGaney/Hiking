@@ -52,45 +52,113 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-3 col-md-offset-1 browseSideBar">
-                    <div class="legend">
+
+                <div class="col-md-6">
+                    <div class="mobileHeader">
+                        <div class="mobileSections">
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Gatherings</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinks btn btn-lg btn-info">Weather</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinks btn btn-lg btn-info">Useful Links</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Other</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+
+                <!--<div class="col-md-3 col-md-offset-1 browseSideBarBlogs">
+                    <div class="legendBlogs">
                         <h2>Social Media</h2>
                         <hr />
                         <h4>****</h4>
                         <h4>***</h4>
                     </div>
 
-                    <!-- Weather Link -->
-                    <div class="legend">
+                    <div class="legendBlogs">
                         <h2>Local Weather</h2>
                         <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
                     </div>
 
-                    <!-- Meet Up Info -->
-                    <div class="legend">
+                    <div class="legendBlogs">
                         <h2>Upcomming Events</h2>
                         <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
                     </div>
+                </div>-->
+
+
+                <div class="col-md-4 browseSideBarBlogs">
+
+                    <!-- Meet Up Info -->
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles">Gatherings</h2>
+                        <button class="browseSBbtns"><a href="#">Click Here</a></button>
+                    </div>
+
+                    <!-- Weather Link -->
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles">Local Weather</h2>
+                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                    </div>
+
+                    <!-- Meet Up Info -->
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles">Need a Parking Pass</h2>
+                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles2">Social Media</h2>
+                        <hr />
+                        <a href="https://en-gb.facebook.com/login/"><img src="../../images/2114874155_af1849819d_o.png" width="50" /></a><a href="https://twitter.com/login?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Twitter.svg/200px-Twitter.svg.png" width="50" /></a><a href="https://www.instagram.com/accounts/login/"><img src="http://www.authenticdigitalmarketing.com/wp-content/uploads/2015/01/instagram-logo-icon-png-300x300-300x300.png" width="50" /></a><a href="https://secure.meetup.com/login/"><img src="http://austincreativereuse.org/wp-content/uploads/2015/04/meetup-icon.png" width="50" /></a><a href="https://www.pinterest.com/login/"><img src="http://sites.arbor.edu/whitelibrary/files/2014/05/pinterest-icon.png" width="50" /></a>
+                    </div>
+
                 </div>
+
+
                 <div class="col-md-8 details">
                     <div class="blogTitle">
+                        <!--<div class="blogTitleText">
+                            <span class="blogTitleTextH2">{{controller.blog.title}}</span>
+                        </div>-->
+
                         <div class="blogTitleText">
-                            <h2 class="blogTitleTextH2">{{controller.blog.title}}</h2>
+                            <h3 style="vertical-align:top; text-align: center">{{controller.blog.title}}</h3>
+                            <!--<div class="blogDetails">
+                                <span class="detailsLabel">Views: {{blog.views}}</span><br />
+                                <span class="detailsLabel">Comments: {{blog.commentCount}}</span>
+                                <span class="detailsLabel">Date: {{blog.creationDate | date:'MMM dd, h:mma'}}</span>
+                            </div>-->
+                            <!--<div class="blogDescription">
+                                <p>{{blog.message}}</p>
+                            </div>-->
                         </div>
+
+
                         <div class="blogTitleUser">
                             <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="blogDetailsProfilePic" />
                         </div>
                     </div>
+
+                    
+
                     <div class="blogBody">
-                        <p class="blogBodyText">{{controller.blog.message}}</p>
+                        <span class="blogBodyText">{{controller.blog.message}}</span>
                     </div>
+
                     <div class="blogComments">
-                        <div class="commentTItle">
-                            <h3>Comments</h3>
+                        <div class="commentTitle">
+                            <h2>Comments</h2>
                         </div>
+
                         <div class="comment" ng-repeat="comment in controller.blog.comments">
                             <div class="commentText">
-                                <p>{{comment.message}}</p>
+                                <span>{{comment.message}}</span>
                             </div>
                             <div class="commentDetails">
                                 <div class="commentDetailsUser">
@@ -100,6 +168,12 @@
                                     <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="addComment">
+                            <form ng-submit="controller.AddComment()">
+                                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                                <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
+                            </form>
                         </div>
                     </div>
                 </div>

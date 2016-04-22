@@ -11,6 +11,7 @@ namespace Hiking.Models
         public static void Initialize(IServiceProvider serviceProvider)
         {
             var db = serviceProvider.GetService<ApplicationDbContext>();
+
             if (!db.Trails.Any())
             {
                 db.Trails.AddRange(
@@ -298,6 +299,17 @@ namespace Hiking.Models
 
               db.SaveChanges();
             }
+
+            var trails = db.Trails.ToList();
+            Random rnd = new Random();
+
+            var trl = trails[rnd.Next(trails.Count)];
+
+            foreach (var trail in trails)
+            {
+                
+            }
+
         }
     }
 }

@@ -97,6 +97,12 @@ namespace Hiking {
                 controller: Hiking.Controllers.EditBlogController,
                 controllerAs: 'controller'
             })
+            .state('admin', {
+                url: '/admin',
+                templateUrl: '/ngApp/Admin/Views/admin.html',
+                controller: Hiking.Controllers.AdminController,
+                controllerAs: 'controller'
+            })
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'
