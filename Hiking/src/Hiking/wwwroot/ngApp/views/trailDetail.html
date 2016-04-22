@@ -9,13 +9,35 @@
                         <!-- Legend -->
                         <div class="legend">
                             <h2>Legend</h2>
-                            <hr />
-                            <h4>*******</h4>
-                            <h4>****</h4>
-                            <h4>******</h4>
-                            <h4>****</h4>
-                            <h4>*******</h4>
-                            <h4>**</h4>
+
+                            <div class="row">
+                                <!--<div class="col-md-4">-->
+                                
+                                <h5>Activities</h5>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.fishing"><img title="Fishing" src="../../images/fishing.png" width="30" /></li>
+                                    <li ng-show="controller.trail.biking"> <img title="Biking" src="../../images/bike.png" width="30" /></li>
+                                    <li ng-show="controller.trail.camping"><img title="Camping" src="../../images/tent.png" width="30" /></li>
+                                </ul>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.horses"><img title="Horseback Riding" src="../../images/horseback.png" width="30" /></li>
+                                    <li ng-show="controller.trail.lakes"><img title="Lakes" src="../../images/lakes.png" width="30" /></li>
+                                    <li ng-show="controller.trail.rivers"><img title="Rivers" src="../../images/lake.png" width="30" /></li>
+                                </ul>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.lookouts"><img title="Scenic Views" src="../../images/lookout.png" width="30" /></li>
+                                    <li ng-show="controller.trail.passRequired"><img title="Pass Required" src="../../images/parkpass.png" width="30" /></li>
+                                    <li ng-show="controller.trail.waterfalls"><img title="Waterfalls" src="../../images/river.png" width="30" /></li>
+                                </ul>
+                                <h5>Hazards</h5>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.bears"><img title="Bears Seighted" src="../../images/bear.png" width="30" /></li>
+
+                                    <li ng-show="controller.trail.cougars"><img title="Cougars Seighted" src="../../images/cougar.png" width="30" /></li>
+                                </ul>
+                            </div>
+
+
                         </div>
 
                         <!-- Social Media -->
@@ -77,7 +99,11 @@
                             <h4>Elevation: {{controller.trail.elevation}}</h4>
                             <button href="" class="saveToPack">Save Hike To Pack</button>
                         </div>
+                        <!--Icon display-->
+                        <div>
 
+
+                        </div>
                         <!-- Overview -->
                         <div class="legend overview">
                             <h4>{{controller.trail.overview}}</h4>
