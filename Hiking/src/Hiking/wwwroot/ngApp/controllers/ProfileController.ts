@@ -23,14 +23,18 @@
     export class EditProfileController {
         public editProfile;
         public profileToSave;
+        public profileToDelete;
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
-            private $state: ng.ui.IStateService)
+            private $state: ng.ui.IStateService,
+            private $stateParams: ng.ui.IStateParamsService)
         {
             this.editProfile = {};
             this.profileToSave = {};
             this.GetProfile();
+           
+            
         }
 
         GetProfile()
@@ -61,7 +65,15 @@
                 this.$state.go('viewprofile');
             })
         }
+        deleteProfile() {
+            let profileId = this.$stateParams["id"];
+            this.profileService.deleteProfile(profileId).then(() => {
+                this.$state.go('trails');              
+            });
+            
+        }
+
     }
 
-
+    
 }

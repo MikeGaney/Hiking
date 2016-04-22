@@ -1,0 +1,13 @@
+﻿.myTrailsWindow{
+    background-image:url(http://www.ilikewallpaper.net/ipad-air-wallpapers/download/28035/Spring-Art-Dark-Blue-Watercolor-Pattern-ipad-air-wallpaper-ilikewallpaper_com.jpg);
+    background-size:cover;
+    /*height: 1500px;*/
+    background-repeat: no-repeat;
+    min-width: 1600px;
+}
+#navPlaceholder {
+    height: 150px;
+}
+#footerPlaceholder{
+    height: 75px;
+}

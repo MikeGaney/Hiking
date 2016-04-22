@@ -14,6 +14,10 @@
             let editProfileResource = this.$resource('/api/account/editprofile');
             return editProfileResource.save(profileToEdit).$promise;
         }
+        deleteProfile(profileId) { //MH
+            let deleteProfileResource = this.$resource('/api/account/:id');
+            return deleteProfileResource.delete({ id: profileId }).$promise;
+        }
     }
     angular.module('Hiking').service('profileService', ProfileService);
 }
