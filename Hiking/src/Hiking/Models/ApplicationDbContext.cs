@@ -12,14 +12,14 @@ namespace Hiking.Models
         public DbSet<Trail> Trails { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<UserTrail> UserTrails { get; set; }
+        //public DbSet<UserTrail> UserTrails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
             base.OnModelCreating(builder);
 
-            builder.Entity<UserTrail>().HasKey(x => new { x.TrailID, x.UserID });
+            //builder.Entity<UserTrail>().HasKey(x => new { x.TrailID, x.UserID });
 
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
