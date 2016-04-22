@@ -22,7 +22,10 @@ namespace Hiking.Services {
         public getUserId() {
             return this.$window.sessionStorage.getItem('userId');
         }
-
+        public getFirstName()
+        {
+            return this.$window.sessionStorage.getItem('firstName');
+        }
 
         public getClaim(type) {
             var allClaims = JSON.parse(this.$window.sessionStorage.getItem('claims'));

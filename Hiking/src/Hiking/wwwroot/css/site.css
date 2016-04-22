@@ -34,3 +34,27 @@
 .navbar{
     margin-bottom: 0;
 }
+
+.navbar-header{
+    margin-right: 20px !important;
+}
+
+.navBar-link{
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    padding: 23px 10px 22px 10px;
+}
+
+.navBar-link:focus, .navBar-link:hover{
+    text-decoration: none;
+}
+
+.navBarMenu{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navBarDropMenu{
+    margin-top: 17px;
+}

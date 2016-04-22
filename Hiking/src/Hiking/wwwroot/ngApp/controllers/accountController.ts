@@ -12,6 +12,16 @@ namespace Hiking.Controllers {
             return this.accountService.getUserId();
         }
 
+        public getFirstName()
+        {
+            let name = this.accountService.getFirstName();
+            if (name == "null")
+            {
+                name = "";
+            }
+            return name;
+        }
+
         public getClaim(type) {
             return this.accountService.getClaim(type);
         }
