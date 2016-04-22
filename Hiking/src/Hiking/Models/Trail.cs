@@ -33,5 +33,7 @@ namespace Hiking.Models
         public int Rating { get; set; }
         public string OpenSeason { get; set; }
         public ICollection<Comment> Comments { get; set; }
+        public ICollection<ApplicationUser> UserTrails { get; set; }
+
     }
 }

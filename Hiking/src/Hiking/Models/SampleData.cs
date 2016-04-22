@@ -104,13 +104,13 @@ namespace Hiking.Models
                     Expertise = 1,
                     Bio = "Love the outside.",
                     DisplayName = "ArcherMadden",
-                    MyTrails = new List<Trail> {
-                            new Trail
-                            {
+                    //MyTrails = new List<Trail> {
+                    //        new Trail
+                    //        {
                                 
 
-                            }
-                    }
+                    //        }
+                    //}
                 };
                 await userManager.CreateAsync(mandy, "Secret123!");
 
