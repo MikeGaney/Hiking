@@ -13,10 +13,6 @@ namespace Hiking.Models
             var db = sp.GetService<ApplicationDbContext>();
             var userIdList = db.Users.Select(u => u.Id).ToList();
             Random rnd = new Random();
-            var rnd1 = userIdList[rnd.Next(userIdList.Count)];
-            var rnd2 = userIdList[rnd.Next(userIdList.Count)];
-            var rnd3 = userIdList[rnd.Next(userIdList.Count)];
-            var rnd4 = userIdList[rnd.Next(userIdList.Count)];
 
             if (!db.Blogs.Any())
             {

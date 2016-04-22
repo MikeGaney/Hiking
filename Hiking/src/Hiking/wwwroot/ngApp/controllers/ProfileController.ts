@@ -16,6 +16,14 @@
             this.profileService.getProfile(id).then((data) =>
             {
                 this.viewProfile = data;
+                if (this.viewProfile.expertise == 0)
+                {
+                    this.viewProfile.expertise = "-";
+                }
+                if (this.viewProfile.age == 0)
+                {
+                    this.viewProfile.age = "-";
+                }
                 //console.log(data);
             });
         }

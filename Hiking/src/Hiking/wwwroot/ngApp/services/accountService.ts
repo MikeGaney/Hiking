@@ -26,6 +26,10 @@ namespace Hiking.Services {
         {
             return this.$window.sessionStorage.getItem('firstName');
         }
+        public getDisplayName()
+        {
+            return this.$window.sessionStorage.getItem('displayName');
+        }
 
         public getClaim(type) {
             var allClaims = JSON.parse(this.$window.sessionStorage.getItem('claims'));

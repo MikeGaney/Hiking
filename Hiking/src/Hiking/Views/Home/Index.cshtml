@@ -93,10 +93,12 @@
 
                         <span uib-dropdown on-toggle="toggled(open)">
                             <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
-                                Welcome Back {{controller.getFirstName()}} <span class="caret"></span>
+                                Welcome Back {{controller.getName()}} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
                                 <li role="menuitem"><a href="/viewprofile">Profile</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a href="/admin">Admin Page</a></li>
                                 <li class="divider"></li>
                                 <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
                             </ul>
