@@ -15,7 +15,7 @@
             console.log( "hello" );
             console.log( this.trails );
             this.trailsService.saveOneTrail( this.trails ).then(() => {
-                this.$state.go( 'home' );
+                this.$state.go( 'trails' );
 
             });
         }

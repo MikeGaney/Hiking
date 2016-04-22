@@ -259,8 +259,6 @@
 .map {
     margin-left: -280px;
     margin-bottom: 20px;
-   
-
 }
 
 .sidebar {
@@ -296,5 +294,13 @@ font-size: inherit;
 margin-top: 85px;
 background-color: lawngreen;
 }
+.ulLegend li {
+    list-style-type:none;
+    display:inline;
+    /*left:-75px;*/
 
+}
 
+.ulLegend {
+    padding-left:0;
+}
