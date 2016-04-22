@@ -23,26 +23,35 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-3 col-md-offset-1 browseSideBar">
-                    <div class="legend">
-                        <h2>Social Media</h2>
-                        <hr />
-                        <h4>****</h4>
-                        <h4>***</h4>
+                <div class="col-md-4 browseSideBarBlogs">
+
+                    <!-- Meet Up Info -->
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles">Gatherings</h2>
+                        <button class="browseSBbtns"><a href="#">Click Here</a></button>
                     </div>
 
                     <!-- Weather Link -->
-                    <div class="legend">
-                        <h2>Local Weather</h2>
-                        <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles">Local Weather</h2>
+                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
                     </div>
 
                     <!-- Meet Up Info -->
-                    <div class="legend">
-                        <h2>Upcomming Events</h2>
-                        <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles">Need a Parking Pass</h2>
+                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
                     </div>
+
+                    <!-- Social Media -->
+                    <div class="legendBlogs">
+                        <h2 class="browseSBtitles2">Social Media</h2>
+                        <hr />
+                        <a href="https://en-gb.facebook.com/login/"><img src="../../images/2114874155_af1849819d_o.png" width="50" /></a><a href="https://twitter.com/login?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Twitter.svg/200px-Twitter.svg.png" width="50" /></a><a href="https://www.instagram.com/accounts/login/"><img src="http://www.authenticdigitalmarketing.com/wp-content/uploads/2015/01/instagram-logo-icon-png-300x300-300x300.png" width="50" /></a><a href="https://secure.meetup.com/login/"><img src="http://austincreativereuse.org/wp-content/uploads/2015/04/meetup-icon.png" width="50" /></a><a href="https://www.pinterest.com/login/"><img src="http://sites.arbor.edu/whitelibrary/files/2014/05/pinterest-icon.png" width="50" /></a>
+                    </div>
+
                 </div>
+
                 <div class="col-md-8 blogs">
                     <div class="singleBlog" ng-repeat="blog in controller.blogs">
                         <div class="blogLeft">
