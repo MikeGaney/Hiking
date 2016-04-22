@@ -16,5 +16,6 @@ namespace Hiking.Models
         public int Expertise { get; set; }
         public string Bio { get; set; }
         public string DisplayName { get; set; }
+        public ICollection<Trail> MyTrails { get; set; }
     }
 }

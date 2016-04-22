@@ -68,7 +68,7 @@ namespace Hiking {
                 controllerAs: 'controller'
             })
             .state('editprofile', {
-                url: '/editprofile',
+                url: '/editprofile/:id',
                 templateUrl: '/ngApp/Users/views/EditProfile.html',
                 controller: Hiking.Controllers.EditProfileController,
                 controllerAs: 'controller'
@@ -101,6 +101,12 @@ namespace Hiking {
                 url: '/admin',
                 templateUrl: '/ngApp/Admin/Views/admin.html',
                 controller: Hiking.Controllers.AdminController,
+                controllerAs: 'controller'
+            })
+            .state('mytrails', {
+                url: '/mytrails/:id',
+                templateUrl: '/ngApp/Users/views/myTrails.html',
+                controller: Hiking.Controllers.MyTrailsController,
                 controllerAs: 'controller'
             })
             .state('notFound', {

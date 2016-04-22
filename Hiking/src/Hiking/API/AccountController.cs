@@ -72,6 +72,15 @@ namespace Hiking.Controllers
 
             return Ok();
         }
+        [HttpDelete("{id}")] //MH
+        //[Route("deleteprofile")]
+        public IActionResult Delete(string id)  //won't accept int as data type and string/id is used in get(id) above
+        {
+            var profileToDelete = repo.Query<ApplicationUser>().FirstOrDefault(u => u.Id == id);
+            repo.Delete<ApplicationUser>(profileToDelete);
+            repo.SaveChanges();
+            return Ok(profileToDelete);
+        }
 
         private async Task<UserViewModel> GetUser(string userName)
         {
