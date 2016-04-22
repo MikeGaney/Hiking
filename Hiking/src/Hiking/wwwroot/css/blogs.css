@@ -105,6 +105,25 @@
     width: 100px;
 }
 
+.mobileHeader{
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.33);
+    display: none;
+}
+
+.mobileHeaderLinks{
+    min-width: 150px;
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+.mobileSections{
+    width: 24%;
+    display: inline-block
+}
+
 @media only screen and (max-width: 1150px) {
     /* For mobile phones: */
 
@@ -115,6 +134,11 @@
 
     .mobileHeader{
         display:block;
+    }
+
+    .details{
+        margin-left: 0 !important;
+        float: left !important;
     }
 
     .blogs{
@@ -129,12 +153,10 @@
 
 /*       Blog Details Page       */
 .details{
-    /*border: 1px solid black;*/
     background-color: rgba(255, 255, 255, 0.33);
     margin-top: 80px;
     margin-left: 30px;
     padding-top: 12px;
-    /*padding-right: 40px;*/
     padding-bottom: 15px;
     float: right;
     margin-right: 40px;
