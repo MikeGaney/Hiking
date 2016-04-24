@@ -8,6 +8,7 @@ namespace Hiking.Services
     {
         void CompletedTrail(int id);
         BackpackTrailViewModel GetTrail(int id);
-        List<Trail> GetTrailList();
+        List<Trail> GetTrailList(string id);
+        void RemoveTrail(int id);
     }
 }

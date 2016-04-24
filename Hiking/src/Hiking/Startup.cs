@@ -128,7 +128,7 @@ namespace Hiking
             SampleData.Initialize(app.ApplicationServices).Wait();
             SampleDataTrail.Initialize(app.ApplicationServices);
             SampleDataBlog.Initialize(app.ApplicationServices);
-
+            //SampleDataBackpack.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.

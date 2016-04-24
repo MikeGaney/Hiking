@@ -17,28 +17,28 @@ namespace Hiking.Models
 
             Random rnd = new Random();
 
-            db.UserTrails.AddRange(
-                //use for loop to go through as many times as  you want
-                    new UserTrail
-                    {
-                        TrailId = trailIdList[rnd.Next(trailIdList.Count)],
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)]
-                    },
-                    new UserTrail
-                    {
-                        TrailId = trailIdList[rnd.Next(trailIdList.Count)],
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)]
-                    }
-                );
+            //db.UserTrails.AddRange(
+            //    //use for loop to go through as many times as  you want
+            //        new UserTrail
+            //        {
+            //            TrailId = trailIdList[rnd.Next(trailIdList.Count)],
+            //            ApplicationUserId = userIdList[rnd.Next(userIdList.Count)]
+            //        },
+            //        new UserTrail
+            //        {
+            //            TrailId = trailIdList[rnd.Next(trailIdList.Count)],
+            //            ApplicationUserId = userIdList[rnd.Next(userIdList.Count)]
+            //        }
+            //    );
 
-            //for (int i = 0; i < 50; i++)
-            //{
-            //    db.UserTrails.Add(new UserTrail
-            //    {
-            //        TrailId = trailIdList[rnd.Next(trailIdList.Count)],
-            //        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)]
-            //    });
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                db.UserTrails.Add(new UserTrail
+                {
+                    TrailId = trailIdList[rnd.Next(trailIdList.Count)],
+                    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)]
+                });
+            }
 
             db.SaveChanges();
         }
