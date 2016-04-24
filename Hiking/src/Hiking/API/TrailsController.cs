@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Hiking.Models;
+using Hiking.Repositories;
+using Microsoft.Data.Entity;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -31,7 +33,7 @@ namespace Hiking.API
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var trail = _db.Trails.FirstOrDefault(t => t.Id == id);
+            var trail = _db.Trails.Where(t => t.Id == id).FirstOrDefault();
             if(trail == null)
             {
                 return HttpNotFound();

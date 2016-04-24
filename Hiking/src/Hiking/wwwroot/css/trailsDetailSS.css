@@ -264,13 +264,13 @@
 }
 
 .map {
-    margin-left: -280px;
     margin-bottom: 20px;
+    display: inline-block;
+    max-width: 62.5%;
 }
 
 .imagesDetails {
     height: 600px;
-    margin-left: 300px;
     overflow:hidden;
     background-repeat:no-repeat;
 }
@@ -280,7 +280,6 @@
     background-color: rgba(255, 255, 255, 0.66);
     width:240px;
     height: 600px;
-    margin-top: -620px;
     margin-right: 39px;
     padding-top: 80px;
     padding-right: 25px;

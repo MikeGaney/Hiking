@@ -12,6 +12,7 @@ namespace Hiking.Models
         public DbSet<Trail> Trails { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<TrailComment> TrailComments { get; set; }
         //public DbSet<UserTrail> UserTrails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

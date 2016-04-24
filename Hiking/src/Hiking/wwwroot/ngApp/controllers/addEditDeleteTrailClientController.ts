@@ -8,7 +8,10 @@
         getNewTrail() {
             let trailId = this.$stateParams["id"];
 
-            this.trails = this.trailsService.getOneTrail( trailId );
+            this.trailsService.getOneTrail(trailId).then((data) =>
+            {
+                this.trails = data;
+            });
         };
 
         addNewTrail() {

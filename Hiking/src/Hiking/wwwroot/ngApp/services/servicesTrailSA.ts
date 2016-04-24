@@ -11,7 +11,7 @@ namespace Hiking.Services {
             return this.trailsResource.query();
         }
         public getOneTrail( id ) {
-            return this.trailsResource.get( { id: id });
+            return this.trailsResource.get( { id: id }).$promise;
         }
         public saveOneTrail( trails ) {
             console.log( trails );

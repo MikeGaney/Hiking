@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-lg-2 col-md-1 col-sm-1 detailsLeftColumn">
+                    <div class="col-sm-2 detailsLeftColumn">
 
                         <!-- Legend -->
                         <div class="legend">
@@ -103,8 +103,18 @@
 
 
                         <!-- User Comments -->
-                        <div>
-                            <h2></h2>
+                        <div class="comment" ng-repeat="comment in controller.trail.trailComments">
+                            <div class="commentText">
+                                <span>{{comment.message}}</span>
+                            </div>
+                            <div class="commentDetails">
+                                <div class="commentDetailsUser">
+                                    <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
+                                </div>
+                                <div class="commentDetailsDate">
+                                    <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                                </div>
+                            </div>
                         </div>
 
 

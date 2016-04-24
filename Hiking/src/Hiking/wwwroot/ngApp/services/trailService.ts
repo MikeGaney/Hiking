@@ -16,7 +16,7 @@
         }
 
        public getTrail(id) {
-            return this.trailResource.get({ id: id });
+            return this.trailResource.get({ id: id }).$promise;
 
         }
 

@@ -12,6 +12,9 @@ namespace Hiking.Models
         {
             var db = serviceProvider.GetService<ApplicationDbContext>();
 
+            var userIdList = db.Users.Select(u => u.Id).ToList();
+            Random rnd = new Random();
+
             if (!db.Trails.Any())
             {
                 db.Trails.AddRange(
@@ -41,6 +44,27 @@ namespace Hiking.Models
                         Cougars = true,
                         Rating = 4,
                         OpenSeason = "",
+                        TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                     },
 
                      new Trail
@@ -68,7 +92,27 @@ namespace Hiking.Models
                          Cougars = true,
                          Rating = 4,
                          OpenSeason = "",
-
+                         TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                      },
 
                       new Trail
@@ -96,7 +140,27 @@ namespace Hiking.Models
                           Cougars = true,
                           Rating = 4,
                           OpenSeason = "",
-
+                          TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                       },
 
                        new Trail
@@ -124,7 +188,27 @@ namespace Hiking.Models
                            Cougars = true,
                            Rating = 4,
                            OpenSeason = "",
-
+                           TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                        },
 
                         new Trail
@@ -152,7 +236,27 @@ namespace Hiking.Models
                             Cougars = true,
                             Rating = 4,
                             OpenSeason = "",
-
+                            TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                         },
 
                          new Trail
@@ -180,7 +284,27 @@ namespace Hiking.Models
                              Cougars = true,
                              Rating = 5,
                              OpenSeason = "",
-
+                             TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                          },
 
                           new Trail
@@ -208,7 +332,27 @@ namespace Hiking.Models
                               Cougars = false,
                               Rating = 4,
                               OpenSeason = "",
-
+                              TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                           },
 
                            new Trail
@@ -236,7 +380,27 @@ namespace Hiking.Models
                                Cougars = false,
                                Rating = 5,
                                OpenSeason = "",
-
+                               TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                            },
 
                             new Trail
@@ -264,7 +428,27 @@ namespace Hiking.Models
                                 Cougars = true,
                                 Rating = 3,
                                 OpenSeason = "",
-
+                                TrailComments = new List<TrailComment>
+                        {
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            },
+                            new TrailComment
+                            {
+                                CreationDate = DateTime.Now,
+                                Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                UserID = userIdList[rnd.Next(userIdList.Count)],
+                            }
+                        }
                             },
 
                            new Trail
@@ -292,12 +476,32 @@ namespace Hiking.Models
                                Cougars = true,
                                Rating = 4,
                                OpenSeason = "",
-
+                               TrailComments = new List<TrailComment>
+                            {
+                                new TrailComment
+                                {
+                                    CreationDate = DateTime.Now,
+                                    Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                    UserID = userIdList[rnd.Next(userIdList.Count)],
+                                },
+                                new TrailComment
+                                {
+                                    CreationDate = DateTime.Now,
+                                    Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                    UserID = userIdList[rnd.Next(userIdList.Count)],
+                                },
+                                new TrailComment
+                                {
+                                    CreationDate = DateTime.Now,
+                                    Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                                    UserID = userIdList[rnd.Next(userIdList.Count)],
+                                }
+                            }
                            });
 
-                   
 
-              db.SaveChanges();
+
+                db.SaveChanges();
             }
 
             //var trails = db.Trails.ToList();
@@ -307,7 +511,7 @@ namespace Hiking.Models
 
             //foreach (var trail in trails)
             //{
-                
+
             //}
 
         }

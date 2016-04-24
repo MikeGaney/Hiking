@@ -60,7 +60,7 @@ namespace Hiking.Services
 
         public Trail GetOneTrail(int id)
         {
-            return _repo.Query<Trail>().Where(t => t.Id==id).FirstOrDefault();
+            return _repo.Query<Trail>().Where(t => t.Id==id).Include(t => t.TrailComments).FirstOrDefault();
         }
 
         public List<Trail> GetTrailsList()
