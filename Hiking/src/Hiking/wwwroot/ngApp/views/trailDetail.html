@@ -101,18 +101,37 @@
                             <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}">Edit</a></button></h4>
                         </div>
 
+                        <!-- Gatherings -->
+                        <div>
+                            <h3>Upcoming Gatherings</h3>
+                            <table class="table">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>User</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr ng-repeat="gathering in controller.trail.gatherings">
+                                    <td><a href="/gatheringDetails/{{gathering.id}}">{{gathering.name}}</a></td>
+                                    <td>{{gathering.ownerId}}</td>
+                                    <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
+                                </tr>
+                            </table>
+                        </div>
 
                         <!-- User Comments -->
-                        <div class="comment" ng-repeat="comment in controller.trail.trailComments">
-                            <div class="commentText">
-                                <span>{{comment.message}}</span>
-                            </div>
-                            <div class="commentDetails">
-                                <div class="commentDetailsUser">
-                                    <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
+                        <div>
+                            <h3>Comments</h3>
+                            <div class="comment" ng-repeat="comment in controller.trail.trailComments">
+                                <div class="commentText">
+                                    <span>{{comment.message}}</span>
                                 </div>
-                                <div class="commentDetailsDate">
-                                    <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                                <div class="commentDetails">
+                                    <div class="commentDetailsUser">
+                                        <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
+                                    </div>
+                                    <div class="commentDetailsDate">
+                                        <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

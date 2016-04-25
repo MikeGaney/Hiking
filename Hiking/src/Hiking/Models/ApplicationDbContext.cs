@@ -13,12 +13,16 @@ namespace Hiking.Models
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<TrailComment> TrailComments { get; set; }
+        public DbSet<Gathering> Gatherings { get; set; }
+        public DbSet<GatheringUsers> GatheringUsers { get; set; }
         //public DbSet<UserTrail> UserTrails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
             base.OnModelCreating(builder);
+
+            builder.Entity<GatheringUsers>().HasKey(x => new { x.GatheringID, x.ApplicationUserId });
 
             //builder.Entity<UserTrail>().HasKey(x => new { x.TrailID, x.UserID });
 

@@ -109,6 +109,18 @@ namespace Hiking {
                 controller: Hiking.Controllers.MyTrailsController,
                 controllerAs: 'controller'
             })
+            .state('gatherings', {
+                url: '/gatherings',
+                templateUrl: '/ngApp/Gatherings/Views/gatherings.html',
+                controller: Hiking.Controllers.GatheringController,
+                controllerAs: 'controller'
+            })
+            .state('gatheringDetails', {
+                url: '/gatheringDetails/:id',
+                templateUrl: '/ngApp/Gatherings/Views/gatherDetails.html',
+                controller: Hiking.Controllers.GatheringDetailsController,
+                controllerAs: 'controller'
+            })
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'

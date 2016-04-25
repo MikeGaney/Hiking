@@ -1,0 +1,18 @@
+﻿<h1>Gatherings Page</h1>
+
+<div class="col-md-8 col-md-offset-2">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Owner</th>
+            <th>Time</th>
+        </tr>
+        <tr ng-repeat="gather in controller.gatherings">
+            <td>{{gather.id}}</td>
+            <td><a href="/gatheringDetails/{{gather.id}}">{{gather.name}}</a></td>
+            <td>{{gather.ownerId}}</td>
+            <td>{{gather.time | date: 'MMM dd @ h:mma'}}</td>
+        </tr>
+    </table>
+</div>

@@ -71,6 +71,20 @@
                             </ul>
                         </span>
                     </div>
+
+                    <div class="nav navbar-nav navBarMenu">
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                                Treks <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li role="menuitem"><a href="/gatherings">View Treks</a></li>
+                                <li role="menuitem"><a href="/gatherings">Search Treks</a></li>
+                                <li class="divider" ng-show="controller.getClaim('isAdmin')"></li>
+                                @*<li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/blog/add">Add a Blog</a></li>*@
+                            </ul>
+                        </span>
+                    </div>
                    
                     @*<ul class="nav navbar-nav navbar-right">
                         <li><a href="/viewprofile">View Profile</a></li>

@@ -1,0 +1,43 @@
+﻿<h1>Gathering Details Page</h1>
+
+<div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+        <label>ID</label>
+        <label>{{controller.gather.id}}</label>
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <label>{{controller.gather.name}}</label>
+    </div>
+    <div class="form-group" ng-show="controller.IsLoggedIn() != null && controller.userInGather == false">
+        <label><a ng-click="controller.AddToGathering()">Add self to gathering</a></label>
+    </div>
+    <div class="form-group" ng-show="controller.userInGather == true">
+        <label>You are already part of this Gathering - </label>
+        <label><a ng-click="controller.RemoveFromGathering()">Remove self from Gathering</a></label>
+    </div>
+    <div class="form-group">
+        <label>Time</label>
+        <label>{{controller.gather.time | date: 'MMM dd @ h:mma'}}</label>
+    </div>
+    <div class="form-group">
+        <label>Owner</label>
+        <label>{{controller.gather.ownerId}}</label>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <label>{{controller.gather.description}}</label>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Display Name</th>
+            <th>UserId</th>
+        </tr>
+        <tr ng-repeat="user in controller.gather.users">
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.displayName}}</td>
+            <td>{{user.userId}}</td>
+        </tr>
+    </table>
+</div>
