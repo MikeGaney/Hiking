@@ -8,9 +8,10 @@ using Hiking.Models;
 namespace Hiking.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160426210436_MultipleRatings")]
+    partial class MultipleRatings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -155,9 +156,7 @@ namespace Hiking.Migrations
 
                     b.Property<DateTime>("Time");
 
-                    b.Property<int>("TrailId");
-
-                    b.Property<string>("TrailName");
+                    b.Property<int?>("TrailId");
 
                     b.HasKey("Id");
                 });

@@ -13,5 +13,8 @@ namespace Hiking.Models
         public DateTime Time { get; set; }
         public ICollection<GatheringUsers> GatheringUsers { get; set; }
         public string OwnerId { get; set; }
+        public string TrailName { get; set; }
+        //public Trail Trail { get; set; }
+        public int TrailId { get; set; }
     }
 }

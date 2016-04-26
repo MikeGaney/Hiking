@@ -60,8 +60,11 @@ namespace Hiking.Services
 
         public Trail GetOneTrail(int id)
         {
-            var list = _repo.Query<Trail>().Where(t => t.Id==id).Include(t => t.TrailComments).Include(t => t.Gatherings).FirstOrDefault();
+            var list = _repo.Query<Trail>().Where(t => t.Id==id).Include(t => t.TrailComments).Include(t => t.Gatherings).Include(t => t.FamilyRating).Include(t => t.BeautyRating).Include(t => t.RatingList).FirstOrDefault();
             list.Gatherings = list.Gatherings.OrderBy(g => g.Time).ToList();
+            list.BeautyRate = (int)list.BeautyRating.Average(b => b.Rating);
+            list.FamilyRate = (int)list.FamilyRating.Average(r => r.Rating);
+            list.Rating = (int)list.RatingList.Average(r => r.Rating);
 
             List<Gathering> newList = new List<Gathering>();
             foreach (var item in list.Gatherings)

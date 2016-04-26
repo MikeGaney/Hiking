@@ -14,5 +14,7 @@ namespace Hiking.ViewModels.Gatherings
         public DateTime Time { get; set; }
         public ICollection<GatheringUserViewModel> Users { get; set; }
         public string OwnerId { get; set; }
+        public string TrailName { get; set; }
+        public int TrailId { get; set; }
     }
 }

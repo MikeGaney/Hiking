@@ -38,14 +38,14 @@ namespace Hiking.Services
                 Id = gathering.Id,
                 Description = gathering.Description,
                 Name = gathering.Name,
-                 OwnerId = gathering.OwnerId,
-                 Time = gathering.Time,
-                 Users = repo.Query<GatheringUsers>().Where(gu => gu.GatheringID == id).Select(gu => new GatheringUserViewModel {
-                     DisplayName = gu.ApplicationUser.DisplayName,
-                     FirstName = gu.ApplicationUser.FirstName,
-                     LastName = gu.ApplicationUser.LastName,
-                     UserId = gu.ApplicationUser.Id
-                 }).ToList()
+                OwnerId = gathering.OwnerId,
+                Time = gathering.Time,
+                Users = repo.Query<GatheringUsers>().Where(gu => gu.GatheringID == id).Select(gu => new GatheringUserViewModel {
+                    DisplayName = gu.ApplicationUser.DisplayName,
+                    FirstName = gu.ApplicationUser.FirstName,
+                    LastName = gu.ApplicationUser.LastName,
+                    UserId = gu.ApplicationUser.Id
+                }).ToList()
             };
             return data;
         }

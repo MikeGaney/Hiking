@@ -2,6 +2,9 @@
 
     export class TrailDetailsController {
         public trail;
+        public ratingStates = [
+            { stateOn: 'fa fa-star', stateOff: 'fa fa-star-o' }
+        ];
 
         constructor(private trailsService: Hiking.Services.TrailsService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService) {
 

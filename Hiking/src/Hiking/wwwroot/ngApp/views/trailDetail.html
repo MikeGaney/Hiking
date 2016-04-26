@@ -54,8 +54,19 @@
 
                         <!-- Rating -->
                         <div class="legend">
-                            <h2>Trail Rating</h2>
-                            <img src="http://catherinedunn.co.uk/wp-content/uploads/2016/03/4-stars.png" alt="" class="src" width="200" />
+                            <div>
+                                <h2>Trail Rating</h2>
+                                <!--<img src="http://catherinedunn.co.uk/wp-content/uploads/2016/03/4-stars.png" alt="" class="src" width="200" />-->
+                                <uib-rating ng-model="controller.trail.rating" max="5" read-only="true" class="rating"></uib-rating>
+                            </div>
+                            <div>
+                                <h4>View Rating</h4>
+                                <uib-rating ng-model="controller.trail.beautyRate" max="5" read-only="true" class="smallRating"></uib-rating>
+                            </div>
+                            <div>
+                                <h4>Family Friendly Rating</h4>
+                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating>
+                            </div>
                         </div>
 
                         <!-- Open Seasons -->
@@ -108,11 +119,13 @@
                                 <tr>
                                     <th>Title</th>
                                     <th>User</th>
+                                    <!--<th>Trail Name</th>-->
                                     <th>Date</th>
                                 </tr>
                                 <tr ng-repeat="gathering in controller.trail.gatherings">
                                     <td><a href="/gatheringDetails/{{gathering.id}}">{{gathering.name}}</a></td>
                                     <td>{{gathering.ownerId}}</td>
+                                    <!--<td><a href="/trailDetail/{{gathering.trailId}}">{{gathering.trailName}}</a></td>-->
                                     <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
                                 </tr>
                             </table>
