@@ -11,6 +11,8 @@
     <link href="~/css/blogs.css" rel="stylesheet" />
     <link href="~/css/trailchanges.css" rel="stylesheet" />
     <link href="~/css/editprofile.css" rel="stylesheet" />
+    <link href="~/css/about1.css" rel="stylesheet" />
+    <link href="~/css/home1.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
     <base href="/" />
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
@@ -19,10 +21,10 @@
 </head>
 <body ng-controller="accountController as controller">
     <div class="container">
-        
+
         @* start of Navbar *@
 
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -37,13 +39,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     @*<ul class="nav navbar-nav">
-                        <li><a href="/trails">View Trails</a></li>
-                        <li><a href="/changes/">Add a Trail</a></li>
-                        <li><a href="/blogs">Blogs</a></li>
-                        <li><a href="/blog/add">Add New Blog</a></li>
-                       
-                    </ul>*@
-                    
+                            <li><a href="/trails">View Trails</a></li>
+                            <li><a href="/changes/">Add a Trail</a></li>
+                            <li><a href="/blogs">Blogs</a></li>
+                            <li><a href="/blog/add">Add New Blog</a></li>
+
+                        </ul>*@
+
                     <div class="nav navbar-nav navBarMenu">
                         <span uib-dropdown on-toggle="toggled(open)">
                             <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
@@ -71,25 +73,25 @@
                             </ul>
                         </span>
                     </div>
-                   
+
                     @*<ul class="nav navbar-nav navbar-right">
-                        <li><a href="/viewprofile">View Profile</a></li>
-                        <li><a ng-click="controller.showRegisterModal()">Register</a></li>
-                        <li><a ng-click="controller.showLoginModal()">Login</a></li>
-                        <li><a ng-click="controller.logout()">Logout</a></li>
-                    </ul>*@
+                            <li><a href="/viewprofile">View Profile</a></li>
+                            <li><a ng-click="controller.showRegisterModal()">Register</a></li>
+                            <li><a ng-click="controller.showLoginModal()">Login</a></li>
+                            <li><a ng-click="controller.logout()">Logout</a></li>
+                        </ul>*@
 
                     <div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
                         @*<div class="btn-group" uib-dropdown keyboard-nav>
-                            <button id="simple-btn-keyboard-nav" type="button" class="nav-item navbar-link" uib-dropdown-toggle>
-                                Welcome Back {{controller.getFirstName()}} <span class="caret"></span>
-                            </button>
-                            <ul uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
-                                <li role="menuitem"><a href="/viewProfile">Profile</a></li>
-                                <li class="divider"></li>
-                                <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
-                            </ul>
-                        </div>*@
+                                <button id="simple-btn-keyboard-nav" type="button" class="nav-item navbar-link" uib-dropdown-toggle>
+                                    Welcome Back {{controller.getFirstName()}} <span class="caret"></span>
+                                </button>
+                                <ul uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                                    <li role="menuitem"><a href="/viewProfile">Profile</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
+                                </ul>
+                            </div>*@
 
                         <span uib-dropdown on-toggle="toggled(open)">
                             <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
@@ -117,6 +119,12 @@
 
         @* end of navbar *@
 
+        @*Footer*@
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                
+            </div>
+        </nav>
         <ui-view></ui-view>
     </div>
 
