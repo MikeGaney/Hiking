@@ -40,6 +40,8 @@ namespace Hiking.Services
                 Name = gathering.Name,
                 OwnerId = gathering.OwnerId,
                 Time = gathering.Time,
+                TrailId = gathering.TrailId,
+                TrailName = gathering.TrailName,
                 Users = repo.Query<GatheringUsers>().Where(gu => gu.GatheringID == id).Select(gu => new GatheringUserViewModel {
                     DisplayName = gu.ApplicationUser.DisplayName,
                     FirstName = gu.ApplicationUser.FirstName,

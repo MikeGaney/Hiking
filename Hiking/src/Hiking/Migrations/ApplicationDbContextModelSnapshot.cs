@@ -261,6 +261,15 @@ namespace Hiking.Migrations
                     b.HasKey("Id");
                 });
 
+            modelBuilder.Entity("Hiking.Models.UserTrail", b =>
+                {
+                    b.Property<int>("TrailId");
+
+                    b.Property<string>("ApplicationUserId");
+
+                    b.HasKey("TrailId", "ApplicationUserId");
+                });
+
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
                 {
                     b.Property<string>("Id");
@@ -395,6 +404,17 @@ namespace Hiking.Migrations
 
             modelBuilder.Entity("Hiking.Models.TrailRating", b =>
                 {
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.UserTrail", b =>
+                {
+                    b.HasOne("Hiking.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
                     b.HasOne("Hiking.Models.Trail")
                         .WithMany()
                         .HasForeignKey("TrailId");
