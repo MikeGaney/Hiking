@@ -3,9 +3,11 @@
 /************** Browse Page ******************/
 
 .browsePage {
-    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
+    background-image: url('../images/mount_rainier_2.jpg');
+    /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);*/
     /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Salto_del_Angel-Canaima-Venezuela08.JPG);*/
     background-repeat: no-repeat;
+    min-height: 1500px;
     font-family: 'Merriweather', serif;
     color: slategrey;
 }
@@ -15,8 +17,8 @@
     background-color: rgba(255, 255, 255, 0.33);
     margin-top: 50px;
     margin-bottom: 25px;
-    margin-right: 60px;
-    width: 68%;
+    margin-right: 75px;
+    width: 67.3%;
     padding: 25px;
 }
 
@@ -108,10 +110,10 @@
 .trailBrowse1 {
     background-color: rgba(255, 255, 255, 0.66);
     float: right;
-    width: 45%;
+    width: 40%;
     height: 200px;
     margin-top: -220px;
-    margin-right: 220px;
+    margin-right: 265px;
     padding: 20px;
     color: firebrick;
     font-family: 'Merriweather', serif;
@@ -128,7 +130,8 @@
     width: 20%;
     height: 200px;
     margin-top: -220px;
-    margin-left: 500px;
+    margin-right: 10px;
+    /*margin-left: 500px;*/
     padding: 20px;
     color: slategrey;
     font-family: 'Merriweather', serif;
@@ -206,8 +209,9 @@
 /****************** Details Page *************/
 
 .detailsPage {
-    background-image:url(http://1.bp.blogspot.com/-fgYkymZ9P_g/T9-ZJow7f2I/AAAAAAAAA9E/lX_ITY0mioM/s1600/IMG_0037.JPG);
-    background-size:cover;
+    background-image: url('../images/mount_rainier_1.jpg');
+    /*background-image:url(http://1.bp.blogspot.com/-fgYkymZ9P_g/T9-ZJow7f2I/AAAAAAAAA9E/lX_ITY0mioM/s1600/IMG_0037.JPG);*/
+    background-size: cover;
     /*height: 1500px;*/
     background-repeat: no-repeat;
 }
@@ -290,6 +294,7 @@
     background-color: rgba(255, 255, 255, 0.66);
     width:240px;
     height: 600px;
+    margin-top: 0;
     margin-right: 39px;
     padding-top: 80px;
     padding-right: 25px;
