@@ -69,6 +69,11 @@
     display: inline-block;
 }
 
+.blogTitleH4{
+    max-height: 19px;
+    overflow: hidden;
+}
+
 .blogRight{
     /*border: 1px solid black;*/
     width: 96px;
