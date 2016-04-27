@@ -18,11 +18,15 @@ namespace Hiking.Models
         public DbSet<BeautyRating> BeautyRatings { get; set; }
         public DbSet<FamilyRating> FamilyRatings { get; set; }
         public DbSet<TrailRating> TrailRatings { get; set; }
+        public DbSet<UserTrail> UserTrails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
             base.OnModelCreating(builder);
+
+            builder.Entity<UserTrail>().HasKey(x => new { x.TrailId, x.ApplicationUserId });
+
 
             builder.Entity<GatheringUsers>().HasKey(x => new { x.GatheringID, x.ApplicationUserId });
 

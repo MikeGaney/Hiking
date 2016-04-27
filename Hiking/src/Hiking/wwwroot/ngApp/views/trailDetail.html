@@ -31,9 +31,9 @@
                                 </ul>
                                 <h5>Hazards</h5>
                                 <ul class="ulLegend">
-                                    <li ng-show="controller.trail.bears"><img title="Bears Seighted" src="../../images/bear.png" width="30" /></li>
+                                    <li ng-show="controller.trail.bears"><img title="Bears Sighted" src="../../images/bear.png" width="30" /></li>
 
-                                    <li ng-show="controller.trail.cougars"><img title="Cougars Seighted" src="../../images/cougar.png" width="30" /></li>
+                                    <li ng-show="controller.trail.cougars"><img title="Cougars Sighted" src="../../images/cougar.png" width="30" /></li>
                                 </ul>
                             </div>
 
@@ -100,7 +100,7 @@
                             <h4>Average Time: {{controller.trail.time}} hours</h4>
                             <hr />
                             <h4>Elevation: {{controller.trail.elevation}}</h4>
-                            <button href="" class="saveToPack">Save Hike To Pack</button>
+                            <button href="" class="saveToPack" ng-click="controller.getMyTrail()">Save Hike To Pack</button>
                         </div>
                         <!--Icon display-->
                         <div>

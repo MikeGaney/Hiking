@@ -18,5 +18,6 @@ namespace Hiking.Models
         public string DisplayName { get; set; }
         public ICollection<GatheringUsers> Gatheringusers { get; set; }
         //public ICollection<Trail> UserTrails { get; set; }
+        public ICollection<UserTrail> UserTrails { get; set; }
     }
 }

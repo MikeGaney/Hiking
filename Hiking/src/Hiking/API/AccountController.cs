@@ -27,6 +27,7 @@ namespace Hiking.Controllers
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
         private IGenericRepository repo;
+        private IBackpackService service;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
@@ -34,7 +35,8 @@ namespace Hiking.Controllers
             IEmailSender emailSender,
             ISmsSender smsSender,
             ILoggerFactory loggerFactory,
-            IGenericRepository _repo)
+            IGenericRepository _repo,
+            IBackpackService _service)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -42,13 +44,30 @@ namespace Hiking.Controllers
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
             this.repo = _repo;
+            this.service = _service;
         }
 
 
         [HttpGet("{id}")]
         [Route("getprofile")]
         public async Task<IActionResult> GetProfile(string id){
+            //var test= repo.Query<ApplicationUser>().Where(u => u.Id == id).Include(u => u.UserTrails).FirstOrDefault();
             var user = await _userManager.FindByIdAsync(id);
+            var newUser = new ProfileViewModel
+            {   
+                FirstName= user.FirstName,
+                LastName= user.LastName,
+                Age= user.Age,
+                DisplayName= user.DisplayName,
+                Bio = user.Bio,
+                Expertise = user.Expertise,
+                ProfilePic = user.ProfilePic,
+                Id = user.Id,
+                //Trails = service.GetTrailList(user.Id)
+                
+          
+
+            };
             return Ok(user);
         }
 
@@ -74,7 +93,7 @@ namespace Hiking.Controllers
         }
         [HttpDelete("{id}")] //MH
         //[Route("deleteprofile")]
-        public IActionResult Delete(string id)  //won't accept int as data type and string/id is used in get(id) above
+        public IActionResult Delete(string id)  
         {
             var profileToDelete = repo.Query<ApplicationUser>().FirstOrDefault(u => u.Id == id);
             repo.Delete<ApplicationUser>(profileToDelete);

@@ -6,22 +6,18 @@
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService) {
             this.GetProfile();
-            
+
         }
 
-        GetProfile()
-        {
+        GetProfile() {
             let id = this.accountService.getUserId();
             //console.log(id);
-            this.profileService.getProfile(id).then((data) =>
-            {
+            this.profileService.getProfile(id).then((data) => {
                 this.viewProfile = data;
-                if (this.viewProfile.expertise == 0)
-                {
+                if (this.viewProfile.expertise == 0) {
                     this.viewProfile.expertise = "-";
                 }
-                if (this.viewProfile.age == 0)
-                {
+                if (this.viewProfile.age == 0) {
                     this.viewProfile.age = "-";
                 }
                 //console.log(data);
@@ -36,28 +32,25 @@
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
             private $state: ng.ui.IStateService,
-            private $stateParams: ng.ui.IStateParamsService)
-        {
+            private $stateParams: ng.ui.IStateParamsService,
+            private $uibModal: angular.ui.bootstrap.IModalService) {
             this.editProfile = {};
             this.profileToSave = {};
             this.GetProfile();
-           
-            
+
+
         }
 
-        GetProfile()
-        {
+        GetProfile() {
             let id = this.accountService.getUserId();
             //console.log(id);
-            this.profileService.getProfile(id).then((data) =>
-            {
+            this.profileService.getProfile(id).then((data) => {
                 this.editProfile = data;
                 //console.log(data);
             });
         }
 
-        save()
-        {
+        save() {
             console.log(this.editProfile);
             this.profileToSave = {
                 firstName: this.editProfile.firstName,
@@ -73,15 +66,49 @@
                 this.$state.go('viewprofile');
             })
         }
+
         deleteProfile() {
             let profileId = this.$stateParams["id"];
-            this.profileService.deleteProfile(profileId).then(() => {
-                this.$state.go('trails');              
+            this.$uibModal.open({
+                templateUrl: '/ngApp/views/deleteModal.html',
+                controller: DeleteController,
+                controllerAs: 'modal',
+                resolve: {
+                    profileId: () => profileId
+                },
+                size: 'sm'
+            }).result.then(() => {
+                this.profileService.deleteProfile(profileId).then(() => {
+                    this.$state.go('trails');
+                });
+            });
+        };
+
+
+    }
+    export class DeleteController {
+        constructor(
+            private $window: ng.IWindowService,
+            private accountService: Hiking.Services.AccountService,
+            private profileService: Hiking.Services.ProfileService,
+            public profileId: string,
+            private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance) {
+            console.log("heythere");
+        }
+        public ok() {
+            this.profileService.deleteProfile(this.profileId).then(() => {
+                this.$window.sessionStorage.clear();
+                this.$uibModalInstance.close();
             });
             
         }
-
+        public cancel() {
+            this.$uibModalInstance.dismiss();
+        }
     }
 
-    
 }
+
+
+
+

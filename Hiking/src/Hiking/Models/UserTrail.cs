@@ -7,9 +7,9 @@ namespace Hiking.Models
 {
     public class UserTrail
     {
-        public string UserID { get; set; }
+        public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
-        public int TrailID { get; set; }
+        public int TrailId { get; set; }
         public Trail Trail { get; set; }
     }
 }

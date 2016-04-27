@@ -16,7 +16,9 @@
                 <div class="col-sm-4">
                     <div id="asides">
                         <aside class="aside" id="aside1">
-                            <h2>Save Your Trails:</h2>
+                            <h2>My Saved Trails:</h2>
+                            <div id="myTrails">{{controller.myTrails.trailimage}}{{controller.myTrails.name}}</div>
+                            <a href="/mytrails/{{controller.viewProfile.displayName}}">check out your backpack</a>
                         </aside>
                         <aside class="aside" id="aside2">
                             <h2>Trail Patches:</h2>

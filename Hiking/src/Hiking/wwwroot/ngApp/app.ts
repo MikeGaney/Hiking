@@ -121,6 +121,12 @@ namespace Hiking {
                 controller: Hiking.Controllers.GatheringDetailsController,
                 controllerAs: 'controller'
             })
+            .state('delete', {
+                url: '/delete',
+                templateUrl: '/ngApp/Users/Views/deleteModal.html',
+                controller: Hiking.Controllers.DeleteController,
+                controllerAs: 'modal'
+            })
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'
