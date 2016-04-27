@@ -55,6 +55,7 @@
     width: 620px;
     border: solid #737373;
     border-width: 3px;
+    overflow: hidden;
     /*margin-top: 15px;*/
 }
 #profPicInput{

@@ -26,7 +26,10 @@ namespace Hiking.Services
             //});
             //var list = test
             //return test;
-            return new List<Trail>();
+
+            var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).ToList();
+
+            return trails;
         }
 
         public BackpackTrailViewModel GetTrail(int id)
