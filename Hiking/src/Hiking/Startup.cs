@@ -132,6 +132,7 @@ namespace Hiking
             SampleDataGatherings.Initialize(app.ApplicationServices);
             SampleDataGatheringUsers.Initialize(app.ApplicationServices);
             //SampleDataBackpack.Initialize(app.ApplicationServices);
+            SampleDataUserTrails.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.
