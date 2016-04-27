@@ -1,5 +1,6 @@
 ﻿
 
+
 <div class="col-lg-12 browsePage">
 
 
@@ -43,9 +44,9 @@
 
 
                     <!--  Search Feature  -->
-                    <div class="col-3 col-tablet-3 col-sm-4 col-md-8 browseSearch">
+                    <div class="col-tablet-3 col-sm-4 col-md-8 browseSearch">
                         
-                            <form class="form-horizontal browseSearch2" ng-submit="">
+                            <form class="form-horizontal browseSearch2" ng-submit="controller.trailSearch()">
                                 <div class="row form-group">
                                     <h1 id="searchTitle">Find your destination</h1>
                                 </div>
@@ -55,7 +56,7 @@
                                         <label class="searchLabels">Name</label>
                                     </div>
                                     <div class="col-md-4">
-                                        <input type="text" class="form-control inputMM" ng-model="" />
+                                        <input type="text" class="form-control inputMM" ng-model="controller.search.name" />
                                     </div>
                                 </div>
                                 <div class="row form-group search1">
@@ -63,7 +64,7 @@
                                         <label class="searchLabels">Region</label>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control inputMM" ng-model="">
+                                        <select class="form-control inputMM" ng-model="controller.search.location">
                                             <option value="">Include All Areas</option>
                                             <option value="Central Washington">Central Washington</option>
                                             <option value="Eastern Washington">Eastern Washington</option>
@@ -84,13 +85,13 @@
                                         <label class="searchLabels">User Rating</label>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control inputMM" ng-model="">
+                                        <select class="form-control inputMM" ng-model="controller.search.rating">
                                             <option value="">No Minimum</option>
-                                            <option value="1">0-1 Stars</option>
-                                            <option value="2">0-2 Stars</option>
-                                            <option value="3">0-3 Stars</option>
-                                            <option value="4">0-4 Stars</option>
-                                            <option value="5">0-5 Stars</option>
+                                            <option value="1">1 & Above</option>
+                                            <option value="2">2 & Above</option>
+                                            <option value="3">3 & Above</option>
+                                            <option value="4">4 & Above</option>
+                                            <option value="5">5 Stars</option>
                                         </select>
                                     </div>
                                 </div>
@@ -99,7 +100,7 @@
                                         <label class="searchLabels">Difficulty</label>
                                     </div>
                                     <div class="col-md-4">
-                                        <select class="form-control inputMM" ng-model="">
+                                        <select class="form-control inputMM" ng-model="controller.search.difficultyLevel">
                                             <option value="">No Minimum</option>
                                             <option value="1">Level 1</option>
                                             <option value="2">Level 2 & below</option>
@@ -119,45 +120,45 @@
                                     <div class="row">
                                         <div class="row Activities2" align="left">
                                             <div>
-                                                <input type="checkbox" value="Camping" />
+                                                <input type="checkbox" value="Camping" ng-model="controller.search.camping" />
                                                 <label><span>Camping</span></label>
                                             </div>
                                             <div>
-                                                <input type="checkbox" value="Fishing" />
+                                                <input type="checkbox" value="Fishing" ng-model="controller.search.fishing" />
                                                 <label><span>Fishing</span></label>
                                             </div>
                                             <div>
-                                                <input type="checkbox" value="Biking" />
+                                                <input type="checkbox" value="Biking" ng-model="controller.search.biking" />
                                                 <label><span>Biking</span></label>
                                             </div>
                                             <div>
-                                                <input type="checkbox" value="Horses" />
+                                                <input type="checkbox" value="Horses" ng-model="controller.search.horses" />
                                                 <label><span>Horseback Friendly</span></label>
                                             </div>
                                         </div>
 
                                         <div class="row Activities3" align="left">
                                             <div>
-                                                <input type="checkbox" value="Lakes" />
+                                                <input type="checkbox" value="Lakes" ng-model="controller.search.lakes" />
                                                 <label><span>Lakes</span></label>
                                             </div>
                                             <div>
-                                                <input type="checkbox" value="Rivers" />
+                                                <input type="checkbox" value="Rivers" ng-model="controller.search.rivers" />
                                                 <label><span>Rivers</span></label>
                                             </div>
                                             <div>
-                                                <input type="checkbox" value="Waterfall" />
+                                                <input type="checkbox" value="Waterfall" ng-model="controller.search.waterfalls"/>
                                                 <label><span>Waterfall</span></label>
                                             </div>
                                             <div>
-                                                <input type="checkbox" value="Lookouts" />
+                                                <input type="checkbox" value="Lookouts" ng-model="controller.search.lookouts" />
                                                 <label><span>Lookouts</span></label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                     <div class="row form-group">
-                                        <button class="btn searchBtn"><a href="#">Search Trails</a></button>
+                                        <input type="submit" class="btn searchBtn" value="Search Trails" />
                                     </div>
                                 </form>
                            
@@ -168,7 +169,7 @@
                 <!--  Browse Trails  -->
              
                 <div class="row" ng-repeat="trail in controller.trails">
-                    <div class="col-3 col-tablet-3 col-sm-4 col-md-8 trailBox">
+                    <div class="col-tablet-3 col-sm-4 col-md-8 trailBox">
                         <div>
                             <a href="/trailDetail/{{trail.id}}"><img src="{{trail.image}}" width="300" alt="" class="imagesBrowse img-responsive" /></a>
                         </div>
