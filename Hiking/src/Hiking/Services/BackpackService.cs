@@ -29,6 +29,8 @@ namespace Hiking.Services
 
             var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).ToList();
 
+            //var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take(4).ToList();
+
             return trails;
         }
 
@@ -57,6 +59,13 @@ namespace Hiking.Services
         {
             var trailInBkPk = repo.Query<Trail>().Where(t => t.Id == id).FirstOrDefault();
             repo.Delete(trailInBkPk);
+            repo.SaveChanges();
+            return;
+        }
+
+        public void AddToBackpack(UserTrail data)
+        {
+            repo.Add<UserTrail>(data);
             repo.SaveChanges();
             return;
         }

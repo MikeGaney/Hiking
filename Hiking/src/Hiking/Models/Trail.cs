@@ -40,5 +40,6 @@ namespace Hiking.Models
         public ICollection<TrailRating> RatingList { get; set; }
         public ICollection<BeautyRating> BeautyRating { get; set; }
         public ICollection<FamilyRating> FamilyRating { get; set; }
+        public ICollection<UserTrail> UserTrails { get; set; }
     }
 }

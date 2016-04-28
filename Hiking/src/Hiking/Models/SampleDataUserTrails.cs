@@ -21,28 +21,37 @@ namespace Hiking.Models
                 //{
                 //    db.UserTrails.Add(new UserTrail
                 //    {
-                //        //ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                //        //TrailId = trailIdList[rnd.Next(trailIdList.Count)]
-                //        ApplicationUserId = "helloWorld",
-                //        TrailId = 10
+                //        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                //        TrailId = trailIdList[rnd.Next(trailIdList.Count)]
                 //    });
+                //    db.SaveChanges();
                 //}
 
-                db.UserTrails.Add(new UserTrail
-                {
-                    //ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                    //TrailId = trailIdList[rnd.Next(trailIdList.Count)]
-                    ApplicationUserId = "helloWorld",
-                    TrailId = 10
-                });
+                var userTrails = new List<UserTrail>();
 
-                db.UserTrails.Add(new UserTrail
+                for (int i = 0; i < 50; i++)
                 {
-                    //ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                    //TrailId = trailIdList[rnd.Next(trailIdList.Count)]
-                    ApplicationUserId = "hello World",
-                    TrailId = 11
-                });
+                    var rndUserId = userIdList[rnd.Next(userIdList.Count)];
+                    var rndTrailId = trailIdList[rnd.Next(trailIdList.Count)];
+                    var rndUserTrail = db.UserTrails.FirstOrDefault(ut => ut.ApplicationUserId == rndUserId && ut.TrailId == rndTrailId);
+
+                    if (rndUserTrail == null)
+                    {
+                        var userTrail = new UserTrail
+                        {
+                            ApplicationUserId = rndUserId,
+                            TrailId = rndTrailId
+                        };
+                        userTrails.Add(userTrail);
+
+                        db.UserTrails.Add(userTrail);
+                        db.SaveChanges();
+                    }
+                    
+
+                }
+
+                //db.UserTrails.AddRange(userTrails);
 
                 //db.UserTrails.AddRange( new List<UserTrail> {
                 //    new UserTrail

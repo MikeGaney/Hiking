@@ -10,5 +10,6 @@ namespace Hiking.Services
         BackpackTrailViewModel GetTrail(int id);
         List<Trail> GetTrailList(string id);
         void RemoveTrail(int id);
+        void AddToBackpack(UserTrail data);
     }
 }

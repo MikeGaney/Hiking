@@ -68,15 +68,15 @@
         }
 
         deleteProfile() {
-            let profileId = this.$stateParams["id"];
+            let profileId = this.accountService.getUserId();
             this.$uibModal.open({
-                templateUrl: '/ngApp/views/deleteModal.html',
+                templateUrl: '/ngApp/Users/Views/deleteModal.html',
                 controller: DeleteController,
                 controllerAs: 'modal',
                 resolve: {
                     profileId: () => profileId
                 },
-                size: 'sm'
+                //size: 'sm'
             }).result.then(() => {
                 this.profileService.deleteProfile(profileId).then(() => {
                     this.$state.go('trails');

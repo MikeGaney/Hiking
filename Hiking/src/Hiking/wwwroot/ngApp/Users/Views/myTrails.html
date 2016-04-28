@@ -3,7 +3,25 @@
 <div class="row">
     
     <div class="col-md-12" id="navPlaceholder">Nav</div>
-    <div class="col-md-12"id="bodywrapperBP">
+
+    <div class="col-md-8 col-md-offset-2">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Complete Trail</th>
+                <th>Remove from Backpack</th>
+            </tr>
+            <tr ng-repeat="trail in controller.myTrails">
+                <td>{{trail.id}}</td>
+                <td>{{trail.name}}</td>
+                <td><a href="#">DONE!</a></td>
+                <td><a href="#">Remove</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--<div class="col-md-12"id="bodywrapperBP">
         <div class="col-md-2"></div>
         <div class="row">
             <div class="col-md-8">
@@ -17,7 +35,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="col-md-12" id="footerPlaceholder"></div>
 </div>
 </div>

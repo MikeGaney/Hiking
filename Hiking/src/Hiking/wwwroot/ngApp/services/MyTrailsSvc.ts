@@ -19,6 +19,13 @@
             let deleteProfileResource = this.$resource('/api/account/:id');
             return deleteProfileResource.delete({ id: trailId }).$promise;
         }
+
+        public addToBackpack(data)
+        {
+            console.log("addToBackpack(id)");
+            console.log(data);
+            return this.MyTrailsResource.save(data).$promise;
+        }
     }
     angular.module('Hiking').service('myTrailsService', MyTrailsService);
 }

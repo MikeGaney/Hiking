@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Hiking.Services;
 using System.Security.Claims;
+using Hiking.Models;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,6 +31,16 @@ namespace Hiking.API
             return Ok(data);
         }
 
+        //[HttpGet]
+        // ****** Need to create custom route *******
+        //public IActionResult Get()
+        //{
+        //    var userId = User.GetUserId();
+        //    var data = service.GetTrailList(userId);
+
+        //    return Ok(data);
+        //}
+
         // GET api/values/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
@@ -40,8 +51,16 @@ namespace Hiking.API
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody]string value)
+        public IActionResult Post([FromBody]UserTrail data)
         {
+            //var userId = User.GetUserId();
+            //var userTrail = new UserTrail
+            //{
+            //    ApplicationUserId = userId,
+            //    TrailId = id
+            //};
+            service.AddToBackpack(data);
+
             return Ok();
         }
 
