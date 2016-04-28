@@ -3,48 +3,30 @@
     <title>Hiking</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/css/homepage.css" rel="stylesheet" />
     <link href="~/ngapp/users/css/login.css" rel="stylesheet" />
     <link href="~/ngapp/users/css/register.css" rel="stylesheet" />
     <base href="/" />
 </head>
 <body ng-controller="AccountController as controller">
-    <div class="container">
+    <div class="container-fluid">
         
-        @* start of Navbar *@
-
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Brand</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Another Link</a></li>
-                       
-                    </ul>
-                   
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a ng-click="controller.showRegisterModal()">Register</a></li>
-                        <li><a ng-click="controller.showLoginModal()">Login</a></li>
-                        <li><a href="#">Another Link</a></li>
-                      
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+        
+        <div class="nav">
+            <ul>
+                <img src="~/ngapp/homeimages/mountain-peak-logo-no-clouds-.png"
+                 style="height:45px;float:left" />
+                <li id="title">TRECKCLUB </li>
+                <li class="home"><a class="active" href="#"><strong>Home</strong></a></li>
+                <li class="about"><a href="#"><strong>About</strong></a></li>
+                <li><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
+                <li><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
+            </ul>
+        </div>
 
         @* end of navbar *@
 
-        <button></button>
+        
 
         <ui-view></ui-view>
     </div>
