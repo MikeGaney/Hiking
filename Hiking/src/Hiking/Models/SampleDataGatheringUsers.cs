@@ -28,36 +28,36 @@ namespace Hiking.Models
                 //}
 
                 db.GatheringUsers.AddRange(
-                    new GatheringUsers
-                    {
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                        GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
-                    },
-                    new GatheringUsers
-                    {
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                        GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
-                    },
-                    new GatheringUsers
-                    {
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                        GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
-                    },
-                    new GatheringUsers
-                    {
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                        GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
-                    },
-                    new GatheringUsers
-                    {
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                        GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
-                    },
-                    new GatheringUsers
-                    {
-                        ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
-                        GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
-                    },
+                    //new GatheringUsers
+                    //{
+                    //    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                    //    GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
+                    //},
+                    //new GatheringUsers
+                    //{
+                    //    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                    //    GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
+                    //},
+                    //new GatheringUsers
+                    //{
+                    //    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                    //    GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
+                    //},
+                    //new GatheringUsers
+                    //{
+                    //    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                    //    GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
+                    //},
+                    //new GatheringUsers
+                    //{
+                    //    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                    //    GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
+                    //},
+                    //new GatheringUsers
+                    //{
+                    //    ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
+                    //    GatheringID = gatheringIdList[rnd.Next(userIdList.Count)]
+                    //},
                     new GatheringUsers
                     {
                         ApplicationUserId = userIdList[rnd.Next(userIdList.Count)],
