@@ -140,6 +140,13 @@ namespace Hiking {
                 controllerAs: 'controller'
 
             })
+            .state( 'trekChanges', {
+                url: '/trekChanges',
+                templateUrl: '/ngApp/views/TrekChanges.html',
+                controller: Hiking.Controllers.TrekChangesController,
+                controllerAs: 'controller'
+            })
+
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'
