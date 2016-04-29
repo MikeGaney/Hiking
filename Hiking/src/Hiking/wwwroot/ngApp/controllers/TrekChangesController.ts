@@ -25,6 +25,7 @@
                 if ( this.trails[i].id == this.trek.trailId ) {
                     this.trek.trailName = this.trails[i].name;
                 }
+
             }
 
             console.log( this.trek );
