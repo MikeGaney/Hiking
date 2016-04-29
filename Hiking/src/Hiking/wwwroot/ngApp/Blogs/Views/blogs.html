@@ -1,0 +1,118 @@
+﻿<div class="col-md-12 browsePage">
+    <!--<div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Views</th>
+                    <th>Comments</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="blog in controller.blogs">
+                    <td>{{blog.id}}</td>
+                    <td>{{blog.views}}</td>
+                    <td>{{blog.commentCount}}</td>
+                    <td><a href="/blogs/{{blog.id}}">{{blog.title}}</a></td>
+                    <td>{{blog.creationDate | date:'MMMM dd @ h:mma'}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+
+
+                <div class="col-md-6">
+                    <div class="mobileHeader">
+                        <div class="mobileSections">
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Gatherings</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinks btn btn-lg btn-info">Weather</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinks btn btn-lg btn-info">Useful Links</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Other</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+
+                <div class="col-md-4 browseSideBarBlogs">
+
+                    <!-- Meet Up Info -->
+                    <h1 class="sidebarTitle">TrekClub</h1>
+
+                    <!-- Meet Up Info -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Trails</h2>
+                        <button class="browseSBbtns"><a href="/trails">Click Here</a></button>
+                    </div>
+
+                    <!-- Weather Link -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Local Weather</h2>
+                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                    </div>
+
+                    <!-- Parking Pass Link -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Need a Parking Pass</h2>
+                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                    </div>
+
+                    <!-- Fishing/Hunting Licenses Link -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
+                        <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
+                    </div> 
+
+                </div>
+
+                <div class="col-md-8 blogs">
+                    <div class="singleBlog container-fluid" ng-repeat="blog in controller.blogs">
+                        <div class="blogLeft">
+                            <h4 style="vertical-align:top" class="blogTitleH4"><a href="/blogs/{{blog.id}}">{{blog.title}}</a></h4>
+                            <div class="blogDetails">
+                                <span class="detailsLabel">Views: {{blog.views}}</span><br />
+                                <span class="detailsLabel">Comments: {{blog.commentCount}}</span><br />
+                                <span class="detailsLabel">{{blog.creationDate | date:'MMM dd, h:mma'}}</span>
+                            </div>
+                            <div class="blogDescription">
+                                <p>{{blog.message}}</p>
+                            </div>
+                        </div>
+                        <div class="blogRight">
+                            <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="profileImage"/>
+                        </div>
+                    </div>
+                    <!--<table class="table">
+                        <tr>
+                            <th>ID</th>
+                            <th>Views</th>
+                            <th>Comments</th>
+                            <th>Title</th>
+                            <th>Date</th>
+                        </tr>
+                        <tr ng-repeat="blog in controller.blogs">
+                            <td>{{blog.id}}</td>
+                            <td>{{blog.views}}</td>
+                            <td>{{blog.commentCount}}</td>
+                            <td><a href="/blogs/{{blog.id}}">{{blog.title}}</a></td>
+                            <td>{{blog.creationDate | date:'MMMM dd @ h:mma'}}</td>
+                        </tr>
+                    </table>-->
+                </div>
+                <div class="col-md-1 ">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

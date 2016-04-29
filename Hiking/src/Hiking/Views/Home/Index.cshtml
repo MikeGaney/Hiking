@@ -3,25 +3,156 @@
     <title>Hiking</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/ngapp/users/css/login.css" rel="stylesheet" />
+    <link href="~/ngapp/users/css/register.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/trailsdetailss.css" rel="stylesheet" />
+    <link href="~/css/viewprofile.css" rel="stylesheet" />
+    <link href="~/css/blogs.css" rel="stylesheet" />
+    <link href="~/css/trailchanges.css" rel="stylesheet" />
+    <link href="~/css/editprofile.css" rel="stylesheet" />
+    <link href="~/css/gather.css" rel="stylesheet" />
+    <link href="~/css/deleteprofilemodal.css" rel="stylesheet" />
+    <link href="~/css/about1.css" rel="stylesheet" />
+    <link href="~/css/home1.css" rel="stylesheet" />
+    <link href="~/css/backpack.css" rel="stylesheet" />
+    <link href="~/css/trekchangescss.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <base href="/" />
-</head>
-<body ng-controller="AccountController as account">
-    <div class="container">
-        <h1>Hiking</h1>
-        <div>
-          <a href="/">Home</a> /
-           <a href="/about">About</a>
 
-           / <a href="/secret">Secret</a> /
-           <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
-           <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
-           <div ng-show="account.isLoggedIn()">
-               [{{account.getUserName()}}]
-           </div> 
-        </div>
-        <hr />
+
+</head>
+<body ng-controller="accountController as controller">
+    <div class="container">
+        
+        @* start of Navbar *@
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Trek Club</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    @*<ul class="nav navbar-nav">
+                        <li><a href="/trails">View Trails</a></li>
+                        <li><a href="/changes/">Add a Trail</a></li>
+                        <li><a href="/blogs">Blogs</a></li>
+                        <li><a href="/blog/add">Add New Blog</a></li>
+                       
+                    </ul>*@
+                    
+                    <div class="nav navbar-nav navBarMenu">
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                                Trails <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li role="menuitem"><a href="/trails">View Trails</a></li>
+                                <li role="menuitem"><a href="/trails">Search Trails</a></li>
+                                <li class="divider" ng-show="controller.getClaim('isAdmin')"></li>
+                                <li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/changes/">Add a Trail</a></li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="nav navbar-nav navBarMenu">
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                                Blogs <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li role="menuitem"><a href="/blogs">View Blogs</a></li>
+                                <li role="menuitem"><a href="/blogs">Search Blogs</a></li>
+                                <li class="divider" ng-show="controller.getClaim('isAdmin')"></li>
+                                <li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/blog/add">Add a Blog</a></li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="nav navbar-nav navBarMenu">
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                                Treks <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li role="menuitem"><a href="/gatherings">View Treks</a></li>
+                                <li role="menuitem"><a href="/gatherings">Search Treks</a></li>
+                                <li class="divider" ng-show="controller.getClaim('isAdmin')"></li>
+                                @*<li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/blog/add">Add a Blog</a></li>*@
+                            </ul>
+                        </span>
+                    </div>
+                   
+                    @*<ul class="nav navbar-nav navbar-right">
+                        <li><a href="/viewprofile">View Profile</a></li>
+                        <li><a ng-click="controller.showRegisterModal()">Register</a></li>
+                        <li><a ng-click="controller.showLoginModal()">Login</a></li>
+                        <li><a ng-click="controller.logout()">Logout</a></li>
+                    </ul>*@
+
+                    <div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
+                        @*<div class="btn-group" uib-dropdown keyboard-nav>
+                            <button id="simple-btn-keyboard-nav" type="button" class="nav-item navbar-link" uib-dropdown-toggle>
+                                Welcome Back {{controller.getFirstName()}} <span class="caret"></span>
+                            </button>
+                            <ul uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                                <li role="menuitem"><a href="/viewProfile">Profile</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
+                            </ul>
+                        </div>*@
+
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                                Welcome Back {{controller.getName()}} <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li role="menuitem"><a href="/viewprofile">Profile</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a href="/admin">Admin Page</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
+                            </ul>
+                        </span>
+
+                    </div>
+
+                    <div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() == null">
+                        <a href="" class="nav-item navbar-link" ng-click="controller.showRegisterModal()">Register</a>
+                        <a href="" class="nav-item navbar-link" ng-click="controller.showLoginModal()">Login</a>
+                    </div>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        @* end of navbar *@
+
+        
 
         <ui-view></ui-view>
+
+
+        @*@*Footer*@
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                
+            </div>
+        </nav>
+
+        @* End of Footer *@
+
+
     </div>
 
     <!-- Library Files -->
@@ -33,14 +164,23 @@
     <script src="~/lib/angular-ui-router/release/angular-ui-router.js"></script>
 
     <!-- App Files-->
-    <script src="~/ngapp/app.js"></script>
+    <script src="~/all.js"></script>
+    @*<script src="~/ngapp/app.js"></script>
     <script src="~/ngapp/controllers/controllers.js"></script>
     <script src="~/ngapp/services/services.js"></script>
-
+    <script src="~/ngapp/controllers/trailscontroller.js"></script>
+    <script src="~/ngapp/controllers/traildetailscontroller.js"></script>
+    <script src="~/ngapp/controllers/addeditdeletetrailclientcontroller.js"></script>
+    <script src="~/ngapp/services/trailservice.js"></script>
+ 
+    <script src="~/ngapp/controllers/profilecontroller.js"></script>
+    <script src="~/ngapp/services/profilesvc.js"></script>*@
 
     <!-- Security -->
-    <script src="~/ngapp/controllers/accountcontroller.js"></script>
-    <script src="~/ngapp/services/accountservice.js"></script>
+    @*<script src="~/ngapp/controllers/accountcontroller.js"></script>
+    <script src="~/ngapp/services/accountservice.js"></script>*@
+
+
 
 </body>
 </html>

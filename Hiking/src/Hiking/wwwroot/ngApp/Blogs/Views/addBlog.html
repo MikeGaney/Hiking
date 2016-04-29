@@ -1,0 +1,19 @@
+﻿<h1>Add Blog Page</h1>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <form ng-submit="controller.AddBlog()">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" ng-model="controller.blogToAdd.title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea ng-model="controller.blogToAdd.message" class="form-control" rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Blog" class="form-control btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿.home1SA{
+   
+    background-image: url('../images/lake_maria_state_park.jpg');
+     background-size: cover;
+    background-repeat: no-repeat;
+    color:aliceblue;
+     padding-bottom: 10em;
+   
+}
+.bottomHalf {
+    background-image: url('../images/leaves.jpg');
+    background-size:cover;
+    
+}
+.box1SA{
+ background-color: rgba(255, 255, 255, 0.60);
+   color: rgba(0, 0, 0, 1.00);
+   padding-right: 10em;
+   padding-left: 10em;
+   padding-bottom: 10em;
+   padding-top:10em;
+   color:black;
+}
+.box2SA{
+ background-color: rgba(255, 255, 255, 0.60);
+   color: rgba(0, 0, 0, 1.00);
+   padding-right: 10em;
+   padding-left: 10em;
+   padding-bottom: 10em;
+   padding-top:10em;
+   color:black;
+}
+.box3SA{
+ background-color: rgba(255, 255, 255, 0.60);
+   color: rgba(0, 0, 0, 1.00);
+   padding-right: 10em;
+   padding-left: 10em;
+   padding-bottom: 10em;
+   padding-top:10em;
+   color:black;
+}

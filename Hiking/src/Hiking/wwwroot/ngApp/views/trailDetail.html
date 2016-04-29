@@ -1,0 +1,166 @@
+﻿<div class="col-lg-12 detailsPage">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-2 detailsLeftColumn">
+
+                        <!--  -->
+                        <!-- Legend -->
+                        <div class="legend">
+                            <h2>Legend</h2>
+
+                            <div class="row">
+                                <!--<div class="col-md-4">-->
+                                
+                                <h5>Activities</h5>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.fishing"><img title="Fishing" src="../../images/fishing.png" width="30" /></li>
+                                    <li ng-show="controller.trail.biking"> <img title="Biking" src="../../images/bike.png" width="30" /></li>
+                                    <li ng-show="controller.trail.camping"><img title="Camping" src="../../images/tent.png" width="30" /></li>
+                                </ul>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.horses"><img title="Horseback Riding" src="../../images/horseback.png" width="30" /></li>
+                                    <li ng-show="controller.trail.lakes"><img title="Lakes" src="../../images/lakes.png" width="30" /></li>
+                                    <li ng-show="controller.trail.rivers"><img title="Rivers" src="../../images/lake.png" width="30" /></li>
+                                </ul>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.lookouts"><img title="Scenic Views" src="../../images/lookout.png" width="30" /></li>
+                                    <li ng-show="controller.trail.passRequired"><img title="Pass Required" src="../../images/parkpass.png" width="30" /></li>
+                                    <li ng-show="controller.trail.waterfalls"><img title="Waterfalls" src="../../images/river.png" width="30" /></li>
+                                </ul>
+                                <h5>Hazards</h5>
+                                <ul class="ulLegend">
+                                    <li ng-show="controller.trail.bears"><img title="Bears Sighted" src="../../images/bear.png" width="30" /></li>
+
+                                    <li ng-show="controller.trail.cougars"><img title="Cougars Sighted" src="../../images/cougar.png" width="30" /></li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <!-- Weather Link -->
+                        <div class="legend">
+                            <h2>Local Weather</h2>
+                            <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                        </div>
+
+                        <!-- Meet Up Info -->
+                        <div class="legend">
+                            <h2>Upcomming Events</h2>
+                            <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
+                        </div>
+
+                        <!-- Rating -->
+                        <div class="legend">
+                            <div>
+                                <h2>Trail Rating</h2>
+                                <!--<img src="http://catherinedunn.co.uk/wp-content/uploads/2016/03/4-stars.png" alt="" class="src" width="200" />-->
+                                <uib-rating ng-model="controller.trail.rating" max="5" read-only="true" class="rating"></uib-rating>
+                            </div>
+                            <div>
+                                <h4>View Rating</h4>
+                                <uib-rating ng-model="controller.trail.beautyRate" max="5" read-only="true" class="smallRating"></uib-rating>
+                            </div>
+                            <div>
+                                <h4>Family Friendly Rating</h4>
+                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating>
+                            </div>
+                        </div>
+
+                        <!-- Open Seasons -->
+                        <div class="legend">
+                            <h2>Dates of Operation</h2>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-8 detailsRightColumn">
+
+                        <!-- Trail Title -->
+                        <div class="legend1">
+                            <h2 class="name">{{controller.trail.name}} </h2>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="map">
+                            <img src="{{controller.trail.map}}" width="600" class="imagesDetails img-responsive" />
+                        </div>
+
+                        <!-- Details -->
+                        <div class="sidebar">
+                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack"/>
+                            <hr />
+                            <h4>Location: {{controller.trail.location}}</h4>
+                            <hr />
+                            <h4>Distance: {{controller.trail.distance}} miles</h4>
+                            <hr />
+                            <h4>Average Time: {{controller.trail.time}} hours</h4>
+                            <hr />
+                            <h4>Elevation: {{controller.trail.elevation}}</h4>
+                            <!--<button href="" class="saveToPack" ng-click="controller.getMyTrail()">Save Hike To Pack</button>-->
+                        </div>
+                        <!--Icon display-->
+                        <div>
+
+
+                        </div>
+                        <!-- Overview -->
+                        <div class="legend overview">
+                            <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}">Edit</a></button></h4>
+                        </div>
+
+                        <!-- Gatherings -->
+                        <div>
+                            <h3>Upcoming Gatherings</h3>
+                            <table class="table">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>User</th>
+                                    <!--<th>Trail Name</th>-->
+                                    <th>Date</th>
+                                </tr>
+                                <tr ng-repeat="gathering in controller.trail.gatherings">
+                                    <td><a href="/gatheringDetails/{{gathering.id}}">{{gathering.name}}</a></td>
+                                    <td>{{gathering.ownerId}}</td>
+                                    <!--<td><a href="/trailDetail/{{gathering.trailId}}">{{gathering.trailName}}</a></td>-->
+                                    <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- User Comments -->
+                        <div>
+                            <h3>Comments</h3>
+                            <div class="comment" ng-repeat="comment in controller.trail.trailComments">
+                                <div class="commentText">
+                                    <span>{{comment.message}}</span>
+                                </div>
+                                <div class="commentDetails">
+                                    <div class="commentDetailsUser">
+                                        <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
+                                    </div>
+                                    <div class="commentDetailsDate">
+                                        <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <form ng-submit="controller.AddComment()">
+                                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                                <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
