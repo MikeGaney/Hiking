@@ -104,5 +104,22 @@ namespace Hiking.Services
             repo.Delete<GatheringUsers>(model);
             repo.SaveChanges();
         }
+
+        public List<Gathering> SearchGatherings(GatheringSearchViewModel data)
+        {
+            //var list = repo.Query<Gathering>().Where(g => g.Name.Contains(data.GatherName)).ToList();
+            //if (data.GatherName != null) list = repo.Query<Gathering>().Where(g => g.Name.Contains(data.GatherName)).ToList();
+            List<Gathering> searchList = repo.Query<Gathering>().ToList();
+
+            if (data.GatherName != null) searchList = searchList.Where(g => g.Name.Contains(data.GatherName)).OrderBy(g => g.Time).ToList();
+
+            if (data.TrailName != null) searchList = searchList.Where(g => g.TrailName.Contains(data.TrailName)).OrderBy(g => g.Time).ToList();
+
+            if (data.Time != 0) searchList = searchList.Where(g => g.Time <= DateTime.Now.AddDays(data.Time)).OrderBy(g => g.Time).ToList();
+
+
+
+            return searchList;
+        }
     }
 }

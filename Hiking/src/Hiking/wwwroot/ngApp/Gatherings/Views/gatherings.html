@@ -18,7 +18,7 @@
 </div>-->
 
 
-<div class="col-md-12 browsePage">
+<div class="col-md-12 gatherPage">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -26,7 +26,7 @@
                 <div class="col-md-6">
                     <div class="mobileHeader">
                         <div class="mobileSections">
-                            <a href="/trails" class="mobileHeaderLinks btn btn-lg btn-info">Trails</a>
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Gatherings</a>
                         </div>
                         <div class="mobileSections">
                             <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinks btn btn-lg btn-info">Weather</a>
@@ -35,21 +35,21 @@
                             <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinks btn btn-lg btn-info">Useful Links</a>
                         </div>
                         <div class="mobileSections">
-                            <a href="/blogs" class="mobileHeaderLinks btn btn-lg btn-info">Blogs</a>
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Other</a>
                         </div>
                     </div>
                 </div>
                 <div class="row"></div>
 
-                <div class="col-md-4 browseSideBarBlogs">
+                <!--  SideBar  -->
+                <div class="col-md-4 browseSideBar">
 
-                    <!-- Meet Up Info -->
                     <h1 class="sidebarTitle">TrekClub</h1>
 
                     <!-- Meet Up Info -->
                     <div class="browseLegend">
-                        <h2 class="browseSBtitles">Trails</h2>
-                        <button class="browseSBbtns"><a href="/trails">Click Here</a></button>
+                        <h2 class="browseSBtitles">Gatherings</h2>
+                        <button class="browseSBbtns"><a href="#">Click Here</a></button>
                     </div>
 
                     <!-- Weather Link -->
@@ -68,31 +68,72 @@
                     <div class="browseLegend">
                         <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
                         <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
-                    </div> 
+                    </div>
 
                 </div>
+
+
+
+
+                <!--  Search Feature  -->
+                <div class="col-tablet-3 col-sm-4 col-md-8 trekSearch">
+
+                    <form class="form-horizontal trekSearch2" ng-submit="controller.trekSearch()">
+                        <div class="row form-group">
+                            <h1 id="searchTitleTrek">Find a Trek Near You</h1>
+                        </div>
+                        <hr />
+
+                        <div class="form-group search1">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3>Trail Name</h3>
+                                    <input type="text" class="form-control inputMMtrek" ng-model="controller.search.trailName" />
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>Trek Title</h3>
+                                    <input type="text" class="form-control inputMMtrek" ng-model="controller.search.gatherName" />
+                                </div>
+                                <div class="col-md-4 ">
+                                    <h3>Select Date Range</h3>
+                                    <select class="form-control inputMM" ng-model="controller.search.time">
+                                        <option value="">Any Date</option>
+                                        <option value="7">Within Next 7 Days</option>
+                                        <option value="14">Within Next 14 Days</option>
+                                        <option value="30">Within Next 30 Days</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <input type="submit" class="btn searchBtnTrek" value="Search Treks" />
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <!------------------------------------------------>
+
 
                 <div class="col-md-8 blogs">
                     <div class="singleBlog container-fluid" ng-repeat="gather in controller.gatherings">
                         <div class="blogLeft">
-                            <h4 style="vertical-align:top"><a href="/gatheringDetails/{{gather.id}}">{{gather.name}}</a></h4>
-                            <div class="blogDetails">
-                                <!--<span class="detailsLabel">Views: {{blog.views}}</span><br />
-                                <span class="detailsLabel">Comments: {{blog.commentCount}}</span><br />-->
-                                <label><a href="/trailDetail/{{gather.trailId}}">{{gather.trailName}}</a></label>
-                            </div>
-                            <div class="blogDescription">
+                            <a href="/gatheringDetails/{{gather.id}}">
+                                <h4 style="vertical-align:top" class="col-md-3 trekTitle">{{gather.name}}</h4>
+                                
+                                <label class="trekTime">{{gather.time | date:'MMM dd, h:mma'}}</label>
+                            </a>
+                            <div class="trekDescription">
                                 <p>{{gather.description}}</p>
                             </div>
                         </div>
-                        <div class="blogRight gatherTime">
-                            <span class="detailsLabel">{{gather.time | date:'MMM dd, h:mma'}}</span>
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-1 ">
 
-                </div>
+
+
             </div>
         </div>
     </div>

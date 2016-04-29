@@ -2,9 +2,50 @@
 
 /************** Browse Page ******************/
 
+.mobileHeaderTrailsBrowse {
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.33);
+    display: none;
+}
+
+.mobileHeaderLinksTrailsBrowse {
+    min-width: 150px;
+    margin: 25px;
+    /*margin-left: 60px;*/
+}
+
+.mobileSectionsTrailsBrowse {
+    width: 24%;
+    display: inline-block
+}
+
+@media only screen and (max-width: 1150px) {
+    /* For mobile phones: */
+    
+    .browseSideBar{
+        position: static;
+        display: none;
+    }
+
+    .mobileHeaderTrailsBrowse {
+        display:block;
+    }
+
+    .browseSearch {
+        margin-left: 0 !important;
+        float: left !important;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
 .browsePage {
-    background-image: url('../images/mount_rainier_2.jpg');
-    /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);*/
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
     /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Salto_del_Angel-Canaima-Venezuela08.JPG);*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +74,7 @@
 }
 
 #searchTitle {
-    margin-left: 200px;
+    text-align: center;
     font-size: 50px;
     color: firebrick;
 }
@@ -211,7 +252,7 @@
 /****************** Details Page *************/
 
 .detailsPage {
-    background-image: url('../images/mount_rainier_1.jpg');
+    background-image: url(http://greendalba.com/wp-content/uploads/2008/11/dsc02863.jpg);
     /*background-image:url(http://1.bp.blogspot.com/-fgYkymZ9P_g/T9-ZJow7f2I/AAAAAAAAA9E/lX_ITY0mioM/s1600/IMG_0037.JPG);*/
     background-size: cover;
     /*height: 1500px;*/

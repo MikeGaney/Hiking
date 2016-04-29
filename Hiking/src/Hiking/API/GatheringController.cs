@@ -61,6 +61,17 @@ namespace Hiking.API
             return Ok();
         }
 
+        [HttpGet]
+        [Route("search")]
+        public IActionResult GetSearchList(GatheringSearchViewModel data)
+        {
+            var searchList = repo.SearchGatherings(data);
+
+
+            return Ok(searchList);
+
+        }
+
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
