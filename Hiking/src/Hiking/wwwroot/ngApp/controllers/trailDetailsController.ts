@@ -10,7 +10,7 @@
         public userTrail;
         public comment;
 
-        constructor(private trailsService: Hiking.Services.TrailsService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService, private myTrailsService: Hiking.Services.MyTrailsService, private accountService: Hiking.Services.AccountService)
+        constructor(private trailsService: Hiking.Services.TrailsService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService, private backpackService: Hiking.Services.BackPackService, private accountService: Hiking.Services.AccountService)
         {
             this.comment = {};
             this.userTrail = {};
