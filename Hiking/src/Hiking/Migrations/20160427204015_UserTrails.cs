@@ -4,19 +4,39 @@ using Microsoft.Data.Entity.Migrations;
 
 namespace Hiking.Migrations
 {
-    public partial class DisplayNameForUser : Migration
+    public partial class UserTrails : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(name: "FK_Gathering_Trail_TrailId", table: "Gathering");
+            migrationBuilder.DropForeignKey(name: "FK_GatheringUsers_Gathering_GatheringID", table: "GatheringUsers");
+            migrationBuilder.DropForeignKey(name: "FK_UserTrail_Trail_TrailId", table: "UserTrail");
             migrationBuilder.DropForeignKey(name: "FK_IdentityRoleClaim<string>_IdentityRole_RoleId", table: "AspNetRoleClaims");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserClaim<string>_ApplicationUser_UserId", table: "AspNetUserClaims");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserLogin<string>_ApplicationUser_UserId", table: "AspNetUserLogins");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_IdentityRole_RoleId", table: "AspNetUserRoles");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_ApplicationUser_UserId", table: "AspNetUserRoles");
-            migrationBuilder.AddColumn<string>(
-                name: "DisplayName",
-                table: "AspNetUsers",
-                nullable: true);
+            migrationBuilder.AddForeignKey(
+                name: "FK_Gathering_Trail_TrailId",
+                table: "Gathering",
+                column: "TrailId",
+                principalTable: "Trail",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.AddForeignKey(
+                name: "FK_GatheringUsers_Gathering_GatheringID",
+                table: "GatheringUsers",
+                column: "GatheringID",
+                principalTable: "Gathering",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.AddForeignKey(
+                name: "FK_UserTrail_Trail_TrailId",
+                table: "UserTrail",
+                column: "TrailId",
+                principalTable: "Trail",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
             migrationBuilder.AddForeignKey(
                 name: "FK_IdentityRoleClaim<string>_IdentityRole_RoleId",
                 table: "AspNetRoleClaims",
@@ -56,12 +76,35 @@ namespace Hiking.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(name: "FK_Gathering_Trail_TrailId", table: "Gathering");
+            migrationBuilder.DropForeignKey(name: "FK_GatheringUsers_Gathering_GatheringID", table: "GatheringUsers");
+            migrationBuilder.DropForeignKey(name: "FK_UserTrail_Trail_TrailId", table: "UserTrail");
             migrationBuilder.DropForeignKey(name: "FK_IdentityRoleClaim<string>_IdentityRole_RoleId", table: "AspNetRoleClaims");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserClaim<string>_ApplicationUser_UserId", table: "AspNetUserClaims");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserLogin<string>_ApplicationUser_UserId", table: "AspNetUserLogins");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_IdentityRole_RoleId", table: "AspNetUserRoles");
             migrationBuilder.DropForeignKey(name: "FK_IdentityUserRole<string>_ApplicationUser_UserId", table: "AspNetUserRoles");
-            migrationBuilder.DropColumn(name: "DisplayName", table: "AspNetUsers");
+            migrationBuilder.AddForeignKey(
+                name: "FK_Gathering_Trail_TrailId",
+                table: "Gathering",
+                column: "TrailId",
+                principalTable: "Trail",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+            migrationBuilder.AddForeignKey(
+                name: "FK_GatheringUsers_Gathering_GatheringID",
+                table: "GatheringUsers",
+                column: "GatheringID",
+                principalTable: "Gathering",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+            migrationBuilder.AddForeignKey(
+                name: "FK_UserTrail_Trail_TrailId",
+                table: "UserTrail",
+                column: "TrailId",
+                principalTable: "Trail",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
             migrationBuilder.AddForeignKey(
                 name: "FK_IdentityRoleClaim<string>_IdentityRole_RoleId",
                 table: "AspNetRoleClaims",

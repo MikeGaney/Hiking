@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNet.Identity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Hiking.Models
 {
@@ -31,7 +32,7 @@ namespace Hiking.Models
                     ProfilePic = "http://images.nationalgeographic.com/wpf/media-live/photos/000/707/overrides/alberta-canada-hiking-bugaboos_70729_600x450.jpg",
                     Expertise = 1,
                     Bio = "Love the outside.",
-                    DisplayName = "HelloKitty"
+                    DisplayName = "SporkOfFear"
                 };
                 await userManager.CreateAsync(sarah, "Secret123!");
 
@@ -102,7 +103,14 @@ namespace Hiking.Models
                     ProfilePic = "http://images.nationalgeographic.com/wpf/media-live/photos/000/707/overrides/alberta-canada-hiking-bugaboos_70729_600x450.jpg",
                     Expertise = 1,
                     Bio = "Love the outside.",
-                    DisplayName = "ArcherMadden"
+                    DisplayName = "ArcherMadden",
+                    //MyTrails = new List<Trail> {
+                    //        new Trail
+                    //        {
+                                
+
+                    //        }
+                    //}
                 };
                 await userManager.CreateAsync(mandy, "Secret123!");
 

@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using Hiking.Models;
 using Hiking.Services;
 using Hiking.ViewModels.Account;
+using Hiking.ViewModels.Profile;
+using Hiking.Repositories;
 
 namespace Hiking.Controllers
 {
@@ -24,21 +26,80 @@ namespace Hiking.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private IGenericRepository repo;
+        private IBackpackService service;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            IGenericRepository _repo,
+            IBackpackService _service)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            this.repo = _repo;
+            this.service = _service;
         }
 
+
+        [HttpGet("{id}")]
+        [Route("getprofile")]
+        public async Task<IActionResult> GetProfile(string id){
+            //var test= repo.Query<ApplicationUser>().Where(u => u.Id == id).Include(u => u.UserTrails).FirstOrDefault();
+            var user = await _userManager.FindByIdAsync(id);
+            var newUser = new ProfileViewModel
+            {   
+                FirstName= user.FirstName,
+                LastName= user.LastName,
+                Age= user.Age,
+                DisplayName= user.DisplayName,
+                Bio = user.Bio,
+                Expertise = user.Expertise,
+                ProfilePic = user.ProfilePic,
+                Id = user.Id,
+                //Trails = service.GetTrailList(user.Id)
+                
+          
+
+            };
+            return Ok(user);
+        }
+
+
+        [HttpPost]
+        [Route("editprofile")]
+        public IActionResult EditProfile([FromBody]EditProfileViewModel data) {
+            //var user = await _userManager.FindByIdAsync(data.Id);
+
+            var user = repo.Query<ApplicationUser>().Where(u => u.Id == data.Id).FirstOrDefault();
+
+            user.FirstName = data.FirstName;
+            user.LastName = data.LastName;
+            user.Age = data.Age;
+            user.ProfilePic = data.ProfilePic;
+            user.Expertise = data.Expertise;
+            user.DisplayName = data.DisplayName;
+            user.Bio = data.Bio;
+
+            repo.SaveChanges();
+
+            return Ok();
+        }
+        [HttpDelete("{id}")] //MH
+        //[Route("deleteprofile")]
+        public IActionResult Delete(string id)  
+        {
+            var profileToDelete = repo.Query<ApplicationUser>().FirstOrDefault(u => u.Id == id);
+            repo.Delete<ApplicationUser>(profileToDelete);
+            repo.SaveChanges();
+            return Ok(profileToDelete);
+        }
 
         private async Task<UserViewModel> GetUser(string userName)
         {
@@ -47,7 +108,11 @@ namespace Hiking.Controllers
             var vm = new UserViewModel
             {
                 UserName = user.UserName,
-                Claims = claims.ToDictionary(c => c.Type, c => c.Value)
+                Claims = claims.ToDictionary(c => c.Type, c => c.Value),
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                DisplayName = user.DisplayName,
+                UserId = user.Id
             };
             return vm;
         }
@@ -100,7 +165,7 @@ namespace Hiking.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, DisplayName = model.DisplayName };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -326,10 +391,10 @@ namespace Hiking.Controllers
 
         //
         // POST: /Account/ResetPassword
-        [HttpPost]
+        [HttpPost("resetPassword")]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword([FromBody]ResetPasswordViewModel model)
         {
             if (!ModelState.IsValid)
             {

@@ -31,7 +31,15 @@ namespace Hiking.Models
         public bool Bears { get; set; }
         public bool Cougars { get; set; }
         public int Rating { get; set; }
+        public decimal BeautyRate { get; set; }
+        public decimal FamilyRate { get; set; }
         public string OpenSeason { get; set; }
-
+        public ICollection<Comment> Comments { get; set; }
+        public ICollection<TrailComment> TrailComments { get; set; }
+        public ICollection<Gathering> Gatherings { get; set; }
+        public ICollection<TrailRating> RatingList { get; set; }
+        public ICollection<BeautyRating> BeautyRating { get; set; }
+        public ICollection<FamilyRating> FamilyRating { get; set; }
+        public ICollection<UserTrail> UserTrails { get; set; }
     }
 }

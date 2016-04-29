@@ -13,6 +13,24 @@ namespace Hiking {
                 controller: Hiking.Controllers.HomeController,
                 controllerAs: 'controller'
             })
+            .state('trails', {
+                url: '/trails',
+                templateUrl: '/ngApp/views/trails.html',
+                controller: Hiking.Controllers.TrailsController,
+                controllerAs: 'controller'
+            })
+            .state('trailDetail', {
+                url: '/trailDetail/:id',
+                templateUrl: '/ngApp/views/trailDetail.html',
+                controller: Hiking.Controllers.TrailDetailsController,
+                controllerAs: 'controller'
+            })
+            .state( 'changes', {
+                url: '/changes/:id?',
+                templateUrl: '/ngApp/views/AddEditDeleteTrail.html',
+                controller: Hiking.Controllers.AddEditDeleteTrailClientController,
+                controllerAs: 'controller'
+            })
             .state('secret', {
                 url: '/secret',
                 templateUrl: '/ngApp/views/secret.html',
@@ -43,6 +61,92 @@ namespace Hiking {
                 controller: Hiking.Controllers.AboutController,
                 controllerAs: 'controller'
             })
+            .state('viewprofile', {
+                url: '/viewprofile',
+                templateUrl: '/ngApp/Users/views/viewprofile.html',
+                controller: Hiking.Controllers.ViewProfileController,
+                controllerAs: 'controller'
+            })
+            .state('editprofile', {
+                url: '/editprofile/:id',
+                templateUrl: '/ngApp/Users/views/EditProfile.html',
+                controller: Hiking.Controllers.EditProfileController,
+                controllerAs: 'controller'
+            })
+            .state('blogs', {
+                url: '/blogs',
+                templateUrl: '/ngApp/Blogs/views/blogs.html',
+                controller: Hiking.Controllers.BlogsController,
+                controllerAs: 'controller'
+            })
+            .state('blogDetails', {
+                url: '/blogs/:id',
+                templateUrl: '/ngApp/Blogs/views/blogDetails.html',
+                controller: Hiking.Controllers.BlogDetailsController,
+                controllerAs: 'controller'
+            })
+            .state('addBlog', {
+                url: '/blog/add',
+                templateUrl: '/ngApp/Blogs/views/addBlog.html',
+                controller: Hiking.Controllers.AddBlogController,
+                controllerAs: 'controller'
+            })
+            .state('editBlog', {
+                url: '/blogEdit/:id',
+                templateUrl: '/ngApp/Blogs/views/editBlog.html',
+                controller: Hiking.Controllers.EditBlogController,
+                controllerAs: 'controller'
+            })
+            .state('admin', {
+                url: '/admin',
+                templateUrl: '/ngApp/Admin/Views/admin.html',
+                controller: Hiking.Controllers.AdminController,
+                controllerAs: 'controller'
+            })
+            .state('backpack', {
+                url: '/backpack/:id',
+                templateUrl: '/ngApp/Users/views/backpack.html',
+                controller: Hiking.Controllers.BackPackController,
+                controllerAs: 'controller'
+            })
+            .state('gatherings', {
+                url: '/gatherings',
+                templateUrl: '/ngApp/Gatherings/Views/gatherings.html',
+                controller: Hiking.Controllers.GatheringController,
+                controllerAs: 'controller'
+            })
+            .state('gatheringDetails', {
+                url: '/gatheringDetails/:id',
+                templateUrl: '/ngApp/Gatherings/Views/gatherDetails.html',
+                controller: Hiking.Controllers.GatheringDetailsController,
+                controllerAs: 'controller'
+            })
+            .state('delete', {
+                url: '/delete',
+                templateUrl: '/ngApp/Users/Views/deleteModal.html',
+                controller: Hiking.Controllers.DeleteController,
+                controllerAs: 'modal'
+            })
+            .state( 'about1', {
+                url: '/about1',
+                templateUrl: '/ngApp/views/About1.html',
+                controller: Hiking.Controllers.AboutController,
+                controllerAs: 'controller'    
+            })
+            .state( 'home1', {
+                url: '/home1',
+                templateUrl: '/ngApp/views/home1.html',
+                controller: Hiking.Controllers.AboutController,
+                controllerAs: 'controller'
+
+            })
+            .state( 'trekChanges', {
+                url: '/trekChanges/:id',
+                templateUrl: '/ngApp/views/TrekChanges.html',
+                controller: Hiking.Controllers.TrekChangesController,
+                controllerAs: 'controller'
+            })
+
             .state('notFound', {
                 url: '/notFound',
                 templateUrl: '/ngApp/views/notFound.html'
