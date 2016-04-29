@@ -31,15 +31,14 @@ namespace Hiking.API
             return Ok(data);
         }
 
-        //[HttpGet]
-        // ****** Need to create custom route *******
-        //public IActionResult Get()
-        //{
-        //    var userId = User.GetUserId();
-        //    var data = service.GetTrailList(userId);
-
-        //    return Ok(data);
-        //}
+        [HttpGet]
+        [Route("completedTrail")]
+        public IActionResult GetCompletedTrails()
+        {
+            var userId = User.GetUserId();
+            var completedTrails = service.GetCompletedTrails(userId);
+            return Ok(completedTrails);
+        }
 
         // GET api/values/5
         [HttpGet("{id}")]
@@ -63,6 +62,20 @@ namespace Hiking.API
 
             return Ok();
         }
+        // POST api/values
+        [HttpPost]
+        [Route ("saveCompletedTrail")]
+        public IActionResult SaveCompletedTrail([FromBody]UserTrail id)
+        {
+            //var userTrail = new UserTrail
+            //{
+            //    ApplicationUserId = User.GetUserId(),
+            //    TrailId = id.TrailId
+            //};
+            service.SaveCompletedTrail(id);
+
+            return Ok();
+        }
 
         //// PUT api/values/5
         //[HttpPut("{id}")]
@@ -71,10 +84,11 @@ namespace Hiking.API
         //}
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpDelete]
+        [Route("removeMyTrail")]
+        public IActionResult Delete(UserTrail data)
         {
-            service.RemoveTrail(id);
+            service.RemoveTrail(data);
             return Ok();
         }
     }

@@ -50,7 +50,7 @@
     width: 600px;
 }
 #profPic{
-    box-shadow: 7px 7px 7px #737373;
+    box-shadow: 7px 7px 7px #404040;
     height: 475px;
     width: 620px;
     border: solid #737373;
@@ -80,7 +80,7 @@
     /*margin-bottom: 80px;*/
 }
 #bioInput{
-    box-shadow: 7px 7px 7px #737373;
+    box-shadow: 7px 7px 7px #404040;
     border: solid #737373;
     background-color: rgba(230, 230, 230, 0.80);
     border-width: 3px;

@@ -35,15 +35,15 @@
             <div class="col-md-5 form-group" id="leftSide">
                 <label>Change Profile Picture</label>
                 <div id="profPic">
-                    <img src={{controller.editProfile.profilePic}} />
+                    <img src= {{controller.editProfile.profilePic}} style="width: 100%; height: 100%" />
                 </div>
                 <div class="form-group" id="profPicInput">
                     <h4>Enter URL here:</h4>
                     <input type="text" ng-model="controller.editProfile.profilePic" class="form-control fromControl" />
-
+                    
                     <!--<button class="btn btn-primary form-group">Upload</button>-->
                 </div>
-
+                
                 <div class="form-group" id="nameInput">
                     <label>Change Name</label>
                     <h4>First Name</h4>
@@ -59,40 +59,40 @@
                     <label>Change Age</label>
                     <input type="text" ng-model="controller.editProfile.age" class="form-control fromControl" />
                 </div>
-
+                
                 <div class="form-group" id="expertWrapper">
                     <div class="form-group" id="expLevel">
                         <label>Expertise Level</label>
                         <br />
                         <input type="radio" name="expertise" value="1" ng-model="controller.editProfile.expertise" class="form-inline" /> Beginner (1)
-                        <input type="radio" name="expertise" value="2" ng-model="controller.editProfile.expertise" class="form-inline" /> Intermediate (2)
-                        <input type="radio" name="expertise" value="3" ng-model="controller.editProfile.expertise" class="form-inline" /> Expert (3)
+                        <input type="radio" name="expertise" value="2" ng-model="controller.editProfile.expertise" class="form-inline"/> Intermediate (2) 
+                        <input type="radio" name="expertise" value="3" ng-model="controller.editProfile.expertise" class="form-inline"/> Expert (3)
                     </div>
 
                 </div>
 
             </div>
             <!--RightSide-->
-            <div class="col-md-5 form-group" id="rightSide">
+            <div class="col-md-6 form-group" id="rightSide">
                 <div class="form-group" id="bioWrapper">
                     <label id="bioLabel">Change Bio</label>
                     <textarea class="form-group" id="bioInput" ng-model="controller.editProfile.bio" wrap="hard" maxlength="1250"></textarea>
                     <br />
                 </div>
                 <div class="form-group" id="pwProf">
-                    <label><a ng-click="controller.ForgotPasword()">Change Password</a></label>
+                    <label>Change Password</label>
 
 
-                    <!--<input type="password" name="oldPassword" class="form-control fromControl" placeholder="Current Password" />
-                <hr class="editHr"/>
-                <input type="password" name="newPassword1" class="form-control fromControl" placeholder="New Password" />
-                <hr class="editHr"/>
-                <input type="password" name="newPassword2" class="form-control fromControl" placeholder="Confirm New Password" />-->
+                    <input type="password" name="oldPassword" class="form-control fromControl" placeholder="Current Password" />
+                    <hr class="editHr"/>
+                    <input type="password" name="newPassword1" class="form-control fromControl" placeholder="New Password" />
+                    <hr class="editHr"/>
+                    <input type="password" name="newPassword2" class="form-control fromControl" placeholder="Confirm New Password" />
 
                 </div>
                 <div id="submitWrapper">
-                    <div>
-                        <button type="submit" value="Save Changes" class="btn btn-success" id="saveBtn">Save Changes</button>
+                    <div >
+                        <button type="submit" value="Save Changes" class="btn btn-success"id="saveBtn">Save Changes</button>
                     </div>
                     <div>
                         <button type="button" value="Delete Profile" class="btn btn-danger" id="deleteBtn" ng-click="controller.deleteProfile()">Delete Profile</button>

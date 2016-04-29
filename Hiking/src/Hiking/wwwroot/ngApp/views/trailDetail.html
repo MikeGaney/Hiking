@@ -94,7 +94,7 @@
 
                         <!-- Details -->
                         <div class="sidebar">
-                            <h4><a ng-click="controller.AddToBackpack()">Add To Backpack</a></h4>
+                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack"/>
                             <hr />
                             <h4>Location: {{controller.trail.location}}</h4>
                             <hr />
@@ -103,7 +103,7 @@
                             <h4>Average Time: {{controller.trail.time}} hours</h4>
                             <hr />
                             <h4>Elevation: {{controller.trail.elevation}}</h4>
-                            <button href="" class="saveToPack" ng-click="controller.getMyTrail()">Save Hike To Pack</button>
+                            <!--<button href="" class="saveToPack" ng-click="controller.getMyTrail()">Save Hike To Pack</button>-->
                         </div>
                         <!--Icon display-->
                         <div>

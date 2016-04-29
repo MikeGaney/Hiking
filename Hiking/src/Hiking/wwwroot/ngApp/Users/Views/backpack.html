@@ -12,11 +12,27 @@
                 <th>Complete Trail</th>
                 <th>Remove from Backpack</th>
             </tr>
-            <tr ng-repeat="trail in controller.myTrails">
+            <tr ng-repeat="trail in controller.backpack">
                 <td>{{trail.id}}</td>
                 <td>{{trail.name}}</td>
-                <td><a href="#">DONE!</a></td>
-                <td><a href="#">Remove</a></td>
+                <td> <a ng-click="controller.saveCompletedTrail(trail.id)">DONE!</a></td>
+                <td><button type="button" value="Delete myTrail" class="btn btn-danger" id="deleteBtn" ng-click="controller.deleteMyTrail(trail.id)">Remove from BackPack</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2">
+        <h2>Completed Trails</h2>
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Trail Image</th>                
+            </tr>
+            <tr ng-repeat="trail in controller.completedHikes">
+                <td>{{trail.id}}</td>
+                <td>{{trail.name}}</td>
+                <td>{{trail.trailImage}}</td>
             </tr>
         </table>
     </div>
@@ -26,8 +42,8 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-4">{{controller.myTrail.image}}</div>
-                    <div class="col-md-4">{{controller.myTrail.name}}{{controller.myTrail.distance}}{{controller.myTrail.elevation}}</div>
+                    <div class="col-md-4">{{controller.backpack.image}}</div>
+                    <div class="col-md-4">{{controller.backpack.name}}{{controller.backpack.distance}}{{controller.backpack.elevation}}</div>
                     <div class="col-md-4">
                         <img src="https://cdn4.iconfinder.com/data/icons/simplicio/128x128/notification_error.png" id="deleteMyTrail" ng-click="controller.deleteMyTrail()" />
                         <input type="checkbox" value="" label="Done!"/>

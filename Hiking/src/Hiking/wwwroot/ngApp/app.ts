@@ -103,10 +103,10 @@ namespace Hiking {
                 controller: Hiking.Controllers.AdminController,
                 controllerAs: 'controller'
             })
-            .state('mytrails', {
-                url: '/mytrails/:id',
-                templateUrl: '/ngApp/Users/views/myTrails.html',
-                controller: Hiking.Controllers.MyTrailsController,
+            .state('backpack', {
+                url: '/backpack/:id',
+                templateUrl: '/ngApp/Users/views/backpack.html',
+                controller: Hiking.Controllers.BackPackController,
                 controllerAs: 'controller'
             })
             .state('gatherings', {

@@ -1,6 +1,6 @@
 ﻿namespace Hiking.Services {
 
-    export class MyTrailsService {
+    export class BackPackService {
         private MyTrailsResource;
         constructor(private $resource: ng.resource.IResourceService) 
         {
@@ -15,11 +15,18 @@
         {
             return this.MyTrailsResource.query().$promise;
         }
-        public removeMyTrail(trailId) { 
-            let deleteProfileResource = this.$resource('/api/account/:id');
-            return deleteProfileResource.delete({ id: trailId }).$promise;
+        public removeMyTrail(del) { 
+            let deleteMyTrailResource = this.$resource('/api/backpack/removeMyTrail');
+            return deleteMyTrailResource.delete(del).$promise;
         }
-
+        public getCompletedTrails() {
+            let trailsCompleted = this.$resource('/api/backpack/completedTrail');
+            return trailsCompleted.query().$promise;
+        }
+        public saveCompletedTrail(id) {
+            let trailResource = this.$resource('/api/backpack/saveCompletedTrail');
+            return trailResource.save(id).$promise;
+        }
         public addToBackpack(data)
         {
             console.log("addToBackpack(id)");
@@ -27,5 +34,5 @@
             return this.MyTrailsResource.save(data).$promise;
         }
     }
-    angular.module('Hiking').service('myTrailsService', MyTrailsService);
+    angular.module('Hiking').service('backpackService', BackPackService);
 }

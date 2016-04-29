@@ -35,7 +35,7 @@
             //console.log(trailId);
             this.userTrail.ApplicationUserId = userId;
             this.userTrail.TrailId = trailId;
-            this.myTrailsService.addToBackpack(this.userTrail).then(() =>
+            this.backpackService.addToBackpack(this.userTrail).then(() =>
             {
                 console.log("added to backpack");
             });
@@ -52,7 +52,7 @@
             });
         }
 
-    }
+        }
 
-}
+    }
 
