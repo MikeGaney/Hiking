@@ -150,6 +150,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <form ng-submit="controller.AddComment()">
+                                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                                <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
+                            </form>
                         </div>
 
 

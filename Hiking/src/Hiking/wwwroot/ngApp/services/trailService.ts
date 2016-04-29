@@ -1,6 +1,8 @@
-﻿namespace Hiking.Services {
+﻿namespace Hiking.Services
+{
 
-    export class TrailService {
+    export class TrailService
+    {
         public trailResource;
 
 
@@ -11,24 +13,29 @@
 
         public getTrails()
         {
-            console.log("getting list of trails from server");
+            //console.log("getting list of trails from server");
             return this.trailResource.query();
         }
 
-       public getTrail(id) {
+        public getTrail(id) 
+        {
             return this.trailResource.get({ id: id }).$promise;
+        }
+
+        public searchTrails(data) 
+        {
+            let searchResource = this.$resource('/api/trails/search');
+
+            //console.log("getting search from server");
+            //console.log(data);
+            return searchResource.query(data).$promise;
 
         }
 
-       public searchTrails(data) {
-           let searchResource = this.$resource('/api/trails/search');
-
-           //var test = { name: "falls", location: "a", diffivultyLevel: 3, camping: true, biking: true, fishing: true, horses: true, waterfalls: true, rivers: true, lakes: true, lookouts: true, rating: 4 };
-           console.log("getting search from server");
-           console.log(data);
-           return searchResource.query(data).$promise;
-
-       }
+        public AddComment(data)
+        {
+            return this.trailResource.save(data).$promise;
+        }
 
     }
 

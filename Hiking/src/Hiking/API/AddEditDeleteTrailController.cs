@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Hiking.Models;
 using Hiking.Services;
+using Hiking.ViewModels.Trails;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,7 +15,7 @@ namespace Hiking.API
     public class AddEditDeleteTrailController : Controller
     {
         ISATrailsService _service;
-        public AddEditDeleteTrailController (ISATrailsService service)
+        public AddEditDeleteTrailController(ISATrailsService service)
         {
             this._service = service;
         }
@@ -39,13 +40,21 @@ namespace Hiking.API
         {
             if (value.Id == 0)
             {
-            _service.AddTrail(value);
+                _service.AddTrail(value);
 
             }
             else
             {
                 _service.EditTrail(value);
             }
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("addComment")]
+        public IActionResult AddComment([FromBody] TrailCommentViewModel data)
+        {
+            _service.AddCommentToTrail(data);
             return Ok();
         }
 

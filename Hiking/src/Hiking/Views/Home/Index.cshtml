@@ -26,7 +26,7 @@
         
         @* start of Navbar *@
 
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -135,14 +135,22 @@
 
         @* end of navbar *@
 
-        @*@*Footer*@
-        @*<nav class="navbar navbar-inverse navbar-fixed-bottom">
-            <div class="container">
-
-            </div>
-        </nav>*@
+        
 
         <ui-view></ui-view>
+
+
+        @*@*Footer*@
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                
+            </div>
+        </nav>
+
+        @* End of Footer *@
+
+
     </div>
 
     <!-- Library Files -->

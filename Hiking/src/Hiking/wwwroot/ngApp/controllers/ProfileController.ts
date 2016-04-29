@@ -1,18 +1,23 @@
-﻿namespace Hiking.Controllers {
+﻿namespace Hiking.Controllers 
+{
 
-    export class ViewProfileController {
+    export class ViewProfileController 
+    {
         public viewProfile;
         constructor(
             private profileService: Hiking.Services.ProfileService,
-            private accountService: Hiking.Services.AccountService) {
+            private accountService: Hiking.Services.AccountService) 
+        {
             this.GetProfile();
 
         }
 
-        GetProfile() {
+        GetProfile() 
+        {
             let id = this.accountService.getUserId();
             //console.log(id);
-            this.profileService.getProfile(id).then((data) => {
+            this.profileService.getProfile(id).then((data) => 
+            {
                 this.viewProfile = data;
                 if (this.viewProfile.expertise == 0) {
                     this.viewProfile.expertise = "-";
@@ -24,7 +29,9 @@
             });
         }
     }
-    export class EditProfileController {
+
+    export class EditProfileController 
+    {
         public editProfile;
         public profileToSave;
         public profileToDelete;
@@ -32,25 +39,28 @@
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
             private $state: ng.ui.IStateService,
+            //private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance,
             private $stateParams: ng.ui.IStateParamsService,
-            private $uibModal: angular.ui.bootstrap.IModalService) {
+            private $uibModal: angular.ui.bootstrap.IModalService) 
+        {
             this.editProfile = {};
             this.profileToSave = {};
             this.GetProfile();
-
-
         }
 
-        GetProfile() {
+        GetProfile() 
+        {
             let id = this.accountService.getUserId();
             //console.log(id);
-            this.profileService.getProfile(id).then((data) => {
+            this.profileService.getProfile(id).then((data) => 
+            {
                 this.editProfile = data;
                 //console.log(data);
             });
         }
 
-        save() {
+        save() 
+        {
             console.log(this.editProfile);
             this.profileToSave = {
                 firstName: this.editProfile.firstName,
@@ -62,12 +72,14 @@
                 expertise: this.editProfile.expertise
             };
             console.log(this.profileToSave);
-            this.profileService.editProfile(this.editProfile).then(() => {
+            this.profileService.editProfile(this.editProfile).then(() => 
+            {
                 this.$state.go('viewprofile');
             })
         }
 
-        deleteProfile() {
+        deleteProfile() 
+        {
             let profileId = this.accountService.getUserId();
             this.$uibModal.open({
                 templateUrl: '/ngApp/Users/Views/deleteModal.html',
@@ -84,25 +96,43 @@
             });
         };
 
+        ForgotPasword()
+        {
+            this.$uibModal.open({
+                templateUrl: '/ngApp/Users/Views/forgotPassword.html',
+                controller: Hiking.Controllers.ForgotPasswordController,
+                controllerAs: 'controller',
+                resolve: {
+                    
+                }
+            });
+        }
+
 
     }
-    export class DeleteController {
+    export class DeleteController 
+    {
         constructor(
             private $window: ng.IWindowService,
             private accountService: Hiking.Services.AccountService,
             private profileService: Hiking.Services.ProfileService,
             public profileId: string,
-            private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance) {
+            private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance) 
+        {
             console.log("heythere");
         }
+
         public ok() {
-            this.profileService.deleteProfile(this.profileId).then(() => {
+            this.profileService.deleteProfile(this.profileId).then(() => 
+            {
                 this.$window.sessionStorage.clear();
                 this.$uibModalInstance.close();
             });
             
         }
-        public cancel() {
+
+        public cancel() 
+        {
             this.$uibModalInstance.dismiss();
         }
     }

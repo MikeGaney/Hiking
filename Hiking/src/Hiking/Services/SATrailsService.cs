@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hiking.ViewModels.Trails;
 
 namespace Hiking.Services
 {
@@ -15,6 +16,20 @@ namespace Hiking.Services
             this._repo = repo;
         }
 
+        public void AddCommentToTrail(TrailCommentViewModel data)
+        {
+            var comment = new TrailComment
+            {
+                CreationDate = DateTime.Now,
+                Message = data.Message,
+                UserID = data.UserID
+            };
+            var trail = _repo.Query<Trail>().Where(t => t.Id == data.TrailID).Include(t => t.TrailComments).FirstOrDefault();
+            trail.TrailComments.Add(comment);
+            _repo.SaveChanges();
+            return;
+        }
+
         public void AddTrail(Trail trail)
         {
             _repo.Add(trail);
@@ -23,7 +38,14 @@ namespace Hiking.Services
 
         public void DeleteTrail(int id)
         {
-            var TrailToDelete = _repo.Query<Trail>().FirstOrDefault(t=>t.Id==id);
+            var TrailToDelete = _repo.Query<Trail>().Where(t => t.Id == id).Include(t => t.BeautyRating).Include(t => t.FamilyRating).Include(t => t.RatingList).Include(t => t.Comments).Include(t => t.Gatherings).FirstOrDefault();
+
+            TrailToDelete.BeautyRating.Clear();
+            TrailToDelete.RatingList.Clear();
+            TrailToDelete.FamilyRating.Clear();
+            TrailToDelete.Comments.Clear();
+            TrailToDelete.Gatherings.Clear();
+
             _repo.Delete<Trail>(TrailToDelete);
             _repo.SaveChanges();
         }
@@ -53,18 +75,30 @@ namespace Hiking.Services
             HoldTrail.Rivers = trail.Rivers;
             HoldTrail.Time = trail.Time;
             HoldTrail.Waterfalls = trail.Waterfalls;
-            
+
             _repo.SaveChanges();
             return;
         }
 
         public Trail GetOneTrail(int id)
         {
-            var list = _repo.Query<Trail>().Where(t => t.Id==id).Include(t => t.TrailComments).Include(t => t.Gatherings).Include(t => t.FamilyRating).Include(t => t.BeautyRating).Include(t => t.RatingList).FirstOrDefault();
-            list.Gatherings = list.Gatherings.OrderBy(g => g.Time).ToList();
-            list.BeautyRate = (int)list.BeautyRating.Average(b => b.Rating);
-            list.FamilyRate = (int)list.FamilyRating.Average(r => r.Rating);
-            list.Rating = (int)list.RatingList.Average(r => r.Rating);
+            var list = _repo.Query<Trail>().Where(t => t.Id == id).Include(t => t.TrailComments).Include(t => t.Gatherings).Include(t => t.FamilyRating).Include(t => t.BeautyRating).Include(t => t.RatingList).FirstOrDefault();
+            if (list.Gatherings.Any())
+            {
+                list.Gatherings = list.Gatherings.OrderBy(g => g.Time).ToList();
+            }
+            if (list.BeautyRating.Any())
+            {
+                list.BeautyRate = (int)list.BeautyRating.Average(b => b.Rating);
+            }
+            if (list.FamilyRating.Any())
+            {
+                list.FamilyRate = (int)list.FamilyRating.Average(r => r.Rating);
+            }
+            if (list.RatingList.Any())
+            {
+                list.Rating = (int)list.RatingList.Average(r => r.Rating);
+            }
 
             List<Gathering> newList = new List<Gathering>();
             foreach (var item in list.Gatherings)

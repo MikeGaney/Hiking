@@ -110,10 +110,51 @@ namespace Hiking.Controllers {
             this.$uibModalInstance.close();
         }
 
+        public ForgotPasword()
+        {
+            this.showForgotPasswordModal();
+            this.OK();
+        }
+
+        public showForgotPasswordModal()
+        {
+            //debugger;
+            console.log("Showing forgotPassword modal");
+            this.$uibModal.open({
+                templateUrl: '/ngApp/Users/Views/forgotPassword.html',
+                controller: Hiking.Controllers.ForgotPasswordController,
+                controllerAs: 'controller',
+                //size: "sm"
+                resolve: {
+                    //    //size: 'sm'
+                }
+            });
+        }
+
         constructor(private accountService: Hiking.Services.AccountService, private $location: ng.ILocationService,
-                    private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance, private $state: ng.ui.IStateService) { }
+            private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance, private $state: ng.ui.IStateService,
+            private $uibModal: ng.ui.bootstrap.IModalService) { }
     }
 
+    export class ForgotPasswordController
+    {
+        public password;
+
+        public OK()
+        {
+            this.$uibModalInstance.close();
+        }
+
+        public ChangePassword()
+        {
+            this.accountService.ChangePassword(this.password);
+        }
+
+        constructor(private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance, private accountService: Hiking.Services.AccountService)
+        {
+            this.password = {};
+        }
+    }
 
     export class RegisterController {
         public registerUser;

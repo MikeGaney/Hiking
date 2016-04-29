@@ -38,12 +38,12 @@
     color: rgba(0, 0, 0, 1.0);
     position: relative;
     display: inline-block;
-    height: 1200px;
-    width: 775px;
+    /*height: 1200px;*/
+    width: 700px;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 15px;
-    margin-left: 100px;
+    margin-left: 135px;
     
 }
 .formControl{
@@ -75,16 +75,16 @@
 }
 
 #bioWrapper{
-    width: 750px; 
+    width: 650px; 
     height: 600px;
-    margin-bottom: 80px;
+    /*margin-bottom: 80px;*/
 }
 #bioInput{
     box-shadow: 7px 7px 7px #737373;
     border: solid #737373;
     background-color: rgba(230, 230, 230, 0.80);
     border-width: 3px;
-    width: 700px;
+    width: 625px;
     height: 550px;
     padding: 5px;
     /*margin-left: 50px;*/
@@ -93,16 +93,17 @@
 #bioLabel{
 }
 #pwProf{
-    display: inline-block;
+    /*display: inline-block;
     margin-top: -45px;
     width: 600px;
-    height: 200px;
+    height: 200px;*/
+    text-align: center;
 }
 #submitWrapper{
     position:relative;
     /*background-color: lightblue;*/
     width: 800px;
-    height: 230px;
+    /*height: 230px;*/
     margin-right:0;
     margin-bottom: 20px;
 
@@ -111,8 +112,8 @@
     position:relative;
     width:125px;
     margin-bottom: 20px;
-    margin-top: 130px;
-    margin-left: 575px;
+    /*margin-top: 130px;*/
+    margin-left: 500px;
     box-shadow: 7px 7px 7px #404040;
     
 }
@@ -120,7 +121,7 @@
     position:relative;
     width:125px;
     /*margin-top: 175px;*/
-    margin-left: 575px;
+    margin-left: 500px;
     box-shadow: 7px 7px 7px #404040;
 
 }

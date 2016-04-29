@@ -35,10 +35,10 @@
 .browsePage {
 
     background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Merriweather', serif;
     color: slategrey;
-    /*height: 100%;*/
 }
 
 .blogs{
@@ -50,6 +50,7 @@
     padding-bottom: 15px;
     float: right;
     margin-right: 40px;
+    margin-bottom: 50px;
 }
 
 .singleBlog{
@@ -88,7 +89,7 @@
     display: inline-block;
     float: right;
     width: 73%;
-    height: 49px;
+    height: 48px;
     padding: 5px;
 }
 

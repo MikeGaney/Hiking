@@ -391,10 +391,10 @@ namespace Hiking.Controllers
 
         //
         // POST: /Account/ResetPassword
-        [HttpPost]
+        [HttpPost("resetPassword")]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword([FromBody]ResetPasswordViewModel model)
         {
             if (!ModelState.IsValid)
             {

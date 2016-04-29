@@ -131,7 +131,6 @@ namespace Hiking
             SampleDataBlog.Initialize(app.ApplicationServices);
             SampleDataGatherings.Initialize(app.ApplicationServices);
             SampleDataGatheringUsers.Initialize(app.ApplicationServices);
-            //SampleDataBackpack.Initialize(app.ApplicationServices);
             SampleDataUserTrails.Initialize(app.ApplicationServices);
         }
 

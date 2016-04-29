@@ -7,9 +7,11 @@
     /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);*/
     /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Salto_del_Angel-Canaima-Venezuela08.JPG);*/
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 1500px;
     font-family: 'Merriweather', serif;
     color: slategrey;
+    margin-bottom: 50px;
 }
 
 .browseSearch {
@@ -165,8 +167,8 @@
     background-color: rgba(255, 255, 255, 0.66);
     width:95%;
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .browseLegend2 {
@@ -195,7 +197,7 @@
 
 .browseSBbtns {
     width: 100%;
-    height: 50px;
+    height: 40px;
     font-size: inherit;
     margin-top: 20px;
     background-color: aliceblue;
