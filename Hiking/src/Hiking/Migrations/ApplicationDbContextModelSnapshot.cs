@@ -78,6 +78,113 @@ namespace Hiking.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUsers");
                 });
 
+            modelBuilder.Entity("Hiking.Models.BeautyRating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Rating");
+
+                    b.Property<int?>("TrailId");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+                });
+
+            modelBuilder.Entity("Hiking.Models.Blog", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("Message");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("UserID");
+
+                    b.Property<int>("Views");
+
+                    b.HasKey("ID");
+                });
+
+            modelBuilder.Entity("Hiking.Models.Comment", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("BlogID");
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("Message");
+
+                    b.Property<int?>("TrailId");
+
+                    b.Property<string>("UserID");
+
+                    b.HasKey("ID");
+                });
+
+            modelBuilder.Entity("Hiking.Models.CompletedTrail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ApplicationUserId");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("TrailImage");
+
+                    b.HasKey("Id");
+                });
+
+            modelBuilder.Entity("Hiking.Models.FamilyRating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Rating");
+
+                    b.Property<int?>("TrailId");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+                });
+
+            modelBuilder.Entity("Hiking.Models.Gathering", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("OwnerId");
+
+                    b.Property<DateTime>("Time");
+
+                    b.Property<int>("TrailId");
+
+                    b.Property<string>("TrailName");
+
+                    b.HasKey("Id");
+                });
+
+            modelBuilder.Entity("Hiking.Models.GatheringUsers", b =>
+                {
+                    b.Property<int>("GatheringID");
+
+                    b.Property<string>("ApplicationUserId");
+
+                    b.HasKey("GatheringID", "ApplicationUserId");
+                });
+
             modelBuilder.Entity("Hiking.Models.Trail", b =>
                 {
                     b.Property<int>("Id")
@@ -86,6 +193,8 @@ namespace Hiking.Migrations
                     b.Property<string>("BackgroundImage");
 
                     b.Property<bool>("Bears");
+
+                    b.Property<decimal>("BeautyRate");
 
                     b.Property<bool>("Biking");
 
@@ -98,6 +207,8 @@ namespace Hiking.Migrations
                     b.Property<decimal>("Distance");
 
                     b.Property<string>("Elevation");
+
+                    b.Property<decimal>("FamilyRate");
 
                     b.Property<bool>("Fishing");
 
@@ -132,6 +243,45 @@ namespace Hiking.Migrations
                     b.Property<bool>("Waterfalls");
 
                     b.HasKey("Id");
+                });
+
+            modelBuilder.Entity("Hiking.Models.TrailComment", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<string>("Message");
+
+                    b.Property<int?>("TrailId");
+
+                    b.Property<string>("UserID");
+
+                    b.HasKey("ID");
+                });
+
+            modelBuilder.Entity("Hiking.Models.TrailRating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Rating");
+
+                    b.Property<int?>("TrailId");
+
+                    b.Property<string>("UserId");
+
+                    b.HasKey("Id");
+                });
+
+            modelBuilder.Entity("Hiking.Models.UserTrail", b =>
+                {
+                    b.Property<int>("TrailId");
+
+                    b.Property<string>("ApplicationUserId");
+
+                    b.HasKey("TrailId", "ApplicationUserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
@@ -214,6 +364,81 @@ namespace Hiking.Migrations
                     b.HasKey("UserId", "RoleId");
 
                     b.HasAnnotation("Relational:TableName", "AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Hiking.Models.BeautyRating", b =>
+                {
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.Comment", b =>
+                {
+                    b.HasOne("Hiking.Models.Blog")
+                        .WithMany()
+                        .HasForeignKey("BlogID");
+
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.CompletedTrail", b =>
+                {
+                    b.HasOne("Hiking.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.FamilyRating", b =>
+                {
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.Gathering", b =>
+                {
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.GatheringUsers", b =>
+                {
+                    b.HasOne("Hiking.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("Hiking.Models.Gathering")
+                        .WithMany()
+                        .HasForeignKey("GatheringID");
+                });
+
+            modelBuilder.Entity("Hiking.Models.TrailComment", b =>
+                {
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.TrailRating", b =>
+                {
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
+                });
+
+            modelBuilder.Entity("Hiking.Models.UserTrail", b =>
+                {
+                    b.HasOne("Hiking.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("Hiking.Models.Trail")
+                        .WithMany()
+                        .HasForeignKey("TrailId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRoleClaim<string>", b =>

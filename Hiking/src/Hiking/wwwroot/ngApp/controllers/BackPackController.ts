@@ -1,5 +1,7 @@
-﻿namespace Hiking.Controllers {
-    export class BackPackController {
+﻿namespace Hiking.Controllers
+{
+    export class BackPackController
+    {
         public backpack;
         public delete;
         public completed;
@@ -18,11 +20,12 @@
             this.completed = {};
             this.getBackPack();
             this.getCompletedTrails();
-            
-            
+
+
         }
 
-        getMyTrail() {
+        getMyTrail()
+        {
             let trailId = this.$stateParams["id"];
             //console.log(id);
             this.backpackService.getMyTrail(trailId).then((data) => 
@@ -47,23 +50,27 @@
             this.delete.applicationUserId = this.accountService.getUserId();
             console.log(this.delete);
             console.log(id);
-                this.backpackService.removeMyTrail(this.delete).then(() => {
-                    //console.log("Need to install confirmation modal.");
-                    this.$state.reload();
-                });
+            this.backpackService.removeMyTrail(this.delete).then(() =>
+            {
+                //console.log("Need to install confirmation modal.");
+                this.$state.reload();
+            });
         }
-        
+
         saveCompletedTrail(id)
         {
             //let userId = this.accountService.getUserId();
             this.completed.trailId = id;
             this.completed.applicationUserId = this.accountService.getUserId();
-            this.backpackService.saveCompletedTrail(this.completed).then(() => {
+            this.backpackService.saveCompletedTrail(this.completed).then(() =>
+            {
                 this.getCompletedTrails();
             });
         };
-        getCompletedTrails() {
-            this.backpackService.getCompletedTrails().then((data) => {
+        getCompletedTrails()
+        {
+            this.backpackService.getCompletedTrails().then((data) =>
+            {
                 this.completedHikes = data;
                 console.log(data);
             });

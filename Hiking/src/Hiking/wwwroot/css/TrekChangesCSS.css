@@ -1,0 +1,20 @@
+﻿.changesTrek {
+
+    background-image: url('../images/lake_maria_state_park.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.changesAreaTrek{
+       background-color: rgba(255, 255, 255, 0.60);
+   color: rgba(0, 0, 0, 1.00);
+   padding-right: 10em;
+   padding-left: 10em;
+   padding-bottom: 5em;
+   padding-top:2em;
+   color:black;
+}
+textarea{
+    resize:none;
+}

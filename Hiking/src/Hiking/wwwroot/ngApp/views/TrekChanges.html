@@ -1,0 +1,35 @@
+﻿<div class="col-md-12 changesTrek">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 ">
+                <div class="changesAreaTrek">
+                    <form ng-submit="controller.saveTrek()">
+                        <div class="form-group">
+                            <div class="row">
+                                <h3>Name</h3>
+                                <input type="text" class="form-control" placeholder="Name" ng-model="controller.trek.name" />
+                                <h3>Trail Name</h3>
+                                <select ng-model="controller.trek.trailId"
+                                        ng-options="trail.id as trail.name for trail in controller.trails"
+                                ></select>
+                                <h3>Time (date/time)</h3>
+                                <input type="text" class="form-control" placeholder="DateTime" ng-model="controller.trek.time" />
+                                <h3>Description</h3> 
+                                <textarea class="form-control descriptionTrek" rows="4" placeholder="Description" ng-model="controller.trek.description"></textarea>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <button type="submit" class="btn btn-lg btn-warning">Save</button>
+                                    <button type="button" class="btn btn-lg btn-danger" ng-click="controller.deleteTrek()">Delete</button>
+                                    <br />
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

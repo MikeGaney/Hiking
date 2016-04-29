@@ -1,0 +1,120 @@
+﻿.gatherPage {
+    /*background-image: url(https://s-media-cache-ak0.pinimg.com/564x/15/84/e1/1584e14766955f506efe97be7ea3fa26.jpg);*/
+    /*background-image: url(http://singhraycn.com/blog/pics/2010/09/hbnrlre2.jpg);*/
+    background-image: url(http://images.forwallpaper.com/files/images/9/98ee/98ee67ea/301828/beautiful-scenery-in-hdr.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1500px;
+    font-family: 'Merriweather', serif;
+    color: slategrey;
+}
+
+.gatherDetailPage {
+    /*background-image: url(https://s-media-cache-ak0.pinimg.com/564x/87/70/66/8770668b04a8df1b147e9032bbde2c5f.jpg);*/
+    background-image: url(http://flygtf.com/images/Glacier.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1500px;
+    font-family: 'Merriweather', serif;
+    color: slategrey;
+}
+
+.gatherTime{
+    margin-top: 3%;
+}
+
+.trekSearch {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-right: 75px;
+    width: 67.3%;
+    padding: 25px;
+}
+
+.trekSearch2 {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:100%;
+    padding: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#searchTitleTrek {
+    text-align: center;
+    font-size: 50px;
+    color: firebrick;
+}
+
+.inputMMtrek {
+    border-radius: 0;
+
+}
+
+.searchLabelsTrek {
+    padding-top: 7px;
+    padding-left: 30px;
+}
+
+.searchBtnTrek {
+    width: 100%;
+    height: 50px;
+    font-size: inherit;
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius:0;
+    border-style: outset;
+    border-width:initial;
+    border-color: aliceblue;
+    font-size: x-large;
+}
+
+.treks{
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 50px;
+    margin-left: 30px;
+    padding: 25px;
+    float: right;
+    margin-right: 75px;
+    width: 67.3%;
+}
+
+.trekLeft{
+    width: 100%;
+    display: inline-block;
+    padding: inherit;
+}
+
+.trekTitle {
+    color: firebrick;
+    font-weight: bold;
+}
+
+.trekTime {
+    color: black;
+    max-width: 100%;
+    font-weight: 700;
+    float: left;
+    margin-top: 35px;
+    margin-left: -225px;
+}
+
+.trekDescription {
+    color: mediumblue;
+    font-size: small;
+    overflow: hidden;
+    /*border: 1px solid black;*/
+    display: inline-block;
+    float: right;
+    width: 73%;
+    height: 90px;
+    padding: 5px;
+}
+
+.trekDetail {
+    background-color:  rgba(255, 255, 255, 0.66);
+    color: mediumblue;
+
+}
+

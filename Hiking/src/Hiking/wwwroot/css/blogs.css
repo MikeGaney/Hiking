@@ -1,0 +1,270 @@
+﻿textarea{
+    resize: vertical;
+}
+
+.test{
+    border: 1px solid red;
+}
+
+.legendBlogs {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.browseSideBarBlogs {
+    /*float: left;
+    margin-top: 80px;
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.33);
+    position: fixed;
+    display: inline-block*/
+    float: left;
+    width: 22%;
+    margin-top: 80px;
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.33);
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+}
+
+.browsePage {
+
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Merriweather', serif;
+    color: slategrey;
+}
+
+.blogs{
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-top: 12px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    float: right;
+    margin-right: 75px;
+    width: 67.3%;
+}
+
+.singleBlog{
+    background-color: rgba(255, 255, 255, 0.66);
+    /*border: 1px solid black;*/
+    width: 100%;
+    max-height: 120px;
+    height: 120px;
+    margin: 8px;
+    padding: 10px;
+    color: black;
+}
+
+.blogLeft{
+    /*border: 1px solid black;*/
+    width: 83%;
+    display: inline-block;
+}
+
+.blogTitleH4{
+    max-height: 19px;
+    overflow: hidden;
+}
+
+.blogRight{
+    /*border: 1px solid black;*/
+    width: 96px;
+    display: inline-block;
+    float: right;
+    margin-top: -5px;
+}
+
+.blogDescription{
+    overflow: hidden;
+    /*border: 1px solid black;*/
+    display: inline-block;
+    float: right;
+    width: 73%;
+    height: 48px;
+    padding: 5px;
+}
+
+.blogDetails{
+    /*border: 1px solid black;*/
+    float: left;
+    width: 26%;
+    font-size: 13px;
+    padding: 10px 5px 5px 5px;
+}
+
+.detailsLabel{
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 700;
+}
+
+.profileImage{
+    height: 105px;
+    width: 100px;
+}
+
+.mobileHeader{
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.33);
+    display: none;
+}
+
+.mobileHeaderLinks{
+    min-width: 150px;
+    margin-top: 25px;
+    margin-left: 60px;
+}
+
+.mobileSections{
+    width: 24%;
+    display: inline-block
+}
+
+@media only screen and (max-width: 1150px) {
+    /* For mobile phones: */
+
+    .browseSideBarBlogs {
+        position: static;
+        display: none;
+    }
+
+    .mobileHeader{
+        display:block;
+    }
+
+    .details{
+        margin-left: 0 !important;
+        float: left !important;
+    }
+
+    .blogs{
+        margin-left: 0;
+        float: left;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/*       Blog Details Page       */
+.details{
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 80px;
+    margin-left: 30px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    float: right;
+    margin-right: 40px;
+    color: black;
+}
+
+.blogTitle{
+    /*border: 1px solid black;*/
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.66);
+}
+
+.blogTitleText{
+    /*border: 1px solid black;*/
+    display: inline-block;
+    width: 80%;
+    height: 100px;
+}
+
+/*.blogTitleTextH2{
+    margin: 0;
+    font-size: 30px;
+}*/
+
+.blogTitleUser{
+    /*border: 1px solid black;*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    float: right;
+    /*width: 151px;
+    height: 150px;*/
+}
+
+.blogDetailsProfilePic{
+    height: 100px;
+    width: 100px;
+    /*vertical-align: middle;*/
+}
+
+.blogBody{
+    /*border: 1px solid black;*/
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.66);
+}
+
+.blogBodyText{
+    /*border: 1px solid black;*/
+}
+
+.blogComments{
+    /*border: 1px solid black;*/
+    margin-top: 20px;
+}
+
+.commentTitle{
+    /*border: 1px solid black;*/
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.66);
+    margin-bottom: 20px;
+    height: 75px;
+    padding-top: 1px;
+}
+
+.comment{
+    /*border: 1px solid black;*/
+    background-color: rgba(255, 255, 255, 0.66);
+    min-height: 130px;
+    margin-bottom: 20px;
+}
+
+.commentText{
+    /*border: 1px solid black;*/
+    display: inline-block;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.commentDetails{
+    /*border: 1px solid black;*/
+    display: inline-block;
+    float: right;
+    width: 110px;
+}
+
+.commentDetailsUser{
+    /*border: 1px solid black;*/
+    /*margin-top: 15px;*/
+}
+
+.commentDetailsUserPic{
+    height: 75px;
+    width: 75px;
+}
+
+.commentDetailsDate{
+    /*border: 1px solid black;*/
+}
+
+.addCommentBtn{
+    margin-top: 10px;
+}

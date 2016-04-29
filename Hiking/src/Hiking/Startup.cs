@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Hiking.Models;
 using Hiking.Services;
 using Newtonsoft.Json.Serialization;
+using Hiking.Repositories;
 
 namespace Hiking
 {
@@ -39,6 +40,12 @@ namespace Hiking
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IGenericRepository, GenericRepository>();
+            services.AddScoped<ISATrailsService, SATrailsService>();
+            services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IGatheringService, GatheringService>();
+            services.AddScoped<IBackpackService, BackpackService>();
+
             // Add framework services.
             services.AddEntityFramework()
                 .AddSqlServer()
@@ -121,7 +128,10 @@ namespace Hiking
             // initialize sample data
             SampleData.Initialize(app.ApplicationServices).Wait();
             SampleDataTrail.Initialize(app.ApplicationServices);
-
+            SampleDataBlog.Initialize(app.ApplicationServices);
+            SampleDataGatherings.Initialize(app.ApplicationServices);
+            SampleDataGatheringUsers.Initialize(app.ApplicationServices);
+            SampleDataUserTrails.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.

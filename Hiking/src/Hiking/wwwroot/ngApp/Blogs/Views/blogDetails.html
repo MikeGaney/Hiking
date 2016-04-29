@@ -1,0 +1,185 @@
+﻿<!--<h1>Blog Details Page</h1>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <h2>{{controller.blog.title}}</h2>
+        </div>
+        <div class="row">
+            <h4><a href="/blogEdit/{{controller.blog.id}}">Edit</a></h4>
+            <h4><a ng-click="controller.showDeleteConfirmationModal()">Delete</a></h4>
+        </div>
+        <div class="row">
+            <p>{{controller.blog.message}}</p>
+        </div>
+        <div class="row">
+            <label>User: </label>
+            <label>{{controller.blog.userID}}</label>
+        </div>
+        <div class="row">
+            <label>Views: </label>
+            <label>{{controller.blog.views}}</label>
+        </div>
+        <div class="row">
+            <label>Date: </label>
+            <label>{{controller.blog.creationDate | date:'MMMM dd @ h:mma'}}</label>
+        </div>
+        <div class="row">
+            <h4>Comments</h4>
+        </div>
+        <div class="row" ng-repeat="comment in controller.blog.comments">
+            <label>Comment ID:</label>
+            <label>{{comment.id}}</label>
+            <a ng-click="controller.showDeleteCommentConfirmationModal(comment.id)">Delete</a><br />
+            <p>{{comment.message}}</p>
+            <label>User: </label>
+            <label>{{comment.userID}}</label> <br />
+            <label>Date: </label>
+            <label>{{comment.creationDate | date:'MMMM dd @ h:mma'}}</label>
+        </div>
+        <hr />
+        <div class="row">
+            <h4>Add Comment</h4>
+            <form ng-submit="controller.AddComment()">
+                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                <input type="submit" value="Add Comment" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+</div>-->
+
+<div class="col-md-12 browsePage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="col-md-6">
+                    <div class="mobileHeader">
+                        <div class="mobileSections">
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Gatherings</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinks btn btn-lg btn-info">Weather</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinks btn btn-lg btn-info">Useful Links</a>
+                        </div>
+                        <div class="mobileSections">
+                            <a href="#" class="mobileHeaderLinks btn btn-lg btn-info">Other</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+
+                <!--<div class="col-md-3 col-md-offset-1 browseSideBarBlogs">
+                    <div class="legendBlogs">
+                        <h2>Social Media</h2>
+                        <hr />
+                        <h4>****</h4>
+                        <h4>***</h4>
+                    </div>
+
+                    <div class="legendBlogs">
+                        <h2>Local Weather</h2>
+                        <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                    </div>
+
+                    <div class="legendBlogs">
+                        <h2>Upcomming Events</h2>
+                        <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
+                    </div>
+                </div>-->
+
+
+                <div class="col-md-4 browseSideBarBlogs">
+
+                    <!-- Meet Up Info -->
+                    <h1 class="sidebarTitle">TrekClub</h1>
+
+                    <!-- Meet Up Info -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Trails</h2>
+                        <button class="browseSBbtns"><a href="/trails">Click Here</a></button>
+                    </div>
+
+                    <!-- Weather Link -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Local Weather</h2>
+                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                    </div>
+
+                    <!-- Parking Pass Link -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Need a Parking Pass</h2>
+                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                    </div>
+
+                    <!-- Fishing/Hunting Licenses Link -->
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
+                        <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
+                    </div> 
+
+                </div>
+
+
+                <div class="col-md-8 details">
+                    <div class="blogTitle">
+                        <!--<div class="blogTitleText">
+                            <span class="blogTitleTextH2">{{controller.blog.title}}</span>
+                        </div>-->
+
+                        <div class="blogTitleText">
+                            <h3 style="vertical-align:top; text-align: center">{{controller.blog.title}}</h3>
+                            <!--<div class="blogDetails">
+                                <span class="detailsLabel">Views: {{blog.views}}</span><br />
+                                <span class="detailsLabel">Comments: {{blog.commentCount}}</span>
+                                <span class="detailsLabel">Date: {{blog.creationDate | date:'MMM dd, h:mma'}}</span>
+                            </div>-->
+                            <!--<div class="blogDescription">
+                                <p>{{blog.message}}</p>
+                            </div>-->
+                        </div>
+
+
+                        <div class="blogTitleUser">
+                            <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="blogDetailsProfilePic" />
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="blogBody">
+                        <span class="blogBodyText">{{controller.blog.message}}</span>
+                    </div>
+
+                    <div class="blogComments">
+                        <div class="commentTitle">
+                            <h2>Comments</h2>
+                        </div>
+
+                        <div class="comment" ng-repeat="comment in controller.blog.comments">
+                            <div class="commentText">
+                                <span>{{comment.message}}</span>
+                            </div>
+                            <div class="commentDetails">
+                                <div class="commentDetailsUser">
+                                    <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
+                                </div>
+                                <div class="commentDetailsDate">
+                                    <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addComment">
+                            <form ng-submit="controller.AddComment()">
+                                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                                <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

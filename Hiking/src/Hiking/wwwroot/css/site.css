@@ -1,6 +1,11 @@
-body {
+/*body {
     padding-top: 50px;
     padding-bottom: 20px;
+}*/
+
+.container{
+    width: 100%;
+    padding: 0;
 }
 
 /* Wrapping element */
@@ -8,13 +13,6 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-}
-
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
 }
 
 /* Carousel */
@@ -31,4 +29,36 @@ textarea {
     .carousel-caption {
         z-index: 10 !important;
     }
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.navbar-header{
+    margin-right: 20px !important;
+}
+
+.navBar-link{
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    padding: 23px 10px 22px 10px;
+}
+
+.navBar-link:focus, .navBar-link:hover{
+    text-decoration: none;
+}
+
+.navBarMenu{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navBarDropMenu{
+    margin-top: 17px;
+}
+
+.row {
+    margin-right: 0;
 }
