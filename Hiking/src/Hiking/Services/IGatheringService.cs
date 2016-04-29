@@ -9,7 +9,9 @@ namespace Hiking.Services
         void DeleteGathering(int id);
         List<Gathering> GetAllGatherings();
         GatheringViewModel GetOneGathering(int id);
-        void SaveGathering(Gathering data);
+        void AddGathering(AddGatheringViewModel data);
+        void UpdateGathering(AddGatheringViewModel data);
+
         void AddToGathering(AddUserToGatherViewModel data);
         UserInGatheringViewModel IsUserInGathering(AddUserToGatherViewModel data);
         void RemoveFromGathering(AddUserToGatherViewModel data);
