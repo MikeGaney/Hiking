@@ -2,12 +2,32 @@
 
 
 <div class="col-lg-12 browsePage">
-
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="row">
+
+
+                <!--  Mobile Header  -->
+                <div class="col-md-6">
+                    <div class="mobileHeaderTrailsBrowse">
+                        <div class="mobileSectionsTrailsBrowse">
+                            <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Gatherings</a>
+                        </div>
+                        <div class="mobileSectionsTrailsBrowse">
+                            <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Weather</a>
+                        </div>
+                        <div class="mobileSectionsTrailsBrowse">
+                            <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Parking Pass</a>
+                        </div>
+                        <div class="mobileSectionsTrailsBrowse">
+                            <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Fishing/Hunting</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+
+
+
 
                     <!--  SideBar  -->
                     <div class="col-md-4 browseSideBar">
@@ -39,7 +59,7 @@
                         </div> 
 
                     </div>
-                </div>
+                
 
 
 
@@ -173,14 +193,14 @@
                         <div>
                             <a href="/trailDetail/{{trail.id}}"><img src="{{trail.image}}" width="300" alt="" class="imagesBrowse img-responsive" /></a>
                         </div>
-                        <div class="trailBrowse1">
-                            <h2>{{trail.name}}</h2>
-                            <h3>{{trail.location}}</h3>
+                        <div class="trailBrowse1"><a href="/trailDetail/{{trail.id}}">
+                              <h2>{{trail.name}}</h2>
+                              <h3>{{trail.location}}</h3></a>
                         </div>
-                        <div class="trailBrowse2">
-                            <h5>Distance: {{trail.distance}} miles</h5>
-                            <h5>Average Time: {{trail.time}} hours</h5>
-                            <h5>Elevation: {{trail.elevation}}</h5>
+                        <div class="trailBrowse2"><a href="/trailDetail/{{trail.id}}">
+                              <h5>Distance: {{trail.distance}} miles</h5>
+                              <h5>Average Time: {{trail.time}} hours</h5>
+                              <h5>Elevation: {{trail.elevation}}</h5></a>
                         </div>
                     </div>
                 </div>

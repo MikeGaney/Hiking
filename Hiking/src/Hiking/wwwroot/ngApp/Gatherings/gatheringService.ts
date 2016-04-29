@@ -48,6 +48,16 @@
             let removeResource = this.$resource("/api/gathering/removeUserFromGathering");
             return removeResource.delete(data).$promise;
         }
+
+        public searchTreks(data) {
+            let searchResource = this.$resource('/api/gathering/search');
+
+            console.log("getting trek search from server");
+            console.log(data);
+            return searchResource.query(data).$promise;
+
+        }
+
     }
     angular.module("Hiking").service("gatheringService", GatheringService);
 }

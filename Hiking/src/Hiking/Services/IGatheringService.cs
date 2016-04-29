@@ -13,5 +13,6 @@ namespace Hiking.Services
         void AddToGathering(AddUserToGatherViewModel data);
         UserInGatheringViewModel IsUserInGathering(AddUserToGatherViewModel data);
         void RemoveFromGathering(AddUserToGatherViewModel data);
+        List<Gathering> SearchGatherings(GatheringSearchViewModel data);
     }
 }
