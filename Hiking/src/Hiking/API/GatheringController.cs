@@ -63,8 +63,16 @@ namespace Hiking.API
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]AddGatheringViewModel value)
         {
+            if (value.Id == 0)
+            {
+                repo.AddGathering(value);
+            } else
+            {
+                repo.UpdateGathering(value);
+            }
+            return Ok();
         }
 
         // PUT api/values/5
@@ -75,8 +83,10 @@ namespace Hiking.API
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            repo.DeleteGathering(id);
+            return Ok();
         }
     }
 }

@@ -141,7 +141,7 @@ namespace Hiking {
 
             })
             .state( 'trekChanges', {
-                url: '/trekChanges',
+                url: '/trekChanges/:id',
                 templateUrl: '/ngApp/views/TrekChanges.html',
                 controller: Hiking.Controllers.TrekChangesController,
                 controllerAs: 'controller'

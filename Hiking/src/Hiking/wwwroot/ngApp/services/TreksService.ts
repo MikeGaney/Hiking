@@ -2,7 +2,7 @@
     export class TreksService {
         public treksService;
         constructor( $resource: ng.resource.IResourceService ) {
-            this.treksService = $resource( '/api/TrekChanges/:id' );
+            this.treksService = $resource( '/api/gathering/:id' );
 
         }
         public getAllTreks() {

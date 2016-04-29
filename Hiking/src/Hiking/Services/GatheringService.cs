@@ -52,13 +52,58 @@ namespace Hiking.Services
             return data;
         }
 
-        public void SaveGathering(Gathering data)
+
+
+        public void AddGathering(AddGatheringViewModel data)
         {
-            return;
+            var gather = new Gathering
+            {
+                Name = data.Name,
+                Description = data.Description,
+                Time = data.Time,
+                TrailId = data.TrailId,
+                OwnerId = data.OwnerId,
+            };
+            repo.Add<Gathering>(gather);
+            repo.SaveChanges();
+
         }
+
+        public void UpdateGathering(AddGatheringViewModel data)
+        {
+            var original = repo.Query<Gathering>().FirstOrDefault(g => g.Id == data.Id);
+            original.Name = data.Name;
+            original.Description = data.Description;
+            original.Time = data.Time;
+            original.TrailId = data.TrailId;
+            original.TrailName = data.TrailName;
+
+            repo.SaveChanges();
+
+        }
+
+
+
+        //public void SaveGathering(AddGatheringViewModel data)
+        //{
+        //    //var trail = repo.Query<Trail>().Where(t => t.Id == data.TrailId).FirstOrDefault();
+        //    var gather = new Gathering {
+        //        Name=data.Name,
+        //        Description=data.Description,
+        //        Time=data.Time,
+        //        TrailId=data.TrailId,
+        //        OwnerId=data.OwnerId,
+        //    };
+        //    repo.
+        //    //trail.Gatherings.Add(gather);
+        //    repo.SaveChanges();
+        //    return;
+        //}
 
         public void DeleteGathering(int id)
         {
+            var gather = repo.Query<Gathering>().Where(g => g.Id == id).FirstOrDefault();
+            repo.Delete<Gathering>(gather);
             return;
         }
 
