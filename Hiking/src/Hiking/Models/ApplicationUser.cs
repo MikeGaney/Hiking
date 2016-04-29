@@ -19,5 +19,6 @@ namespace Hiking.Models
         public ICollection<GatheringUsers> Gatheringusers { get; set; }
         //public ICollection<Trail> UserTrails { get; set; }
         public ICollection<UserTrail> UserTrails { get; set; }
+        public ICollection<CompletedTrail> CompletedTrails { get; set; }
     }
 }

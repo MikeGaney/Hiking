@@ -6,10 +6,12 @@ namespace Hiking.Services
 {
     public interface IBackpackService
     {
-        void CompletedTrail(int id);
+        void CompletedTrail(UserTrail data);
         BackpackTrailViewModel GetTrail(int id);
         List<Trail> GetTrailList(string id);
-        void RemoveTrail(int id);
+        void RemoveTrail(UserTrail data);
         void AddToBackpack(UserTrail data);
+        List<CompletedTrail> GetCompletedTrails(string id);
+        void SaveCompletedTrail(UserTrail id);
     }
 }

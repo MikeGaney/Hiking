@@ -7,7 +7,7 @@
         ];
         public userTrail;
 
-        constructor(private trailsService: Hiking.Services.TrailsService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService, private myTrailsService: Hiking.Services.MyTrailsService, private accountService: Hiking.Services.AccountService) {
+        constructor(private trailsService: Hiking.Services.TrailsService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService, private backpackService: Hiking.Services.BackPackService, private accountService: Hiking.Services.AccountService) {
 
             this.userTrail = {};
             this.getTrail();
@@ -34,7 +34,7 @@
             console.log(trailId);
             this.userTrail.ApplicationUserId = userId;
             this.userTrail.TrailId = trailId;
-            this.myTrailsService.addToBackpack(this.userTrail).then(() =>
+            this.backpackService.addToBackpack(this.userTrail).then(() =>
             {
                 console.log("added to backpack");
             });

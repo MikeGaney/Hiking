@@ -46,19 +46,28 @@ namespace Hiking.Services
             return trail;
         }
 
-        public void CompletedTrail(int id)
+        public void CompletedTrail(UserTrail data)
         {
-            var trailCompleted = repo.Query<Trail>().Where(t => t.Id == id).FirstOrDefault();
-            repo.Delete(trailCompleted);
-            repo.SaveChanges();
+            // var trailCompleted = repo.Query<UserTrail>().Where(ut => ut.TrailId == id).FirstOrDefault();
+            //repo.Delete<UserTrail>(data);
             //trailCompleted = ** need to remove from one and add to another (field)
+            //repo.Add<CompletedTrail>(data);
+            var hiker = repo.Query<ApplicationUser>().Where(u => u.Id == data.ApplicationUserId).FirstOrDefault();
+            var completedTrail = repo.Query<Trail>().Where(t => t.Id == data.TrailId).FirstOrDefault();
+            var CompletedTrail = new CompletedTrail
+            {
+                Name = completedTrail.Name,
+                TrailImage = completedTrail.Image
+            };
+            hiker.CompletedTrails.Add(CompletedTrail);
+            repo.SaveChanges();
             return;
         }
 
-        public void RemoveTrail(int id)
+        public void RemoveTrail(UserTrail data)
         {
-            var trailInBkPk = repo.Query<Trail>().Where(t => t.Id == id).FirstOrDefault();
-            repo.Delete(trailInBkPk);
+           // var trailInBkPk = repo.Query<UserTrail>().Where(ut => ut.TrailId == id).FirstOrDefault();
+            repo.Delete<UserTrail>(data);          
             repo.SaveChanges();
             return;
         }
@@ -68,6 +77,26 @@ namespace Hiking.Services
             repo.Add<UserTrail>(data);
             repo.SaveChanges();
             return;
+        }
+
+        public List<CompletedTrail> GetCompletedTrails(string id)
+        {
+            var completedTrailsList = repo.Query<ApplicationUser>().Where(u => u.Id == id).Include(u => u.CompletedTrails).FirstOrDefault();
+            var list = completedTrailsList.CompletedTrails.ToList();
+            return list;
+        }
+
+        public void SaveCompletedTrail(UserTrail id)
+        {
+            var user = repo.Query<ApplicationUser>().Where(u => u.Id == id.ApplicationUserId).Include( u => u.CompletedTrails).FirstOrDefault();
+            var trail = repo.Query<Trail>().Where(t => t.Id == id.TrailId).FirstOrDefault();
+            var completed = new CompletedTrail
+            {
+                Name = trail.Name,
+                TrailImage = trail.Image
+            };
+            user.CompletedTrails.Add(completed);
+            repo.SaveChanges();
         }
     }
 }

@@ -16,25 +16,35 @@
                     <div class="col-sm-4">
 
                         <div id="asides">
-                            <button class="toEditbtn"><a href="/editprofile/{{controller.viewProfile.id}}" style="color: white">Edit Your Profile Here</a></button>
+                            <button class="toEditbtn"><a href="/editprofile/{{controller.viewProfile.displayName}}" style="color: firebrick">Edit Your Profile Here</a></button>
                             <aside class="aside" id="aside1" style="border:10px solid rgba(0,0,0,.3);">
                                 <h3>My Saved Trails:</h3>
                                 <div id="myTrails">
-                                    {{controller.myTrails.trailimage}}{{controller.myTrails.name}}
+                                    <!--{{controller.myTrails.trailimage}}{{controller.myTrails.name}}-->
                                     <table class="bkpkTable">
                                         <tr>
+                                            <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
                                             <td>Lake Phillipa</td>
+                                            <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
                                             <td>John Wayne Trail</td>
                                         </tr>
                                         <tr>
-                                            <td>Big Four Ice Caves</td>
+                                            <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
+                                            <td>
+                                                Big Four Ice Caves
+                                            </td>
+                                            <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
                                             <td>Hoodoo Canyon</td>
                                         </tr>
                                     </table>
 
 
                                 </div>
-                                <a href="/mytrails/{{controller.viewProfile.displayName}}">check out your backpack</a>
+                                <div class="bkpkLink">
+                                    <a href="/backpack/{{controller.viewProfile.displayName}}" style="color:white">check out your backpack</a>
+                                    <img src="http://iloominate.org/images/backpack_2551.png" id="bkpkIcon"/>
+                                </div>
+                                
                             </aside>
                             <aside class="aside" id="aside2">
                                 <h3>Trail Patches:</h3>
@@ -47,15 +57,15 @@
                         <div class="row">
                             <div class="col-sm-8">
                                 <div id="bio">
-                                    <h3><strong>About Me:</strong></h3>
+                                    <h3 style="color:firebrick"><strong>About Me:</strong></h3>
                                     <p>{{controller.viewProfile.bio}}</p>
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div id="circle">
-                                    <h3>Expertise Level:</h3>
+                                    <h3 style="color:firebrick">Expertise Level:</h3>
                                     <h4>{{controller.viewProfile.expertise}}</h4>
-                                    <h3>Age:</h3>
+                                    <h3 style="color:firebrick">Age:</h3>
                                     <h4>{{controller.viewProfile.age}}</h4>
                                 </div>
                             </div>
