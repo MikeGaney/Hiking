@@ -37,13 +37,14 @@
     box-shadow: 7px 7px 7px #404040;
     color: rgba(0, 0, 0, 1.0);
     position: relative;
+    float: right;
     display: inline-block;
-    /*height: 1200px;*/
+    height: 1200px;
     width: 700px;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 15px;
-    margin-left: 135px;
+    /*margin-left: 100px;*/
     
 }
 .formControl{
@@ -67,13 +68,6 @@
     margin-top: 10px;
     
 }
-#expertWrapper {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin-top: 25px;
-}
-
 #bioWrapper{
     width: 650px; 
     height: 600px;
@@ -92,12 +86,11 @@
 }
 #bioLabel{
 }
-#pwProf{
-    /*display: inline-block;
-    margin-top: -45px;
-    width: 600px;
-    height: 200px;*/
-    text-align: center;
+#expertWrapper {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: 25px;
 }
 #submitWrapper{
     position:relative;

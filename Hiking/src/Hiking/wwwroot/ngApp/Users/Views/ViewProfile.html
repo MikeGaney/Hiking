@@ -20,21 +20,19 @@
                             <aside class="aside" id="aside1" style="border:10px solid rgba(0,0,0,.3);">
                                 <h3>My Saved Trails:</h3>
                                 <div id="myTrails">
-                                    <!--{{controller.myTrails.trailimage}}{{controller.myTrails.name}}-->
                                     <table class="bkpkTable">
-                                        <tr>
+                                        
+                                        <tr ng-repeat="trail in controller.backpack">
                                             <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                            <td>Lake Phillipa</td>
+                                            <td>{{trail.name}}</td>
                                             <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                            <td>John Wayne Trail</td>
+                                            <td>{{trail.name}}</td>
                                         </tr>
                                         <tr>
                                             <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                            <td>
-                                                Big Four Ice Caves
-                                            </td>
+                                            <td>{{trail.name}}</td>
                                             <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                            <td>Hoodoo Canyon</td>
+                                            <td>{{trail.name}}</td>
                                         </tr>
                                     </table>
 
@@ -42,9 +40,9 @@
                                 </div>
                                 <div class="bkpkLink">
                                     <a href="/backpack/{{controller.viewProfile.displayName}}" style="color:white">check out your backpack</a>
-                                    <img src="http://iloominate.org/images/backpack_2551.png" id="bkpkIcon"/>
+                                    <img src="http://iloominate.org/images/backpack_2551.png" id="bkpkIcon" />
                                 </div>
-                                
+
                             </aside>
                             <aside class="aside" id="aside2">
                                 <h3>Trail Patches:</h3>
