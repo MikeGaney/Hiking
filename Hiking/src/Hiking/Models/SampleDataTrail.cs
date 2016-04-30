@@ -1186,8 +1186,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "John Wayne Trail - Army West",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/5/56/Snoqualmie_Valley_Trail.gif",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/3/35/John_Wayne_Pioneer_Trail_-_east_end_of_Iron_Horse_park.jpg",
                     Distance = 8.0m,
                     Time = 4.0m,
                     Location = "Central Washington, Yakima",
@@ -1302,8 +1302,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Hoodoo Canyon",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/1/1e/Map_of_North_Cascades_National_Park.png",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/4/47/Palouse-Canyon-Washington-State.jpg",
                     Distance = 6.5m,
                     Time = 3.0m,
                     Location = "Eastern Washington, Okanogan Highlands/Kettle River Range",
@@ -1418,8 +1418,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Big Rock",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/1/1e/Map_of_North_Cascades_National_Park.png",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/9/9d/Lemei_Rock,_the_highest_peak_in_the_Indian_Heaven_Wilderness..jpg",
                     Distance = 2.5m,
                     Time = 1.5m,
                     Location = "Eastern Washington, Spokane Area/Coeur d'Alene",
@@ -1534,8 +1534,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Amber Lake",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Northwest_National_Scenic_Trail_overview_map.jpg",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Columbia_plateau_trail_IMG_1549.jpg",
                     Distance = 15.0m,
                     Time = 9.5m,
                     Location = "Eastern Washington, Spokane Area/Coeur d'Alene",
@@ -1650,8 +1650,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Similkameen Trail",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/7/70/South_BC-NW_USA-relief_CaribooRoad.png",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/e/e2/Pacific_Northwest_NST_(9509988001).jpg",
                     Distance = 7.0m,
                     Time = 5.5m,
                     Location = "Eastern Washington, Okanogan Highlands/Kettle River Range",
@@ -1766,8 +1766,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Wapaloosie Mountain",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/1/1c/Birkhead_Mountains_Wilderness_Trail_Map.jpg",
+                    Image = "https://pixabay.com/static/uploads/photo/2014/09/06/23/36/summit-437315_960_720.jpg",
                     Distance = 75.0m,
                     Time = 3.5m,
                     Location = "Eastern Washington, Okanogan Highlands/Kettle River Range",
@@ -1882,8 +1882,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Pend Oreille County Park",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/0/05/Pend_Oreille_River_Map.png",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/2/2c/Lake_Pend_Oreille.jpg",
                     Distance = 7.0m,
                     Time = 4.5m,
                     Location = "Eastern Washington, Spokane Area/Coeur d'Alene",
@@ -1998,8 +1998,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Liberty Lake Regional Park",
-                    Map = "",
-                    Image = "",
+                    Map = "https://c2.staticflickr.com/6/5589/14878036706_87b7bc6c33_b.jpg",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/c/ca/Lake_Loramie_Bridge.jpg",
                     Distance = 8.0m,
                     Time = 4.5m,
                     Location = "Eastern Washington, Spokane Area/Coeur d'Alene",
@@ -2114,8 +2114,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Big Four Ice Caves Snowshoe",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/f/f4/Lassen_Volcanic_National_Park_map_2006.07.png",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/f/fb/Big_Four_Ice_Caves._Mt._Baker-Snoqualmie_National_Forest,_North_Cascade_Mountains,_Washington.JPG",
                     Distance = 7.0m,
                     Time = 5.5m,
                     Location = "North Cascades, Mountain Loop Highway",
@@ -2230,8 +2230,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Big Four Ice Caves",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/f/f4/Lassen_Volcanic_National_Park_map_2006.07.png",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/a/a0/Big_Four_Glacier_Ice_cave.jpg",
                     Distance = 2.2m,
                     Time = 1.5m,
                     Location = "North Cascades, Mountain Loop Highway",
@@ -2346,8 +2346,8 @@ namespace Hiking.Models
                 {
                     BackgroundImage = "",
                     Name = "Quartzite Mountain",
-                    Map = "",
-                    Image = "",
+                    Map = "https://upload.wikimedia.org/wikipedia/commons/a/a5/WA18_topo_map_1971.jpg",
+                    Image = "https://upload.wikimedia.org/wikipedia/commons/a/a8/Mt._Adams_from_Bird_Creek_Meadows_03.JPG",
                     Distance = 3.0m,
                     Time = 1.5m,
                     Location = "Eastern Washington, Selkirk Range",
@@ -2457,7 +2457,936 @@ namespace Hiking.Models
                             UserID = userIdList[rnd.Next(userIdList.Count)],
                         }
                     }
-                }
+                },
+                 new Trail
+                 {
+                     BackgroundImage = "",
+                     Name = "Hog Lake",
+                     Map = "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Northwest_National_Scenic_Trail_overview_map.jpg",
+                     Image = "https://c2.staticflickr.com/4/3493/3882964492_20ee567a4e_b.jpg",
+                     Distance = 5.0m,
+                     Time = 3.5m,
+                     Location = "Eastern Washington, Spokane Area/Coeur d'Alene",
+                     Elevation = "Gain: 1700 ft. Highest Point 500 ft.",
+                     DifficultyLevel = 5,
+                     Overview = "To access the upper portion of a 1.3 - mile loop above Hog Lake, hike 1.2 miles along the main road to a trailhead / horse unloading area.After enjoying the loop in the northern highlands above the lake, drop down the short trail to the lakeshore to experience the views there.The access to Hog Lake itself is found down the steep hill about 0.2 mile from the trailhead parking area along the southern side of the upper loop.A nice fisher's trail leads along the north shore of Hog Lake to wind around the shore for great reflection views, photo opportunities, and wildlife.",
+                     PassRequired = false,
+                     Biking = false,
+                     Fishing = false,
+                     Camping = false,
+                     Horses = false,
+                     Lakes = true,
+                     Rivers = false,
+                     Waterfalls = false,
+                     Lookouts = false,
+                     Bears = true,
+                     Cougars = true,
+                     Rating = 4,
+                     OpenSeason = "",
+                     RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                     BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                     FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                     TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                 },
+
+                             new Trail
+                             {
+                                 BackgroundImage = "",
+                                 Name = "Heather Lake",
+                                 Map = "https://upload.wikimedia.org/wikipedia/commons/3/35/East_Lake_Sammamish_Trail.gif",
+                                 Image = "https://upload.wikimedia.org/wikipedia/commons/f/f8/Kaweah_downValley.jpg",
+                                 Distance = 4.6m,
+                                 Time = 2.5m,
+                                 Location = "North Cascades, Mountain Loop Highway",
+                                 Elevation = "Gain: 1034 ft. Highest Point 2430 ft.",
+                                 DifficultyLevel = 3,
+                                 Overview = "The trail takes off just left of the large parking lot, and immediately begins to climb through old second growth forest on a series of switchbacks.As you climb through the woods, note the huge rotting stumps with the springboard notches on the side.Springboards were boards placed in tree trunks for the loggers of yore to stand on as they used a large crosscut saw to take down the tree.Notice young trees growing out of the stumps--old stumps nursing new forest.",
+                                 PassRequired = false,
+                                 Biking = false,
+                                 Fishing = false,
+                                 Camping = false,
+                                 Horses = false,
+                                 Lakes = true,
+                                 Rivers = false,
+                                 Waterfalls = true,
+                                 Lookouts = true,
+                                 Bears = false,
+                                 Cougars = false,
+                                 Rating = 3,
+                                 OpenSeason = "",
+                                 RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                 BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                 FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                 TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                             },
+                             new Trail
+                             {
+                                 BackgroundImage = "",
+                                 Name = "Skyline Trail Loop",
+                                 Map = "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Northwest_National_Scenic_Trail_overview_map.jpg",
+                                 Image = "https://upload.wikimedia.org/wikipedia/commons/e/e9/Cabot_trail_2009k.JPG",
+                                 Distance = 5.5m,
+                                 Time = 2.5m,
+                                 Location = "Mount Rainier Area, SW Longmire/Paradise",
+                                 Elevation = "Gain: 1450 ft. Highest Point 6800 ft.",
+                                 DifficultyLevel = 2,
+                                 Overview = "Depart from the Paradise parking lot and locate the trailhead behind the Jackson Visitor Center.The crosshatched system of trails heading out of Paradise is intricate, so make sure to stop by the visitor center to pick up a map if you didn't bring one in your pack. ",
+                                 PassRequired = false,
+                                 Biking = false,
+                                 Fishing = false,
+                                 Camping = false,
+                                 Horses = false,
+                                 Lakes = false,
+                                 Rivers = true,
+                                 Waterfalls = true,
+                                 Lookouts = true,
+                                 Bears = true,
+                                 Cougars = true,
+                                 Rating = 4,
+                                 OpenSeason = "",
+                                 RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                 BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                 FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                 TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                             },
+                              new Trail
+                              {
+                                  BackgroundImage = "",
+                                  Name = "Brightwater Center",
+                                  Map = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Renfrewshire_UK_location_map.svg/2000px-Renfrewshire_UK_location_map.svg.png",
+                                  Image = "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ba-trail.JPG",
+                                  Distance = 3.0m,
+                                  Time = 1.0m,
+                                  Location = "Puget Sound and Islands, Seattle-Tacoma Area",
+                                  Elevation = "N/A",
+                                  DifficultyLevel = 1,
+                                  Overview = "The grounds are open daily from dawn to dusk, and the Brightwater Education and Community Center is open to the public Monday – Thursday, 10 a.m. – 4 p.m. ",
+                                  PassRequired = false,
+                                  Biking = false,
+                                  Fishing = false,
+                                  Camping = false,
+                                  Horses = false,
+                                  Lakes = true,
+                                  Rivers = true,
+                                  Waterfalls = false,
+                                  Lookouts = false,
+                                  Bears = false,
+                                  Cougars = false,
+                                  Rating = 3,
+                                  OpenSeason = "",
+                                  RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                  BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                  FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                  TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                              },
+                               new Trail
+                               {
+                                   BackgroundImage = "",
+                                   Name = "Teneriffe Falls (Kamikaze Falls)",
+                                   Map = "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Northwest_National_Scenic_Trail_overview_map.jpg",
+                                   Image = "https://upload.wikimedia.org/wikipedia/commons/6/67/Lake-Mountain-trail.jpg",
+                                   Distance = 6.0m,
+                                   Time = 5.0m,
+                                   Location = "Snoqualmie, North Bend Area",
+                                   Elevation = "Gain: 1420 ft. Highest Point 2370 ft.",
+                                   DifficultyLevel = 3,
+                                   Overview = "The hike starts from a trailhead at the school bus turn-around off SE Mt. Si Road--be sure not to block this turnaround if you're hiking this trail during the week! Also note that the tread consists of loose rock in places, so sturdy shoes or boots will help keep your ankles and feet happy on this hike.",
+                                   PassRequired = true,
+                                   Biking = false,
+                                   Fishing = false,
+                                   Camping = false,
+                                   Horses = false,
+                                   Lakes = false,
+                                   Rivers = false,
+                                   Waterfalls = true,
+                                   Lookouts = false,
+                                   Bears = false,
+                                   Cougars = false,
+                                   Rating = 3,
+                                   OpenSeason = "",
+                                   RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                   BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                   FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                   TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                               },
+                                new Trail
+                                {
+                                    BackgroundImage = "",
+                                    Name = "Lake Wapiki",
+                                    Map = "https://upload.wikimedia.org/wikipedia/commons/8/83/Lemei_Rock_in_the_Indian_Heaven_Wilderness_Visitor_Map.png",
+                                    Image = "https://upload.wikimedia.org/wikipedia/commons/b/b9/Small_Lake_at_Indian_Heaven.jpg",
+                                    Distance = 7.0m,
+                                    Time = 8.0m,
+                                    Location = "South Cascades, Mount Adams Area",
+                                    Elevation = "Gain: 100 ft. Highest Point 5100 ft.",
+                                    DifficultyLevel = 4,
+                                    Overview = "Find the junction for Lake Wapiki three miles from the Lemei Lake trailhead. A short traverse along a forested hill delivers you to the sapphire blue lake in Lemei Rock's old crater.",
+                                    PassRequired = false,
+                                    Biking = false,
+                                    Fishing = false,
+                                    Camping = true,
+                                    Horses = false,
+                                    Lakes = true,
+                                    Rivers = false,
+                                    Waterfalls = true,
+                                    Lookouts = false,
+                                    Bears = false,
+                                    Cougars = false,
+                                    Rating = 5,
+                                    OpenSeason = "",
+                                    RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                    BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                    FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                    TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                                },
+                                  new Trail
+                                  {
+                                      BackgroundImage = "",
+                                      Name = "Greider Lakes",
+                                      Map = "https://upload.wikimedia.org/wikipedia/commons/d/db/Pacific_Northwest_National_Scenic_Trail_overview_map.jpg",
+                                      Image = "https://c2.staticflickr.com/8/7723/17126211407_435cb41006_b.jpg",
+                                      Distance = 8.6m,
+                                      Time = 8.0m,
+                                      Location = "Central Cascades, Stevens Pass-West",
+                                      Elevation = "Gain: 1370 ft. Highest Point 2930 ft.",
+                                      DifficultyLevel = 5,
+                                      Overview = "The trail quickly heads upward, steeply at first on somewhat rocky and rooty terrain. Traversing slopes that succumbed to fire many decades ago, you'll see blackened snags punctuate an even-aged canopy of maturing second growth.",
+                                      PassRequired = true,
+                                      Biking = false,
+                                      Fishing = false,
+                                      Camping = true,
+                                      Horses = false,
+                                      Lakes = true,
+                                      Rivers = false,
+                                      Waterfalls = false,
+                                      Lookouts = false,
+                                      Bears = false,
+                                      Cougars = false,
+                                      Rating = 5,
+                                      OpenSeason = "",
+                                      RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                      BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                      FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                      TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                                  },
+                                   new Trail
+                                   {
+                                       BackgroundImage = "",
+                                       Name = "Margaret's Way",
+                                       Map = "https://s-media-cache-ak0.pinimg.com/236x/7f/aa/1c/7faa1c46eea3b70fd64dc97512f8f377.jpg",
+                                       Image = "https://upload.wikimedia.org/wikipedia/commons/8/88/Ex-Milwaukee_Road_railroad_trestle_over_Mine_Creek_on_John_Wayne_Pioneer_Trail.jpg",
+                                       Distance = 5.5m,
+                                       Time = 3.0m,
+                                       Location = "Issaquah Alps, Squak Mountain",
+                                       Elevation = "Gain: 1500 ft. Highest Point 1730 ft.",
+                                       DifficultyLevel = 3,
+                                       Overview = "Margaret's Way is a trail built on King County lands on the west side of Squak Mountain, connecting to the Squak Mountain trail system, and culminating at Five Corners, where hikers can link to the Chybinski trail, as well as the Perimeter Loop near Debbie's View. ",
+                                       PassRequired = false,
+                                       Biking = false,
+                                       Fishing = false,
+                                       Camping = true,
+                                       Horses = false,
+                                       Lakes = false,
+                                       Rivers = false,
+                                       Waterfalls = false,
+                                       Lookouts = true,
+                                       Bears = false,
+                                       Cougars = false,
+                                       Rating = 3,
+                                       OpenSeason = "",
+                                       RatingList = new List<TrailRating>
+                    {
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new TrailRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                       BeautyRating = new List<BeautyRating>
+                    {
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new BeautyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                       FamilyRating = new List<FamilyRating>
+                    {
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        },
+                        new FamilyRating
+                        {
+                            UserId = userIdList[rnd.Next(userIdList.Count)],
+                            Rating = rnd.Next(1, 5)
+                        }
+                    },
+                                       TrailComments = new List<TrailComment>
+                    {
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        },
+                        new TrailComment
+                        {
+                            CreationDate = DateTime.Now,
+                            Message = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis gravida ligula. Praesent eros diam, fringilla vel lacinia sit amet, porta at magna. Suspendisse quis ullamcorper ante. Morbi eu velit tempus, lobortis metus at, accumsan ligula. Pellentesque sed magna a nibh elementum venenatis.",
+                            UserID = userIdList[rnd.Next(userIdList.Count)],
+                        }
+                    }
+                                   }
                 );
 
 
