@@ -249,6 +249,11 @@
     font-size: x-large;
 }
 
+.paginationBrowse {
+    margin-left: 525px;
+
+}
+
 /****************** Details Page *************/
 
 .detailsPage {

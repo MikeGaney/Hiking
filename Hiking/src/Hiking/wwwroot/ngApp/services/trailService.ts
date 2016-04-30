@@ -11,6 +11,12 @@
             this.trailResource = $resource('/api/trails/:id');
         }
 
+        getTrailsShortList(num) {
+            console.log(num);
+            let randomResource = this.$resource('/api/trails/browse');
+            return randomResource.query({ num: num });
+        }
+
         public getTrails()
         {
             //console.log("getting list of trails from server");
