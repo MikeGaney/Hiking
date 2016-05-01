@@ -1,41 +1,149 @@
-﻿.home1SA{
-   
-    background-image: url('../images/lake_maria_state_park.jpg');
-     background-size: cover;
+﻿.home1SA {
+    background-image: url('../images/neve_glacier_north_cascades_usgs (1).jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    color:aliceblue;
-     padding-bottom: 10em;
-   
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
-.bottomHalf {
-    background-image: url('../images/leaves.jpg');
-    background-size:cover;
-    
-}
-.box1SA{
- background-color: rgba(255, 255, 255, 0.60);
+.whiteCover{
+   background-color: rgba(255, 255, 255, 0.60);
    color: rgba(0, 0, 0, 1.00);
    padding-right: 10em;
    padding-left: 10em;
-   padding-bottom: 10em;
-   padding-top:10em;
+   padding-bottom: 60em;
+   padding-top:2em;
    color:black;
 }
-.box2SA{
- background-color: rgba(255, 255, 255, 0.60);
-   color: rgba(0, 0, 0, 1.00);
-   padding-right: 10em;
-   padding-left: 10em;
-   padding-bottom: 10em;
-   padding-top:10em;
-   color:black;
+.TitleHome{
+    text-align:center;
 }
-.box3SA{
- background-color: rgba(255, 255, 255, 0.60);
-   color: rgba(0, 0, 0, 1.00);
-   padding-right: 10em;
-   padding-left: 10em;
-   padding-bottom: 10em;
-   padding-top:10em;
-   color:black;
+@media (max-width: 600px) {
+    .section {
+	width: 60px;
+	height: 60px;
+    }
+}
+
+@media (min-width: 600px) {
+    .section {
+	width: 200px;
+	height: 200px;
+    }
+}
+
+.section {
+    position: absolute;
+    overflow:hidden;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -khtml-border-radius: 50%;
+    background: #eee;
+    z-index: 5;
+}
+
+.section a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.section .section-header p {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .section .section-header {
+	height: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section .section-header {
+	height: 33%;
+    }
+}
+
+#sid-trails .section-header {
+    background-color: orange;
+}
+
+#sid-trails {
+    top: 3%;
+    right: 18%;
+    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+}
+
+#sid-treks .section-header {
+    background-color: green;
+}
+
+#sid-treks {
+    bottom: 23%;
+    left: 25%;
+    background-image: url('../images/6063863667_71fa43a77e_b hiking.jpg');
+}
+
+#sid-blogs .section-header {
+    background-color: cyan;
+}
+
+#sid-blogs {
+    top: 3%;
+    left: 5%;
+    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+}
+
+#sid-gears .section-header {
+    background: magenta;
+}
+
+#sid-gears {
+    bottom: 23%;
+    right: 5%;
+    background-image: url('../images/columbia_river_gorge_(3).jpg');
+}
+
+
+@media (max-width: 600px) {
+    #main-circle {
+	width: 100%;
+    }
+}
+
+/* Computer Size Main Circle */
+@media (min-width: 600px) {
+    #main-circle {
+	width: 45%;
+    }
+}
+
+#main-circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#main-circle:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+}
+#main-circle > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#main-circle {
+    overflow: hidden;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+    background-repeat: no-repeat;
+    /*background: #000;*/
 }
