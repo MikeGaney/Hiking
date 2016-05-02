@@ -31,6 +31,15 @@ namespace Hiking.API
             return Ok(data);
         }
 
+        //[HttpGet]
+        //public IActionResult GetShortTrailList()
+        //{
+        //    var userId = User.GetUserId();
+        //    var data = service.GetShortTrailList(userId);
+
+        //    return Ok(data);
+        //}
+
         [HttpGet]
         [Route("completedTrail")]
         public IActionResult GetCompletedTrails()

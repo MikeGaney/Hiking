@@ -99,6 +99,7 @@
 #bkpkIcon{
     height: 40px;
     width: 40px;
+   
 }
 
 #aside1{
@@ -127,8 +128,8 @@
     box-shadow: 7px 7px 7px #404040;
     border: 10px solid rgba(0,0,0,.3);
     margin-top: 150px;
-    height: 225px;
-    width: 625px;
+    height: 325px;
+    width: 100%;
     left: 0;
     right: -50px;
     top: 250px;

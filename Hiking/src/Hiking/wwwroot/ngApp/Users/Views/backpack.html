@@ -1,42 +1,38 @@
-﻿<div id="myTrailsWindow">
-<h1>BackPack Page</h1>
-<div class="row">
-    
-    <div class="col-md-12" id="navPlaceholder">Nav</div>
+﻿<div class="backpackWindow">
+    <!--<div class="container-fluid">-->
+    <!--<div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Complete Trail</th>
+                    <th>Remove from Backpack</th>
+                </tr>
+                <tr ng-repeat="trail in controller.backpack">
+                    <td>{{trail.id}}</td>
+                    <td>{{trail.name}}</td>
+                    <td> <a ng-click="controller.saveCompletedTrail(trail.id)">DONE!</a></td>
+                    <td><button type="button" value="Delete myTrail" class="btn btn-danger" id="deleteBtn" ng-click="controller.deleteMyTrail(trail.id)">Remove from BackPack</button></td>
+                </tr>
+            </table>
+        </div>
 
-    <div class="col-md-8 col-md-offset-2">
-        <table class="table">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Complete Trail</th>
-                <th>Remove from Backpack</th>
-            </tr>
-            <tr ng-repeat="trail in controller.backpack">
-                <td>{{trail.id}}</td>
-                <td>{{trail.name}}</td>
-                <td> <a ng-click="controller.saveCompletedTrail(trail.id)">DONE!</a></td>
-                <td><button type="button" value="Delete myTrail" class="btn btn-danger" id="deleteBtn" ng-click="controller.deleteMyTrail(trail.id)">Remove from BackPack</button></td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="col-md-8 col-md-offset-2">
-        <h2>Completed Trails</h2>
-        <table class="table">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Trail Image</th>                
-            </tr>
-            <tr ng-repeat="trail in controller.completedHikes">
-                <td>{{trail.id}}</td>
-                <td>{{trail.name}}</td>
-                <td>{{trail.trailImage}}</td>
-            </tr>
-        </table>
-    </div>
-
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Completed Trails</h2>
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Trail Image</th>
+                </tr>
+                <tr ng-repeat="trail in controller.completedHikes">
+                    <td>{{trail.id}}</td>
+                    <td>{{trail.name}}</td>
+                    <td>{{trail.trailImage}}</td>
+                </tr>
+            </table>
+        </div>-->
     <!--<div class="col-md-12"id="bodywrapperBP">
         <div class="col-md-2"></div>
         <div class="row">
@@ -52,6 +48,119 @@
             </div>
         </div>
     </div>-->
-    <div class="col-md-12" id="footerPlaceholder"></div>
+    <!--</div>
+    </div>-->
+    <div class="col-lg-12 ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <!--  Mobile Header  -->
+                    <div class="col-md-6">
+                        <div class="mobileHeaderTrailsBrowse">
+                            <div class="mobileSectionsTrailsBrowse">
+                                <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Gatherings</a>
+                            </div>
+                            <div class="mobileSectionsTrailsBrowse">
+                                <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Weather</a>
+                            </div>
+                            <div class="mobileSectionsTrailsBrowse">
+                                <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Parking Pass</a>
+                            </div>
+                            <div class="mobileSectionsTrailsBrowse">
+                                <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Fishing/Hunting</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+
+
+
+
+                    <!--  SideBar  -->
+                    <div class="col-md-4 browseSideBar">
+
+                        <h1 class="sidebarTitle">TrekClub</h1>
+
+                        <!-- Meet Up Info -->
+                        <div class="bkpkBrowseLegend">
+                            <h2 class="browseSBtitles">Gatherings</h2>
+                            <button class="browseSBbtns"><a href="/gatherings">Click Here</a></button>
+                        </div>
+
+                        <!-- Weather Link -->
+                        <div class="bkpkBrowseLegend">
+                            <h2 class="browseSBtitles">Local Weather</h2>
+                            <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                        </div>
+
+                        <!-- Parking Pass Link -->
+                        <div class="bkpkBrowseLegend">
+                            <h2 class="browseSBtitles">Need a Parking Pass</h2>
+                            <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                        </div>
+
+                        <!-- Fishing/Hunting Licenses Link -->
+                        <div class="bkpkBrowseLegend">
+                            <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
+                            <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!--  Header Quote  -->
+                    <div class="col-tablet-3 col-sm-4 col-md-8 bkpkBody">
+                        <div id="bkpkHeaderBkgrnd">
+                            <hr />
+                            <div class="row form-group">                                
+                                <h1 id="bkpkHeader">"I haven't been everywhere, but it's on my list." ~ Susan Sontag</h1>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+
+
+
+                    <!--  Trails Added to BackPack  -->
+                    <div class="row" ng-repeat="trail in controller.backpack">
+                        <div class="col-tablet-3 col-sm-4 col-md-8 trailBox">
+                            <div>
+                                 <a href="/trailDetail/{{trail.id}}">
+                                <img src="{{trail.image}}" style="width:150px; height: 120px;" class="imagesBrowse img-responsive>" />
+                                 </a>
+                           </div>
+                         <div class="bkpkTrailInfo">
+                                <a href="/trailDetail/{{trail.id}}">
+                                    <h3 class="bkpkTrailName">{{trail.name}}</h3>
+                                    <h5>Distance: {{trail.distance}} miles</h5>
+                                    <h5>Average Time: {{trail.time}} hours</h5>
+                                </a>
+                                <div id="bkpkRemoveBtnDiv">
+                                    <img src="http://www.jpapencen.gov.my/images/close.png" id="bkpkremoveBtn"  ng-click="controller.deleteMyTrail(trail.id)"/>
+                                </div>
+                                <div id="doneDiv">
+                                    <form ng-submit="controller.saveCompletedTrail(trail.id)">
+                                        Done!<input type="checkbox" value="Done" id="bkpkCheckbox"/>
+                                    </form>
+
+                               </div>
+                        </div>
+
+                    </div>
+                  </div>
+                    <!--  Pagination  -->
+                    <div class="row bkpkPagination">
+                        <uib-pagination total-items="controller.numberOfAds" ng-model="controller.currentPage" max-size="controller.maxSize" class="pagination-sm" boundary-link-numbers="true" ng-change="controller.nextPage()"></uib-pagination>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+

@@ -26,11 +26,17 @@ namespace Hiking.Services
             //});
             //var list = test
             //return test;
-
-            //var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take        (4).ToList();
             var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).ToList();
             return trails;
         }
+
+        //public List<Trail> GetShortTrailList(string id)
+        //{
+        //    //var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take(4).ToList();
+        //    //return trails;
+        //    var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take(4).ToList();
+        //    return trails;
+        //}
 
         public BackpackTrailViewModel GetTrail(int id)
         {
@@ -96,5 +102,7 @@ namespace Hiking.Services
             user.CompletedTrails.Add(completed);
             repo.SaveChanges();
         }
+
+        
     }
 }

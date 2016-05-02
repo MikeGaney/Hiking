@@ -6,20 +6,25 @@
         public delete;
         public completed;
         public completedHikes;
+        public search;
+        public trails;
 
         constructor(
             private backpackService: Hiking.Services.BackPackService,
             private trailsService: Hiking.Services.TrailService,
             private $stateParams: ng.ui.IStateParamsService,
             private accountService: Hiking.Services.AccountService,
-            private $state: ng.ui.IStateService) 
+            private $state: ng.ui.IStateService,
+            private trailService: Hiking.Services.TrailService) 
         {
-            console.log("hey");
+            //console.log("hey");
             this.completedHikes = {};
             this.delete = {};
             this.completed = {};
             this.getBackPack();
             this.getCompletedTrails();
+            this.search = {};
+            //this.();
 
 
         }
@@ -74,7 +79,14 @@
                 this.completedHikes = data;
                 console.log(data);
             });
-        }
+        };
+        //trailSearch() {
 
+        //    console.log(this.search);
+        //    this.trailService.searchTrails(this.search).then((data) => {
+        //        this.trails = data;
+        //        console.log(data);
+        //    });
+        //};
     }
 } 

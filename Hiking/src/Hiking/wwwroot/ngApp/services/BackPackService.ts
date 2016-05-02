@@ -2,6 +2,7 @@
 
     export class BackPackService {
         private MyTrailsResource;
+
         constructor(private $resource: ng.resource.IResourceService) 
         {
             this.MyTrailsResource = $resource('/api/backpack/:id');
@@ -15,6 +16,10 @@
         {
             return this.MyTrailsResource.query().$promise;
         }
+        //public getShortTrailList() {
+        //    console.log("I'm here.");
+        //    return this.MyTrailsResource.query().$promise;          
+        //}
         public removeMyTrail(del) { 
             let deleteMyTrailResource = this.$resource('/api/backpack/removeMyTrail');
             return deleteMyTrailResource.delete(del).$promise;

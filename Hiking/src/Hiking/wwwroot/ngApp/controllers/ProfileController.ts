@@ -4,12 +4,18 @@
     export class ViewProfileController 
     {
         public viewProfile;
+        public shortbackpack;
+        public completedHikes;
         constructor(
             private profileService: Hiking.Services.ProfileService,
-            private accountService: Hiking.Services.AccountService) 
+            private accountService: Hiking.Services.AccountService,
+            private backpackService:Hiking.Services.BackPackService) 
         {
             this.GetProfile();
-
+            //this.shortbackpack = {};
+            //this.getShortTrailList();
+            this.completedHikes = {};
+            this.getCompletedTrails();
         }
 
         GetProfile() 
@@ -25,6 +31,19 @@
                 if (this.viewProfile.age == 0) {
                     this.viewProfile.age = "-";
                 }
+                //console.log(data);
+            });
+        }
+        //getShortTrailList() {
+        //    //debugger;
+        //    this.backpackService.getShortTrailList().then((data) => {
+        //        this.shortbackpack = data;
+        //        console.log(data);
+        //    });
+        //}
+        getCompletedTrails() {
+            this.backpackService.getCompletedTrails().then((data) => {
+                this.completedHikes = data;
                 //console.log(data);
             });
         }
