@@ -29,6 +29,15 @@ namespace Hiking.API
             return trails;
         }
 
+        // GET: api/values
+        [HttpGet]
+        [Route("browse")]
+        public IEnumerable<Trail> getpage(int num)
+        {
+            var trails = _db.Trails.Skip(10 * (num - 1)).Take(10).ToList();
+            return trails;
+        }
+
         // GET api/values/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)

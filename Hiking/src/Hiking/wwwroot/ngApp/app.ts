@@ -111,7 +111,7 @@ namespace Hiking {
             .state('admin', {
                 url: '/admin',
                 templateUrl: '/ngApp/Admin/Views/admin.html',
-                controller: Hiking.Controllers.AdminController,
+                controller: Hiking.Controllers.ViewProfileController,
                 controllerAs: 'controller'
             })
             .state('backpack', {

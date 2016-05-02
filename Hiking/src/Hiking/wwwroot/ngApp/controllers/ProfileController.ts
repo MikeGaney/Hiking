@@ -4,11 +4,14 @@
     export class ViewProfileController 
     {
         public viewProfile;
+        public profiles;
         constructor(
             private profileService: Hiking.Services.ProfileService,
-            private accountService: Hiking.Services.AccountService) 
+            private accountService: Hiking.Services.AccountService,
+            private profileAccountService: Hiking.Services.ProfileAccountService) 
         {
-            this.GetProfile();
+
+            this.profiles = this.profileAccountService.getProfiles();
 
         }
 

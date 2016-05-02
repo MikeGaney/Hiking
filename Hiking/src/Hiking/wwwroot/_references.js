@@ -11,4 +11,5 @@
 /// <reference path="lib/jquery/dist/jquery.js" />
 /// <reference path="lib/jquery-validation/dist/jquery.validate.js" />
 /// <reference path="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />
-/// <reference path="ngapp/services/services.js" />
+/// <reference path="ngapp/controllers.js" />
+/// <reference path="ngapp/services.js" />
