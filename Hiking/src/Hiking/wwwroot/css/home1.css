@@ -10,8 +10,8 @@
    color: rgba(0, 0, 0, 1.00);
    padding-right: 10em;
    padding-left: 10em;
-   padding-bottom: 60em;
-   padding-top:2em;
+   padding-bottom: 100em;
+   padding-top:10em;
    color:black;
 }
 .TitleHome{
@@ -26,8 +26,8 @@
 
 @media (min-width: 600px) {
     .section {
-	width: 200px;
-	height: 200px;
+	width: 350px;
+	height: 350px;
     }
 }
 
@@ -71,9 +71,17 @@
 #sid-trails {
     top: 3%;
     right: 18%;
+    animation-name:example2;
+    animation-duration:40s;
     background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
 }
-
+@keyframes example2{
+      0%   {background-color: red; right:0px; top:100px;}
+    25%  {background-color: yellow; right:200px; top:100px;}
+    50%  {background-color: blue; right:200px; top:400px;}
+    75%  {background-color: green; right:0px; top:400px;}
+    100% {background-color: red; right:0px; top:100px;}
+}
 #sid-treks .section-header {
     background-color: green;
 }
@@ -81,9 +89,17 @@
 #sid-treks {
     bottom: 23%;
     left: 25%;
+    animation-name:example1;
+    animation-duration:40s;
     background-image: url('../images/6063863667_71fa43a77e_b hiking.jpg');
 }
-
+@keyframes example1{
+      0%   {background-color: red; left:0px; bottom:200px;}
+    25%  {background-color: yellow; left:200px; bottom:200px;}
+    50%  {background-color: blue; left:200px; bottom:600px;}
+    75%  {background-color: green; left:0px; bottom:600px;}
+    100% {background-color: red; left:0px; bottom:200px;}
+}
 #sid-blogs .section-header {
     background-color: cyan;
 }
@@ -91,9 +107,17 @@
 #sid-blogs {
     top: 3%;
     left: 5%;
+    animation-name:example3;
+    animation-duration:40s;
     background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
 }
-
+@keyframes example3{
+      0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: yellow; left:300px; top:0px;}
+    50%  {background-color: blue; left:250px; top:300px;}
+    75%  {background-color: green; left:0px; top:200px;}
+    100% {background-color: red; left:0px; top:0px;}
+}
 #sid-gears .section-header {
     background: magenta;
 }
@@ -101,10 +125,18 @@
 #sid-gears {
     bottom: 23%;
     right: 5%;
+    animation-name:example4;
+    animation-duration:40s;
     background-image: url('../images/columbia_river_gorge_(3).jpg');
 }
 
-
+@keyframes example4{
+      0%   {background-color: red; right:0px; bottom:0px;}
+    25%  {background-color: yellow; right:200px; bottom:0px;}
+    50%  {background-color: blue; right:300px; bottom:300px;}
+    75%  {background-color: green; right:0px; bottom:300px;}
+    100% {background-color: red; right:0px; bottom:0px;}
+}
 @media (max-width: 600px) {
     #main-circle {
 	width: 100%;
@@ -143,7 +175,23 @@
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     -khtml-border-radius: 50%;
-    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
-    background-repeat: no-repeat;
+     animation-name: example;
+    animation-duration: 40s;
+    /*background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');*/
+    background-size:cover;
     /*background: #000;*/
+}
+@keyframes example{
+    0% {
+        background-image: url('../images/6063863667_71fa43a77e_b hiking.jpg');
+    }
+    25% {
+        background-image: url('../images/columbia_river_gorge_(3).jpg');
+    }
+    50% {
+        background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+    }
+    100% {
+        background-image: url('../images/lake_maria_state_park.jpg');
+    }
 }

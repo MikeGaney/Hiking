@@ -6,8 +6,10 @@
                     <form ng-submit="controller.saveTrek()">
                         <div class="form-group">
                             <div class="row">
+                                <br />
                                 <h3>Name</h3>
                                 <input type="text" class="form-control" placeholder="Name" ng-model="controller.trek.name" />
+                                
                                 <h3>Trail Name</h3>
                                 <select ng-model="controller.trek.trailId"
                                         ng-options="trail.id as trail.name for trail in controller.trails"
