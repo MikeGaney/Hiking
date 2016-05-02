@@ -4,6 +4,7 @@
     export class ViewProfileController 
     {
         public viewProfile;
+        // comment
         public profiles;
         constructor(
             private profileService: Hiking.Services.ProfileService,
