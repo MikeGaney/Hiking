@@ -1,7 +1,6 @@
 ﻿.About1Background {
-    background-size: cover;
-    background-image: url('../images/columbia_river_gorge_(3).jpg');
-    background-repeat: no-repeat;
+    background-color:#202020;
+
 }
 /*.circleAbout{
      background-color: cornflowerblue;
@@ -24,13 +23,53 @@
   
 }*/
 
-.AboutSA{
-     background-color: rgba(255, 255, 255, 0.60);
-   color: rgba(0, 0, 0, 1.00);
-   padding-right: 10em;
-   padding-left: 10em;
-   padding-bottom: 5em;
-   padding-top:2em;
-   color:black;
 
+#header {
+    background-image: url('../images/aboutpagepics/screenshot (51).png');
+    background-position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    opacity: .99;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+}
+#section {
+    width: 350px;
+    float: left;
+    padding: 10px;
+}
+#footer {
+    background-color:white;
+    color:black;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+
+#about-who{
+    color:#F0F0F0; 	
+    font-size:50px;
+    font-family: 'Lobster', cursive;
+}
+
+#about-p{
+    color:#E8E8E8; 
+}
+
+#aside {
+    /*background-image: url('../images/aboutpagepics/screenshot (52).png');
+    background-size:cover;
+    background-position:inherit;
+    background-repeat:no-repeat;*/
+    }

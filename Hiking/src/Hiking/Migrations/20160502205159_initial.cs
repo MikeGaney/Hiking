@@ -5,7 +5,7 @@ using Microsoft.Data.Entity.Metadata;
 
 namespace Hiking.Migrations
 {
-    public partial class CommentsProfilesBranchMerge : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -76,7 +76,9 @@ namespace Hiking.Migrations
                     Horses = table.Column<bool>(nullable: false),
                     Image = table.Column<string>(nullable: true),
                     Lakes = table.Column<bool>(nullable: false),
+                    Latitude = table.Column<double>(nullable: false),
                     Location = table.Column<string>(nullable: true),
+                    Longitude = table.Column<double>(nullable: false),
                     Lookouts = table.Column<bool>(nullable: false),
                     Map = table.Column<string>(nullable: true),
                     MyProperty = table.Column<bool>(nullable: false),
@@ -105,6 +107,26 @@ namespace Hiking.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_IdentityRole", x => x.Id);
+                });
+            migrationBuilder.CreateTable(
+                name: "CompletedTrail",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ApplicationUserId = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: true),
+                    TrailImage = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CompletedTrail", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CompletedTrail_ApplicationUser_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
             migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
@@ -384,6 +406,7 @@ namespace Hiking.Migrations
         {
             migrationBuilder.DropTable("BeautyRating");
             migrationBuilder.DropTable("Comment");
+            migrationBuilder.DropTable("CompletedTrail");
             migrationBuilder.DropTable("FamilyRating");
             migrationBuilder.DropTable("GatheringUsers");
             migrationBuilder.DropTable("TrailComment");

@@ -8,8 +8,8 @@ using Hiking.Models;
 namespace Hiking.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160430061931_GoogleMapsLocationOnTrails")]
-    partial class GoogleMapsLocationOnTrails
+    [Migration("20160502205159_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
