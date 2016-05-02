@@ -2,6 +2,7 @@
 
     export class BackPackService {
         private MyTrailsResource;
+
         constructor(private $resource: ng.resource.IResourceService) 
         {
             this.MyTrailsResource = $resource('/api/backpack/:id');
@@ -15,6 +16,10 @@
         {
             return this.MyTrailsResource.query().$promise;
         }
+        //public getShortTrailList() {
+        //    console.log("I'm here.");
+        //    return this.MyTrailsResource.query().$promise;          
+        //}
         public removeMyTrail(del) { 
             let deleteMyTrailResource = this.$resource('/api/backpack/removeMyTrail');
             return deleteMyTrailResource.delete(del).$promise;
@@ -32,6 +37,15 @@
             console.log("addToBackpack(id)");
             console.log(data);
             return this.MyTrailsResource.save(data).$promise;
+        }
+
+        // *** PAGINATION***
+      
+
+        public gettrlshortlist(num) {
+            console.log(num);
+            let randomresource = this.$resource('/api/backpack/bkpkpage');
+            return randomresource.query({ num: num }).$promise;
         }
     }
     angular.module('Hiking').service('backpackService', BackPackService);

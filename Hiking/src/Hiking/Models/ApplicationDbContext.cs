@@ -20,6 +20,7 @@ namespace Hiking.Models
         public DbSet<TrailRating> TrailRatings { get; set; }
         public DbSet<UserTrail> UserTrails { get; set; }
         public DbSet<CompletedTrail> CompletedTrails { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,15 +1,244 @@
-﻿.myTrailsWindow{
+﻿.backpackWindow{
     background-image:url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
     background-size:cover;
-    /*height: 1500px;*/
+    height: 200%;
     background-repeat: no-repeat;
-    min-width: 1600px;
+    min-width: 1600px; 
+    /*min-height: 1500px;*/
+    font-family: 'Merriweather', serif;
+    /*color: slategrey;*/
+    margin-bottom: 50px;
 }
-#navPlaceholder {
-    height: 150px;
+.browseSideBar {
+    float: left;
+    width: 22%;
+    margin-top: 50px;
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.33);
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+}
+.bkpkBrowseLegend{
+    box-shadow: 7px 7px 7px #404040;
+    background-color: rgba(255, 255, 255, 0.66);
+    width:95%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: black;
+}
+.bkpkBody {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-right: 75px;
+    width: 67.3%;
+    padding: 25px;
+}
+#bkpkHeaderBkgrnd{
+    background-color: rgba(230, 230, 230, 0.70);
+    box-shadow: 7px 7px 7px #404040;
+    padding: 10px;
+}
+#bkpkHeader {
+    text-align: center;
+    font-size: 50px;
+    color: firebrick;
+    text-shadow: 2px 2px #333333;
+}
+.trailBox {
+    float: right;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-bottom: 25px;
+    margin-right:75px;
+}
+
+.sidebarTitle {
+     color: firebrick;
+     font-weight:700;
+     text-align: center;
+     text-shadow: 2px 2px #333333;
+}
+.bkpkTrailInfo{
+    background-color: rgba(255, 255, 255, 0.66);
+    box-shadow: 7px 7px 7px #404040;
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: 82%;
+    height: 120px;
+    margin-top: -142px;
+    padding: 15px;
+    color: black;
+    font-size: small;
+    font-weight: 400;
+    border-radius: 0; 
+}
+.bkpkTrailImg{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 120px;
+    box-shadow: 7px 7px 7px #404040;
+}
+.bkpkTrailName{
+    margin-top: -3px;
+}
+#bkpkRemoveBtnDiv{
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-top: -80px;
+   
+}
+#bkpkremoveBtn{
+    height: 25px;
+    width: 25px;
+}
+#doneDiv{
+    position: relative;
+    margin-left: 400px;
+    margin-top: -50px;
+    text-align: right;
+}
+#bkpkCheckbox{
+    margin-left: 5px;
+    margin-top: 15px;
+    height: 20px;
+    width: 20px;
 }
 
 
-#footerPlaceholder{
-    height: 75px;
+
+
+
+
+
+
+
+
+
+.mobileHeaderTrailsBrowse {
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.33);
+    display: none;
 }
+
+.mobileHeaderLinksTrailsBrowse {
+    min-width: 150px;
+    margin: 25px;
+    /*margin-left: 60px;*/
+}
+
+.mobileSectionsTrailsBrowse {
+    width: 24%;
+    display: inline-block
+}
+
+@media only screen and (max-width: 1150px) {
+     for mobile phones: 
+    .browsesidebar{
+        position: static;
+        display: none;
+    }
+
+    .mobileheadertrailsbrowse {
+        display:block;
+    }
+
+    .browsesearch {
+        margin-left: 0 !important;
+        float: left !important;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/*.browseSearch2 {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:100%;
+    padding: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}*/
+
+
+/*.inputMM {
+    border-radius: 0;
+
+}*/
+
+/*.searchLabels {
+    padding-top: 7px;
+    padding-left: 30px;
+}*/
+
+/*.Activities {
+    float: right;
+    margin-top: -195px;
+    margin-right: 20px;
+    border-style: outset;
+    width: 400px;
+    height: 180px;
+    padding-top: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+}*/
+
+/*.actLabel {
+    margin-left: 60px;
+    font-size:large;
+    font-weight:400;
+}*/
+
+
+/*.browseLegend {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:95%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}*/
+/*.browseLegend2 {
+    background-color: rgba(255, 255, 255, 0.66);
+    width:95%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}*/
+
+/*.browseSBtitles {
+    font-size: 18px;
+    text-align:center;
+    color: slategrey;
+    margin-top: 10px;
+    margin-bottom: 0;
+}*/
+
+/*.browseSBtitles2 {
+    font-size: 18px;
+    text-align:center;
+    color: slategrey;
+    margin-top: 5px;
+    margin-bottom: 0;
+}*/
+/*.browseSBbtns {
+    width: 100%;
+    height: 40px;
+    font-size: inherit;
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius:0;
+    border-style: outset;
+    border-width:initial;
+    border-color: aliceblue;
+    font-size: x-large;*/
+/*}*/
