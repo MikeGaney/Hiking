@@ -1,0 +1,42 @@
+﻿<!--<h1>Trail Map Page</h1>-->
+
+<!-- comment -->
+
+<!--<div class="col-md-8 col-md-offset-2">
+    <table class="table">
+        <tr>
+            <th>Trail</th>
+        </tr>
+        <tr ng-repeat="trail in controller.trails">
+            <td>{{trail}}</td>
+        </tr>
+    </table>
+</div>-->
+<div class="map">
+    <ui-gmap-google-map center='controller.center' zoom='controller.zoom'>
+        <ui-gmap-markers models="controller.trails"
+                         coords="'self'"
+                         icon="'icon'"
+                         dorebuildall="true"
+                         click="controller.showInfo()"
+                         options="'options'">
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
+</div>
+<div class="mapSelection">
+    <select class="inputMM" ng-model="controller.location" ng-change="controller.Search()">
+        <option value="">Include All Areas</option>
+        <option value="Central Washington">Central Washington</option>
+        <option value="Eastern Washington">Eastern Washington</option>
+        <option value="North Cascades">North Cascades</option>
+        <option value="Mount Rainier Area">Mount Rainier Area</option>
+        <option value="Puget Sound and Islands">Puget Sound and Islands</option>
+        <option value="Olympic Peninsula">Olympic Peninsula</option>
+        <option value="Snoqualmie Region">Snoqualmie Region</option>
+        <option value="South Cascades">South Cascades</option>
+        <option value="Central Cascades">Central Cascades</option>
+        <option value="Issaquah Alps">Issaquah Alps</option>
+        <option value="Southwest Washington">Southwest Washington</option>
+    </select>
+    <label>{{controller.numOfTrails}} Trails in Area</label>
+</div>
