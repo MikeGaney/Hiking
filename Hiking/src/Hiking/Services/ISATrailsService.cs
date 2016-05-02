@@ -11,6 +11,8 @@ namespace Hiking.Services
         Trail GetOneTrail(int id);
         void EditTrail(Trail trail);
         void DeleteTrail(int id);
-        void AddCommentToTrail(TrailCommentViewModel data);         
+        void AddCommentToTrail(TrailCommentViewModel data);
+        List<MapTrailViewModel> GetMapTrails();
+        List<MapTrailViewModel> GetSearchMapTrails(string area);      
     }
 }

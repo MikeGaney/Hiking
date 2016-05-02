@@ -43,7 +43,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 47.6493,
+                    Longitude = -121.6456,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -160,7 +162,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 47.8669,
+                    Longitude = -121.6820,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -276,7 +280,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.0537,
+                    Longitude = -121.4113,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -393,7 +399,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Closed",
+                    Latitude = 47.5092,
+                    Longitude = -121.8434,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -510,7 +518,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 47.8982,
+                    Longitude = -124.6238,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -626,7 +636,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 5,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 47.8597,
+                    Longitude = -123.9337,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -742,7 +754,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.4169,
+                    Longitude = -122.6512,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -858,7 +872,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 5,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.8467,
+                    Longitude = -121.6910,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -974,7 +990,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 3,
-                    OpenSeason = "",
+                    OpenSeason = "Closed",
+                    Latitude = 48.0584,
+                    Longitude = -121.2878,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1090,7 +1108,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Closed",
+                    Latitude = 48.9123,
+                    Longitude = -121.8578,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1206,7 +1226,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 1,
-                    OpenSeason = "",
+                    OpenSeason = "Closed",
+                    Latitude = 46.9595,
+                    Longitude = -120.2952,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1322,7 +1344,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 2,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.6242,
+                    Longitude = -118.2398,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1438,7 +1462,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 3,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 47.5720,
+                    Longitude = -117.2897,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1554,7 +1580,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 5,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 47.3512,
+                    Longitude = -117.7106,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1670,7 +1698,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 5,
-                    OpenSeason = "false",
+                    OpenSeason = "Closed",
+                    Latitude = 48.9390,
+                    Longitude = -119.4430,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1786,7 +1816,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 3,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.6751,
+                    Longitude = -118.5005,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -1902,7 +1934,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.0808,
+                    Longitude = -117.3240,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -2018,7 +2052,9 @@ namespace Hiking.Models
                     Bears = true,
                     Cougars = true,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Closed",
+                    Latitude = 47.6105,
+                    Longitude = -117.0409,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -2134,7 +2170,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 3,
-                    OpenSeason = "closed",
+                    OpenSeason = "Closed",
+                    Latitude = 48.0651,
+                    Longitude = -121.5068,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -2250,7 +2288,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 4,
-                    OpenSeason = "closed",
+                    OpenSeason = "Closed",
+                    Latitude = 48.0659,
+                    Longitude = -121.5107,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating
@@ -2366,7 +2406,9 @@ namespace Hiking.Models
                     Bears = false,
                     Cougars = false,
                     Rating = 4,
-                    OpenSeason = "",
+                    OpenSeason = "Open",
+                    Latitude = 48.2738,
+                    Longitude = -117.6562,
                     RatingList = new List<TrailRating>
                     {
                         new TrailRating

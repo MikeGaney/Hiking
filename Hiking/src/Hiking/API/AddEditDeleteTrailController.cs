@@ -26,6 +26,30 @@ namespace Hiking.API
             return Ok(_service.GetTrailsList());
         }
 
+        [HttpGet]
+        [Route("map")]
+        public IActionResult GetMapTrails()
+        {
+            var list = _service.GetMapTrails();
+            return Ok(list);
+        }
+
+        [HttpGet("{area}")]
+        [Route("searchMap")]
+        public IActionResult GetSearchMapTrails(string area)
+        {
+            List<MapTrailViewModel> list = new List<MapTrailViewModel>();
+            if (area == null)
+            {
+                list = _service.GetMapTrails();
+            }
+            else
+            {
+                list = _service.GetSearchMapTrails(area);
+            }
+            return Ok(list);
+        }
+
         // GET api/values/5
         [HttpGet("{id}")]
         public Trail Get(int id)

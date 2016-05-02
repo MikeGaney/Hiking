@@ -1,7 +1,17 @@
-/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}*/
+.angular-google-map-container {
+    height: 500px;
+    width: 700px;
+    border: 1px solid black;
+}
+
+.view.ng-enter{
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.view.ng-enter-active{
+    opacity: 1;
+}
 
 .container{
     width: 100%;

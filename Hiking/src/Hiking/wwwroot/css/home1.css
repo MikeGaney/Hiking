@@ -1,41 +1,350 @@
-﻿.home1SA{
-   
-    background-image: url('../images/lake_maria_state_park.jpg');
-     background-size: cover;
+﻿.home1SA {
+    background-image: url('../images/neve_glacier_north_cascades_usgs (1).jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    color:aliceblue;
-     padding-bottom: 10em;
-   
+    /*margin-top: 70px;*/
+    margin-bottom: 70px;
 }
-.bottomHalf {
-    background-image: url('../images/leaves.jpg');
-    background-size:cover;
-    
-}
-.box1SA{
- background-color: rgba(255, 255, 255, 0.60);
+.whiteCover{
+   background-color: rgba(255, 255, 255, 0.60);
    color: rgba(0, 0, 0, 1.00);
    padding-right: 10em;
    padding-left: 10em;
-   padding-bottom: 10em;
-   padding-top:10em;
+   padding-bottom: 60em;
+   padding-top:2em;
    color:black;
 }
-.box2SA{
- background-color: rgba(255, 255, 255, 0.60);
-   color: rgba(0, 0, 0, 1.00);
-   padding-right: 10em;
-   padding-left: 10em;
-   padding-bottom: 10em;
-   padding-top:10em;
-   color:black;
+.TitleHome{
+    text-align:center;
 }
-.box3SA{
- background-color: rgba(255, 255, 255, 0.60);
-   color: rgba(0, 0, 0, 1.00);
-   padding-right: 10em;
-   padding-left: 10em;
-   padding-bottom: 10em;
-   padding-top:10em;
-   color:black;
+@media (max-width: 600px) {
+    .section, .headerContainer {
+	width: 60px;
+	height: 60px;
+    }
+}
+
+@media (min-width: 600px) {
+    .section, .headerContainer {
+	width: 200px;
+	height: 200px;
+    }
+}
+
+.section {
+    position: absolute;
+    overflow:hidden;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -khtml-border-radius: 50%;
+    background: #eee;
+    z-index: 5;
+    /*border: 2px solid red;*/
+}
+
+.section a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.section .section-header p {
+    text-align: center;
+    opacity: 0.99;
+}
+
+.headerContainer{
+    position: absolute;
+    overflow:hidden;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -khtml-border-radius: 50%;
+    /*background: #eee;*/
+    z-index: 5;
+}
+
+.homeCloseBtn, .GearCloseBtn{
+    color: yellow;
+    text-align: center;
+    font-size: 3em;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.outBtn{
+    margin-top: -4%;
+}
+
+@media (min-width: 600px) {
+    .section .section-header {
+	height: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section .section-header {
+	height: 33%;
+    }
+}
+
+#sid-trails .section-header {
+    background-color: orange;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+#sid-trails {
+    top: 3%;
+    right: 18%;
+    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+    background-size: cover;
+}
+
+#sid-treks .section-header {
+    background-color: green;
+}
+
+#sid-treks {
+    bottom: 23%;
+    left: 17%;
+    background-image: url('../images/6063863667_71fa43a77e_b hiking.jpg');
+    background-size: cover;
+}
+
+#sid-blogs .section-header {
+    background-color: cyan;
+}
+
+#sid-blogs {
+    top: 9%;
+    left: 11%;
+    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+    background-size: cover;
+}
+
+#sid-gears .section-header {
+    background: magenta;
+}
+
+#sid-gears {
+    bottom: 15%;
+    right: 15%;
+    background-image: url('../images/columbia_river_gorge_(3).jpg');
+    background-size: cover;
+}
+
+
+@media (max-width: 600px) {
+    #main-circle {
+	width: 100%;
+    }
+}
+
+/* Computer Size Main Circle */
+@media (min-width: 600px) {
+    #main-circle {
+	width: 45%;
+    }
+}
+
+#main-circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#main-circle:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+}
+#main-circle > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*.trails-add, .css-class-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.trails,
+.trails-add.trails-add-active {
+    color: yellow;
+    font-size:3em;
+    height: 60%;
+    width: 50%;
+}
+
+.trails-remove.trails-remove-active {
+    font-size:1.0em;
+    color:black;
+    height: 200px;
+    width: 200px;
+}*/
+
+/*.clicked, .clicked-add.clicked-add-active{
+    color: yellow;
+    height: 30%;
+    width: 40%;
+
+}
+
+.clicked-add, .clicked-remove{
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.clicked-remove.clicked-remove-active {
+  font-size:1.0em;
+  color:black;
+}*/
+
+.css-class-add, .css-class-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    }
+
+.css-class,
+.css-class-add.css-class-add-active {
+    color: red;
+    font-size:3em;
+    height: 100%;
+    width: 50%;
+    transform: translate(-14%, 8%);
+}
+
+.css-class-remove.css-class-remove-active {
+    /*font-size:1.0em;
+    color:black;*/
+}
+
+.TrekClass-add, .TrekClass-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    }
+
+.TrekClass,
+.TrekClass-add.TrekClasss-add-active {
+    color: red;
+    font-size:3em;
+    height: 100%;
+    width: 50%;
+    transform: translate(14%, 33%);
+}
+
+.TrekClass-remove.TrekClass-remove-active {
+    /*font-size:1.0em;
+    color:black;*/
+}
+
+.BlogClass-add, .BlogClass-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    }
+
+.BlogClass,
+.BlogClass-add.BlogClass-add-active {
+    color: red;
+    font-size:3em;
+    height: 100%;
+    width: 50%;
+    transform: translate(29%, 1%);
+}
+
+.BlogClass-remove.BlogClass-remove-active {
+    /*font-size:1.0em;
+    color:black;*/
+}
+
+.GearClass-add, .GearClass-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    }
+
+.GearClass,
+.GearClass-add.GearClass-add-active {
+    color: red;
+    font-size:3em;
+    height: 100%;
+    width: 50%;
+    transform: translate(-19%, 25%);
+}
+
+.GearClass-remove.GearClass-remove-active {
+    /*font-size:1.0em;
+    color:black;*/
+}
+
+.closeBtn-add, .closeBtn-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.closeBtn,
+.closeBtn-add.closeBtn-add-active {
+    color: red;
+    /*font-size: 3em;*/
+    opacity: 1;
+    margin-left: 75%;
+    margin-top: 1%;
+
+}
+
+.closeBtn-remove.closeBtn-remove-active {
+    /*font-size:1.0em;
+    color:black;*/
+}
+
+.closeGearBtn-add, .closeGearBtn-remove {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.closeGearBtn,
+.closeGearBtn-add.closeGearBtn-add-active {
+    color: red;
+    /*font-size: 3em;*/
+    opacity: 1;
+    margin-left: 75%;
+    margin-top: 4%;
+
+}
+
+.closeGearBtn-remove.closeGearBtn-remove-active {
+    /*font-size:1.0em;
+    color:black;*/
+}
+
+#main-circle {
+    overflow: hidden;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    background-image: url('../images/2362739742_d866b02c67_bmountain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: #000;*/
 }

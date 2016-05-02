@@ -2,6 +2,16 @@
     resize: vertical;
 }
 
+.singleBlog.ng-enter{
+    transition: height 1s;
+    height: 0;
+    overflow: hidden;
+}
+
+.singleBlog.ng-enter-active{
+    height: 50px;
+}
+
 .test{
     border: 1px solid red;
 }

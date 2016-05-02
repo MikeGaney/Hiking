@@ -1,19 +1,14 @@
-﻿body{
-    background-color:#202020;
-    
-}
-
-#title{
-    float:left;
-    color:white;
-    font-size:40px;
+﻿#home-title{
+   float:left;
+   color:white;
+   font-size:40px;
    font-family: 'Francois One', sans-serif;
    padding-left:7px;
    color: #E8E8E8; 	
     
 }
 
-#footer {
+#home-footer {
     
     background-image:url(http://www.cuzzsoft.com/wallbank/90-black-wood-wallpaper.jpg);
     background-position:inherit;
@@ -39,78 +34,62 @@
 }
 
 /*BEGINNING OF SEARCH BOX STYLING*/
-a {
-    color: #69C;
-    text-decoration: none;
-}
-
-    a:hover {
-        color: #F60;
-    }
-
-h1 {
-    font: 1.7em;
-    line-height: 110%;
-    color: #fff;
-}
-
-p {
-    margin: 0 0 20px;
-}
 
 
-input {
+
+
+input#box {
     outline: none;
 }
 
-    input[type=search] {
-        -webkit-appearance: textfield;
-        -webkit-box-sizing: content-box;
-        font-family: inherit;
-        font-size: 100%;
-    }
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
 
-    input::-webkit-search-decoration,
-    input::-webkit-search-cancel-button {
-        display: none;
-    }
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none;
+}
 
 
-    input[type=search] {
-        background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-        border: solid 7px #2d862d;
-        padding: 9px 10px 9px 32px;
-        width: 255px;
-        height: 30px;
-        opacity: .88;
-        -webkit-border-radius: 10em;
-        -moz-border-radius: 10em;
-        border-radius: 10px;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        transition: all .5s;
-        font-size: 25px;
-        color: black;
-    }
+input[type=search] {
+    background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 7px #2d862d;
+    padding: 9px 10px 9px 32px;
+    width: 255px;
+    height: 30px;
+    opacity: .88;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    font-size: 25px;
+    color: black;
+}
 
-        input[type=search]:focus {
-            width: 300px;
-            background-color: #fff;
-            border-color: #2d862d;
-            font-size: 25px;
-            color: black;
-            -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-            -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-            box-shadow: 0 0 5px rgba(109,207,246,.5);
-        }
+input[type=search]:focus {
+    width: 300px;
+    background-color: #fff;
+    border-color: #2d862d;
+    font-size: 25px;
+    color: black;
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
 
-    input:-moz-placeholder {
-        color: #999;
-    }
+input:-moz-placeholder {
+    color: #999;
+}
 
-    input::-webkit-input-placeholder {
-        color: #999;
-    }
+input::-webkit-input-placeholder {
+    color: #999;
+}
 /*END OF SEARCH BOX STYLING*/
 
 .container-fluid{
@@ -127,38 +106,38 @@ input {
     background-color:#99aa1a;
     margin:4px;
 }
-#button1{
+#home-button1{
     background-color:#1c96b0;
 }
-#buttonpic1 {
+#home-buttonpic1 {
     background-image: url('../ngapp/homeimages/north-face-ad-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: inherit;
 }
-#button2 {
+#home-button2 {
     background-color: #CC6633;
 }
-#buttonpic2 {
+#home-buttonpic2 {
     background-image: url('../ngapp/homeimages/new campfire.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: inherit;
 }
 
-#button3 {
+#home-button3 {
     background-color: #336666;
 }
-#buttonpic3 {
+#home-buttonpic3 {
     background-image: url(http://images.huffingtonpost.com/2015-02-12-TotekeeFallsOregonTheOutbound.jpg);
     background-size:cover;
     background-position:inherit;
     background-repeat:no-repeat;
 }
-#button4 {
+#home-button4 {
     background-color: #993333;
 }
-#buttonpic4 {
+#home-buttonpic4 {
     background-image: url('../ngapp/homeimages/e0a3229ca350edde0a1f7fa7e72e0bf7.jpg');
     background-repeat: no-repeat;
     background-position: inherit;
@@ -182,7 +161,7 @@ input {
 
 /*ENDING OF COLOR-IMAGE BOX LINKS*/
 
-.nav ul {
+/*.nav ul {
   list-style: none;
   background-color: #444;
   text-align: center;
@@ -215,7 +194,7 @@ input {
   background-color: #2d862d;
   color: #fff;
   cursor: default;
-}
+}*/
 
 @media screen and (min-width: 600px) {
     .nav li {

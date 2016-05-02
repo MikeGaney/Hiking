@@ -34,6 +34,8 @@ namespace Hiking.Models
         public decimal BeautyRate { get; set; }
         public decimal FamilyRate { get; set; }
         public string OpenSeason { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public ICollection<Comment> Comments { get; set; }
         public ICollection<TrailComment> TrailComments { get; set; }
         public ICollection<Gathering> Gatherings { get; set; }

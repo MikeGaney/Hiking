@@ -1,10 +1,15 @@
 namespace Hiking {
 
-    angular.module('Hiking', ['ui.router', 'ngResource', 'ui.bootstrap']).config((
+    angular.module('Hiking', ['ui.router', 'ngResource', 'ui.bootstrap', 'uiGmapgoogle-maps', 'ngAnimate']).config((
         $stateProvider: ng.ui.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
-        $locationProvider: ng.ILocationProvider
-    ) => {
+        $locationProvider: ng.ILocationProvider,
+        uiGmapGoogleMapApiProvider: any
+    ) =>
+    {
+        uiGmapGoogleMapApiProvider.configure({
+            //key: 'AIzaSyDipwkGrC3bLZpUpEGaqcsIDKu5_AmT7C0',
+        });
         // Define routes
         $stateProvider
             .state('home', {
@@ -17,6 +22,12 @@ namespace Hiking {
                 url: '/trails',
                 templateUrl: '/ngApp/views/trails.html',
                 controller: Hiking.Controllers.TrailsController,
+                controllerAs: 'controller'
+            })
+            .state('trailmap', {
+                url: '/trailmap',
+                templateUrl: '/ngApp/Trails/Views/trailMap.html',
+                controller: Hiking.Controllers.TrailMapController,
                 controllerAs: 'controller'
             })
             .state('trailDetail', {
@@ -138,7 +149,12 @@ namespace Hiking {
                 templateUrl: '/ngApp/views/home1.html',
                 controller: Hiking.Controllers.AboutController,
                 controllerAs: 'controller'
-
+            })
+            .state('home2', {
+                url: '/home2',
+                templateUrl: '/ngApp/views/home2.html',
+                controller: Hiking.Controllers.AboutController,
+                controllerAs: 'controller'
             })
             .state( 'trekChanges', {
                 url: '/trekChanges/:id',

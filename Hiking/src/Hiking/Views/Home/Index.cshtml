@@ -3,6 +3,7 @@
     <title>Hiking</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="~/ngapp/users/css/login.css" rel="stylesheet" />
     <link href="~/ngapp/users/css/register.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
@@ -15,8 +16,10 @@
     <link href="~/css/deleteprofilemodal.css" rel="stylesheet" />
     <link href="~/css/about1.css" rel="stylesheet" />
     <link href="~/css/home1.css" rel="stylesheet" />
+    <link href="~/css/home2.css" rel="stylesheet" />
     <link href="~/css/backpack.css" rel="stylesheet" />
     <link href="~/css/trekchangescss.css" rel="stylesheet" />
+    <link href="~/css/homepage.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <base href="/" />
@@ -28,7 +31,7 @@
         
         @* start of Navbar *@
 
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -38,7 +41,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Trek Club</a>
+                    <a class="navbar-brand" href="/home1">Trek Club</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,7 +60,8 @@
                             </a>
                             <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
                                 <li role="menuitem"><a href="/trails">View Trails</a></li>
-                                <li role="menuitem"><a href="/trails">Search Trails</a></li>
+                                <li role="menuitem"><a href="/trailmap">Map of Trails</a></li>
+                                <li role="menuitem"><a href="/home2">Home2</a></li>
                                 <li class="divider" ng-show="controller.getClaim('isAdmin')"></li>
                                 <li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/changes/">Add a Trail</a></li>
                             </ul>
@@ -87,6 +91,18 @@
                                 <li role="menuitem"><a href="/gatherings">View Treks</a></li>
                                 <li role="menuitem"><a href="/gatherings">Search Treks</a></li>
                                 <li class="divider" ng-show="controller.getClaim('isAdmin')"></li>
+                                @*<li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/blog/add">Add a Blog</a></li>*@
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="nav navbar-nav navBarMenu">
+                        <span uib-dropdown on-toggle="toggled(open)">
+                            <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                                Maps <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                                <li role="menuitem"><a href="/about">Maps</a></li>
                                 @*<li role="menuitem" ng-show="controller.getClaim('isAdmin')"><a href="/blog/add">Add a Blog</a></li>*@
                             </ul>
                         </span>
@@ -139,7 +155,7 @@
 
         
 
-        <ui-view></ui-view>
+        <ui-view class="view"></ui-view>
 
 
         @*@*Footer*@
@@ -157,6 +173,10 @@
 
     <!-- Library Files -->
     <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/lodash/dist/lodash.js"></script>
+    <script src="~/lib/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="~/lib/angular-google-maps/dist/angular-google-maps.js"></script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>*@
     <script src="~/lib/angular-resource/angular-resource.js"></script>
     <script src="~/lib/angular-animate/angular-animate.js"></script>
     <script src="~/lib/angular-touch/angular-touch.js"></script>
@@ -180,7 +200,9 @@
     @*<script src="~/ngapp/controllers/accountcontroller.js"></script>
     <script src="~/ngapp/services/accountservice.js"></script>*@
 
-
+    @* Google Maps API Key *@
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDipwkGrC3bLZpUpEGaqcsIDKu5_AmT7C0&callback=initMap"
+            async defer></script>
 
 </body>
 </html>

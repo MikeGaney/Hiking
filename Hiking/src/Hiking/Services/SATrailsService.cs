@@ -80,6 +80,38 @@ namespace Hiking.Services
             return;
         }
 
+        public List<MapTrailViewModel> GetMapTrails()
+        {
+            var list = _repo.Query<Trail>().Select(t => new MapTrailViewModel
+            {
+                Id = t.Id,
+                Latitude = t.Latitude,
+                Longitude = t.Longitude,
+                Name = t.Name,
+                Options = new OptionsModel
+                {
+                    Title = t.Name
+                }
+            }).ToList();
+            return list;
+        }
+
+        public List<MapTrailViewModel> GetSearchMapTrails(string area)
+        {
+            var list = _repo.Query<Trail>().Where(t => t.Location.Contains(area)).Select(t => new MapTrailViewModel
+            {
+                Id = t.Id,
+                Latitude = t.Latitude,
+                Longitude = t.Longitude,
+                Name = t.Name,
+                Options = new OptionsModel
+                {
+                    Title = t.Name
+                }
+            }).ToList();
+            return list;
+        }
+
         public Trail GetOneTrail(int id)
         {
             var list = _repo.Query<Trail>().Where(t => t.Id == id).Include(t => t.TrailComments).Include(t => t.Gatherings).Include(t => t.FamilyRating).Include(t => t.BeautyRating).Include(t => t.RatingList).FirstOrDefault();
