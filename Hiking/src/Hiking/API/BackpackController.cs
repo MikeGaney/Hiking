@@ -21,6 +21,13 @@ namespace Hiking.API
             this.service = _service;
         }
 
+        //private ApplicationDbContext _db;
+
+        //public BackpackController(ApplicationDbContext db)
+        //{
+        //    this._db = db;
+        //}
+
         // GET: api/values
         [HttpGet]
         public IActionResult Get()
@@ -30,6 +37,26 @@ namespace Hiking.API
 
             return Ok(data);
         }
+        
+        // GET: api/values
+        [HttpGet]
+        [Route("bkpkpage")]
+        public IEnumerable<Trail> GetBkPkList(int num)
+        {
+            var userId = User.GetUserId();
+            var trails = service.BkPkPagination(num, userId);
+            return trails;
+        }
+
+        // GET: api/values
+        //[HttpGet]
+        //[Route("browse")]
+        //public IEnumerable<Trail> getpage(int num)
+        //{
+        //    var trails = _db.Trails.Skip(10 * (num - 1)).Take(10).ToList();
+        //    return trails;
+        //}
+        
 
         //[HttpGet]
         //public IActionResult GetShortTrailList()

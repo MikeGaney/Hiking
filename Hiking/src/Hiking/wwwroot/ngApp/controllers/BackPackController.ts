@@ -8,6 +8,11 @@
         public completedHikes;
         public search;
         public trails;
+        public tenTrls;
+        public bkpkCurrentPage = 1;
+        public maxSize = 3;
+        public numberTrls = 0;
+
 
         constructor(
             private backpackService: Hiking.Services.BackPackService,
@@ -24,8 +29,19 @@
             this.getBackPack();
             this.getCompletedTrails();
             this.search = {};
-            //this.();
+            
+            //*** PAGINATION ***
+            this.backpackService.getAllTrails().then((data) => {
+                this.numberTrls = data.length;
+                console.log(this.numberTrls);
+            });
 
+            console.log(this.bkpkCurrentPage);
+            //this.backpackService.gettrlshortlist(this.bkpkCurrentPage).then((data) => {
+            //    this.tenTrls = data;
+            //    console.log(data);
+            //});
+            this.bkpkNextPage()
 
         }
 
@@ -70,6 +86,7 @@
             this.backpackService.saveCompletedTrail(this.completed).then(() =>
             {
                 this.getCompletedTrails();
+                this.getBackPack();
             });
         };
         getCompletedTrails()
@@ -80,6 +97,20 @@
                 console.log(data);
             });
         };
+
+
+        //*** PAGINATION
+        setPage(pageNo) {
+            this.bkpkCurrentPage = pageNo;
+        }
+
+        bkpkNextPage() {
+            this.backpackService.gettrlshortlist(this.bkpkCurrentPage).then((data) => {
+                this.tenTrls = data;
+            });
+        }
+        //*** END PAGINATION
+
         //trailSearch() {
 
         //    console.log(this.search);

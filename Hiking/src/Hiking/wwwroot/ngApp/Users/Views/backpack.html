@@ -123,10 +123,17 @@
                         </div>
                     </div>
 
+                    <!--  Pagination  -->
 
+                    <div class="row bkpkPagination">
+                        <uib-pagination total-items="controller.numberTrls" ng-model="controller.bkpkCurrentPage" max-size="controller.maxSize" class="pagination-sm" boundary-link-numbers="true" ng-change="controller.bkpkNextPage()"></uib-pagination>
+                    </div>
+
+                   
 
                     <!--  Trails Added to BackPack  -->
                     <div class="row" ng-repeat="trail in controller.backpack">
+
                         <div class="col-tablet-3 col-sm-4 col-md-8 trailBox">
                             <div>
                                  <a href="/trailDetail/{{trail.id}}">
@@ -143,22 +150,16 @@
                                     <img src="http://www.jpapencen.gov.my/images/close.png" id="bkpkremoveBtn"  ng-click="controller.deleteMyTrail(trail.id)"/>
                                 </div>
                                 <div id="doneDiv">
-                                    <form ng-submit="controller.saveCompletedTrail(trail.id)">
-                                        Done!<input type="checkbox" value="Done" id="bkpkCheckbox"/>
-                                    </form>
-
+                                    <!--<form ng-submit="controller.saveCompletedTrail(trail.id)">-->
+                                        <!--Done!<input type="checkbox" value="Done" id="bkpkCheckbox" ng-checked="controller.savecompletedtrail(trail.id)"/>-->
+                                    <!--</form>-->
+                                    <button  ng-click="controller.saveCompletedTrail(trail.id)" >Done</button>
                                </div>
                         </div>
 
                     </div>
                   </div>
-                    <!--  Pagination  -->
-                    <div class="row bkpkPagination">
-                        <uib-pagination total-items="controller.numberOfAds" ng-model="controller.currentPage" max-size="controller.maxSize" class="pagination-sm" boundary-link-numbers="true" ng-change="controller.nextPage()"></uib-pagination>
-                    </div>
-
-
-                </div>
+                </div>               
             </div>
         </div>
     </div>

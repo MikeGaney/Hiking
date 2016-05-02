@@ -38,6 +38,15 @@
             console.log(data);
             return this.MyTrailsResource.save(data).$promise;
         }
+
+        // *** PAGINATION***
+      
+
+        public gettrlshortlist(num) {
+            console.log(num);
+            let randomresource = this.$resource('/api/backpack/bkpkpage');
+            return randomresource.query({ num: num }).$promise;
+        }
     }
     angular.module('Hiking').service('backpackService', BackPackService);
 }

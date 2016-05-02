@@ -11,10 +11,11 @@ namespace Hiking.Services
     public class BackpackService : IBackpackService
     {
         private IGenericRepository repo;
-
+       
         public BackpackService(IGenericRepository _repo)
         {
             this.repo = _repo;
+                  
         }
 
         public List<Trail> GetTrailList(string id)
@@ -28,8 +29,17 @@ namespace Hiking.Services
             //return test;
             var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).ToList();
             return trails;
+
         }
 
+        
+        public List<Trail> BkPkPagination(int num, string id)
+        {
+            var bkpkPage = repo.Query<UserTrail>().Where(ut => ut.ApplicationUserId == id).Select(ut => ut.Trail).Skip(10 * (num - 1)).Take(10).ToList();
+            return bkpkPage;
+
+        }
+       
         //public List<Trail> GetShortTrailList(string id)
         //{
         //    //var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take(4).ToList();
@@ -99,8 +109,10 @@ namespace Hiking.Services
                 Name = trail.Name,
                 TrailImage = trail.Image
             };
-            user.CompletedTrails.Add(completed);
+            user.CompletedTrails.Add(completed);           
+            repo.Delete(id);
             repo.SaveChanges();
+          
         }
 
         
