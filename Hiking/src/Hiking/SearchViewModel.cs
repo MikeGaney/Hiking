@@ -14,8 +14,5 @@
         public bool Waterfalls { get; set; }
         public bool Lookouts { get; set; }
         public int Rating { get; set; }
-
-       
-
     }
 }

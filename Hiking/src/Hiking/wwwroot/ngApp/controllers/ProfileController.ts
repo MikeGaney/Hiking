@@ -6,9 +6,12 @@
         public viewProfile;
         public shortbackpack;
         public completedHikes;
+        public profiles;
+
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
+            private profileAccountService: Hiking.Services.ProfileAccountService,
             private backpackService:Hiking.Services.BackPackService) 
         {
             this.GetProfile();
@@ -16,6 +19,8 @@
             //this.getShortTrailList();
             this.completedHikes = {};
             this.getCompletedTrails();
+
+            this.profiles = this.profileAccountService.getProfiles();
         }
 
         GetProfile() 

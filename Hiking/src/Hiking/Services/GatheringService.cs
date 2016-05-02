@@ -34,6 +34,7 @@ namespace Hiking.Services
         public GatheringViewModel GetOneGathering(int id)
         {
             var gathering = repo.Query<Gathering>().Where(g => g.Id == id).Include(g => g.GatheringUsers).FirstOrDefault();
+            var trail = repo.Query<Trail>().Where(t => t.Id == gathering.TrailId).FirstOrDefault();
             var data = new GatheringViewModel {
                 Id = gathering.Id,
                 Description = gathering.Description,
@@ -42,11 +43,12 @@ namespace Hiking.Services
                 Time = gathering.Time,
                 TrailId = gathering.TrailId,
                 TrailName = gathering.TrailName,
+                Image = trail.Image,
                 Users = repo.Query<GatheringUsers>().Where(gu => gu.GatheringID == id).Select(gu => new GatheringUserViewModel {
                     DisplayName = gu.ApplicationUser.DisplayName,
                     FirstName = gu.ApplicationUser.FirstName,
                     LastName = gu.ApplicationUser.LastName,
-                    UserId = gu.ApplicationUser.Id
+                    UserId = gu.ApplicationUser.Id,
                 }).ToList()
             };
             return data;
@@ -156,9 +158,9 @@ namespace Hiking.Services
             //if (data.GatherName != null) list = repo.Query<Gathering>().Where(g => g.Name.Contains(data.GatherName)).ToList();
             List<Gathering> searchList = repo.Query<Gathering>().ToList();
 
-            if (data.GatherName != null) searchList = searchList.Where(g => g.Name.Contains(data.GatherName)).OrderBy(g => g.Time).ToList();
+            if (data.GatherName != null) searchList = searchList.Where(g => g.Name.ToLower().Contains(data.GatherName.ToLower())).OrderBy(g => g.Time).ToList();
 
-            if (data.TrailName != null) searchList = searchList.Where(g => g.TrailName.Contains(data.TrailName)).OrderBy(g => g.Time).ToList();
+            if (data.TrailName != null) searchList = searchList.Where(g => g.TrailName.ToLower().Contains(data.TrailName.ToLower())).OrderBy(g => g.Time).ToList();
 
             if (data.Time != 0) searchList = searchList.Where(g => g.Time <= DateTime.Now.AddDays(data.Time)).OrderBy(g => g.Time).ToList();
 

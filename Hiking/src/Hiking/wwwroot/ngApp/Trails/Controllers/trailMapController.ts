@@ -91,7 +91,7 @@
                         this.center = this.locCenter.SW;
                         this.zoom = 8;
                         break;
-                    case "":
+                    case "default":
                         this.center = this.locCenter.ALL;
                         this.zoom = 8;
                         break;

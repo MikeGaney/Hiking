@@ -34,12 +34,13 @@ namespace Hiking.API
             return Ok(list);
         }
 
-        [HttpGet("{area}")]
-        [Route("searchMap")]
+        [HttpGet("searchMap/{area}")]
+        //[Route("searchMap")]
+
         public IActionResult GetSearchMapTrails(string area)
         {
             List<MapTrailViewModel> list = new List<MapTrailViewModel>();
-            if (area == null)
+            if (area == "default")
             {
                 list = _service.GetMapTrails();
             }
