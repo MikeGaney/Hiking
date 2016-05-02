@@ -380,3 +380,18 @@ background-color: lawngreen;
 .ulLegend {
     padding-left:0;
 }
+
+/*********************************/
+
+
+/******** Admin Page *************/
+
+.adminTable {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-right: 75px;
+    width: 67.3%;
+    padding: 25px;
+}
