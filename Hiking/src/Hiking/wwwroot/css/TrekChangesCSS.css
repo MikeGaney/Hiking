@@ -18,3 +18,9 @@
 textarea{
     resize:none;
 }
+
+.trekDtlImg {
+    float: right;
+    height: 170px;
+    margin-top: -75px;
+}

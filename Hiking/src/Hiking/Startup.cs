@@ -45,6 +45,7 @@ namespace Hiking
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<IGatheringService, GatheringService>();
             services.AddScoped<IBackpackService, BackpackService>();
+            services.AddScoped<IProfile, Profile>();
 
             // Add framework services.
             services.AddEntityFramework()

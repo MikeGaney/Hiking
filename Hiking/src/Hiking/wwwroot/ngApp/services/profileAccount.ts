@@ -1,14 +1,18 @@
 ﻿namespace Hiking.Services {
 
-    export class ProfileService {
-        private ProfileResource;
+    export class ProfileAccountService {
+        private ProfileAccountResource;
         constructor(private $resource: ng.resource.IResourceService) {
-            this.ProfileResource = $resource('/api/account/:id');
+            this.ProfileAccountResource = $resource('/api/profiles/:id');
         }
-        
+
+        getProfiles() {
+            return this.ProfileAccountResource.query();
+        }
+
         getProfile(id) {
             let getProfileResource = this.$resource('/api/account/getprofile');
-            return getProfileResource.get({id:id}).$promise;
+            return getProfileResource.get({ id: id }).$promise;
         }
 
         editProfile(profileToEdit) {
@@ -19,7 +23,7 @@
             let deleteProfileResource = this.$resource('/api/account/:id');
             return deleteProfileResource.delete({ id: profileId }).$promise;
         }
-      
+
     }
-    angular.module('Hiking').service('profileService', ProfileService);
+    angular.module('Hiking').service('profileAccountService', ProfileAccountService);
 }
