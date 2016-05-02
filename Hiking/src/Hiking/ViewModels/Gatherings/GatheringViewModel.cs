@@ -16,5 +16,7 @@ namespace Hiking.ViewModels.Gatherings
         public string OwnerId { get; set; }
         public string TrailName { get; set; }
         public int TrailId { get; set; }
+        public string Image { get; set; }
+
     }
 }

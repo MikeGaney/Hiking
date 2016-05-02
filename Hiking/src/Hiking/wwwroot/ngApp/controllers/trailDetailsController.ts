@@ -19,6 +19,7 @@
 
         getTrail()
         {
+            console.log("getTrail()");
             var trailId = this.$stateParams['id'];
             this.trailsService.getOneTrail(trailId).then((data) =>
             {

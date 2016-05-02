@@ -13,17 +13,24 @@
         {
             this.search = {};
             console.log("trails controller");
-            this.trails = this.trailService.getTrails();
-
-            console.log(this.currentPage);
-            this.trailService.getTrailsShortList(this.currentPage).$promise.then((data) => {
-
-                this.numberOfAds = this.trails.length;
-                this.tenTrails = data;
-                console.log(this.numberOfAds);
+            this.trailService.getTrails().then((data) =>
+            {
+                this.numberOfAds = data.length;
             });
 
             
+            this.getTrailListShort();
+            
+        }
+
+        getTrailListShort()
+        {
+            console.log(this.currentPage);
+            this.trailService.getTrailsShortList(this.currentPage).then((data) =>
+            {
+                this.trails = data;
+                console.log(this.numberOfAds);
+            });
         }
 
 
@@ -45,7 +52,7 @@
 
         nextPage() {
 
-            this.tenTrails = this.trailService.getTrailsShortList(this.currentPage);
+            this.trails = this.trailService.getTrailsShortList(this.currentPage);
 
         }
 
