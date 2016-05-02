@@ -44,19 +44,61 @@
     text-shadow: 2px 2px #333333;
     padding: 15px;
 }
+#circle{
+    /*background-color: rgba(115, 115, 115, .90);*/
+    background-color: rgba(255, 255, 255, 0.66);
+    border: 9px solid rgba(0,0,0,.2);
+    position: relative;
+    margin-left: 40px;
+    margin-top: 300px;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    box-shadow: 7px 7px 7px #404040;
+    border-radius: 100%;
+    color: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    /*text-shadow: 2px 2px #333333;*/
+    padding: 55px;
+}
+#compassContainer{
+    height: 270px;
+    width: 270px;
+    position: relative;
+    float:right;
+    margin-top: -450px;
+    margin-right: 40px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.80);
+    box-shadow: 0 5px 10px #404040;
+    transform: rotate(-13deg);
+    -webkit-transform: rotate(-13 deg); /* Chrome, Safari, Opera */
+}
+#compass{
+    width:100%;
+    
+}
+.bioContainer{
+    float: right;
+    width: 100%;
+    margin-bottom: 100px;
+
+}
 #bio {
     /*background-color:rgba(115, 115, 115, .70);*/
     background-color: rgba(255, 255, 255, 0.66);
-    color: rgba(255, 255, 255, 1.0);
+    color: black;
     box-shadow: 7px 7px 7px #404040;
-    position: relative;
-    margin-top: 150px;
+    /*position: relative;*/
+    float: right;
+    margin-right: 20px;
+    margin-top: -400px;
     display: inline-block;
     height: 450px;
     width: 1100px;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
-    padding:15px;
+    padding: 10px;
     /*text-shadow: 2px 2px #333333;*/
     margin-left: 30px;
 }
@@ -80,10 +122,9 @@
     width: 625px;
     left: 0;
     right: -50px;
-    top: 90px;
+    top: 30px;
     background-color: rgba(255, 255, 255, 0.80);
     /**border hard coded**/
-    border: 5px;
     padding-left: 10px;
     padding-top: -10px;
   
@@ -94,8 +135,6 @@
    
 }
 .bkpkLink{
-   
-    margin-left: auto;
     margin-top: 20px;
     margin-left: 10px;
 }
@@ -104,8 +143,8 @@
     /*background-color:rgba(115, 115, 115, 1.00);*/
     background-color: rgba(255, 255, 255, 1.00);
     float: right;
-    margin-top: 25px;
-    margin-right: px;
+    margin-top: 23px;
+    margin-right: 20px;
     border-radius: 7px;
     box-shadow: 7px 7px 7px #404040;
     padding: 4px;
@@ -144,9 +183,9 @@
     display: block;
     box-shadow: 7px 7px 7px #404040;
     border: 10px solid rgba(0,0,0,.3);
-    margin-top: 150px;
-    height: 325px;
-    width: 625px;
+    margin-top: -75px;
+    height: 525px;
+    width: 100%;
     left: 0;
     right: -50px;
     top: 250px;
@@ -160,23 +199,6 @@
     height: 40px;
     width: 60px;
 }
-#circle{
-    /*background-color: rgba(115, 115, 115, .90);*/
-    background-color: rgba(255, 255, 255, 0.66);
-    border: 9px solid rgba(0,0,0,.2);
-    float: right;
-    position: absolute;
-    margin-left:300px;
-    margin-top: 150px;
-    display: inline-block;
-    height: 300px;
-    width: 300px;
-    box-shadow: 7px 7px 7px #404040;
-    border-radius: 100%;
-    color: rgba(0, 0, 0, 0.80);
-    text-align: center;
-    /*text-shadow: 2px 2px #333333;*/
-    padding: 60px;
-}
+
 
 
