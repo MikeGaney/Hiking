@@ -127,7 +127,7 @@ namespace Hiking
 
 
             // initialize sample data
-            SampleData.Initialize(app.ApplicationServices).Wait();
+            //SampleData.Initialize(app.ApplicationServices).Wait();
             SampleDataTrail.Initialize(app.ApplicationServices);
             SampleDataBlog.Initialize(app.ApplicationServices);
             SampleDataGatherings.Initialize(app.ApplicationServices);
