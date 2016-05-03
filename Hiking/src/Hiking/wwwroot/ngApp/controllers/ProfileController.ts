@@ -11,7 +11,7 @@
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
-            private backpackService:Hiking.Services.BackPackService) 
+            private backpackService: Hiking.Services.BackPackService,
             private $state: ng.ui.IStateService,
             private profileAccountService: Hiking.Services.ProfileAccountService) 
         {
@@ -22,6 +22,9 @@
             this.getCompletedTrails();
 
             this.profiles = this.profileAccountService.getProfiles();
+
+        }
+
         addAdmin(id) {
             console.log(id);
             this.accountService.addAdmin(id).then(() => {

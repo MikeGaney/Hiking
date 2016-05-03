@@ -69,13 +69,32 @@
                     </div>
                 </li>
 
-                <li><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
-                <li><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
+                <li><a ng-click="controller.showRegisterModal()" ng-show="controller.getUserName() == null"><strong>Register</strong></a></li>
+                <li><a ng-click="controller.showLoginModal()" ng-show="controller.getUserName() == null"><strong>Login</strong></a></li>
+
+                <div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
+
+
+                    <span uib-dropdown on-toggle="toggled(open)">
+                        <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
+                            Welcome Back {{controller.getName()}} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                            <li role="menuitem"><a href="/viewprofile">Profile</a></li>
+                            <li class="divider"></li>
+                            <li role="menuitem"><a href="/admin">Admin Page</a></li>
+                            <li class="divider"></li>
+                            <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
+                        </ul>
+                    </span>
+
+                </div>
+
             </ul>
 
 
 
-            <div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
+            @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
 
 
                 <span uib-dropdown on-toggle="toggled(open)">
@@ -91,7 +110,7 @@
                     </ul>
                 </span>
 
-            </div>
+            </div>*@
 
 
 
