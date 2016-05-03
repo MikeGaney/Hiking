@@ -32,9 +32,8 @@
     position: fixed;
 }
 
-.browsePage {
-
-    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
+.blogPage {
+    background-image: url('../images/nw1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Merriweather', serif;
@@ -49,7 +48,7 @@
     padding-right: 40px;
     padding-bottom: 15px;
     float: right;
-    margin-right: 75px;
+    /*margin-right: 75px;*/
     width: 67.3%;
 }
 

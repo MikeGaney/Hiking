@@ -1,4 +1,8 @@
-﻿
+﻿/************** UI View **********************/
+
+#uiView {
+    background-color: #1a1919;
+}
 
 /************** Browse Page ******************/
 
@@ -46,7 +50,6 @@
 
 .browsePage {
     background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
-    /*background-image:url(https://upload.wikimedia.org/wikipedia/commons/3/3c/Salto_del_Angel-Canaima-Venezuela08.JPG);*/
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 1500px;
@@ -187,9 +190,9 @@
 
 .browseSideBar {
     float: left;
-    width: 22%;
-    margin-top: 50px;
-    margin-left: 60px;
+    width: 18%;
+    margin-top: 70px;
+    /*margin-left: 60px;*/
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -257,8 +260,7 @@
 /****************** Details Page *************/
 
 .detailsPage {
-    background-image: url(http://greendalba.com/wp-content/uploads/2008/11/dsc02863.jpg);
-    /*background-image:url(http://1.bp.blogspot.com/-fgYkymZ9P_g/T9-ZJow7f2I/AAAAAAAAA9E/lX_ITY0mioM/s1600/IMG_0037.JPG);*/
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
     background-size: cover;
     /*height: 1500px;*/
     background-repeat: no-repeat;
