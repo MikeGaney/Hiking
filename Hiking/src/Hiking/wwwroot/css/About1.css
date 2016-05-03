@@ -112,16 +112,16 @@
     transition: .3s background-color;
 }
 
-    .nav a:hover {
-        background-color: #2d862d;
-        color: #fff;
-    }
+.nav a:hover {
+    background-color: #2d862d;
+    color: #fff;
+}
 
-    .nav a.active {
-        background-color: #2d862d;
-        color: #fff;
-        cursor: default;
-    }
+.nav a.active {
+    background-color: #2d862d;
+    color: #fff;
+    cursor: default;
+}
 
 @media screen and (min-width: 600px) {
     .nav li {
@@ -164,16 +164,16 @@
     min-width: 160px;
 }
 
-    .dropdown-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-        .dropdown-content a:hover {
-            background-color: #505050;
-        }
+.dropdown-content a:hover {
+    background-color: #505050;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;

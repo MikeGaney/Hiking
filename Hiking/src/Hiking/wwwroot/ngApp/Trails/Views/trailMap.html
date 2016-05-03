@@ -18,8 +18,12 @@
                          coords="'self'"
                          icon="'icon'"
                          dorebuildall="true"
-                         click="controller.showInfo()"
+                         idkey="controller.trails.id"
+                         click="controller.onClick()"
                          options="'options'">
+            <ui-gmap-windows options="controller.windowOption" closeClick="controller.closeClick()" >
+                <div ng-non-bindable>Hello World {{name}}</div>
+            </ui-gmap-windows>
         </ui-gmap-markers>
     </ui-gmap-google-map>
 </div>
@@ -39,4 +43,5 @@
         <option value="Southwest Washington">Southwest Washington</option>
     </select>
     <label>{{controller.numOfTrails}} Trails in Area</label>
+    <label>{{controller.windowOption.visible}}</label>
 </div>

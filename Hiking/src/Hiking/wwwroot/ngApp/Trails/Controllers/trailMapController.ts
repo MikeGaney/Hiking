@@ -21,11 +21,12 @@
             SW: { latitude: 48.0000, longitude: -120.9800 },
             ALL: { latitude: 48.0000, longitude: -120.9800 }
         };
-        
+        public windowOption;
 
         constructor(private trailsService: Hiking.Services.TrailsService)
         {
             this.trails = {};
+            this.windowOption = {visible: false};
             this.GetTrails();
             this.showInfo = this.showInfo.bind(this);
         }
@@ -105,13 +106,23 @@
             
         }
 
-        showInfo(marker, eventName, model, eventArgs)
+        onClick()
+        {
+            this.windowOption.visible = !this.windowOption.visible;
+        }
+
+        closeClick()
+        {
+            this.windowOption.visible = false;
+        }
+
+        showInfo()
         {
             console.log("marker clicked");
-            console.log(marker);
-            console.log(eventName);
-            console.log(model);
-            console.log(eventArgs);
+            //console.log(marker);
+            //console.log(eventName);
+            //console.log(model);
+            //console.log(eventArgs);
         }
     }
 }
