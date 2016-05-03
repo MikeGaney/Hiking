@@ -25,12 +25,11 @@
 
 </div>-->
 <div class="profileEditWindow">
-    <!--<h1 id="editTitle"> < Edit Profile > </h1>-->
     <div class="row">
-        <div class="col-md-1"></div>
+        <div class="col-sm-1"></div>
         <form ng-submit="controller.save()" id="editProfForm">
             <!--Left Side-->
-            <div class="col-md-6 form-group" id="leftSide">
+            <div class="col-sm-5 form-group" id="leftSide">
                 <label id="changeProfLabel">Change Profile Picture</label>
                 <div id="profPic">
                     <img src={{controller.editProfile.profilePic}} style="width: 100%; height: 100%" />
@@ -41,29 +40,37 @@
 
                     <!--<button class="btn btn-primary form-group">Upload</button>-->
                 </div>
-
-                <div class="form-group" id="nameInput">
-                    <label>Change Name</label>
-                    <h4>First Name</h4>
-                    <input type="text" ng-model="controller.editProfile.firstName" class="form-control fromControl" />
-                    <h4>Last Name</h4>
-                    <input type="text" ng-model="controller.editProfile.lastName" class="form-control fromControl" />
+                <div class="row">
+                    <div class="col-sm-6 form-group" id="nameInput">
+                        <label>Change Name</label>
+                        <input type="text" ng-model="controller.editProfile.firstName" class="form-control formControl" placeholder="First Name" />
+                        <br />
+                        <input type="text" ng-model="controller.editProfile.lastName" class="form-control formControl" placeholder="Last Name" />
+                    </div>
+                    <div class="col-sm-6 form-group" id="displayNameInput">
+                        <label>Change Trail Name</label>
+                        <input type="text" ng-model="controller.editProfile.displayName" class="form-control formControl" maxlength="12" />
+                    </div>
+                    <div class="col-sm-6 form-group" id="ageInput">
+                        <label>Change Age</label>
+                        <input type="text" ng-model="controller.editProfile.age" class="form-control " />
+                    </div>
                 </div>
-                <div class="form-group" id="displayNameInput">
-                    <label>Change Trail Name</label>
-                    <input type="text" ng-model="controller.editProfile.displayName" class="form-control fromControl" maxlength="12" />
-                </div>
+              
+                    
+               
+                
 
             </div>
             <!--RightSide-->
-            <div class="col-md-6 form-group" id="rightSide">
+            <div class="col-sm-5 form-group" id="rightSide">
                 <div class="form-group" id="bioWrapper">
                     <label id="bioLabel">Change Bio</label>
                     <textarea class="form-group" id="bioInput" ng-model="controller.editProfile.bio" wrap="hard" maxlength="1250"></textarea>
                     <br />
                 </div>
                 <div class="row form-group" id="expertWrapper">
-                    <div class=" col-md-6 form-group" id="expLevel">
+                    <div class= "col-sm-6 form-group" id="expLevel">
                         <label>Expertise Level</label>
                         <br />
                         <input type="radio" name="expertise" value="1" ng-model="controller.editProfile.expertise" class="form" /> Beginner (1)
@@ -72,12 +79,9 @@
                         <br />
                         <input type="radio" name="expertise" value="3" ng-model="controller.editProfile.expertise" class="form" /> Expert (3)
                     </div>
-                    <div class="col-md-6 form-group" id="ageInput">
-                        <label>Change Age</label>
-                        <input type="text" ng-model="controller.editProfile.age" class="form-control " />
-                    </div>
+
                 </div>
-                
+
 
                 <div id="submitWrapper">
                     <div>

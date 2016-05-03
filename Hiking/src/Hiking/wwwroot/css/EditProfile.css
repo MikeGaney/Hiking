@@ -1,7 +1,7 @@
 ﻿.profileEditWindow{
     background-image:url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
     background-size:cover;
-    /*height: 1500px;*/
+    height: 1500px;
     background-repeat: no-repeat;
     min-width: 1600px;
 }
@@ -24,7 +24,8 @@
     color: rgba(0, 0, 0, 1.0);
     position: relative;
     display: inline-block;
-    height: 1100px;
+    /*height: 900px;*/
+    height: 80%;
     width: 40%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
@@ -40,8 +41,9 @@
     position: absolute;
     float: right;
     display: inline-block;
-    height: 1100px;
-    width: 41%;
+    /*height: 900px;*/
+    height: 80%;
+    width: 40%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 15px;
@@ -50,9 +52,7 @@
     margin-top: 75px;
     
 }
-.formControl{
-    width: 600px;
-}
+
 #profPic{
     box-shadow: 7px 7px 7px #404040;
     height: 475px;
@@ -67,9 +67,20 @@
     margin-top: 20px;
     width: 500px;
 }
-#nameInput{
+.formControl{
+    width: 100%;
+}
+#nameInput {
     margin-top: 10px;
-    
+    /*display: inline-block;*/
+}
+#displayNameInput{
+    margin-top: 10px;
+
+    /*margin-top: -150px;
+    margin-left: 75px;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
 }
 #bioWrapper{
     width: 100%; 
@@ -110,9 +121,9 @@
 #saveBtn{
     position:relative;
     width: 16%;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     /*margin-top: 130px;*/
-    margin-left: 500px;
+    /*margin-left: 500px;*/
     box-shadow: 7px 7px 7px #404040;
     margin-top: 85px;
     
@@ -121,7 +132,7 @@
     position:relative;
     width: 16%;
     /*margin-top: 175px;*/
-    margin-left: 500px;
+    /*margin-left: 500px;*/
     box-shadow: 7px 7px 7px #404040;
     margin-top: 30px;
 }

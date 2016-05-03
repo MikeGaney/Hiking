@@ -13,60 +13,30 @@
                         </div>
                         <div id="name">{{controller.viewProfile.displayName}}</div>
                     </div>
-                    <div class="col-sm-4">
 
+                    <!-- Open Asides-->
+                    <div class="col-sm-4">
                         <div id="asides">
                             <div id="profLinks" style="border: 10px solid rgba(0,0,0,.3);">
                                 <div id="myTrails">
-                                    <a href="/editprofile/{{controller.viewProfile.displayName}}" style="color: firebrick" class="toEditbtn">Edit Your Profile Here</a>
+                                    <a href="/editprofile/{{controller.viewProfile.displayName}}" style="color: firebrick" class="toEditbtn"><strong>Edit Your Profile Here</strong></a>
                                 </div>
                                 <!--BackPack link-->
                                 <div class="bkpkLink">
-                                    <a href="/backpack/{{controller.viewProfile.displayName}}" style="color: black">Check out your backpack</a>
+                                    <a href="/backpack/{{controller.viewProfile.displayName}}" style="color: black"><strong>Check out your backpack</strong></a>
                                     <img src="http://iloominate.org/images/backpack_2551.png" id="bkpkIcon" />
                                 </div>
                             </div>
-                            <!--Saved Trails Div-->
-                            <!--<aside class="aside" id="aside1" style="border:10px solid rgba(0,0,0,.3);">
-                                    <h3>My Saved Trails:</h3>
-                                    <div id="myTrails">-->
-                            <!--<table class="bkpkTable">
-                            <tr ng-repeat="trail in controller.shortbackpack">
-                                <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                <td>{{trail.name}}</td>-->
-                            <!--<td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                            <td>{{trail.name}}</td>-->
-                            <!--</tr>-->
-                            <!--<tr n
-                                                    g-repeat="trail in controller.backpack">
-                                <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                <td>{{trail.name}}</td>
-                                <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                <td>{{trail.name}}</td>
-                            </tr>-->
-                            <!--</table>-->
+
                             <!--Trails Completed Div-->
                             <aside class="aside" id="aside2">
-                                <h3>Trail Patches:</h3>
-                                <table class="bkpkTable">
-                                    <tr>
-                                        <td ng-repeat="trail in controller.completedHikes">
-                                            <img src="http://image005.flaticon.com/1/svg/39/39536.svg" class="bkpkMtnIcon" />
-                                            <br />
-                                            {{trail.name}}
-                                        </td>
-                                    </tr>
-
-                                    <!--<tr ng-repeat="trail in controller.backpack">
-                                        <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                        <td>{{trail.name}}</td>
-                                        <td><img src="http://www.hexographer.com/wp-content/uploads/2014/04/mountains-forested-conifer-smallgroup-b-white.png" class="bkpkMtnIcon" /></td>
-                                        <td>{{trail.name}}</td>
-                                    </tr>-->
-
-                                </table>
+                                <h3>Trail Badges:</h3>
+                                
+                                <div></div>
+                                    <ul class="bkpkTable" >
+                                        <li ng-repeat="trail in controller.completedHikes" class="profBadges"><img src="http://image005.flaticon.com/1/svg/39/39536.svg" width="100" uib-tooltip="{{trail.name}}"></li>
+                                    </ul>                               
                             </aside>
-
                         </div>
                     </div>
                     <!--</aside>-->
@@ -75,7 +45,7 @@
             </div>
         </div>
     </div>
-    <!--About Me Div-->
+   
     <div class="row">
         <!--Expertise Circle Div-->
         <div class="col-sm-4">
@@ -87,9 +57,11 @@
             </div>
             <div id="compassContainer">
                 <!--<img src="https://cdn2.iconfinder.com/data/icons/map-location-set/512/632503-compass_wind_rose-512.png" id="compass"  />-->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />-->
+                <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="compass" />
             </div>
         </div>
+        <!--About Me Div-->
         <div class="col-sm-8 bioContainer">
             <div id="bio">
                 <h3 style="color:firebrick"><strong>About Me:</strong></h3>

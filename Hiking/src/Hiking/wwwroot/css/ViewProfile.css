@@ -1,40 +1,40 @@
-﻿.profileWindow{
-    background-image:url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
-    background-size:cover;
-    /*height: 1500px;*/
+﻿.profileWindow {
+    background-image: url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
+    background-size: cover;
+    height: 1500px;
     background-repeat: no-repeat;
     min-width: 1600px;
 }
+
 #bodydiv {
     position: relative;
     font-family: 'Arvo', serif;
-    
 }
 
 #profilePic {
     position: relative;
     border-color: lightgray;
     height: 600px;
-    width: 1100px; 
+    width: 100%;
     border: 20px solid rgba(0,0,0,.3);
     margin-left: 30px;
     margin-top: 25px;
     background-color: rgba(255, 255, 255, 0.66);
+}
 
-    }
 .profImage {
     width: 100%;
     height: 100%;
 }
-    
-#name{
+
+#name {
     position: absolute;
     display: block;
     box-shadow: 7px 7px 7px #404040;
     border: 10px solid rgba(0,0,0,.3);
     height: 150px;
-    width: 650px;
-    left: 80px;
+    width: 70%;
+    left: 7%;
     top: 550px;
     /*background-color: rgba(115, 115, 115, .90);*/
     background-color: rgba(255, 255, 255, 0.80);
@@ -44,14 +44,16 @@
     text-shadow: 2px 2px #333333;
     padding: 15px;
 }
-#circle{
+
+#circle {
     /*background-color: rgba(115, 115, 115, .90);*/
-    background-color: rgba(255, 255, 255, 0.66);
+    background-color: rgba(255, 255, 255, 0.80);
     border: 9px solid rgba(0,0,0,.2);
     position: relative;
     margin-left: 40px;
     margin-top: 300px;
     display: inline-block;
+    
     height: 300px;
     width: 300px;
     box-shadow: 7px 7px 7px #404040;
@@ -61,32 +63,37 @@
     /*text-shadow: 2px 2px #333333;*/
     padding: 55px;
 }
-#compassContainer{
-    height: 270px;
-    width: 270px;
+
+#compassContainer {
+    height: 16.5%;
+    width: 45%;
     position: relative;
-    float:right;
+    /*float: right;
     margin-top: -450px;
-    margin-right: 40px;
+    margin-right: 40px;*/
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.80);
-    box-shadow: 0 5px 10px #404040;
-    transform: rotate(-13deg);
-    -webkit-transform: rotate(-13 deg); /* Chrome, Safari, Opera */
+    box-shadow: 0 10px 10px #404040;
+    /*transform: rotate(-13deg);
+    -webkit-transform: rotate(-13 deg); /* Chrome, Safari, Opera */ */;
 }
-#compass{
-    width:100%;
-    
+
+#compass {
+    width: 100%;
+    transform: rotate(-16deg);
+    -webkit-transform: rotate(-16 deg);
+    /* Chrome, Safari, Opera */
 }
-.bioContainer{
-    float: right;
+
+.bioContainer {
+    /*float: right;*/
     width: 100%;
     margin-bottom: 100px;
-
 }
+
 #bio {
     /*background-color:rgba(115, 115, 115, .70);*/
-    background-color: rgba(255, 255, 255, 0.66);
+    background-color: rgba(255, 255, 255, 0.80);
     color: black;
     box-shadow: 7px 7px 7px #404040;
     /*position: relative;*/
@@ -95,7 +102,7 @@
     margin-top: -400px;
     display: inline-block;
     height: 450px;
-    width: 1100px;
+    width: 70%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 10px;
@@ -103,23 +110,24 @@
     margin-left: 30px;
 }
 
-#asides{ /*background-color: lightblue;*/
+#asides { /*background-color: lightblue;*/
     position: absolute;
     display: block;
-    height: 700px;
-    width: 625px;
-    right: -250px;
-    margin-top: 30px;
+    height: 50%;
+    width: 100%;
+    right: -100px;
+    /*margin-top: 30px;*/
     font-size: 16px;
     color: firebrick;
 }
-#profLinks{
-   position: absolute;
+
+#profLinks {
+    position: absolute;
     display: block;
     box-shadow: 7px 7px 7px #404040;
-    border: 10px solid rgba(0,0,0,.3);  
+    border: 10px solid rgba(0,0,0,.3);
     height: 100px;
-    width: 625px;
+    width: 100%;
     left: 0;
     right: -50px;
     top: 30px;
@@ -127,19 +135,19 @@
     /**border hard coded**/
     padding-left: 10px;
     padding-top: -10px;
-  
 }
-#bkpkIcon{
+
+#bkpkIcon {
     height: 40px;
     width: 40px;
-   
 }
-.bkpkLink{
+
+.bkpkLink {
     margin-top: 20px;
     margin-left: 10px;
 }
-.toEditbtn{
-    
+
+.toEditbtn {
     /*background-color:rgba(115, 115, 115, 1.00);*/
     background-color: rgba(255, 255, 255, 1.00);
     float: right;
@@ -149,14 +157,18 @@
     box-shadow: 7px 7px 7px #404040;
     padding: 4px;
     text-decoration: none;
-    
-
 }
-/*.bkpkTable{
-    width: 580px;
-    height: 100px;
-    color:rgba(0, 0, 0, 0.80);
-}*/
+
+.bkpkTable {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    list-style:none;
+    margin-left: -15px;
+}
+.profBadges{
+    margin-right: 10px;
+}
 
 /*#aside1{
     position: absolute;
@@ -169,16 +181,16 @@
     right: -50px;
     top: 90px;
     /*background-color:  rgba(153, 51, 0, 1.0);*/
-    /*background-color:rgba(115, 115, 115, .90);*/
-    /*background-color: rgba(255, 255, 255, 0.80);
+/*background-color:rgba(115, 115, 115, .90);*/
+/*background-color: rgba(255, 255, 255, 0.80);
     border-top-style: solid ;
     border-color: black;
     border: 5px;
     padding-left: 10px;
     padding-top: -10px;*/
-    /*text-shadow: 2px 2px #333333;*/
+/*text-shadow: 2px 2px #333333;*/
 
-#aside2{
+#aside2 {
     position: absolute;
     display: block;
     box-shadow: 7px 7px 7px #404040;
@@ -195,10 +207,8 @@
     padding-top: -5px;
     /*text-shadow: 2px 2px #333333;*/
 }
-.bkpkMtnIcon{
+
+.bkpkMtnIcon {
     height: 40px;
     width: 60px;
 }
-
-
-
