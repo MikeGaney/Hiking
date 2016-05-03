@@ -381,3 +381,46 @@ background-color: lawngreen;
 .ulLegend {
     padding-left:0;
 }
+
+/*********************************/
+
+
+/******** Admin Page *************/
+
+#adminHeader {
+    text-align: center;
+}
+
+.adminPage {
+    font-family: 'Merriweather', serif;
+    background-color: dimgrey;
+    color: firebrick;
+    min-height: 1500px;
+}
+.adminTable {
+    background-color: rgba(255, 255, 255, 0.80);
+    margin-top: -682px;
+    margin-right: 350px;
+    margin-left: 350px;
+    width: 900px;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.adminUsers {
+    color: navy;
+}
+
+.adminBtn {
+    font-size: xx-large;
+    font-weight: 800;
+    height: 50px;
+    width: 340px;
+    border-radius: 0;
+    padding-bottom: inherit;
+}
+
+.adminCompass {
+    margin-left: 460px;
+}

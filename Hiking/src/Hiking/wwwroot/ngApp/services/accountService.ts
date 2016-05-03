@@ -3,6 +3,7 @@ namespace Hiking.Services
 
     export class AccountService
     {
+        private accountResource;
 
         // Store access token and claims in browser session storage
         private storeUserInfo(userInfo)
@@ -194,6 +195,17 @@ namespace Hiking.Services
                 messages = messages.concat(modelState[prop]);
             }
             return messages;
+        }
+
+        public addAdmin(id)
+        {
+            console.log(id);
+            return this.$http.post('/api/account/addAdmin/' + id, id);
+        }
+
+        public removeAdmin(id)
+        {
+            return this.$http.post('/api/account/removeAdmin/' + id, id);
         }
 
         constructor

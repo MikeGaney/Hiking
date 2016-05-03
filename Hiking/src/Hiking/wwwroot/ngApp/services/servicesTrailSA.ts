@@ -49,5 +49,5 @@ namespace Hiking.Services {
             return commentResource.save(data).$promise;
         }
     }
-    angular.module( "Hiking" ).service( "trailsService", TrailsService );
+    angular.module("Hiking").service("trailsService", TrailsService);
 }

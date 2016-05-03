@@ -1,25 +1,34 @@
-﻿
+﻿<div class="adminPage">
 <br />
 <br />
+    <br />
+    <br />
 <br />
-<hr />
 
-<div class="col-tablet-3 col-sm-4 col-md-8 browseSearch">
-    <button><a href="/changes/">Add A Trail</a></button>
-    <button><a href="/blog/add">Add a Blog</a></button>
+<img src="http://worldartsme.com/images/compas-clipart-1.jpg" class="adminCompass" alt="Alternate Text" width="680" />
 
+<div class="col-tablet-3 col-sm-4 col-md-8 adminTable">
     <div class="row">
-        <table class="table">
+        <table class="table adminUsers">
+            <h3 id="adminHeader">TrekClub Users</h3>
             <tr>
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>UserName</th>
+                <th>Admin Access</th>
             </tr>
             <tr ng-repeat="profile in controller.profiles">
                 <td>{{profile.firstName}}</td>
                 <td>{{profile.lastName}}</td>
                 <td>{{profile.userName}}</td>
+                <td>
+                    <a ng-click="controller.addAdmin(profile.userName)" ng-show="!profile.isAdmin">(+) Admin</a>
+                    <a ng-click="controller.removeAdmin(profile.userName)" ng-show="profile.isAdmin">(-) Admin</a>
+                </td>
             </tr>
         </table>
     </div>
+    <button class="btn btn-danger adminBtn"><a href="/changes/">Add A Trail</a></button>
+    <button class="btn btn-danger adminBtn"><a href="/blog/add">Add a Blog</a></button>
+</div>
 </div>

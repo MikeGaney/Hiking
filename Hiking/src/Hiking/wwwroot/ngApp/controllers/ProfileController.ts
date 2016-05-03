@@ -11,8 +11,9 @@
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
-            private profileAccountService: Hiking.Services.ProfileAccountService,
             private backpackService:Hiking.Services.BackPackService) 
+            private $state: ng.ui.IStateService,
+            private profileAccountService: Hiking.Services.ProfileAccountService) 
         {
             this.GetProfile();
             //this.shortbackpack = {};
@@ -21,6 +22,17 @@
             this.getCompletedTrails();
 
             this.profiles = this.profileAccountService.getProfiles();
+        addAdmin(id) {
+            console.log(id);
+            this.accountService.addAdmin(id).then(() => {
+                this.$state.reload();
+            });
+        }
+
+        removeAdmin(id) {
+            this.accountService.removeAdmin(id).then(() => {
+                this.$state.reload();
+            });
         }
 
         GetProfile() 
