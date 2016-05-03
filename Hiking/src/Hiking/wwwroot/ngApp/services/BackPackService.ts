@@ -39,6 +39,12 @@
             return this.MyTrailsResource.save(data).$promise;
         }
 
+        public RateTrails(data)
+        {
+            let rateResource = this.$resource('/api/backpack/rateTrails');
+            return rateResource.save(data).$promise;
+        }
+
         // *** PAGINATION***
       
 

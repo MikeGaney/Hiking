@@ -1,0 +1,16 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Rate Trail</h3>
+</div>
+<div class="modal-body">
+    <h3>How would you rate {{controller.trailName}}?</h3>
+    <label>Overall Rating</label>
+    <uib-rating ng-model="controller.rate.overall" max="controller.max" ></uib-rating><br />
+    <label>Family Rating</label>
+    <uib-rating ng-model="controller.rate.family" max="controller.max" ></uib-rating><br />
+    <label>Scenic Beauty Rating</label>
+    <uib-rating ng-model="controller.rate.beauty" max="controller.max" ></uib-rating><br />
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="controller.OK()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="controller.Cancel()">Cancel</button>
+</div>

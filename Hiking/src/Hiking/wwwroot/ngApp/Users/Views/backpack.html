@@ -153,7 +153,8 @@
                                     <!--<form ng-submit="controller.saveCompletedTrail(trail.id)">-->
                                         <!--Done!<input type="checkbox" value="Done" id="bkpkCheckbox" ng-checked="controller.savecompletedtrail(trail.id)"/>-->
                                     <!--</form>-->
-                                    <button  ng-click="controller.saveCompletedTrail(trail.id)" >Done</button>
+                                    <button  ng-click="controller.saveCompletedTrail(trail.id, trail.name)" class="btn btn-primary" >Done</button>
+                                    <!--<input type="button" value="Rate Trail" class="btn btn-primary" ng-click="controller.showRateModal(trail.id, trail.name)" />-->
                                </div>
                         </div>
 

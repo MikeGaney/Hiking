@@ -117,19 +117,19 @@ namespace Hiking.Services
             var list = _repo.Query<Trail>().Where(t => t.Id == id).Include(t => t.TrailComments).Include(t => t.Gatherings).Include(t => t.FamilyRating).Include(t => t.BeautyRating).Include(t => t.RatingList).FirstOrDefault();
             if (list.Gatherings.Any())
             {
-            list.Gatherings = list.Gatherings.OrderBy(g => g.Time).ToList();
+                list.Gatherings = list.Gatherings.OrderBy(g => g.Time).ToList();
             }
             if (list.BeautyRating.Any())
             {
-            list.BeautyRate = (int)list.BeautyRating.Average(b => b.Rating);
+                list.BeautyRate = (int)list.BeautyRating.Average(b => b.Rating);
             }
             if (list.FamilyRating.Any())
             {
-            list.FamilyRate = (int)list.FamilyRating.Average(r => r.Rating);
+                list.FamilyRate = (int)list.FamilyRating.Average(r => r.Rating);
             }
             if (list.RatingList.Any())
             {
-            list.Rating = (int)list.RatingList.Average(r => r.Rating);
+                list.Rating = (int)list.RatingList.Average(r => r.Rating);
             }
 
             List<Gathering> newList = new List<Gathering>();

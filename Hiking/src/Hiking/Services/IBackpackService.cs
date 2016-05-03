@@ -15,5 +15,6 @@ namespace Hiking.Services
         void SaveCompletedTrail(UserTrail id);
         //List<Trail> GetShortTrailList(string id);
         List<Trail> BkPkPagination(int num, string id);
+        void RateTrails(TrailRateViewModel data, string id);
     }
 }

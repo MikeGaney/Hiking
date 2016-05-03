@@ -115,6 +115,40 @@ namespace Hiking.Services
           
         }
 
-        
+        public void RateTrails(TrailRateViewModel data, string id)
+        {
+            //var user = repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
+            var trail = repo.Query<Trail>().Where(t => t.Id == data.TrailId).Include(t => t.BeautyRating).Include(t => t.RatingList).Include(t => t.FamilyRating).FirstOrDefault();
+            if (data.Overall != 0)
+            {
+                var trailRate = new TrailRating
+                {
+                    Rating = data.Overall,
+                    UserId = id
+                };
+                trail.RatingList.Add(trailRate);
+            }
+            if (data.Beauty != 0)
+            {
+                var beautyRate = new BeautyRating
+                {
+                    Rating = data.Beauty,
+                    UserId = id
+                };
+                trail.BeautyRating.Add(beautyRate);
+            }
+            if (data.Family != 0)
+            {
+                var familyRate = new FamilyRating
+                {
+                    Rating = data.Family,
+                    UserId = id
+                };
+                trail.FamilyRating.Add(familyRate);
+            }
+
+            repo.SaveChanges();
+            return;
+        }
     }
 }

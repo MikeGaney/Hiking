@@ -6,6 +6,7 @@ using Microsoft.AspNet.Mvc;
 using Hiking.Services;
 using System.Security.Claims;
 using Hiking.Models;
+using Hiking.ViewModels.Profile;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -98,6 +99,7 @@ namespace Hiking.API
 
             return Ok();
         }
+
         // POST api/values
         [HttpPost]
         [Route ("saveCompletedTrail")]
@@ -110,6 +112,15 @@ namespace Hiking.API
             //};
             service.SaveCompletedTrail(id);
 
+            return Ok();
+        }
+
+        [HttpPost]
+        [Route("rateTrails")]
+        public IActionResult RateTrails([FromBody] TrailRateViewModel data)
+        {
+            var userId = User.GetUserId();
+            service.RateTrails(data, userId);
             return Ok();
         }
 
