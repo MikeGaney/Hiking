@@ -1,7 +1,7 @@
 ﻿.profileWindow {
     background-image: url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
     background-size: cover;
-    height: 1500px;
+    height: 2000px;
     background-repeat: no-repeat;
     min-width: 1600px;
 }
@@ -17,7 +17,7 @@
     height: 600px;
     width: 100%;
     border: 20px solid rgba(0,0,0,.3);
-    margin-left: 30px;
+    /*margin-left: 30px;*/
     margin-top: 25px;
     background-color: rgba(255, 255, 255, 0.66);
 }
@@ -50,8 +50,8 @@
     background-color: rgba(255, 255, 255, 0.80);
     border: 9px solid rgba(0,0,0,.2);
     position: relative;
-    margin-left: 40px;
-    margin-top: 300px;
+    /*margin-left: 40px;*/
+    /*margin-top: 300px;*/
     display: inline-block;
     
     height: 300px;
@@ -87,8 +87,9 @@
 
 .bioContainer {
     /*float: right;*/
-    width: 100%;
+    /*width: 100%;*/
     margin-bottom: 100px;
+   
 }
 
 #bio {
@@ -96,27 +97,27 @@
     background-color: rgba(255, 255, 255, 0.80);
     color: black;
     box-shadow: 7px 7px 7px #404040;
-    /*position: relative;*/
-    float: right;
-    margin-right: 20px;
-    margin-top: -400px;
+    position: relative;
+    /*float: right;*/
+    /*margin-right: 20px;*/
+    /*margin-top: -400px;*/
     display: inline-block;
     height: 450px;
-    width: 70%;
+    width: 50%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 10px;
     /*text-shadow: 2px 2px #333333;*/
-    margin-left: 30px;
+    /*margin-left: 30px;*/
 }
 
 #asides { /*background-color: lightblue;*/
-    position: absolute;
-    display: block;
-    height: 50%;
+    position: relative;
+    /*display: block;*/
+    height: 35%;
     width: 100%;
-    right: -100px;
-    /*margin-top: 30px;*/
+    /*right: -100px;*/
+    margin-top: 5%;
     font-size: 16px;
     color: firebrick;
 }
@@ -196,7 +197,7 @@
     box-shadow: 7px 7px 7px #404040;
     border: 10px solid rgba(0,0,0,.3);
     margin-top: -75px;
-    height: 525px;
+    height: 75%;
     width: 100%;
     left: 0;
     right: -50px;
