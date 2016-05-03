@@ -3,7 +3,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     /*margin-top: 70px;*/
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
+    height:1500px;
 }
 .whiteCover{
    background-color: rgba(255, 255, 255, 0.60);
@@ -13,6 +14,7 @@
    padding-bottom: 60em;
    padding-top:2em;
    color:black;
+   height:1500px;
 }
 .TitleHome{
     text-align:center;
