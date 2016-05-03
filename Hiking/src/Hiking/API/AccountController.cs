@@ -71,6 +71,22 @@ namespace Hiking.Controllers
             return Ok(user);
         }
 
+        [HttpPost("addAdmin/{id}")]
+        public async Task<IActionResult> adminToPost(string id)
+        {
+            var user = await _userManager.FindByEmailAsync(id);
+            await _userManager.AddClaimAsync(user, new Claim("IsAdmin", "true"));
+            return Ok();
+        }
+
+        [HttpPost("removeAdmin/{id}")]
+        public async Task<IActionResult> adminToDelete(string id)
+        {
+            var user = await _userManager.FindByEmailAsync(id);
+            await _userManager.RemoveClaimAsync(user, new Claim("IsAdmin", "true"));
+            return Ok();
+        }
+
 
         [HttpPost]
         [Route("editprofile")]
@@ -91,6 +107,8 @@ namespace Hiking.Controllers
 
             return Ok();
         }
+
+       
         [HttpDelete("{id}")] //MH
         //[Route("deleteprofile")]
         public IActionResult Delete(string id)  

@@ -12,6 +12,7 @@ namespace Hiking.Repositories
     {
         private ApplicationDbContext _db;
 
+
         public GenericRepository(ApplicationDbContext db)
         {
             this._db = db;
@@ -97,5 +98,6 @@ namespace Hiking.Repositories
         void SaveChanges();
         IQueryable<T> SqlQuery<T>(string sql, params object[] parameters) where T : class;
         void Update<T>(T entityToUpdate) where T : class;
+        //void Post<T>(ApplicationUser adminToPost);
     }
 }

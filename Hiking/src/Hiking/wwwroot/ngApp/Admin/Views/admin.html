@@ -15,11 +15,16 @@
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>UserName</th>
+                <th>Admin Access</th>
             </tr>
             <tr ng-repeat="profile in controller.profiles">
                 <td>{{profile.firstName}}</td>
                 <td>{{profile.lastName}}</td>
                 <td>{{profile.userName}}</td>
+                <td>
+                    <a ng-click="controller.addAdmin(profile.userName)" ng-show="!profile.isAdmin">(+) Admin</a>
+                    <a ng-click="controller.removeAdmin(profile.userName)" ng-show="profile.isAdmin">(-) Admin</a>
+                </td>
             </tr>
         </table>
     </div>

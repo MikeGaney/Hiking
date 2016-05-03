@@ -9,11 +9,25 @@
         constructor(
             private profileService: Hiking.Services.ProfileService,
             private accountService: Hiking.Services.AccountService,
+            private $state: ng.ui.IStateService,
             private profileAccountService: Hiking.Services.ProfileAccountService) 
         {
 
             this.profiles = this.profileAccountService.getProfiles();
+            console.log("test");
+        }
 
+        addAdmin(id) {
+            console.log(id);
+            this.accountService.addAdmin(id).then(() => {
+                this.$state.reload();
+            });
+        }
+
+        removeAdmin(id) {
+            this.accountService.removeAdmin(id).then(() => {
+                this.$state.reload();
+            });
         }
 
         GetProfile() 
