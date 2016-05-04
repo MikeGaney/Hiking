@@ -64,7 +64,8 @@ namespace Hiking
             services.AddTransient<ISmsSender, AuthMessageSender>();
 
             // convert Pascal to Camel
-            services.AddMvc().AddJsonOptions(options => {
+            services.AddMvc().AddJsonOptions(options =>
+            {
                 options.SerializerSettings.ContractResolver =
                     new CamelCasePropertyNamesContractResolver();
             });
@@ -84,11 +85,11 @@ namespace Hiking
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            app.UseDeveloperExceptionPage();
 
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
-                app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
             else
