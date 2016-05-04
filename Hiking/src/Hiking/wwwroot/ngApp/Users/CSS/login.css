@@ -3,15 +3,16 @@
 }*/
 
 .login-title-text {
+    margin-top: -20px;
 }
 
-/*.login-form-container {
+.login-form-container {
     width: 342px;
     margin: 0 auto;
     padding: 30px;
     border: 1px solid #ccc;
     height: 400px;
-}*/
+}
 
 /*.google-login {
     background: #e0492f;
@@ -95,9 +96,11 @@
     font-size: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border-radius: 0;
+    border-radius: 5px;
     cursor: auto !important;
     height: 36px;
+    margin-left: 125px;
+    box-shadow: 7px 7px 7px #404040;
 }
 
 #password {
@@ -108,9 +111,11 @@
     font-size: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border-radius: 0;
+    border-radius: 5px;
     cursor: auto !important;
     height: 36px;
+    margin-left: 125px;
+    box-shadow: 7px 7px 7px #404040;
 }
 
 /*.forgot{
@@ -136,6 +141,7 @@
     border: none;
     cursor: pointer;
     margin-bottom: 0 !important;
+    box-shadow: 7px 7px 7px #404040;
 }
 
 .login-button:hover{
@@ -156,6 +162,9 @@
     /*opacity: .5 !important;*/
     box-shadow: 10px 10px 10px #404040;
     border-radius: 5px;
+    text-shadow: 2px 2px #333333;
+    color: white;
+
 }
 .mHeader{
   margin-top: -30px;
@@ -163,4 +172,10 @@
 .mTitle{
   font-size: 35pt;
   font-weight: bold;
+}
+#loginCompass{
+    margin-left: -55%;
+    margin-top:-40px;
+    transform: rotate(-16deg);
+    -webkit-transform: rotate(-16 deg);
 }
