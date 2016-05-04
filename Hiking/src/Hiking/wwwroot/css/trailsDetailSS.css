@@ -120,13 +120,13 @@
 }
 
 .rating{
-    font-size: 30px;
-    color: forestgreen;
+    font-size: 29px;
+    color: #2d862d;
 }
 
 .smallRating{
     font-size: 18px;
-    color: forestgreen;
+    color: #2d862d;
 }
 
 .searchBtn {
