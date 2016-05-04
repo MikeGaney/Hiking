@@ -5,7 +5,7 @@ namespace Hiking.Services {
 
         constructor(private $resource: ng.resource.IResourceService) 
         {
-            this.trailsResource = this.$resource('/api/AddEditDeleteTrail/:id', null, { searchMap: { url: "/api/AddEditDeleteTrail/searchMap/:area", isArray: true }, pb: {} });         
+            this.trailsResource = this.$resource('/api/AddEditDeleteTrail/:id', null, { searchMap: { url: "/api/AddEditDeleteTrail/searchMap/:area", isArray: true }, backpack: { url: "/api/AddEditDeleteTrail/backpack/:id", isArray: false} });         
         }
 
         public getAllTrails() 
@@ -23,6 +23,11 @@ namespace Hiking.Services {
         {
             //let searchResource = this.$resource('/api/AddEditDeleteTrail/searchMap');
             return this.trailsResource.searchMap({ area: area }).$promise;
+        }
+
+        public checkBackpack(id)
+        {
+            return this.trailsResource.backpack({ id: id }).$promise;
         }
 
         public getOneTrail(id) 

@@ -6,6 +6,8 @@ using Microsoft.AspNet.Mvc;
 using Hiking.Models;
 using Hiking.Services;
 using Hiking.ViewModels.Trails;
+using Microsoft.AspNet.Identity;
+using System.Security.Claims;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,6 +17,7 @@ namespace Hiking.API
     public class AddEditDeleteTrailController : Controller
     {
         ISATrailsService _service;
+        
         public AddEditDeleteTrailController(ISATrailsService service)
         {
             this._service = service;
@@ -36,7 +39,6 @@ namespace Hiking.API
 
         [HttpGet("searchMap/{area}")]
         //[Route("searchMap")]
-
         public IActionResult GetSearchMapTrails(string area)
         {
             List<MapTrailViewModel> list = new List<MapTrailViewModel>();
@@ -49,6 +51,14 @@ namespace Hiking.API
                 list = _service.GetSearchMapTrails(area);
             }
             return Ok(list);
+        }
+
+        [HttpGet("backpack/{id}")]
+        public IActionResult CheckBackpack(int id)
+        {
+            var userId = User.GetUserId();
+            var check = _service.CheckBackpack(userId, id);
+            return Ok(check);
         }
 
         // GET api/values/5

@@ -9,12 +9,29 @@
         //];
         public userTrail;
         public comment;
+        public backpack;
 
         constructor(private trailsService: Hiking.Services.TrailsService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService, private backpackService: Hiking.Services.BackPackService, private accountService: Hiking.Services.AccountService)
         {
             this.comment = {};
             this.userTrail = {};
+            this.backpack = {};
+            this.checkBackpack();
             this.getTrail();
+        }
+
+        checkBackpack()
+        {
+            var trailId = this.$stateParams['id'];
+            this.trailsService.checkBackpack(trailId).then((data) =>
+            {
+                this.backpack = data;
+            });
+        }
+
+        getUserName()
+        {
+            return this.accountService.getUserName();
         }
 
         getTrail()

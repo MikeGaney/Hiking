@@ -82,7 +82,9 @@
 
                         <!-- Details -->
                         <div class="sidebar">
-                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack"/>
+                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack btn" ng-show="!controller.backpack.isThere && controller.getUserName() != null"/>
+                            <label ng-show="controller.backpack.isThere">Trail already in Backpack</label>
+                            <label ng-show="controller.getUserName() == null">Log In to Add to Backpack</label>
                             <hr />
                             <h5>Location: {{controller.trail.location}}</h5>
                             <hr />
