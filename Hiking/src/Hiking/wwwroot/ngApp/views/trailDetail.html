@@ -2,19 +2,18 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8 col-lg-offset-2">
                 <div class="row">
-                    <div class="col-sm-2 detailsLeftColumn">
+                    <div class="col-sm-4 detailsLeftColumn">
 
                         <!--  -->
                         <!-- Legend -->
                         <div class="legend">
-                            <h2>Legend</h2>
 
                             <div class="row">
                                 <!--<div class="col-md-4">-->
                                 
-                                <h5>Activities</h5>
+                                <h3 class="trailSBtitles">Activities</h3>
                                 <ul class="ulLegend">
                                     <li ng-show="controller.trail.fishing"><img title="Fishing" src="../../images/fishing.png" width="30" /></li>
                                     <li ng-show="controller.trail.biking"> <img title="Biking" src="../../images/bike.png" width="30" /></li>
@@ -30,7 +29,7 @@
                                     <li ng-show="controller.trail.passRequired"><img title="Pass Required" src="../../images/parkpass.png" width="30" /></li>
                                     <li ng-show="controller.trail.waterfalls"><img title="Waterfalls" src="../../images/river.png" width="30" /></li>
                                 </ul>
-                                <h5>Hazards</h5>
+                                <h3 class="trailSBtitles">Hazards</h3>
                                 <ul class="ulLegend">
                                     <li ng-show="controller.trail.bears"><img title="Bears Sighted" src="../../images/bear.png" width="30" /></li>
 
@@ -43,20 +42,14 @@
 
                         <!-- Weather Link -->
                         <div class="legend">
-                            <h2>Local Weather</h2>
+                            <h3 class="trailSBtitles">Local Weather</h3>
                             <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
-                        </div>
-
-                        <!-- Meet Up Info -->
-                        <div class="legend">
-                            <h2>Upcomming Events</h2>
-                            <button href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="weatherbtn">Click Here</button>
                         </div>
 
                         <!-- Rating -->
                         <div class="legend">
                             <div>
-                                <h2>Trail Rating</h2>
+                                <h3 class="trailSBtitles">Trail Rating</h3>
                                 <!--<img src="http://catherinedunn.co.uk/wp-content/uploads/2016/03/4-stars.png" alt="" class="src" width="200" />-->
                                 <uib-rating ng-model="controller.trail.rating" max="5" read-only="true" class="rating"></uib-rating>
                             </div>
@@ -70,17 +63,12 @@
                             </div>
                         </div>
 
-                        <!-- Open Seasons -->
-                        <div class="legend">
-                            <h2>Dates of Operation</h2>
-                        </div>
-
                     </div>
 
 
 
 
-                    <div class="col-md-8 detailsRightColumn">
+                    <div class="col-md-6 detailsRightColumn">
 
                         <!-- Trail Title -->
                         <div class="legend1">
@@ -89,20 +77,20 @@
 
                         <!-- Map -->
                         <div class="map">
-                            <img src="{{controller.trail.map}}" width="600" class="imagesDetails img-responsive" />
+                            <img src="{{controller.trail.map}}" width="400" class="imagesDetails img-responsive" />
                         </div>
 
                         <!-- Details -->
                         <div class="sidebar">
                             <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack"/>
                             <hr />
-                            <h4>Location: {{controller.trail.location}}</h4>
+                            <h5>Location: {{controller.trail.location}}</h5>
                             <hr />
-                            <h4>Distance: {{controller.trail.distance}} miles</h4>
+                            <h5>Distance: {{controller.trail.distance}} miles</h5>
                             <hr />
-                            <h4>Average Time: {{controller.trail.time}} hours</h4>
+                            <h5>Average Time: {{controller.trail.time}} hours</h5>
                             <hr />
-                            <h4>Elevation: {{controller.trail.elevation}}</h4>
+                            <h5>Elevation: {{controller.trail.elevation}}</h5>
                             <!--<button href="" class="saveToPack" ng-click="controller.getMyTrail()">Save Hike To Pack</button>-->
                         </div>
                         <!--Icon display-->
@@ -117,7 +105,7 @@
 
                         <!-- Gatherings -->
                         <div>
-                            <h3>Upcoming Gatherings</h3>
+                            <h2 class="trailSBtitles">Upcoming Treks</h2>
                             <table class="table">
                                 <tr>
                                     <th>Title</th>
@@ -136,7 +124,7 @@
 
                         <!-- User Comments -->
                         <div>
-                            <h3>Comments</h3>
+                            <h3 class="trailSBtitles">Comments</h3>
                             <div class="comment" ng-repeat="comment in controller.trail.trailComments">
                                 <div class="commentText">
                                     <span>{{comment.message}}</span>
@@ -151,7 +139,7 @@
                                 </div>
                             </div>
                             <form ng-submit="controller.AddComment()">
-                                <textarea rows="10" class="form-control" ng-model="controller.comment.message"></textarea>
+                                <textarea rows="6" class="form-control" ng-model="controller.comment.message"></textarea>
                                 <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
                             </form>
                         </div>
