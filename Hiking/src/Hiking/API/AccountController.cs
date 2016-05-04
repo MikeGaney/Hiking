@@ -111,10 +111,24 @@ namespace Hiking.Controllers
         //[Route("deleteprofile")]
         public IActionResult Delete(string id)  
         {
-            var profileToDelete = repo.Query<ApplicationUser>().FirstOrDefault(u => u.Id == id);
+            var profileToDelete = repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
+            var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUserId == id).ToList();
+            var gatherings = repo.Query<GatheringUsers>().Where(gu => gu.ApplicationUserId == id).ToList();
+            //results.Clear();
+            foreach (var item in trails)
+            {
+                repo.Delete<UserTrail>(item);
+            }
+
+            foreach (var item in gatherings)
+            {
+                repo.Delete<GatheringUsers>(item);
+            }
+            //repo.SaveChanges();
+            
             repo.Delete<ApplicationUser>(profileToDelete);
-            repo.SaveChanges();
-            return Ok(profileToDelete);
+            //repo.SaveChanges();
+            return Ok();
         }
 
         private async Task<UserViewModel> GetUser(string userName)

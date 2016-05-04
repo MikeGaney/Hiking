@@ -3,7 +3,8 @@
     background-size: cover;
     /*height: 2000px;*/
     background-repeat: no-repeat;
-    min-width: 1600px;
+    /*min-width: 1600px;*/
+    margin-top: 54px;
 }
 
 #bodydiv {
@@ -236,5 +237,11 @@
         margin-top: 270px;
         margin-right: 50px;
         width: 95%;
+    }
+    #profilePic{
+        display:block;
+    }
+    #name{
+        /*top: 0;*/
     }
 }

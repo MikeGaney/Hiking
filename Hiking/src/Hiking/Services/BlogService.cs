@@ -24,9 +24,9 @@ namespace Hiking.Services
                 CreationDate = b.CreationDate,
                 Message = b.Message,
                 Title = b.Title,
-                 UserID = b.UserID,
-                 Views = b.Views,
-                 CommentCount = b.Comments.Count
+                UserID = b.UserID,
+                Views = b.Views,
+                CommentCount = b.Comments.Count
             }).ToList();
             return list;
         }

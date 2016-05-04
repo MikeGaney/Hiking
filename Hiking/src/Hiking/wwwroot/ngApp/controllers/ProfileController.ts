@@ -129,9 +129,9 @@
                 },
                 //size: 'sm'
             }).result.then(() => {
-                this.profileService.deleteProfile(profileId).then(() => {
+                //this.profileService.deleteProfile(profileId).then(() => {
+                //});
                     this.$state.go('home');
-                });
             });
         };
 
@@ -155,6 +155,7 @@
             private $window: ng.IWindowService,
             private accountService: Hiking.Services.AccountService,
             private profileService: Hiking.Services.ProfileService,
+            private $state: ng.ui.IStateService,
             public profileId: string,
             private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance) 
         {
@@ -166,6 +167,7 @@
             {
                 this.$window.sessionStorage.clear();
                 this.$uibModalInstance.close();
+                //this.$state.go('home');
             });
             
         }
