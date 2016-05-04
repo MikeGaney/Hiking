@@ -12,7 +12,7 @@
         constructor(private trailService: Hiking.Services.TrailService)
         {
             this.search = {};
-            console.log("trails controller");
+            //console.log("trails controller");
             this.trailService.getTrails().then((data) =>
             {
                 this.numberOfAds = data.length;
@@ -29,7 +29,7 @@
             this.trailService.getTrailsShortList(this.currentPage).then((data) =>
             {
                 this.tenTrails = data;
-                console.log(this.numberOfAds);
+                //console.log(this.numberOfAds);
             });
         }
 
@@ -39,7 +39,7 @@
             console.log(this.search);
             this.trailService.searchTrails(this.search).then((data) => {
                 this.tenTrails = data;
-                console.log(data);
+                //console.log(data);
             });
 
         }
@@ -52,7 +52,10 @@
 
         nextPage() {
 
-            this.tenTrails = this.trailService.getTrailsShortList(this.currentPage);
+            this.trailService.getTrailsShortList(this.currentPage).then((data) =>
+            {
+                this.tenTrails = data;
+            });
 
         }
 
