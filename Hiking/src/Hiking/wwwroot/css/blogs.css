@@ -25,16 +25,9 @@
 }
 
 .browseSideBarBlogs {
-    /*float: left;
-    margin-top: 80px;
-    margin-left: 60px;
-    background-color: rgba(255, 255, 255, 0.33);
-    position: fixed;
-    display: inline-block*/
     float: left;
-    width: 22%;
-    margin-top: 80px;
-    margin-left: 60px;
+    width: 18%;
+    margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -46,6 +39,7 @@
     background-image: url('../images/nw1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 1500px;
     font-family: 'Merriweather', serif;
     color: slategrey;
     margin-top:50px;
@@ -53,14 +47,14 @@
 
 .blogs{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 70px;
     padding-top: 12px;
     padding-right: 40px;
     padding-bottom: 15px;
     float: right;
     /*margin-right: 75px;*/
-    width: 67.3%;
+    width: 65%;
+    margin-bottom: 60px;
 }
 
 .singleBlog{
@@ -76,7 +70,7 @@
 
 .blogLeft{
     /*border: 1px solid black;*/
-    width: 83%;
+    width: 95%;
     display: inline-block;
 }
 
@@ -91,6 +85,7 @@
     display: inline-block;
     float: right;
     margin-top: -5px;
+    margin-right: 5px;
 }
 
 .blogDescription{
@@ -171,13 +166,12 @@
 /*       Blog Details Page       */
 .details{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 80px;
-    margin-left: 30px;
+    margin-top: 70px;
     padding-top: 12px;
     padding-bottom: 15px;
     float: right;
-    margin-right: 40px;
     color: black;
+    margin-bottom: 60px;
 }
 
 .blogTitle{

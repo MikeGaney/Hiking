@@ -3,7 +3,7 @@
     export class TrailMapController
     {
         public trails;
-        public center = { latitude: 48.0000, longitude: -120.9800 };
+        public center = { latitude: 47.6000, longitude: -120.9800 };
         public zoom = 7;
         public location;
         public numOfTrails;
