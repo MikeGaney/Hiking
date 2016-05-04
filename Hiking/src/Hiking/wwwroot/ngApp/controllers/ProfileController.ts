@@ -115,7 +115,7 @@
                 //size: 'sm'
             }).result.then(() => {
                 this.profileService.deleteProfile(profileId).then(() => {
-                    this.$state.go('trails');
+                    this.$state.go('home');
                 });
             });
         };
@@ -143,7 +143,7 @@
             public profileId: string,
             private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance) 
         {
-            console.log("heythere");
+            //console.log("heythere");
         }
 
         public ok() {
