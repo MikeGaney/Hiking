@@ -120,14 +120,14 @@ namespace Hiking {
                 controller: Hiking.Controllers.BackPackController,
                 controllerAs: 'controller'
             })
-            .state('gatherings', {
-                url: '/gatherings',
+            .state('treks', {
+                url: '/treks',
                 templateUrl: '/ngApp/Gatherings/Views/gatherings.html',
                 controller: Hiking.Controllers.GatheringController,
                 controllerAs: 'controller'
             })
-            .state('gatheringDetails', {
-                url: '/gatheringDetails/:id',
+            .state('treksDetails', {
+                url: '/treksDetails/:id',
                 templateUrl: '/ngApp/Gatherings/Views/gatherDetails.html',
                 controller: Hiking.Controllers.GatheringDetailsController,
                 controllerAs: 'controller'
