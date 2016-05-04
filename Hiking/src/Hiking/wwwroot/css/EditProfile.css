@@ -23,33 +23,34 @@
     box-shadow: 7px 7px 7px #404040;
     color: rgba(0, 0, 0, 1.0);
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     /*height: 900px;*/
-    height: 80%;
+    height: 70%;
     width: 40%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     /*padding:15px;*/
     margin-bottom: 75px;
     margin-top: 75px;
-    margin-left: -2%;
+    margin-left: 5%;
 }
 #rightSide{
     background-color: rgba(230, 230, 230, 0.70);
     box-shadow: 7px 7px 7px #404040;
     color: rgba(0, 0, 0, 1.0);
-    position: absolute;
-    float: right;
-    display: inline-block;
+    position: relative;
+    /*float: right;*/
+    /*display: inline-block;*/
     /*height: 900px;*/
-    height: 80%;
+    height: 70%;
     width: 40%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 15px;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-bottom: 75px;
     margin-top: 75px;
+    justify-content: center;
     
 }
 
@@ -105,22 +106,25 @@
 }
 #expertWrapper {
     display: inline-block;
-    width: 100%;
+    width: 40%;
     height: auto;
-    margin-top: 25px;
+    margin-top: 45px;
+   
 }
 #submitWrapper{
     position:relative;
+    display: inline-block;
     /*background-color: lightblue;*/
-    width: 800px;
+    width: 40%;
     /*height: 230px;*/
-    margin-right:0;
-    margin-bottom: 20px;
+    /*margin-right:0;*/
+    float: right;
+    margin-bottom: 40px;
 
 }
 #saveBtn{
     position:relative;
-    width: 16%;
+    width: 80%;
     /*margin-bottom: 20px;*/
     /*margin-top: 130px;*/
     /*margin-left: 500px;*/
@@ -130,7 +134,7 @@
 }
 #deleteBtn{
     position:relative;
-    width: 16%;
+    width: 80%;
     /*margin-top: 175px;*/
     /*margin-left: 500px;*/
     box-shadow: 7px 7px 7px #404040;

@@ -1,13 +1,12 @@
 ﻿
 <div class="profileWindow">
-    <div class="row">
+    <!--<div class="row">-->
 
         <div id="bodydiv">
-            <div class="col-sm-10">
                 <div class="row">
 
                     <!-- Profile Pic-->
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <div id="profilePic">
                             <img src="{{controller.viewProfile.profilePic}}" class="image profImage" />
                         </div>
@@ -15,7 +14,7 @@
                     </div>
 
                     <!-- Open Asides-->
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div id="asides">
                             <div id="profLinks" style="border: 10px solid rgba(0,0,0,.3);">
                                 <div id="myTrails">
@@ -34,40 +33,48 @@
                                 
                                 <div></div>
                                     <ul class="bkpkTable" >
-                                        <li ng-repeat="trail in controller.completedHikes" class="profBadges"><img src="http://image005.flaticon.com/1/svg/39/39536.svg" width="100" uib-tooltip="{{trail.name}}"></li>
+                                        <li ng-repeat="trail in controller.completedHikes" class="profBadges"><img src="http://image005.flaticon.com/1/svg/39/39536.svg" width="87" uib-tooltip="{{trail.name}}"></li>
                                     </ul>                               
                             </aside>
                         </div>
                     </div>
-                    <!--</aside>-->
+                    <!--End Asides-->
 
                 </div>
-            </div>
-        </div>
-    </div>
-   
-    <div class="row">
-        <!--Expertise Circle Div-->
-        <div class="col-sm-4">
-            <div id="circle">
-                <h3 style="color:firebrick"><strong>Expertise Level:</strong></h3>
-                <h4>{{controller.viewProfile.expertise}}</h4>
-                <h3 style="color:firebrick"><strong>Age:</strong></h3>
-                <h4>{{controller.viewProfile.age}}</h4>
-            </div>
-            <div id="compassContainer">
-                <!--<img src="https://cdn2.iconfinder.com/data/icons/map-location-set/512/632503-compass_wind_rose-512.png" id="compass"  />-->
-                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />-->
-                <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="compass" />
-            </div>
-        </div>
-        <!--About Me Div-->
-        <div class="col-sm-8 bioContainer">
-            <div id="bio">
-                <h3 style="color:firebrick"><strong>About Me:</strong></h3>
-                <p>{{controller.viewProfile.bio}}</p>
-            </div>
-        </div>
-    </div>
+            <!--End Top Row-->
+            <!--Bottom Row-->
+            <div class="row">
+                <!--Expertise Circle Div-->
+                <div class="col-md-12">
+                    <div id="circle">
+                        <h3 style="color:firebrick"><strong>Expertise Level:</strong></h3>
+                        <h4>{{controller.viewProfile.expertise}}</h4>
+                        <h3 style="color:firebrick"><strong>Age:</strong></h3>
+                        <h4>{{controller.viewProfile.age}}</h4>
+                        <div id="compassContainer">
+                            <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="compass" style="width: 270px" />
 
-</div> <!--End BodyDiv-->
+                            <!--<img src="https://cdn2.iconfinder.com/data/icons/map-location-set/512/632503-compass_wind_rose-512.png" id="compass"  />-->
+                            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />-->
+
+                        </div>
+                    </div>
+                    <!--About Me Div-->
+                    <div class="bioContainer">
+                        <div id="bio">
+                            <h3 style="color:firebrick"><strong>About Me:</strong></h3>
+                            <p>{{controller.viewProfile.bio}}</p>
+                        </div>
+                    </div>
+                    
+                </div>              
+            </div>
+            <!--End Bottom Row-->
+
+            
+       
+    </div><!--End BodyDiv-->
+   
+    
+
+</div> 

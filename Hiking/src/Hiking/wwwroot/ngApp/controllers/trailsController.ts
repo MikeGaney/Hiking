@@ -28,7 +28,7 @@
             console.log(this.currentPage);
             this.trailService.getTrailsShortList(this.currentPage).then((data) =>
             {
-                this.trails = data;
+                this.tenTrails = data;
                 console.log(this.numberOfAds);
             });
         }
@@ -38,7 +38,7 @@
 
             console.log(this.search);
             this.trailService.searchTrails(this.search).then((data) => {
-                this.trails = data;
+                this.tenTrails = data;
                 console.log(data);
             });
 
@@ -52,7 +52,7 @@
 
         nextPage() {
 
-            this.trails = this.trailService.getTrailsShortList(this.currentPage);
+            this.tenTrails = this.trailService.getTrailsShortList(this.currentPage);
 
         }
 
