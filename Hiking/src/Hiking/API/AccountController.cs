@@ -91,7 +91,7 @@ namespace Hiking.Controllers
 
             return Ok();
         }
-        [HttpDelete("{id}")] //MH
+        [HttpDelete("{id}")] 
         //[Route("deleteprofile")]
         public IActionResult Delete(string id)  
         {

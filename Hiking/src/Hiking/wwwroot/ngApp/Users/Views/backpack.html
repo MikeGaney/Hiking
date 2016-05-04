@@ -57,7 +57,7 @@
 
 
                     <!--  Mobile Header  -->
-                    <div class="col-md-6">
+                    <!--<div class="col-md-6">
                         <div class="mobileHeaderTrailsBrowse">
                             <div class="mobileSectionsTrailsBrowse">
                                 <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Gatherings</a>
@@ -72,99 +72,106 @@
                                 <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Fishing/Hunting</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="row"></div>
-
-
-
+                    </div>-->
+                    <!--<div class="row"></div>-->
 
                     <!--  SideBar  -->
-                    <div class="col-md-4 browseSideBar">
+                    <div class="col-md-4 bkpkSideBar">
 
-                        <h1 class="sidebarTitle">TrekClub</h1>
+                        <h1 class="bkpkSidebarTitle">TrekClub</h1>
 
                         <!-- Meet Up Info -->
                         <div class="bkpkBrowseLegend">
-                            <h2 class="browseSBtitles">Gatherings</h2>
-                            <button class="browseSBbtns"><a href="/gatherings">Click Here</a></button>
+                            <h2 class="bkpkBrowseSBtitles">Gatherings</h2>
+                            <button class="bkpkBrowseSBbtns"><a href="/gatherings">Click Here</a></button>
                         </div>
 
                         <!-- Weather Link -->
                         <div class="bkpkBrowseLegend">
-                            <h2 class="browseSBtitles">Local Weather</h2>
-                            <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                            <h2 class="bkpkBrowseSBtitles">Local Weather</h2>
+                            <button class="bkpkBrowseSBbtns"><a href="https://weather.com/weather/tenday/l/seattle+wa+uswa0395:1:us">Click here</a></button>
                         </div>
 
                         <!-- Parking Pass Link -->
                         <div class="bkpkBrowseLegend">
-                            <h2 class="browseSBtitles">Need a Parking Pass</h2>
-                            <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                            <h2 class="bkpkBrowseSBtitles">Need a Parking Pass</h2>
+                            <button class="bkpkBrowseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
                         </div>
 
                         <!-- Fishing/Hunting Licenses Link -->
                         <div class="bkpkBrowseLegend">
-                            <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
-                            <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
+                            <h2 class="bkpkBrowseSBtitles">Fishing & Hunting Licenses</h2>
+                            <button class="bkpkBrowseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
                         </div>
 
                     </div>
-
-
-
-
                     <!--  Header Quote  -->
-                    <div class="col-tablet-3 col-sm-4 col-md-8 bkpkBody">
-                        <div id="bkpkHeaderBkgrnd">
-                            <hr />
-                            <div class="row form-group">                                
-                                <h1 id="bkpkHeader">"I haven't been everywhere, but it's on my list." ~ Susan Sontag</h1>
-                            </div>
-                            <hr />
-                        </div>
-                    </div>
-                    <div id="bkpkCompassContainer">
-                        <!--<img src="https://cdn2.iconfinder.com/data/icons/map-location-set/512/632503-compass_wind_rose-512.png" id="compass"  />-->
-                        <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />-->
-                        <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="bkpCompass" />
-                    </div>
-
-                    <!--  Pagination  -->
-
-                    <div class="row bkpkPagination">
-                        <uib-pagination total-items="controller.numberTrls" ng-model="controller.bkpkCurrentPage" max-size="controller.maxSize" class="pagination-sm" boundary-link-numbers="true" ng-change="controller.bkpkNextPage()"></uib-pagination>
-                    </div>
-
-                   
-
-                    <!--  Trails Added to BackPack  -->
-                    <div class="row" ng-repeat="trail in controller.backpack">
-
-                        <div class="col-tablet-3 col-sm-4 col-md-8 trailBox">
-                            <div>
-                                 <a href="/trailDetail/{{trail.id}}">
-                                <img src="{{trail.image}}" style="width:150px; height: 120px;" class="imagesBrowse img-responsive>" />
-                                 </a>
-                           </div>
-                         <div class="bkpkTrailInfo">
-                                <a href="/trailDetail/{{trail.id}}">
-                                    <h3 class="bkpkTrailName">{{trail.name}}</h3>
-                                    <h5>Distance: {{trail.distance}} miles</h5>
-                                    <h5>Average Time: {{trail.time}} hours</h5>
-                                </a>
-                                <div id="bkpkRemoveBtnDiv">
-                                    <img src="http://www.jpapencen.gov.my/images/close.png" id="bkpkremoveBtn"  ng-click="controller.deleteMyTrail(trail.id)"/>
+                    <div class="col-md-8 bkpkBody">
+                        <div>
+                            <div id="bkpkHeaderBkgrnd">
+                                <hr />
+                                <div class="row form-group">
+                                    <h1 id="bkpkHeader">"I haven't been everywhere, but it's on my list." </br>~ Susan Sontag</h1>
                                 </div>
-                                <div id="doneDiv">
-                                    <!--<form ng-submit="controller.saveCompletedTrail(trail.id)">-->
+                                <hr />
+                            </div>
+
+                        </div>
+                        <div id="bkpkCompassContainer">
+                            <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="bkpkCompass" />
+                            <!--<img src="https://cdn2.iconfinder.com/data/icons/map-location-set/512/632503-compass_wind_rose-512.png" id="compass"  />-->
+                            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />-->
+
+                        </div>
+
+
+                        <!--  Pagination  -->
+
+                        <div class="row bkpkPagination">
+                            <uib-pagination total-items="controller.numberTrls" ng-model="controller.bkpkCurrentPage" max-size="controller.maxSize" class="pagination-sm" boundary-link-numbers="true" ng-change="controller.bkpkNextPage()"></uib-pagination>
+                        </div>
+                        <div class="row" ng-repeat="trail in controller.backpack">
+
+                            <div class=" col-md-12 bkpkTrailBox">
+                                <div>
+                                    <a href="/trailDetail/{{trail.id}}">
+                                        <img src="{{trail.image}}" style="width:150px; height: 120px;" class="imagesBrowse img-responsive>" />
+                                    </a>
+                                </div>
+                                <div class="bkpkTrailInfo">
+                                    <a href="/trailDetail/{{trail.id}}">
+                                        <h3 class="bkpkTrailName">{{trail.name}}</h3>
+                                        <h5>Distance: {{trail.distance}} miles</h5>
+                                        <h5>Average Time: {{trail.time}} hours</h5>
+                                    </a>
+                                    <div id="bkpkRemoveBtnDiv">
+                                        <img src="http://www.jpapencen.gov.my/images/close.png" id="bkpkremoveBtn" ng-click="controller.deleteMyTrail(trail.id)" />
+                                    </div>
+                                    <div id="doneDiv">
+                                        <!--<form ng-submit="controller.saveCompletedTrail(trail.id)">-->
                                         <!--Done!<input type="checkbox" value="Done" id="bkpkCheckbox" ng-checked="controller.savecompletedtrail(trail.id)"/>-->
-                                    <!--</form>-->
-                                    <button  ng-click="controller.saveCompletedTrail(trail.id)" >Done</button>
-                               </div>
+                                        <!--</form>-->
+                                        <button ng-click="controller.saveCompletedTrail(trail.id)" id="hikedBtn">HIKED!</button>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>
-                  </div>
-                </div>               
+                   
+                    
+                </div> <!-- End Row-->
+
+
+
+
+
+
+
+                <!--  Trails Added to BackPack  -->
+               
+
             </div>
         </div>
     </div>

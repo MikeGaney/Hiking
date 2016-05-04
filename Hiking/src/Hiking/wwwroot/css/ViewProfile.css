@@ -1,7 +1,7 @@
 ﻿.profileWindow {
     background-image: url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
     background-size: cover;
-    height: 2000px;
+    /*height: 2000px;*/
     background-repeat: no-repeat;
     min-width: 1600px;
 }
@@ -15,9 +15,9 @@
     position: relative;
     border-color: lightgray;
     height: 600px;
-    width: 100%;
+    width: 95%;
     border: 20px solid rgba(0,0,0,.3);
-    /*margin-left: 30px;*/
+    margin-left: 30px;
     margin-top: 25px;
     background-color: rgba(255, 255, 255, 0.66);
 }
@@ -50,8 +50,8 @@
     background-color: rgba(255, 255, 255, 0.80);
     border: 9px solid rgba(0,0,0,.2);
     position: relative;
-    /*margin-left: 40px;*/
-    /*margin-top: 300px;*/
+    margin-left: 40px;
+    margin-top: 35px;
     display: inline-block;
     
     height: 300px;
@@ -64,33 +64,40 @@
     padding: 55px;
 }
 
-#compassContainer {
-    height: 16.5%;
-    width: 45%;
+/*#compassContainer {
+    height: 270px;
+    width: 270px;
     position: relative;
-    /*float: right;
-    margin-top: -450px;
-    margin-right: 40px;*/
+    float: right;
+    margin-top: -350px;
+    margin-left: 240px;
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.80);
     box-shadow: 0 10px 10px #404040;
-    /*transform: rotate(-13deg);
-    -webkit-transform: rotate(-13 deg); /* Chrome, Safari, Opera */ */;
+    transform: rotate(-13deg);
+    -webkit-transform: rotate(-13 deg); /* Chrome, Safari, Opera  */
 }
 
 #compass {
-    width: 100%;
+    position: relative;
+    /*float: right;*/
+
+    height: 270px;
+    width: 270px;
+    /*margin-top: -350px;*/
+    /*margin-left: 240px;*/
+    /*width: 10%;*/
     transform: rotate(-16deg);
     -webkit-transform: rotate(-16 deg);
     /* Chrome, Safari, Opera */
 }
 
-.bioContainer {
-    /*float: right;*/
+/*.bioContainer {
+    float: right;
     /*width: 100%;*/
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;
    
-}
+}*/
 
 #bio {
     /*background-color:rgba(115, 115, 115, .70);*/
@@ -98,12 +105,13 @@
     color: black;
     box-shadow: 7px 7px 7px #404040;
     position: relative;
-    /*float: right;*/
-    /*margin-right: 20px;*/
-    /*margin-top: -400px;*/
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 100px;
+    margin-top: -250px;
     display: inline-block;
     height: 450px;
-    width: 50%;
+    width: 70%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 10px;
@@ -128,7 +136,7 @@
     box-shadow: 7px 7px 7px #404040;
     border: 10px solid rgba(0,0,0,.3);
     height: 100px;
-    width: 100%;
+    width: 95%;
     left: 0;
     right: -50px;
     top: 30px;
@@ -197,7 +205,7 @@
     box-shadow: 7px 7px 7px #404040;
     border: 10px solid rgba(0,0,0,.3);
     margin-top: -75px;
-    height: 75%;
+    height: 100%;
     width: 100%;
     left: 0;
     right: -50px;
