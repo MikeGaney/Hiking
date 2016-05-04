@@ -9,7 +9,6 @@
 }
 
 .gatherDetailPage {
-    /*background-image: url(https://s-media-cache-ak0.pinimg.com/564x/87/70/66/8770668b04a8df1b147e9032bbde2c5f.jpg);*/
     background-image: url(http://flygtf.com/images/Glacier.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,7 +31,6 @@
     background-color: rgba(255, 255, 255, 0.33);
     margin-top: 70px;
     margin-bottom: 25px;
-    /*margin-right: 75px;*/
     width: 67.3%;
     padding: 25px;
 }
@@ -76,12 +74,10 @@
 
 .treks{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 50px;
-    margin-left: 30px;
+    margin-top: 70px;
     padding: 25px;
     float: right;
-    margin-right: 75px;
-    width: 67.3%;
+    width: 65%;
 }
 
 .trekLeft{
@@ -104,11 +100,15 @@
     margin-left: -225px;
 }
 
+.trekImg {
+    height: 150px;
+    margin-top: 30px;
+}
+
 .trekDescription {
     color: mediumblue;
     font-size: small;
     overflow: hidden;
-    /*border: 1px solid black;*/
     display: inline-block;
     float: right;
     width: 73%;

@@ -62,47 +62,47 @@
 .browseSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 25px;
-    margin-right: 75px;
-    width: 67.3%;
+    width: 65%;
     padding: 25px;
 }
 
 .browseSearch2 {
     background-color: rgba(255, 255, 255, 0.66);
     width:100%;
-    padding: 30px;
+    padding: 10px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 #searchTitle {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: firebrick;
 }
 
 .inputMM {
     border-radius: 0;
-
+    margin-left: -25px;
+    width: 82%;
+    height: 30px;
 }
 
 .searchLabels {
     padding-top: 7px;
-    padding-left: 30px;
+    font-size: smaller;
 }
 
 .Activities {
     float: right;
-    margin-top: -195px;
-    margin-right: 20px;
+    margin-top: -180px;
     border-style: outset;
-    width: 400px;
-    height: 180px;
+    width: 340px;
+    height: 165px;
     padding-top: 10px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 50px;
+    padding-right: 30px;
 }
 
 .actLabel {
@@ -130,23 +130,22 @@
 }
 
 .searchBtn {
-    width: 100%;
+    width: 95%;
     height: 50px;
-    font-size: inherit;
-    margin-top: 20px;
     background-color: aliceblue;
     border-radius:0;
     border-style: outset;
     border-width:initial;
     border-color: aliceblue;
     font-size: x-large;
+    margin-left: 15px;
 }
 
 .trailBox {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
     margin-bottom: 25px;
-    margin-right:75px;
+    width: 64.1%;
 }
 
 .imagesBrowse {
@@ -157,18 +156,17 @@
 .trailBrowse1 {
     background-color: rgba(255, 255, 255, 0.66);
     float: right;
-    width: 40%;
+    width: 50%;
     height: 200px;
     margin-top: -220px;
-    margin-right: 265px;
-    padding: 20px;
     color: firebrick;
     font-family: 'Merriweather', serif;
-    text-transform: ;
     font-size: small;
     font-weight: 400;
     text-align: center;
     border-radius: 0; 
+    overflow: hidden;
+    padding: initial;
 }
 
 .trailBrowse2 {
@@ -254,8 +252,7 @@
 }
 
 .paginationBrowse {
-    margin-left: 525px;
-
+    margin-left: 420px;
 }
 
 /****************** Details Page *************/
@@ -271,9 +268,7 @@
 .detailsLeftColumn {
    float: left;
    width: 25%;
-   margin-left: 75px;
-   margin-top: 100px;
-   padding-right: 0;
+   margin-top: 70px;
    background-color: rgba(255, 255, 255, 0.33);
    color: rgba(0, 0, 0, 0.80);
    font-family: 'Merriweather', serif;
@@ -287,10 +282,9 @@
 
 .detailsRightColumn {
    float: right;
-   width: 60%;
-   margin-right: 75px;
-   margin-top: 100px;
-   padding-right: 0;
+   width: 70%;
+   margin-top: 70px;
+   margin-bottom:70px;
    background-color: rgba(255, 255, 255, 0.33);
    color: rgba(0, 0, 0, 0.80);
    font-family: 'Merriweather', serif;
@@ -323,6 +317,7 @@
 }
 
 .name {
+    color: firebrick;
     font-size: 40px;
     font-weight: 200;
     padding: 10px;
@@ -330,26 +325,29 @@
 
 .map {
     margin-bottom: 20px;
-    display: inline-block;
-    max-width: 62.5%;
+    margin-left: 20px;
 }
 
 .imagesDetails {
-    height: 600px;
+    height: 400px;
     overflow:hidden;
     background-repeat:no-repeat;
+}
+
+.trailSBtitles {
+    color: firebrick;
+    font-size: 25px;
 }
 
 .sidebar {
     float: right;
     background-color: rgba(255, 255, 255, 0.66);
-    width:240px;
-    height: 600px;
-    margin-top: 0;
-    margin-right: 39px;
-    padding-top: 80px;
-    padding-right: 25px;
-    padding-left: 25px;
+    width:220px;
+    height: 400px;
+    margin-top: -420px;
+    margin-right: 20px;
+    padding: 15px;
+    overflow: hidden;
 }
 
 .overview {
@@ -370,6 +368,7 @@ font-size: x-large;
 width: 100%;
 height: 50px;
 font-size: inherit;
+font-weight: 700;
 /*margin-top: 130px;*/
 background-color: lawngreen;
 }
@@ -395,16 +394,12 @@ background-color: lawngreen;
 
 .adminPage {
     font-family: 'Merriweather', serif;
-    background-color: dimgrey;
     color: firebrick;
     min-height: 1500px;
 }
 .adminTable {
     background-color: rgba(255, 255, 255, 0.80);
     margin-top: -682px;
-    margin-right: 350px;
-    margin-left: 350px;
-    width: 900px;
     padding: 50px;
     padding-left: 100px;
     padding-right: 100px;
@@ -424,5 +419,5 @@ background-color: lawngreen;
 }
 
 .adminCompass {
-    margin-left: 460px;
+    margin-left: 265px;
 }

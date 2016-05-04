@@ -28,7 +28,6 @@
     float: left;
     width: 18%;
     margin-top: 20px;
-    margin-left: 60px;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -40,6 +39,7 @@
     background-image: url('../images/nw1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 1500px;
     font-family: 'Merriweather', serif;
     color: slategrey;
     margin-top:50px;
@@ -47,8 +47,7 @@
 
 .blogs{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 70px;
     padding-top: 12px;
     padding-right: 40px;
     padding-bottom: 15px;
@@ -167,12 +166,10 @@
 /*       Blog Details Page       */
 .details{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 80px;
-    margin-left: 30px;
+    margin-top: 70px;
     padding-top: 12px;
     padding-bottom: 15px;
     float: right;
-    margin-right: 40px;
     color: black;
     margin-bottom: 60px;
 }
