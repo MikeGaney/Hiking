@@ -127,7 +127,7 @@
                 resolve: {
                     profileId: () => profileId
                 },
-                //size: 'sm'
+               
             }).result.then(() => {
                 //this.profileService.deleteProfile(profileId).then(() => {
                 //});

@@ -2,10 +2,10 @@
     <div class="row">
         <div class="login-page">
             <div class="login-title-text">
-                <h3>Log In to TrekClub</h3>
-                <h5>Go Green!</h5>
+                <h3 class="mTitle">Log In to TrekClub</h3>
+                <h5 style="color:#2d862d; text-shadow:none">Go Green!</h5>
             </div>
-            <div class="login-form-container">
+            <!--<div class="login-form-container">
                 <div class="signin-buttons">
                     <div class="major-provider google-login">
                         <div class="icon-container">
@@ -22,21 +22,22 @@
                         <div class="text">
                             <span>Facebook</span>
                         </div>
-                    </div>
+                    </div>-->
                     <!--<button class="btn major-provider">Google</button>
                     <button class="btn major-provider">Facebook</button>-->
-                </div>
+                <!--</div>
                 <br />
                 <div class="or-container">
                     <hr class="or-hr" style="border: 1px solid #ccc;" />
                     <div id="or">OR</div>
-                </div>
+                </div>-->
                 <form id="login-form" ng-submit="controller.login()">
-                    <label for="email">Email</label><br />
-                    <input type="text" class="form-control" id="email" placeholder="example@example.com" ng-model="controller.loginUser.email" /><br />
-                    <label for="password">Password</label><br />
-                    <input type="password" id="password" class="form-control" placeholder="********" ng-model="controller.loginUser.password" /><br />
+                    <label for="email"><strong>Email</strong></label><br />
+                    <input type="text" class="form-control" id="email" placeholder="example@example.com" ng-model="controller.loginUser.email"style="color: #2a2a28;" /><br />
+                    <label for="password"><strong></strong>Password</label><br />
+                    <input type="password" id="password" class="form-control" placeholder="********" ng-model="controller.loginUser.password" style="color: #2a2a28;"/><br />
                     <!--<a ng-click="controller.ForgotPasword()" id="forgot-pw" class="forgot">forgot?</a><br />-->
+                    <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="loginCompass" style="width: 160px" />
                     <input type="submit" id="submit-button" name="submit-button" value="Log in" class="btn login-button" />
                 </form>
             </div>

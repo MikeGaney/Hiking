@@ -1,10 +1,23 @@
-﻿<div class="modal-header">
+﻿<!--<div class="modal-header">
     <h3 class="modal-title">Delete Trail</h3>
 </div>
 <div class="modal-body">
     <h1>Are you sure you want to delete? {{modal.deletesTrail}}</h1>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-warning" ng-click="modal.ok()">OK</button>
-    <button class="btn btn-danger" ng-click="modal.cancel()">Cancel</button>
+    <button class="btn btn-danger" ng-click="modal.ok()">Delete</button>
+    <button class="btn btn-primary" ng-click="modal.cancel()">Cancel</button>
+</div>-->
+<div class="container deleteProfModal">
+    <div class="modal-header mHeader">
+        <h1 class="modal-title mTitle">Hold up, now!{{modal.deletesTrail}}</h1>
+        <img src="http://www.free-icons-download.net/images/warning-icon-2735.png" />
+    </div>
+    <div class="modal-body">
+        <h2>Are you <em>sure</em> you want to delete? It's permanent.</h2>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-danger" ng-click="modal.ok()">Yes, Delete</button>
+        <button class="btn btn-primary" ng-click="modal.cancel()">No, Cancel</button>
+    </div>
 </div>
