@@ -87,6 +87,12 @@ namespace Hiking.Controllers
             return Ok();
         }
 
+        [HttpGet("getDisplayName/{id}")]
+        public IActionResult GetDisplayName(string id)
+        {
+            var userName = repo.Query<ApplicationUser>().Where(u => u.Id == id).Select(u => u.DisplayName).FirstOrDefault();
+            return Ok(userName);
+        }
 
         [HttpPost]
         [Route("editprofile")]

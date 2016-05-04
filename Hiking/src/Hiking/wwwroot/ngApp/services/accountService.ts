@@ -20,6 +20,11 @@ namespace Hiking.Services
             this.$window.sessionStorage.setItem('claims', JSON.stringify(userInfo.claims));
         }
 
+        public getUserNameID(id)
+        {
+            return this.$http.get('/api/account/getDisplayName/' + id, id);
+        }
+
         public getUserName()
         {
             return this.$window.sessionStorage.getItem('userName');

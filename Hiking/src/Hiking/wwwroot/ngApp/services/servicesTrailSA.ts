@@ -2,10 +2,19 @@ namespace Hiking.Services {
     export class TrailsService {
 
         public trailsResource;
+        public accountResource;
 
         constructor(private $resource: ng.resource.IResourceService) 
         {
-            this.trailsResource = this.$resource('/api/AddEditDeleteTrail/:id', null, { searchMap: { url: "/api/AddEditDeleteTrail/searchMap/:area", isArray: true }, backpack: { url: "/api/AddEditDeleteTrail/backpack/:id", isArray: false} });         
+            this.trailsResource = this.$resource('/api/AddEditDeleteTrail/:id', null, { searchMap: { url: "/api/AddEditDeleteTrail/searchMap/:area", isArray: true }, backpack: { url: "/api/AddEditDeleteTrail/backpack/:id", isArray: false } });
+            //this.accountResource = this.$resource('/api/account/:id', null, {
+            //    getDisplayName: { url: "/api/account/getDisplayName/:id", isArray: false }
+            //});
+        }
+
+        public getUserName(id)
+        {
+            return this.accountResource.getDisplayName({ id: id });
         }
 
         public getAllTrails() 

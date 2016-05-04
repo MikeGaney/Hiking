@@ -11,6 +11,7 @@
         public comment;
         public backpack;
         public weather;
+        public userName = [];
         
 
         constructor(private trailsService: Hiking.Services.TrailsService, private $http: ng.IHttpService, private $stateParams: ng.ui.IStateParamsService, private $state: ng.ui.IStateService, private backpackService: Hiking.Services.BackPackService, private accountService: Hiking.Services.AccountService, private $uibModal: ng.ui.bootstrap.IModalService)
@@ -21,6 +22,12 @@
             this.weather = {};
             this.checkBackpack();
             this.getTrail();
+        }
+
+        getGatherUserName(id)
+        {
+            console.log(id);
+            //return this.accountService.getUserNameID(id);
         }
 
         getWeather(lat, long)
