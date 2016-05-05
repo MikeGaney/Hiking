@@ -32,7 +32,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;*/
-    height: 300px;
+    height: 400px;
 }
 
 #home-searchTool {
@@ -170,33 +170,47 @@ input::-webkit-input-placeholder {
 }
 
 #buttons {
-    margin-top: 13px;
+    margin-top: 19px;
     margin-bottom: 1px;
     margin-left: 3px;
    
 }
 
 .bottomdiv {
-    background-color:#080808;
+    background-color:#333;
     height: 100px;
     width: 100%;
      background-size: cover;
 }
 
-#aboutus{
-    background-color:#101010;
-    font-size: 80px;
+#aboutus {
+    border-bottom: 4px #fff;
+    /*background-color: #333;*/
+    font-size: 60px;
     color: #F8F8F8;
-    margin-top: 50px;
-    text-align:center;
+    margin-top: 40px;
+    text-align: center;
     font-family: 'Lobster', cursive;
-  
+    /*padding-left: 10px;*/
+    /*background-image: url('../images/aboutpagepics/portfolio_bg.jpg');*/
 }
 
-.col-sm-12 {
+#bottomhome1 {
     width: 100%;
-    background-color: #101010;
+    background-color:#444;
+    height: 450px;
 }
+
+#upperhome1 {
+    width: 100%;
+    background-image: url('../images/aboutpagepics/portfolio.jpg');
+    background-repeat: no-repeat;
+}
+
+/*.home-info {
+    background-color:#444;
+    height:600px;
+}*/
 
 /*ENDING OF COLOR-IMAGE BOX LINKS*/
 
