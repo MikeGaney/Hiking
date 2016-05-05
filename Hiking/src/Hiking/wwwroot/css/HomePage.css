@@ -195,15 +195,22 @@ input::-webkit-input-placeholder {
     /*background-image: url('../images/aboutpagepics/portfolio_bg.jpg');*/
 }
 
-.col-sm-12 {
+#bottomhome1 {
     width: 100%;
-    background-image: url('../images/aboutpagepics/portfolio_bg.jpg');
+    background-color:#444;
     height: 450px;
 }
-.home-info {
-    background-image: url('../images/aboutpagepics/fullscreen capture 542016 124303 am.jpg');
-    height:300px;
+
+#upperhome1 {
+    width: 100%;
+    background-image: url('../images/aboutpagepics/portfolio.jpg');
+    background-repeat: no-repeat;
 }
+
+/*.home-info {
+    background-color:#444;
+    height:600px;
+}*/
 
 /*ENDING OF COLOR-IMAGE BOX LINKS*/
 

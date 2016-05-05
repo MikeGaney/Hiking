@@ -73,10 +73,10 @@
                     </div>
                 </li>
 
-                <li ng-show="!controller.isLoggedIn()"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
-                <li ng-show="!controller.isLoggedIn()"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()"style="margin-left:200px"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()"style="margin-left:0"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
 
-                <li ng-show="controller.getUserName() != null" class="pull-right" style="margin-right:35px">
+                <li ng-show="controller.getUserName() != null" class="pull-right navbarfix" style="margin-right:35px">
                     <div class="dropdown">
 
                         <button class="dropbtn" id="username">{{controller.getName()}}</button>
@@ -87,8 +87,12 @@
                         </div>
                     </div>
                 </li>
+</ul>
+            @*<ul class="nav navbar-nav navbar-right">
+                <li>Test</li>
 
 
+            </ul>*@
 
                 @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
 
@@ -107,12 +111,7 @@
                     </span>
 
                 </div>*@
-            </ul>
-            <ul class="navbar-right">
-                <li>test</li>
-
-
-            </ul>
+      
 
 
 
@@ -135,9 +134,12 @@
 
 
             <div id="footer">
-                <img src="~/images/aboutpagepics/facebook.png"style="border-radius:50px; width:40px; margin-top:5px" />
-                <img src="~/images/aboutpagepics/instagram.png"style="border-radius:50px; width:40px; margin-top:5px" />
-                <img src="~/images/aboutpagepics/tumblr.png"style="border-radius:50px; width:40px; margin-top:5px" />
+                <a href="https://www.facebook.com/">
+                <img src="~/images/aboutpagepics/facebook.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
+                <a href="https://www.instagram.com/">
+                <img src="~/images/aboutpagepics/instagram.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
+                <a href="https://www.tumblr.com/">
+                <img src="~/images/aboutpagepics/tumblr.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
 
             </div>
     

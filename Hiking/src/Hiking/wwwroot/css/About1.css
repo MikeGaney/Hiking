@@ -22,9 +22,13 @@
   
 }*/
 
+.navbarfix {
+    margin-right: 50px !important;
+}
 
 #header {
-    background-image: url('../images/aboutpagepics/screenshot (51).png');
+    
+    background-image: url('../images/aboutpagepics/fullscreen capture 542016 44134 pm.jpg');
     background-position: inherit;
     background-size: cover;
     background-repeat: no-repeat;
