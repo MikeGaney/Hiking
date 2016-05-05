@@ -27,7 +27,7 @@
                                 </ul>
                                 <ul class="ulLegend">
                                     <li ng-show="controller.trail.lookouts" uib-tooltip="Scenic Views"><img src="../../images/lookout.png" width="30" /></li>
-                                    <li ng-show="controller.trail.passRequired" uib-tooltip="Pass Required"><img src="../../images/parkpass.png" width="30" /></li>
+                                    <li ng-show="controller.trail.passRequired" uib-tooltip="Parking Pass Required"><img src="../../images/parkpass.png" width="30" /></li>
                                     <li ng-show="controller.trail.waterfalls" uib-tooltip="Waterfalls"><img  src="../../images/river.png" width="30" /></li>
                                 </ul>
                                 <h3 class="trailSBtitles">Hazards</h3>
@@ -130,7 +130,7 @@
 
                         <!-- User Comments -->
                         <div>
-                            <h3 class="trailSBtitles">Comments</h3>
+                            <h3 class="trailSBtitles3">Comments</h3>
                             <div class="comment" ng-repeat="comment in controller.trail.trailComments">
                                 <div class="commentText trekSC">
                                     <span>{{comment.message}}</span>

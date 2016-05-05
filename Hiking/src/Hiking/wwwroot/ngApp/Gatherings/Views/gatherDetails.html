@@ -8,16 +8,13 @@
                 <div class="col-md-6">
                     <div class="mobileHeaderTrailsBrowse">
                         <div class="mobileSectionsTrailsBrowse">
-                            <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Gatherings</a>
+                            <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinksTrailsBrowse btn btn-lg">Weather</a>
                         </div>
                         <div class="mobileSectionsTrailsBrowse">
-                            <a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Weather</a>
+                            <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinksTrailsBrowse btn btn-lg">Parking Pass</a>
                         </div>
                         <div class="mobileSectionsTrailsBrowse">
-                            <a href="http://discoverpass.wa.gov/" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Parking Pass</a>
-                        </div>
-                        <div class="mobileSectionsTrailsBrowse">
-                            <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg btn-info">Fishing/Hunting</a>
+                            <a href="#" class="mobileHeaderLinksTrailsBrowse btn btn-lg">Fishing/Hunting</a>
                         </div>
                     </div>
                 </div>
@@ -85,6 +82,9 @@
 
                 <!------------------------------------->
                 <div class="col-md-8 treks">
+                    <!--{{controller.gather}}-->
+
+
                     <div class="trekDetail container-fluid">
                         <div class="trekLeft">
                             <!--<div class="form-group">
@@ -100,8 +100,8 @@
                                 <label>Trail Name: </label> 
                                 <label><a href="/trailDetail/{{controller.gather.trailId}}" class="trekSC">{{controller.gather.trailName}}</a></label> - <label><a href="/trekChanges/{{controller.gather.id}}">Edit Trek</a></label>
                             </div>
-                            <div class="form-group trekDtlImg">
-                                <a href="/trailDetail/{{trail.id}}"><img src="{{trail.image}}" width="250" alt="" class="trekImg img-responsive" /></a>
+                            <div class="form-group">
+                                <a href="/trailDetail/{{controller.gather.trailId}}"><img src="{{controller.gather.image}}" alt="" class="img-responsive trekImg" /></a>
                             </div>
                             <div class="form-group" ng-show="controller.IsLoggedIn() != null && controller.userInGather == false">
                                 <label><a ng-click="controller.AddToGathering()" class="trekSR">Add self to gathering</a></label>
