@@ -33,6 +33,11 @@
         display: none;
     }
 
+    .trekSideBar{
+        position: static;
+        display: none;
+    }
+
     .mobileHeaderTrailsBrowse {
         display:block;
     }
@@ -42,8 +47,24 @@
         float: left !important;
     }
 
+    .treks {
+        margin-left: 0 !important;
+    }
+
+    .trailMobile {
+         margin-left: 0 !important;
+    }
+
+    .trailDP {
+        margin-left: 15px !important;
+    }
+
+    .detailsRightColumn {
+        margin-left: 15px !important;
+    }
+
     [class*="col-"] {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
@@ -62,7 +83,7 @@
 .browseSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 70px;
+    margin-top: 6.6%;
     margin-bottom: 25px;
     width: 65%;
     padding: 25px;
@@ -71,7 +92,7 @@
 .browseSearch2 {
     background-color: rgba(255, 255, 255, 0.66);
     width:100%;
-    padding: 10px;
+    padding: 25px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -85,7 +106,7 @@
 .inputMM {
     border-radius: 0;
     margin-left: -25px;
-    width: 82%;
+    /*width: 110%;*/
     height: 30px;
 }
 
@@ -98,7 +119,7 @@
     float: right;
     margin-top: -180px;
     border-style: outset;
-    width: 340px;
+    width: 50%;
     height: 165px;
     padding-top: 10px;
     padding-left: 50px;
@@ -106,7 +127,7 @@
 }
 
 .actLabel {
-    margin-left: 60px;
+    margin-left: 35px;
     font-size:large;
     font-weight:400;
 }
@@ -188,7 +209,7 @@
 .browseSideBar {
     float: left;
     width: 18%;
-    margin-top: 70px;
+    margin-top: 1.6%;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -304,12 +325,12 @@
 .legend1 {
     background-color: rgba(255, 255, 255, 0.66);
     width:94%;
-    height: 60px;
+    height: 75px;
     margin: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
-  
+    overflow: hidden;
     
 }
 
@@ -317,7 +338,7 @@
     color: firebrick;
     font-size: 40px;
     font-weight: 200;
-    padding: 10px;
+   
 }
 
 .map {
@@ -334,6 +355,13 @@
 .trailSBtitles {
     color: firebrick;
     font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.80);
+    margin: 20px;
+    padding: 20px;
+}
+
+.trailSBtitles2 {
+    color: firebrick;
 }
 
 .sidebar {
@@ -387,23 +415,38 @@ background-color: #2d862d;
     padding-left:0;
 }
 
+.treksInTrails {
+    background-color: rgba(255, 255, 255, 0.80);
+    margin: 20px;
+    padding: 20px;
+}
+
 /*********************************/
 
 
 /******** Admin Page *************/
 
-#adminHeader {
-    text-align: center;
-}
-
 .adminPage {
+    background-image: url(http://worldartsme.com/images/compas-clipart-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Merriweather', serif;
     color: firebrick;
     min-height: 1500px;
 }
-.adminTable {
+
+.admin2 {
     background-color: rgba(255, 255, 255, 0.80);
-    margin-top: -682px;
+    width: 1700px;
+    height: 1500px;
+    margin-left:-100px;
+}
+
+#adminHeader {
+    text-align: center;
+}
+
+.adminTable {
     padding: 50px;
     padding-left: 100px;
     padding-right: 100px;
@@ -418,11 +461,12 @@ background-color: #2d862d;
     font-size: xx-large;
     font-weight: 800;
     height: 50px;
-    width: 340px;
+    width: 280px;
     border-radius: 0;
     padding-bottom: inherit;
 }
 
-.adminCompass {
+/*.adminCompass {
     margin-left: 265px;
-}
+}*/
+

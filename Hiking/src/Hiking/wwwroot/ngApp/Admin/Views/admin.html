@@ -1,35 +1,45 @@
-﻿<div class="col-md-8 col-lg-offset-2 adminPage">
-<br />
-<br />
-    <br />
-    <br />
-<br />
+﻿
+<div class="col-lg-12 adminPage">
+    <div class="container col-lg-12 admin2">
 
-<img src="http://worldartsme.com/images/compas-clipart-1.jpg" class="adminCompass" alt="Alternate Text" width="680" />
+    <div class="col-md-8 col-lg-offset-2">
+        <br />
+        <br />
 
-<div class="col-md-12 adminTable">
-    <div class="row">
-        <table class="table adminUsers">
-            <h3 id="adminHeader">TrekClub Users</h3>
-            <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>UserName</th>
-                <th>Admin Access</th>
-            </tr>
-            <tr ng-repeat="profile in controller.profiles">
-                <td>{{profile.firstName}}</td>
-                <td>{{profile.lastName}}</td>
-                <td>{{profile.userName}}</td>
-                <td>
-                    <a ng-click="controller.addAdmin(profile.userName)" ng-show="!profile.isAdmin">(+) Admin</a>
-                    <a ng-click="controller.removeAdmin(profile.userName)" ng-show="profile.isAdmin">(-) Admin</a>
-                </td>
-            </tr>
-        </table>
+        <!--<img src="" class="adminCompass" alt="Alternate Text" width="680" />-->
+
+        <div class="container">
+
+        <div class="col-md-12 adminTable">
+            <div class="row">
+                <table class="table adminUsers">
+                    <h3 id="adminHeader">TrekClub Users</h3>
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>UserName</th>
+                        <th>Admin Access</th>
+                    </tr>
+                    <tr ng-repeat="profile in controller.profiles">
+                        <td>{{profile.firstName}}</td>
+                        <td>{{profile.lastName}}</td>
+                        <td>{{profile.userName}}</td>
+                        <td>
+                            <!--<a ng-click="controller.addAdmin(profile.userName)" ng-show="!profile.isAdmin">(+) Admin</a>
+                            <a ng-click="controller.removeAdmin(profile.userName)" ng-show="profile.isAdmin">(-) Admin</a>-->
+
+                            <input type="checkbox" value="" ng-click="controller.addAdmin(profile.userName)" ng-model="profile.isAdmin" ng-show="!profile.isAdmin"/>
+                            <input type="checkbox" value="" ng-click="controller.removeAdmin(profile.userName)" ng-model="profile.isAdmin" ng-show="profile.isAdmin && controller.getUserName() != profile.userName"/>
+                            <label ng-show="controller.getUserName() == profile.userName">Cannot remove access from self!</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button class="btn btn-danger adminBtn"><a href="/changes/">Add A Trail</a></button>
+            <button class="btn btn-danger adminBtn"><a href="/blog/add">Add a Blog</a></button>
+            <button class="btn btn-danger adminBtn"><a href="/trekChanges/">Add a Trek</a></button>
+        </div>
+            </div>
     </div>
-    <button class="btn btn-danger adminBtn"><a href="/changes/">Add A Trail</a></button>
-    <button class="btn btn-danger adminBtn"><a href="/blog/add">Add a Blog</a></button>
-    <button class="btn btn-danger adminBtn"><a href="/trekChanges/">Add a Trek</a></button>
-</div>
+    </div>
 </div>

@@ -24,8 +24,6 @@
                 <div class="row"></div>
 
 
-
-
                 <!--  SideBar  -->
                 <div class="col-md-4 trekSideBar">
 
@@ -34,28 +32,54 @@
                     <!-- Meet Up Info -->
                     <div class="browseLegend">
                         <h2 class="browseSBtitles">Gatherings</h2>
-                        <button class="browseSBbtns"><a href="#">Click Here</a></button>
+                        <button class="browseSBbtns"><a href="/gatherings" class="trekSC">Click Here</a></button>
                     </div>
 
                     <!-- Weather Link -->
                     <div class="browseLegend">
                         <h2 class="browseSBtitles">Local Weather</h2>
-                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="trekSC">Click Here</a></button>
                     </div>
 
                     <!-- Parking Pass Link -->
                     <div class="browseLegend">
                         <h2 class="browseSBtitles">Need a Parking Pass</h2>
-                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/" class="trekSC">Click Here</a></button>
                     </div>
 
                     <!-- Fishing/Hunting Licenses Link -->
                     <div class="browseLegend">
                         <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
-                        <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
+                        <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html" class="trekSC">Click Here</a></button>
                     </div>
 
                 </div>
+
+                <!--<div class="col-md-4 trekSideBar">
+
+                    <h1 class="sidebarTitle">TrekClub</h1>
+
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Gatherings</h2>
+                        <button class="browseSBbtns"><a href="#">Click Here</a></button>
+                    </div>
+
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Local Weather</h2>
+                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
+                    </div>
+
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Need a Parking Pass</h2>
+                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
+                    </div>
+
+                    <div class="browseLegend">
+                        <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
+                        <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
+                    </div>
+
+                </div>-->
 
 
 
@@ -73,8 +97,8 @@
                             </div>
                             <hr />
                             <div class="form-group">
-                                <label>Trail Name: </label>
-                                <label><a href="/trailDetail/{{controller.gather.trailId}}" class="trekSC">{{controller.gather.trailName}}</a></label>
+                                <label>Trail Name: </label> 
+                                <label><a href="/trailDetail/{{controller.gather.trailId}}" class="trekSC">{{controller.gather.trailName}}</a></label> - <label><a href="/trekChanges/{{controller.gather.id}}">Edit Trek</a></label>
                             </div>
                             <div class="form-group trekDtlImg">
                                 <a href="/trailDetail/{{trail.id}}"><img src="{{trail.image}}" width="250" alt="" class="trekImg img-responsive" /></a>
