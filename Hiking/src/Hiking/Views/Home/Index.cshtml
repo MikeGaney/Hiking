@@ -9,11 +9,13 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="~/css/trailsdetailss.css" rel="stylesheet" />
     <link href="~/css/viewprofile.css" rel="stylesheet" />
-    <link href="~/css/gather.css" rel="stylesheet" />
     <link href="~/css/blogs.css" rel="stylesheet" />
     <link href="~/css/trailchanges.css" rel="stylesheet" />
     <link href="~/css/editprofile.css" rel="stylesheet" />
+    <link href="~/css/gather.css" rel="stylesheet" />
     <link href="~/css/deleteprofilemodal.css" rel="stylesheet" />
+    <link href="~/css/deletetrailmodal.css" rel="stylesheet" />
+    <link href="~/css/deletetrekmodal.css" rel="stylesheet" />
     <link href="~/css/about1.css" rel="stylesheet" />
     <link href="~/css/home1.css" rel="stylesheet" />
     <link href="~/css/home2.css" rel="stylesheet" />
@@ -23,11 +25,13 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <base href="/" />
 
 
 </head>
-<body ng-controller="accountController as controller">
+<body ng-controller="accountController as controller" ng-cloak>
     <div class="container">
 
         @* start of Navbar *@
@@ -35,110 +39,109 @@
                         
         <div class="nav navbar-fixed-top">
             <ul>
-                <a href="/home1">
-                    <img src="~/ngapp/homeimages/mountain-peak-logo-no-clouds-.png"
-                         style="height:45px;float:left" />
-                </a>
-                <li id="home-title"><a href="/home1">TrekClub</a></li>
-                <li class="home"><a class="active" href="/"><strong>Home</strong></a></li>
+                <img src="~/ngapp/homeimages/mountain-peak-logo-no-clouds-.png"
+                     style="height:45px;float:left" />
+                <li id="home-title">TrekClub </li>
+                <li class="home"><a href="/"><strong>Home</strong></a></li>
                 <li class="about"><a href="about1"><strong>About</strong></a></li>
-                <li><div class="dropdown">
-
-                    <button class="dropbtn"><strong>Trails</strong></button>
-                    <div class="dropdown-content">
-                        <a href="/trails">View Trails</a>
-                        <a href="/trailmap">Map of Trails</a>
-                    </div>
-                </div></li>
                 <li>
-                <div class="dropdown" >
+                    <div class="dropdown">
 
-                    <button class="dropbtn"><strong>Blogs</strong></button>
-                    <div class="dropdown-content">
-                        <a href="/blogs">View Blogs</a>
-                        <a href="/blogs">Search Blogs</a>
+                        <button class="dropbtn"><strong>Trails</strong></button>
+                        <div class="dropdown-content">
+                            <a href="/trails">View Trails</a>
+                            <a href="/trailmap">Map of Trails</a>
+                        </div>
                     </div>
-                </div>
-                    </li>
+                </li>
+                <li>
+                    <div class="dropdown">
+
+                        <button class="dropbtn"><strong>Blogs</strong></button>
+                        <div class="dropdown-content">
+                            <a href="/blogs">View Blogs</a>
+                            <a href="/blogs">Search Blogs</a>
+                        </div>
+                    </div>
+                </li>
                 <li>
                     <div class="dropdown">
 
                         <button class="dropbtn"><strong>Treks</strong></button>
                         <div class="dropdown-content">
-                            <a href="/gatherings">View Treks</a>
-                            <a href="/gatherings">Search Treks</a>
+                            <a href="/treks">View Treks</a>
+                            <a href="/treks">Search Treks</a>
                         </div>
                     </div>
                 </li>
 
-                <li><a ng-click="controller.showRegisterModal()" ng-show="controller.getUserName() == null"><strong>Register</strong></a></li>
-                <li><a ng-click="controller.showLoginModal()" ng-show="controller.getUserName() == null"><strong>Login</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
 
-                <div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
+                <li ng-show="controller.getUserName() != null" class="pull-right" style="margin-right:35px">
+                    <div class="dropdown">
+
+                        <button class="dropbtn" id="username">{{controller.getName()}}</button>
+                        <div class="dropdown-content">
+                            <a href="/viewprofile">Profile</a>
+                            <a href="/admin">Admin Page</a>
+                            <a ng-click="controller.logout()">Logout</a>
+                        </div>
+                    </div>
+                </li>
+
+
+
+                @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
 
 
                     <span uib-dropdown on-toggle="toggled(open)">
                         <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
                             Welcome Back {{controller.getName()}} <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
                             <li role="menuitem"><a href="/viewprofile">Profile</a></li>
-                            <li class="divider"></li>
+                            <br />
                             <li role="menuitem"><a href="/admin">Admin Page</a></li>
-                            <li class="divider"></li>
+                            <br />
                             <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
                         </ul>
                     </span>
 
-                </div>
-
+                </div>*@
             </ul>
 
 
-
-            @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
-
-
-                <span uib-dropdown on-toggle="toggled(open)">
-                    <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
-                        Welcome Back {{controller.getName()}} <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu navBarDropMenu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-                        <li role="menuitem"><a href="/viewprofile">Profile</a></li>
-                        <li class="divider"></li>
-                        <li role="menuitem"><a href="/admin">Admin Page</a></li>
-                        <li class="divider"></li>
-                        <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
-                    </ul>
-                </span>
-
-            </div>*@
 
 
 
         </div>
 
+        </div>
 
 
         @* end of navbar *@
 
 
-
-        <ui-view class="view"></ui-view>
+        <div class="container">
+        <ui-view class="view" autoscroll="true"></ui-view>
+        </div>
 
 
         @*@*Footer*@
 
-        <nav class="navbar navbar-inverse navbar-fixed-bottom">
-            <div class="container">
+
+            <div id="footer">
+                <img src="~/images/aboutpagepics/facebook.png"style="border-radius:50px; width:40px; margin-top:5px" />
+                <img src="~/images/aboutpagepics/instagram.png"style="border-radius:50px; width:40px; margin-top:5px" />
+                <img src="~/images/aboutpagepics/tumblr.png"style="border-radius:50px; width:40px; margin-top:5px" />
 
             </div>
-        </nav>
+    
 
         @* End of Footer *@
 
 
-    </div>
 
     <!-- Library Files -->
     <script src="~/lib/jquery/dist/jquery.js"></script>

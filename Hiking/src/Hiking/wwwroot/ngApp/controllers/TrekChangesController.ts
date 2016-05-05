@@ -30,7 +30,7 @@
 
             console.log( this.trek );
             this.treksService.saveOneTrek( this.trek ).then(() => {
-                this.$state.go( 'gatherings' );
+                this.$state.go( 'treks' );
             });
         }
         deleteTrek() {
@@ -45,7 +45,7 @@
                 size: 'sm'
             }).result.then(() => {
                 this.treksService.deleteTrek( trekId ).then(() => {
-                    this.$state.go( 'gatherings' );
+                    this.$state.go( 'treks' );
                 });
             });
         }

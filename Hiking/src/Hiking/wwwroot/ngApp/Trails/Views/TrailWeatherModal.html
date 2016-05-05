@@ -1,0 +1,13 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Local Trail Weather</h3>
+</div>
+<div class="modal-body">
+    <ul>
+        <li ng-repeat="wet in controller.weather.list">
+            {{controller.getDegrees(wet.deg) | number: 0}} &#8457; | {{wet.weather[0].description}} | <img src="{{controller.weatherIcon}}{{wet.weather[0].icon}}.png" alt="Icon" />
+        </li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="controller.OK()">OK</button>
+</div>

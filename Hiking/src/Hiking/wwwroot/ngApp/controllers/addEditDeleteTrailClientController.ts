@@ -36,7 +36,7 @@
                 resolve: {
                     trailId: () => trailId
                 },
-                size: 'sm'
+                //size: 'sm'
             }).result.then(() => {
 
             this.trailsService.deleteTrail( trailId ).then(() => {

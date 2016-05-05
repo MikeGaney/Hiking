@@ -13,6 +13,7 @@ namespace Hiking.Services
         void DeleteTrail(int id);
         void AddCommentToTrail(TrailCommentViewModel data);
         List<MapTrailViewModel> GetMapTrails();
-        List<MapTrailViewModel> GetSearchMapTrails(string area);      
+        List<MapTrailViewModel> GetSearchMapTrails(string area);
+        CheckBackpackViewModel CheckBackpack(string id, int trailId); 
     }
 }

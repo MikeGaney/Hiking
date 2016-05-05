@@ -149,5 +149,28 @@ namespace Hiking.Services
         {
             return _repo.Query<Trail>().ToList();
         }
+
+        public CheckBackpackViewModel CheckBackpack(string id, int trailId)
+        {
+            var user = _repo.Query<UserTrail>().Where(ut => ut.ApplicationUserId == id && ut.TrailId == trailId).FirstOrDefault();
+            if (user == null)
+            {
+                var check = new CheckBackpackViewModel
+                {
+                    Id = 0,
+                    IsThere = false
+                };
+                return check;
+            }
+            else
+            {
+                var check = new CheckBackpackViewModel
+                {
+                    IsThere = true,
+                    Id = trailId
+                };
+                return check;
+            }
+        }
     }
 }

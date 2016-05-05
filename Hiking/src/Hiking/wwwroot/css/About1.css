@@ -48,7 +48,7 @@
     float: left;
     color: white;
     font-size: 38px;
-    font-family: 'Francois One', sans-serif;
+      font-family: 'Lobster', cursive;
     /* padding-left: 7px; */
     color: #E8E8E8;
 }
@@ -60,7 +60,7 @@
 }
 
 #footer {
-    background-color: white;
+    background-color:#282828; 
     color: black;
     clear: both;
     text-align: center;
@@ -112,22 +112,44 @@
     transition: .3s background-color;
 }
 
-.nav a:hover {
+.navBarMenu {
+ padding-top:0;
+ padding-bottom:0;
+ padding-right:18px;
+ height:40px;
+
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
     background-color: #2d862d;
-    color: #fff;
 }
 
-.nav a.active {
-    background-color: #2d862d;
-    color: #fff;
-    cursor: default;
+.navBar-link{
+    font-size:20px;
 }
+#simple-dropdown{
+padding-top:13px;
+height:50px;
+font-weight:600;
+}
+
+
+
+    .nav a:hover {
+        background-color: #2d862d;
+        color: #fff;
+    }
+
+    .nav a.active {
+        background-color: #2d862d;
+        color: #fff;
+        cursor: default;
+    }
 
 @media screen and (min-width: 600px) {
     .nav li {
         width: 120px;
         border-bottom: none;
-        height: 50px;
+        height: 35px;
         line-height: 50px;
         font-size: 1.4em;
     }
@@ -140,17 +162,29 @@
 }
 
 /*dropdown edits*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
 .dropbtn {
     background-color: #444;
     color: white;
-    width: 120px;
-    font-size: 16px;
+    width: 100%;
     border: none;
     cursor: pointer;
     font-size: 20px;
     transition: .3s background-color;
 }
 
+
+#username{
+    color:#F0F0F0;
+    font-size:35px;
+    font-family: 'Lobster', cursive;
+   
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -164,16 +198,16 @@
     min-width: 160px;
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-.dropdown-content a:hover {
-    background-color: #505050;
-}
+        .dropdown-content a:hover {
+            background-color: #505050;
+        }
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -181,4 +215,17 @@
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+.dropdown-menu > li > a {
+    display: block;
+    clear: both;
+    font-weight: 600;
+    line-height: 1.42857143;
+    padding-right:10px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.footer{
+    text-align:center;
 }

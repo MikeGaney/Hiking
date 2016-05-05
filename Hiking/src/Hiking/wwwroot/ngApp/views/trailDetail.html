@@ -43,7 +43,7 @@
                         <!-- Weather Link -->
                         <div class="legend">
                             <h3 class="trailSBtitles">Local Weather</h3>
-                            <button class="weatherbtn"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US" class="trekSC">Click Here</a></button>
+                            <button class="weatherbtn"><a ng-click="controller.showWeatherModal()" class="trekSC">Click Here</a></button>
                         </div>
 
                         <!-- Rating -->
@@ -59,7 +59,7 @@
                             </div>
                             <div>
                                 <h4 class="trekSC">Family Friendly Rating</h4>
-                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating>
+                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating> 
                                 <hr />
                                 <p class="trekSC">To rate this trail you must have a user profile and complete the trail.</p>
                             </div>
@@ -84,7 +84,9 @@
 
                         <!-- Details -->
                         <div class="sidebar trekSC">
-                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack"/>
+                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack btn" ng-show="!controller.backpack.isThere && controller.getUserName() != null"/>
+                            <label ng-show="controller.backpack.isThere">Trail already in Backpack</label>
+                            <label ng-show="controller.getUserName() == null">Log In to Add to Backpack</label>
                             <hr />
                             <h5>Location: {{controller.trail.location}}</h5>
                             <hr />
@@ -108,6 +110,7 @@
                         <!-- Gatherings -->
                         <div>
                             <h2 class="trailSBtitles">Upcoming Treks</h2>
+                            {{controller.trail.gatherings[0]}}
                             <table class="table trekSC">
                                 <tr>
                                     <th>Title</th>
@@ -117,7 +120,7 @@
                                 </tr>
                                 <tr ng-repeat="gathering in controller.trail.gatherings">
                                     <td><a href="/gatheringDetails/{{gathering.id}}">{{gathering.name}}</a></td>
-                                    <td>{{gathering.ownerId}}</td>
+                                    <td><!--{{gathering.ownerId}} ---> {{controller.getGatherUserName(gathering.ownerId)}}</td>
                                     <!--<td><a href="/trailDetail/{{gathering.trailId}}">{{gathering.trailName}}</a></td>-->
                                     <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
                                 </tr>
@@ -126,8 +129,8 @@
 
                         <!-- User Comments -->
                         <div>
-                            <h3 class="trailSBtitles">Comments</h3>
-                            <div class="comment trekSC" ng-repeat="comment in controller.trail.trailComments">
+                            <h3 class="trailSBtitles trekSC">Comments</h3>
+                            <div class="comment" ng-repeat="comment in controller.trail.trailComments">
                                 <div class="commentText">
                                     <span>{{comment.message}}</span>
                                 </div>

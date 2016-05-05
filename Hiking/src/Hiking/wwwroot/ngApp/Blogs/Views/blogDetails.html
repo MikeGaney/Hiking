@@ -142,9 +142,9 @@
                         </div>
 
 
-                        <div class="blogTitleUser">
+                        <!--<div class="blogTitleUser">
                             <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="blogDetailsProfilePic" />
-                        </div>
+                        </div>-->
                     </div>
 
                     
@@ -157,15 +157,15 @@
                         <div class="commentTitle">
                             <h2>Comments</h2>
                         </div>
-
+                        {{controller.blog.comments[0]}}
                         <div class="comment" ng-repeat="comment in controller.blog.comments">
                             <div class="commentText">
                                 <span>{{comment.message}}</span>
                             </div>
                             <div class="commentDetails">
-                                <div class="commentDetailsUser">
+                                <!--<div class="commentDetailsUser">
                                     <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
-                                </div>
+                                </div>-->
                                 <div class="commentDetailsDate">
                                     <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
                                 </div>

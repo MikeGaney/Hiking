@@ -76,6 +76,13 @@ namespace Hiking
             {
                 options.AddPolicy("AdminOnly", policy => policy.RequireClaim("IsAdmin"));
             });
+            services.AddIdentity<ApplicationUser, IdentityRole>(o => {
+                o.Password.RequireDigit = true;
+                o.Password.RequiredLength = 8;
+                o.Password.RequireLowercase = false;
+                o.Password.RequireUppercase = true;
+                o.Password.RequireNonLetterOrDigit = true;
+            });
 
 
         }

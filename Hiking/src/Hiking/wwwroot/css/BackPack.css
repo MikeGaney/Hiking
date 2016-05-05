@@ -102,8 +102,8 @@
     /*margin-top: -350px;*/
     /*margin-left: 240px;*/
     /*width: 10%;*/
-    transform: rotate(-16deg);
-    -webkit-transform: rotate(-16 deg);
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7 deg);
     /* Chrome, Safari, Opera */
 }
 .bkpkPagination{
@@ -121,8 +121,8 @@
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.80);
     box-shadow: 0 10px 10px #404040;
-    transform: rotate(-13deg);
-    -webkit-transform: rotate(-13 deg);  /*chrome, safari, opera*/  
+    transform: rotate(13deg);
+    -webkit-transform: rotate(13 deg);  /*chrome, safari, opera*/  
 }
 .bkpkTrailBox {
     float: right;
@@ -173,7 +173,7 @@
 #doneDiv{
     position: relative;
     margin-left: 400px;
-    margin-top: -15px;
+    margin-top: -20px;
     text-align: right;
 }
 /*#bkpkCheckbox{

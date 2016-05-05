@@ -74,7 +74,7 @@ namespace Hiking.Controllers {
                 controllerAs: 'controller',
                 //size: "sm"
                 resolve: {
-                //    //size: 'sm'
+                //size: 'sm'
                 }
             });
         }

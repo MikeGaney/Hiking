@@ -4,6 +4,7 @@
     height: 1500px;
     background-repeat: no-repeat;
     min-width: 1600px;
+   
 }
  /**** Need to add back to html ****/
 /*#editTitle {
@@ -139,4 +140,17 @@
     /*margin-left: 500px;*/
     box-shadow: 7px 7px 7px #404040;
     margin-top: 30px;
+}
+@media only screen and (max-width: 1150px){
+    .profileEditWindow{
+    background-size:cover 100%;        
+    }
+    #rightSide{
+        margin-left: 800px;
+        margin-top: -1130px;
+        position: relative;
+    }
+    .bothSidesContainer{
+        align-content: center;
+    }
 }

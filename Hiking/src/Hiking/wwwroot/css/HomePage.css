@@ -1,36 +1,43 @@
-﻿#home-title{
-   float:left;
-   color:white;
-   font-size:40px;
-   font-family: 'Francois One', sans-serif;
-   padding-left:7px;
-   color: #E8E8E8; 	
-    
+﻿#home-title {
+    float: left;
+    color: white;
+    font-size: 40px;
+    font-family: 'Francois One', sans-serif;
+    padding-left: 7px;
+    color: #E8E8E8;
 }
+/*.Homepage{
+    background-color:#181818;
+}*/
 
-#home-footer {
-    
-    background-image:url(http://www.cuzzsoft.com/wallbank/90-black-wood-wallpaper.jpg);
-    background-position:inherit;
-    background-size:cover;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:12px; 
-}
-
-#home-searchpic {
+.Homepage {
     background-image: url('../ngapp/homeimages/av0a0502.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 430px;
+}
+
+#home-footer {
+    background-image: url(http://www.cuzzsoft.com/wallbank/90-black-wood-wallpaper.jpg);
+    background-position: inherit;
+    background-size: cover;
+    color: white;
+    clear: both;
+    text-align: center;
+    padding: 12px;
+}
+
+#home-searchpic {
+    /*background-image: url('../ngapp/homeimages/av0a0502.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    height: 300px;
 }
 
 #home-searchTool {
     padding-top: 185px;
     padding-left: 430px;
-
 }
 
 /*BEGINNING OF SEARCH BOX STYLING*/
@@ -72,16 +79,16 @@ input[type=search] {
     color: black;
 }
 
-input[type=search]:focus {
-    width: 300px;
-    background-color: #fff;
-    border-color: #2d862d;
-    font-size: 25px;
-    color: black;
-    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
+    input[type=search]:focus {
+        width: 300px;
+        background-color: #fff;
+        border-color: #2d862d;
+        font-size: 25px;
+        color: black;
+        -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+        -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+        box-shadow: 0 0 5px rgba(109,207,246,.5);
+    }
 
 input:-moz-placeholder {
     color: #999;
@@ -92,32 +99,38 @@ input::-webkit-input-placeholder {
 }
 /*END OF SEARCH BOX STYLING*/
 
-.container-fluid{
-    padding-left:0;
-    padding-right:0;
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
 /*BEGINNING OF COLOR-IMAGE BOX LINKS*/
-.Links{
-    display:inline-block;
-    height:250px;
-    width:276px;
-    background-color:#99aa1a;
-    margin:4px;
+.Links {
+    display: inline-block;
+    height: 250px;
+    width: 100%;
+    background-color: #99aa1a;
+    margin: 4px;
+    z-index: 99;
+    opacity: .99;
 }
-#home-button1{
-    background-color:#1c96b0;
+
+#home-button1 {
+    background-color: #1c96b0;
 }
+
 #home-buttonpic1 {
     background-image: url('../ngapp/homeimages/north-face-ad-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: inherit;
 }
+
 #home-button2 {
     background-color: #CC6633;
 }
+
 #home-buttonpic2 {
     background-image: url('../ngapp/homeimages/new campfire.jpg');
     background-repeat: no-repeat;
@@ -128,36 +141,62 @@ input::-webkit-input-placeholder {
 #home-button3 {
     background-color: #336666;
 }
+
 #home-buttonpic3 {
     background-image: url(http://images.huffingtonpost.com/2015-02-12-TotekeeFallsOregonTheOutbound.jpg);
-    background-size:cover;
-    background-position:inherit;
-    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
 }
+
 #home-button4 {
     background-color: #993333;
 }
+
 #home-buttonpic4 {
     background-image: url('../ngapp/homeimages/e0a3229ca350edde0a1f7fa7e72e0bf7.jpg');
     background-repeat: no-repeat;
     background-position: inherit;
     background-size: cover;
 }
-.contain{
-    display:block;
-    height:50px;
+
+.contain {
+    display: block;
+    height: 50px;
     /*background-color:#1c96b0;*/
-    font-size:30px;
-    color:white;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#buttons {
+    margin-top: 13px;
+    margin-bottom: 1px;
+    margin-left: 3px;
+   
+}
+
+.bottomdiv {
+    background-color:#080808;
+    height: 100px;
+    width: 100%;
+     background-size: cover;
+}
+
+#aboutus{
+    background-color:#101010;
+    font-size: 80px;
+    color: #F8F8F8;
+    margin-top: 50px;
     text-align:center;
-}
-#buttons{
-    margin-top:13px;
-    margin-bottom:10px;
+    font-family: 'Lobster', cursive;
+  
 }
 
-
-
+.col-sm-12 {
+    width: 100%;
+    background-color: #101010;
+}
 
 /*ENDING OF COLOR-IMAGE BOX LINKS*/
 
