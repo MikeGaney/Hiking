@@ -80,10 +80,6 @@ namespace Hiking.API
             if (data.Lookouts) searchList = searchList.Where(t => t.Lookouts == data.Lookouts).ToList();
 
             return Ok(searchList);
-
-
-            //return Ok(list);
-
         }
 
         // POST api/values

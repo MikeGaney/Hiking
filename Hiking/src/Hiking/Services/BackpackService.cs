@@ -20,16 +20,8 @@ namespace Hiking.Services
 
         public List<Trail> GetTrailList(string id)
         {
-            //var user = repo.Query<ApplicationUser>().Where(u => u.Id == id).Include(u => u.UserTrails).FirstOrDefault();
-            //var test = repo.Query<ApplicationUser>().Where(u => u.Id == id).Select(u => new UserTrailsModel
-            //{
-            //    Trails = u.UserTrails.Select(ut => ut.Trail).ToList()
-            //});
-            //var list = test
-            //return test;
             var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).ToList();
             return trails;
-
         }
 
         
@@ -40,14 +32,6 @@ namespace Hiking.Services
 
         }
        
-        //public List<Trail> GetShortTrailList(string id)
-        //{
-        //    //var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take(4).ToList();
-        //    //return trails;
-        //    var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUser.Id == id).Select(u => u.Trail).Take(4).ToList();
-        //    return trails;
-        //}
-
         public BackpackTrailViewModel GetTrail(int id)
         {
             var trail = repo.Query<Trail>().Where(t => t.Id == id).Select(t => new BackpackTrailViewModel {
@@ -62,10 +46,6 @@ namespace Hiking.Services
 
         public void CompletedTrail(UserTrail data)
         {
-            // var trailCompleted = repo.Query<UserTrail>().Where(ut => ut.TrailId == id).FirstOrDefault();
-            //repo.Delete<UserTrail>(data);
-            //trailCompleted = ** need to remove from one and add to another (field)
-            //repo.Add<CompletedTrail>(data);
             var hiker = repo.Query<ApplicationUser>().Where(u => u.Id == data.ApplicationUserId).FirstOrDefault();
             var completedTrail = repo.Query<Trail>().Where(t => t.Id == data.TrailId).FirstOrDefault();
             var CompletedTrail = new CompletedTrail
@@ -80,7 +60,6 @@ namespace Hiking.Services
 
         public void RemoveTrail(UserTrail data)
         {
-           // var trailInBkPk = repo.Query<UserTrail>().Where(ut => ut.TrailId == id).FirstOrDefault();
             repo.Delete<UserTrail>(data);          
             repo.SaveChanges();
             return;
@@ -117,7 +96,6 @@ namespace Hiking.Services
 
         public void RateTrails(TrailRateViewModel data, string id)
         {
-            //var user = repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
             var trail = repo.Query<Trail>().Where(t => t.Id == data.TrailId).Include(t => t.BeautyRating).Include(t => t.RatingList).Include(t => t.FamilyRating).FirstOrDefault();
             if (data.Overall != 0)
             {

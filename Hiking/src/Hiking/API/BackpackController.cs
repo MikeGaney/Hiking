@@ -22,20 +22,12 @@ namespace Hiking.API
             this.service = _service;
         }
 
-        //private ApplicationDbContext _db;
-
-        //public BackpackController(ApplicationDbContext db)
-        //{
-        //    this._db = db;
-        //}
-
         // GET: api/values
         [HttpGet]
         public IActionResult Get()
         {
             var userId = User.GetUserId();
             var data = service.GetTrailList(userId);
-
             return Ok(data);
         }
         
@@ -49,24 +41,6 @@ namespace Hiking.API
             return trails;
         }
 
-        // GET: api/values
-        //[HttpGet]
-        //[Route("browse")]
-        //public IEnumerable<Trail> getpage(int num)
-        //{
-        //    var trails = _db.Trails.Skip(10 * (num - 1)).Take(10).ToList();
-        //    return trails;
-        //}
-        
-
-        //[HttpGet]
-        //public IActionResult GetShortTrailList()
-        //{
-        //    var userId = User.GetUserId();
-        //    var data = service.GetShortTrailList(userId);
-
-        //    return Ok(data);
-        //}
 
         [HttpGet]
         [Route("completedTrail")]
@@ -89,14 +63,7 @@ namespace Hiking.API
         [HttpPost]
         public IActionResult Post([FromBody]UserTrail data)
         {
-            //var userId = User.GetUserId();
-            //var userTrail = new UserTrail
-            //{
-            //    ApplicationUserId = userId,
-            //    TrailId = id
-            //};
             service.AddToBackpack(data);
-
             return Ok();
         }
 
@@ -105,13 +72,7 @@ namespace Hiking.API
         [Route ("saveCompletedTrail")]
         public IActionResult SaveCompletedTrail([FromBody]UserTrail id)
         {
-            //var userTrail = new UserTrail
-            //{
-            //    ApplicationUserId = User.GetUserId(),
-            //    TrailId = id.TrailId
-            //};
             service.SaveCompletedTrail(id);
-
             return Ok();
         }
 
@@ -123,12 +84,6 @@ namespace Hiking.API
             service.RateTrails(data, userId);
             return Ok();
         }
-
-        //// PUT api/values/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
 
         // DELETE api/values/5
         [HttpDelete]

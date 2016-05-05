@@ -76,7 +76,6 @@ namespace Hiking.API
             if (value.Id == 0)
             {
                 _service.AddTrail(value);
-
             }
             else
             {

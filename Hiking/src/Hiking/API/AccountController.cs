@@ -51,7 +51,6 @@ namespace Hiking.Controllers
         [HttpGet("{id}")]
         [Route("getprofile")]
         public async Task<IActionResult> GetProfile(string id){
-            //var test= repo.Query<ApplicationUser>().Where(u => u.Id == id).Include(u => u.UserTrails).FirstOrDefault();
             var user = await _userManager.FindByIdAsync(id);
             var newUser = new ProfileViewModel
             {   
@@ -63,10 +62,6 @@ namespace Hiking.Controllers
                 Expertise = user.Expertise,
                 ProfilePic = user.ProfilePic,
                 Id = user.Id,
-                //Trails = service.GetTrailList(user.Id)
-                
-          
-
             };
             return Ok(user);
         }
@@ -97,10 +92,7 @@ namespace Hiking.Controllers
         [HttpPost]
         [Route("editprofile")]
         public IActionResult EditProfile([FromBody]EditProfileViewModel data) {
-            //var user = await _userManager.FindByIdAsync(data.Id);
-
             var user = repo.Query<ApplicationUser>().Where(u => u.Id == data.Id).FirstOrDefault();
-
             user.FirstName = data.FirstName;
             user.LastName = data.LastName;
             user.Age = data.Age;
@@ -120,7 +112,6 @@ namespace Hiking.Controllers
             var profileToDelete = repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
             var trails = repo.Query<UserTrail>().Where(ut => ut.ApplicationUserId == id).ToList();
             var gatherings = repo.Query<GatheringUsers>().Where(gu => gu.ApplicationUserId == id).ToList();
-            //results.Clear();
             foreach (var item in trails)
             {
                 repo.Delete<UserTrail>(item);
@@ -130,10 +121,8 @@ namespace Hiking.Controllers
             {
                 repo.Delete<GatheringUsers>(item);
             }
-            //repo.SaveChanges();
             
             repo.Delete<ApplicationUser>(profileToDelete);
-            //repo.SaveChanges();
             return Ok();
         }
 

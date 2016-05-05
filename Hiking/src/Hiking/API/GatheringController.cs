@@ -35,7 +35,6 @@ namespace Hiking.API
         public IActionResult Get(int id)
         {
             var gathering = repo.GetOneGathering(id);
-
             return Ok(gathering);
         }
 
@@ -68,8 +67,6 @@ namespace Hiking.API
         public IActionResult GetSearchList(GatheringSearchViewModel data)
         {
             var searchList = repo.SearchGatherings(data);
-
-
             return Ok(searchList);
 
         }

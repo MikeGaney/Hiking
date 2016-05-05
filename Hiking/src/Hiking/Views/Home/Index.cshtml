@@ -93,50 +93,16 @@
                     </div>
                 </li>
             </ul>
-            @*<ul class="nav navbar-nav navbar-right">
-                    <li>Test</li>
-
-
-                </ul>*@
-
-            @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
-
-
-                    <span uib-dropdown on-toggle="toggled(open)">
-                        <a href id="simple-dropdown" uib-dropdown-toggle class="nav-item navbar-link">
-                            Welcome Back {{controller.getName()}} <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
-                            <li role="menuitem"><a href="/viewprofile">Profile</a></li>
-                            <br />
-                            <li role="menuitem"><a href="/admin">Admin Page</a></li>
-                            <br />
-                            <li role="menuitem"><a ng-click="controller.logout()">Logout</a></li>
-                        </ul>
-                    </span>
-
-                </div>*@
-
-
-
-
-
-
         </div>
-
     </div>
 
-
     @* end of navbar *@
-
 
     <div class="container">
         <ui-view class="view" autoscroll="true"></ui-view>
     </div>
 
-
     @*@*Footer*@
-
 
     <div id="footer" class="navbar-fixed-bottom">
         <a href="https://www.facebook.com/">
@@ -151,10 +117,7 @@
 
     </div>
 
-
     @* End of Footer *@
-
-
 
     <!-- Library Files -->
     <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -171,24 +134,6 @@
 
     <!-- App Files-->
     <script src="~/all.js"></script>
-    @*<script src="~/ngapp/app.js"></script>
-        <script src="~/ngapp/controllers/controllers.js"></script>
-        <script src="~/ngapp/services/services.js"></script>
-        <script src="~/ngapp/controllers/trailscontroller.js"></script>
-        <script src="~/ngapp/controllers/traildetailscontroller.js"></script>
-        <script src="~/ngapp/controllers/addeditdeletetrailclientcontroller.js"></script>
-        <script src="~/ngapp/services/trailservice.js"></script>
-
-        <script src="~/ngapp/controllers/profilecontroller.js"></script>
-        <script src="~/ngapp/services/profilesvc.js"></script>*@
-
-    <!-- Security -->
-    @*<script src="~/ngapp/controllers/accountcontroller.js"></script>
-        <script src="~/ngapp/services/accountservice.js"></script>*@
-
-    @* Google Maps API Key *@
-    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDipwkGrC3bLZpUpEGaqcsIDKu5_AmT7C0&callback=initMap"
-        async defer></script>*@
 
 </body>
 </html>

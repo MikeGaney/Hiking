@@ -30,22 +30,5 @@ namespace Hiking.Services
             }).ToList();
             return profiles;
         }
-
-        //public async void adminToPost(string id)
-        //{
-        //    var user = _repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
-        //    await userManager.AddClaimAsync(user, new Claim ( "IsAdmin", "true" ));
-        //    _repo.SaveChanges();
-        //    return;
-        //}
-
-        //public async void adminToDelete(string id)
-        //{
-        //    var user = _repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
-        //    await userManager.RemoveClaimAsync(user, new Claim("IsAdmin", "true"));
-        //    _repo.SaveChanges();
-        //    return;
-        //}
-
     }
 }

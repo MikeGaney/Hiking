@@ -20,14 +20,6 @@ namespace Hiking.Services
         public List<Gathering> GetAllGatherings()
         {
             var list = repo.Query<Gathering>().Where(g => g.Time >= DateTime.Now).OrderBy(g => g.Time).ToList();
-            //List<Gathering> newList = new List<Gathering>();
-            //foreach (var item in list)
-            //{
-            //    if (item.Time >= DateTime.Now)
-            //    {
-            //        newList.Add(item);
-            //    }
-            //}
             return list;
         }
 
@@ -81,26 +73,7 @@ namespace Hiking.Services
             original.TrailName = data.TrailName;
 
             repo.SaveChanges();
-
         }
-
-
-
-        //public void SaveGathering(AddGatheringViewModel data)
-        //{
-        //    //var trail = repo.Query<Trail>().Where(t => t.Id == data.TrailId).FirstOrDefault();
-        //    var gather = new Gathering {
-        //        Name=data.Name,
-        //        Description=data.Description,
-        //        Time=data.Time,
-        //        TrailId=data.TrailId,
-        //        OwnerId=data.OwnerId,
-        //    };
-        //    repo.
-        //    //trail.Gatherings.Add(gather);
-        //    repo.SaveChanges();
-        //    return;
-        //}
 
         public void DeleteGathering(int id)
         {
@@ -111,7 +84,6 @@ namespace Hiking.Services
 
         public void AddToGathering(AddUserToGatherViewModel data)
         {
-            //var user = repo.Query<ApplicationUser>().Where(u => u.Id == id).FirstOrDefault();
             repo.Add<GatheringUsers>(new GatheringUsers
             {
                 ApplicationUserId = data.UserID,
@@ -122,9 +94,6 @@ namespace Hiking.Services
 
         public UserInGatheringViewModel IsUserInGathering(AddUserToGatherViewModel data)
         {
-            //var check = repo.Query<GatheringUsers>().Where(gu => gu.ApplicationUserId == data.UserID).Any(gu => gu.GatheringID == data.GatherID);
-            //var check = repo.Query<Gathering>().Any(g => g.Id == data.GatherID && g.GatheringUsers.Any(gu => gu.ApplicationUserId == data.UserID));
-
             var check = new UserInGatheringViewModel
             {
                 Check = false
@@ -154,10 +123,7 @@ namespace Hiking.Services
 
         public List<Gathering> SearchGatherings(GatheringSearchViewModel data)
         {
-            //var list = repo.Query<Gathering>().Where(g => g.Name.Contains(data.GatherName)).ToList();
-            //if (data.GatherName != null) list = repo.Query<Gathering>().Where(g => g.Name.Contains(data.GatherName)).ToList();
             var time = DateTime.Now;
-
             List<Gathering> searchList = repo.Query<Gathering>().ToList();
 
             if (data.GatherName != null) searchList = searchList.Where(g => g.Name.ToLower().Contains(data.GatherName.ToLower())).OrderBy(g => g.Time).ToList();
@@ -165,8 +131,6 @@ namespace Hiking.Services
             if (data.TrailName != null) searchList = searchList.Where(g => g.TrailName.ToLower().Contains(data.TrailName.ToLower())).OrderBy(g => g.Time).ToList();
 
             if (data.Time != 0) searchList = searchList.Where(g => g.Time <= DateTime.Now.AddDays(data.Time) && g.Time >= DateTime.Now).OrderBy(g => g.Time).ToList();
-
-
 
             return searchList;
         }
