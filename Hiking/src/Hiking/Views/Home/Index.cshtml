@@ -78,11 +78,11 @@
                 <li ng-show="!controller.isLoggedIn()"style="margin-left:200px"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
                 <li ng-show="!controller.isLoggedIn()"style="margin-left:0"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
 
-                <li ng-show="controller.getUserName() != null" class="pull-right navbarfix" style="margin-right:35px">
+                <li ng-show="controller.getUserName() != null" class="pull-right navbarfix" style="margin-right:5px">
                     <div class="dropdown">
 
                         <button class="dropbtn" id="username">{{controller.getName()}}</button>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content dropdown-menu-right">
                             <a href="/viewprofile">Profile</a>
                             <a href="/admin">Admin Page</a>
                             <a ng-click="controller.logout()">Logout</a>
