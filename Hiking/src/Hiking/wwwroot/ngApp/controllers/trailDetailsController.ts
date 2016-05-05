@@ -24,11 +24,11 @@
             this.getTrail();
         }
 
-        getGatherUserName(id)
-        {
-            console.log(id);
-            //return this.accountService.getUserNameID(id);
-        }
+        //getGatherUserName(id)
+        //{
+        //    console.log(id);
+        //    //return this.accountService.getUserNameID(id);
+        //}
 
         getWeather(lat, long)
         {
