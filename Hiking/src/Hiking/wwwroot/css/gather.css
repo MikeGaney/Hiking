@@ -126,8 +126,9 @@
 }
 
 .trekImg {
-    height: 130px;
-    margin-top: 30px;
+    width: 350px;
+    height: 170px;
+    display: inherit;
 }
 
 .trekDescription {
