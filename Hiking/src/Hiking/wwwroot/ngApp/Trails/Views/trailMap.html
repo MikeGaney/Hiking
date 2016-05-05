@@ -10,10 +10,13 @@
         </tr>
     </table>
 </div>-->
+<div class="container mapPage">
+
 <div class="col-md-8 col-md-offset-2 googleMap">
     <div>
         <div class="mapSelection">
-            <select class="inputMM" ng-model="controller.location" ng-change="controller.Search()">
+            <h3 class="mapName">{{controller.numOfTrails}} Trails in Area</h3>
+            <select class="inputMM mapName2" ng-model="controller.location" ng-change="controller.Search()">
                 <option value="default">Include All Areas</option>
                 <option value="Central Washington">Central Washington</option>
                 <option value="Eastern Washington">Eastern Washington</option>
@@ -27,7 +30,6 @@
                 <option value="Issaquah Alps">Issaquah Alps</option>
                 <option value="Southwest Washington">Southwest Washington</option>
             </select>
-            <label>{{controller.numOfTrails}} Trails in Area</label>
         </div>
         <ui-gmap-google-map center='controller.center' zoom='controller.zoom'>
             <ui-gmap-markers models="controller.trails"
@@ -48,4 +50,6 @@
             </ui-gmap-markers>
         </ui-gmap-google-map>
     </div>
+</div>
+
 </div>

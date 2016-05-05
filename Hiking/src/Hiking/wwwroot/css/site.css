@@ -5,8 +5,11 @@
 }
 
 .googleMap{
+    background-color: rgba(255, 255, 255, 0.99);
     text-align: center;
     margin-top: 80px;
+    padding: 0;
+    min-height:
 }
 
 .view.ng-enter{

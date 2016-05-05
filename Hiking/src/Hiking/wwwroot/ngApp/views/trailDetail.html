@@ -16,25 +16,25 @@
                                  
                                 <h3 class="trailSBtitles">Activities</h3>
                                 <ul class="ulLegend">
-                                    <li ng-show="controller.trail.fishing"><img title="Fishing" src="../../images/fishing.png" width="30" /></li>
-                                    <li ng-show="controller.trail.biking"> <img title="Biking" src="../../images/bike.png" width="30" /></li>
-                                    <li ng-show="controller.trail.camping"><img title="Camping" src="../../images/tent.png" width="30" /></li>
+                                    <li ng-show="controller.trail.fishing" uib-tooltip="Fishing"><img src="../../images/fishing.png" width="30" /></li>
+                                    <li ng-show="controller.trail.biking" uib-tooltip="Biking"><img src="../../images/bike.png" width="30" /></li>
+                                    <li ng-show="controller.trail.camping" uib-tooltip="Camping"><img src="../../images/tent.png" width="30" /></li>
                                 </ul>
                                 <ul class="ulLegend">
-                                    <li ng-show="controller.trail.horses"><img title="Horseback Riding" src="../../images/horseback.png" width="30" /></li>
-                                    <li ng-show="controller.trail.lakes"><img title="Lakes" src="../../images/lakes.png" width="30" /></li>
-                                    <li ng-show="controller.trail.rivers"><img title="Rivers" src="../../images/lake.png" width="30" /></li>
+                                    <li ng-show="controller.trail.horses" uib-tooltip="Horseback Riding"><img src="../../images/horseback.png" width="30" /></li>
+                                    <li ng-show="controller.trail.lakes" uib-tooltip="Lakes"><img src="../../images/lakes.png" width="30" /></li>
+                                    <li ng-show="controller.trail.rivers" uib-tooltip="Rivers"><img src="../../images/lake.png" width="30" /></li>
                                 </ul>
                                 <ul class="ulLegend">
-                                    <li ng-show="controller.trail.lookouts"><img title="Scenic Views" src="../../images/lookout.png" width="30" /></li>
-                                    <li ng-show="controller.trail.passRequired"><img title="Pass Required" src="../../images/parkpass.png" width="30" /></li>
-                                    <li ng-show="controller.trail.waterfalls"><img title="Waterfalls" src="../../images/river.png" width="30" /></li>
+                                    <li ng-show="controller.trail.lookouts" uib-tooltip="Scenic Views"><img src="../../images/lookout.png" width="30" /></li>
+                                    <li ng-show="controller.trail.passRequired" uib-tooltip="Parking Pass Required"><img src="../../images/parkpass.png" width="30" /></li>
+                                    <li ng-show="controller.trail.waterfalls" uib-tooltip="Waterfalls"><img  src="../../images/river.png" width="30" /></li>
                                 </ul>
                                 <h3 class="trailSBtitles">Hazards</h3>
                                 <ul class="ulLegend">
-                                    <li ng-show="controller.trail.bears"><img title="Bears Sighted" src="../../images/bear.png" width="30" /></li>
+                                    <li ng-show="controller.trail.bears" uib-tooltip="Bears Sighted"><img src="../../images/bear.png" width="30" /></li>
 
-                                    <li ng-show="controller.trail.cougars"><img title="Cougars Sighted" src="../../images/cougar.png" width="30" /></li>
+                                    <li ng-show="controller.trail.cougars" uib-tooltip="Cougars Sighted"><img src="../../images/cougar.png" width="30" /></li>
                                 </ul>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
 
                         <!-- User Comments -->
                         <div>
-                            <h3 class="trailSBtitles">Comments</h3>
+                            <h3 class="trailSBtitles3">Comments</h3>
                             <div class="comment" ng-repeat="comment in controller.trail.trailComments">
                                 <div class="commentText trekSC">
                                     <span>{{comment.message}}</span>
