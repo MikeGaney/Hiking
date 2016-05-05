@@ -6,14 +6,22 @@
     background-color: rgb(191, 191, 191);
     box-shadow: 10px 10px 10px #404040;
     border-radius: 5px;
-    width: 115%;
+    width: 190%;
 }
+
 .mHeader{
   margin-top: -30px;
 }
+
 .weatherMTitle{
   font-size: 35pt;
   font-weight: bold;
   color: firebrick;
   text-shadow: 2px 2px #333333;
+}
+
+.weatherModalList{
+    list-style: none;
+    color: white;
+    font-size: medium;
 }

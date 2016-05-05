@@ -3,9 +3,10 @@
         <h3 class="weatherMTitle">Local Trail Weather</h3>
     </div>
     <div class="modal-body">
-        <ul>
-            <li ng-repeat="wet in controller.weather.list">
-                <!--{{controller.getDegrees(wet.deg) | number: 0}} &#8457; |--> {{wet.weather[0].description}} | <img src="{{controller.weatherIcon}}{{wet.weather[0].icon}}.png" alt="Icon" />
+        <!--{{controller.sky}}-->
+        <ul class="weatherModalList">
+            <li ng-repeat="wet in controller.sky">
+                {{wet.day}} | <!--{{controller.getDegrees(wet.weather.deg) | number: 0}} &#8457;-->  {{wet.weather.weather[0].description}} | <img src="{{controller.weatherIcon}}{{wet.weather.weather[0].icon}}.png" alt="Icon" />
             </li>
         </ul>
     </div>

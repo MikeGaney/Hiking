@@ -146,22 +146,24 @@
     export class TrailWeatherController
     {
         public weatherIcon = "http://openweathermap.org/img/w/";
-        public days = [1, 2, 3, 4, 5, 6, 7];
+        public days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         public sky = [];
 
         constructor(private $location: ng.ILocationService, private name, private weather,
             private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance, private $state: ng.ui.IStateService)
         {
-            console.log(name);
-            console.log(weather);
-            for (var i = 0; i < this.days.length; i++)
-            {
-                //for (var j = 0; j < weather.length; j++)
-                //{
-                    this.sky[i] = { day: this.days[i], weather: weather.list[i] };
-                //}
-            }
-            console.log(this.sky);
+                console.log(name);
+                console.log(weather);
+                var date = new Date();
+                var day = date.getDay();
+                console.log(day);
+                for (var i = 0; i < this.days.length; i++) {
+                    //for (var j = 0; j < weather.length; j++)
+                    //{
+                    this.sky[i] = { day: this.days[(i + day) % 7], weather: weather.list[i] };
+                    //}
+                }
+                console.log(this.sky);           
         }
 
         getDegrees(num)
