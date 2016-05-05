@@ -35,10 +35,12 @@
     height: 400px;
 }
 
-#home-searchTool {
-    padding-top: 185px;
-    padding-left: 430px;
-}
+/*#home-searchTool {
+    padding-top: 15px;
+    padding-left: 43px;
+    margin:20px;
+    background-color:white;
+}*/
 
 /*BEGINNING OF SEARCH BOX STYLING*/
 
@@ -111,9 +113,11 @@ input::-webkit-input-placeholder {
     height: 250px;
     width: 100%;
     background-color: #99aa1a;
-    margin: 4px;
+    margin: -30px 4px 9px 4px;
     z-index: 99;
     opacity: .99;
+   
+
 }
 
 #home-button1 {
@@ -197,14 +201,22 @@ input::-webkit-input-placeholder {
 
 #bottomhome1 {
     width: 100%;
-    background-color:#444;
+    background-image: url('../images/aboutpagepics/laughing.jpg');
+    background-repeat: no-repeat;
+    background-position: inherit;
+    background-size: cover;
+    /*background-color: #444;*/
     height: 450px;
 }
 
 #upperhome1 {
     width: 100%;
-    background-image: url('../images/aboutpagepics/portfolio.jpg');
+    background-color:#101010;
+    /*background-image: url('../images/aboutpagepics/portfolio.jpg');*/
     background-repeat: no-repeat;
+    border-top: solid 3px #336666;
+    border-bottom:solid 3px #336666;
+    
 }
 
 /*.home-info {
