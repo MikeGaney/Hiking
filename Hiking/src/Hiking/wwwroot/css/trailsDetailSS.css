@@ -4,6 +4,13 @@
     background-color: #1a1919;
 }
 
+.mapPage {
+    background-color: #1a1919;
+    background-size: cover;
+    min-height: 1000px;
+}
+
+
 /************** Browse Page ******************/
 
 .mobileHeaderTrailsBrowse {
@@ -15,13 +22,16 @@
 }
 
 .mobileHeaderLinksTrailsBrowse {
-    min-width: 150px;
+    /*min-width: 150px;*/
+    width: 100%;
     margin: 25px;
-    /*margin-left: 60px;*/
+    background-color: #2d862d;
+    color: white;
+    margin-left: 30px;
 }
 
 .mobileSectionsTrailsBrowse {
-    width: 24%;
+    width: 30%;
     display: inline-block
 }
 
@@ -34,6 +44,11 @@
     }
 
     .trekSideBar{
+        position: static;
+        display: none;
+    }
+
+    .Activities {
         position: static;
         display: none;
     }
@@ -337,8 +352,25 @@
 .name {
     color: firebrick;
     font-size: 40px;
-    font-weight: 200;
-   
+    font-weight: 200;   
+}
+
+.mapName {
+    font-family: 'Merriweather', serif;
+    color: firebrick;
+    font-size: 30px;
+    font-weight: 700;   
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.mapName2 {
+    font-family: 'Merriweather', serif;
+    color: #004D8D;
+    font-size: 25px;
+    font-weight: 500;   
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .map {
@@ -355,13 +387,21 @@
 .trailSBtitles {
     color: firebrick;
     font-size: 25px;
-    background-color: rgba(255, 255, 255, 0.80);
+    /*background-color: rgba(255, 255, 255, 0.80);*/
     margin: 20px;
     padding: 20px;
 }
 
 .trailSBtitles2 {
     color: firebrick;
+}
+
+.trailSBtitles3 {
+    color: firebrick;
+    background-color: rgba(255, 255, 255, 0.80);
+    font-size: 25px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .sidebar {
