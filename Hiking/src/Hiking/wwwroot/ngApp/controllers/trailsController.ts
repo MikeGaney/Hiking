@@ -12,54 +12,40 @@
         constructor(private trailService: Hiking.Services.TrailService)
         {
             this.search = {};
-            //console.log("trails controller");
             this.trailService.getTrails().then((data) =>
             {
                 this.numberOfAds = data.length;
             });
-
-            
             this.getTrailListShort();
-            
         }
 
         getTrailListShort()
         {
-            console.log(this.currentPage);
             this.trailService.getTrailsShortList(this.currentPage).then((data) =>
             {
                 this.tenTrails = data;
-                //console.log(this.numberOfAds);
             });
         }
 
 
-        trailSearch() {
-
-            console.log(this.search);
+        trailSearch() 
+        {
             this.trailService.searchTrails(this.search).then((data) => {
                 this.tenTrails = data;
-                //console.log(data);
             });
-
         }
 
-        setPage(pageNo) {
-
+        setPage(pageNo) 
+        {
             this.currentPage = pageNo;
-
         }
 
-        nextPage() {
-
+        nextPage() 
+        {
             this.trailService.getTrailsShortList(this.currentPage).then((data) =>
             {
                 this.tenTrails = data;
             });
-
         }
-
-
     }
-
 }

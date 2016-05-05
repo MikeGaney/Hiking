@@ -6,14 +6,11 @@
                 <div class="row">
                     <div class="col-sm-4 detailsLeftColumn trailDP">
 
-                        <!--  -->
-                        <!-- Legend -->
-                       
                         <div class="legend">
-                             
+
                             <div class="row">
                                 <!--<div class="col-md-4">-->
-                                 
+
                                 <h3 class="trailSBtitles">Activities</h3>
                                 <ul class="ulLegend">
                                     <li ng-show="controller.trail.fishing" uib-tooltip="Fishing"><img src="../../images/fishing.png" width="30" /></li>
@@ -28,7 +25,7 @@
                                 <ul class="ulLegend">
                                     <li ng-show="controller.trail.lookouts" uib-tooltip="Scenic Views"><img src="../../images/lookout.png" width="30" /></li>
                                     <li ng-show="controller.trail.passRequired" uib-tooltip="Parking Pass Required"><img src="../../images/parkpass.png" width="30" /></li>
-                                    <li ng-show="controller.trail.waterfalls" uib-tooltip="Waterfalls"><img  src="../../images/river.png" width="30" /></li>
+                                    <li ng-show="controller.trail.waterfalls" uib-tooltip="Waterfalls"><img src="../../images/river.png" width="30" /></li>
                                 </ul>
                                 <h3 class="trailSBtitles">Hazards</h3>
                                 <ul class="ulLegend">
@@ -58,102 +55,86 @@
                             </div>
                             <div>
                                 <h4 class="trekSC">Family Friendly Rating</h4>
-                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating> 
+                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating>
                                 <hr />
                                 <p class="trekSC">To rate this trail you must have a user profile and complete the trail.</p>
                             </div>
                         </div>
-
                     </div>
-
-
 
                     <div class="container trailDP">
-                    <div class="col-md-6 detailsRightColumn">
+                        <div class="col-md-6 detailsRightColumn">
 
-                        <!-- Trail Title -->
-                        <div class="legend1">
-                            <h2 class="name">{{controller.trail.name}} </h2>
-                        </div>
+                            <!-- Trail Title -->
+                            <div class="legend1">
+                                <h2 class="name">{{controller.trail.name}} </h2>
+                            </div>
 
-                        <!-- Map -->
-                        <div class="map">
-                            <img src="{{controller.trail.map}}" width="400" class="imagesDetails img-responsive" />
-                        </div>
+                            <!-- Map -->
+                            <div class="map">
+                                <img src="{{controller.trail.map}}" width="400" class="imagesDetails img-responsive" />
+                            </div>
 
-                        <!-- Details -->
-                        <div class="sidebar trekSC">
-                            <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack btn" ng-show="!controller.backpack.isThere && controller.getUserName() != null"/>
-                            <label ng-show="controller.backpack.isThere">Trail already in Backpack</label>
-                            <label ng-show="controller.getUserName() == null">Log In to Add to Backpack</label>
-                            <hr />
-                            <h5>Location: {{controller.trail.location}}</h5>
-                            <hr />
-                            <h5>Distance: {{controller.trail.distance}} miles</h5>
-                            <hr />
-                            <h5>Average Time: {{controller.trail.time}} hours</h5>
-                            <hr />
-                            <h5>Elevation: {{controller.trail.elevation}}</h5>
-                            <!--<button href="" class="saveToPack" ng-click="controller.getMyTrail()">Save Hike To Pack</button>-->
-                        </div>
-                        <!--Icon display-->
-                        <div>
+                            <!-- Details -->
+                            <div class="sidebar trekSC">
+                                <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack btn" ng-show="!controller.backpack.isThere && controller.getUserName() != null" />
+                                <label ng-show="controller.backpack.isThere">Trail already in Backpack</label>
+                                <label ng-show="controller.getUserName() == null">Log In to Add to Backpack</label>
+                                <hr />
+                                <h5>Location: {{controller.trail.location}}</h5>
+                                <hr />
+                                <h5>Distance: {{controller.trail.distance}} miles</h5>
+                                <hr />
+                                <h5>Average Time: {{controller.trail.time}} hours</h5>
+                                <hr />
+                                <h5>Elevation: {{controller.trail.elevation}}</h5>
+                            </div>
+                            <div>
 
-
-                        </div>
-                        <!-- Overview -->
-                        <div class="legend overview trekSC">
-                            <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}" class="trekSC">Edit</a></button></h4>
-                        </div>
+                            </div>
+                            <!-- Overview -->
+                            <div class="legend overview trekSC">
+                                <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}" class="trekSC">Edit</a></button></h4>
+                            </div>
 
 
 
-                        <!-- Gatherings -->
-                        <div class="treksInTrails">
-                            <h2 class="trailSBtitles2">Upcoming Treks</h2>
-                            <!--{{controller.trail.gatherings[0]}}-->
-                            <table class="table trekSC">
-                                <tr>
-                                    <th>Title</th>
-                                    <!--<th>User</th>-->
-                                    <!--<th>Trail Name</th>-->
-                                    <th>Date</th>
-                                </tr>
-                                <tr ng-repeat="gathering in controller.trail.gatherings">
-                                    <td><a href="/treksDetails/{{gathering.id}}">{{gathering.name}}</a></td>
-                                    <!--<td>{{gathering.ownerId}} - {{controller.getGatherUserName(gathering.ownerId)}}</td>-->
-                                    <!--<td><a href="/trailDetail/{{gathering.trailId}}">{{gathering.trailName}}</a></td>-->
-                                    <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
-                                </tr>
-                            </table>
-                        </div>
+                            <!-- Gatherings -->
+                            <div class="treksInTrails">
+                                <h2 class="trailSBtitles2">Upcoming Treks</h2>
+                                <!--{{controller.trail.gatherings[0]}}-->
+                                <table class="table trekSC">
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date</th>
+                                    </tr>
+                                    <tr ng-repeat="gathering in controller.trail.gatherings">
+                                        <td><a href="/treksDetails/{{gathering.id}}">{{gathering.name}}</a></td>
+                                        <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
+                                    </tr>
+                                </table>
+                            </div>
 
-                        <!-- User Comments -->
-                        <div>
-                            <h3 class="trailSBtitles3">Comments</h3>
-                            <div class="comment" ng-repeat="comment in controller.trail.trailComments">
-                                <div class="commentText trekSC">
-                                    <span>{{comment.message}}</span>
-                                </div>
-                                <div class="commentDetails">
-                                    <!--<div class="commentDetailsUser">
-                                        <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
-                                    </div>-->
-                                    <div class="commentDetailsDate">
-                                        <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                            <!-- User Comments -->
+                            <div>
+                                <h3 class="trailSBtitles3">Comments</h3>
+                                <div class="comment" ng-repeat="comment in controller.trail.trailComments">
+                                    <div class="commentText trekSC">
+                                        <span>{{comment.message}}</span>
+                                    </div>
+                                    <div class="commentDetails">
+                                        <div class="commentDetailsDate">
+                                            <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
+                                        </div>
                                     </div>
                                 </div>
+                                <form ng-submit="controller.AddComment()">
+                                    <textarea rows="6" class="form-control" ng-model="controller.comment.message"></textarea>
+                                    <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
+                                </form>
                             </div>
-                            <form ng-submit="controller.AddComment()">
-                                <textarea rows="6" class="form-control" ng-model="controller.comment.message"></textarea>
-                                <input type="submit" value="Add Comment" class="btn btn-primary pull-right addCommentBtn" />
-                            </form>
                         </div>
-
-
                     </div>
-                    </div>
-
                 </div>
             </div>
         </div>

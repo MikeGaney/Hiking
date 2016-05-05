@@ -16,13 +16,9 @@
             private profileAccountService: Hiking.Services.ProfileAccountService) 
         {
             this.GetProfile();
-            //this.shortbackpack = {};
-            //this.getShortTrailList();
             this.completedHikes = {};
             this.getCompletedTrails();
-
             this.profiles = this.profileAccountService.getProfiles();
-
         }
 
         getUserName()
@@ -30,14 +26,15 @@
             return this.accountService.getUserName();
         }
 
-        addAdmin(id) {
-            console.log(id);
+        addAdmin(id) 
+        {
             this.accountService.addAdmin(id).then(() => {
                 this.$state.reload();
             });
         }
 
-        removeAdmin(id) {
+        removeAdmin(id)
+        {
             this.accountService.removeAdmin(id).then(() => {
                 this.$state.reload();
             });
@@ -46,7 +43,6 @@
         GetProfile() 
         {
             let id = this.accountService.getUserId();
-            //console.log(id);
             this.profileService.getProfile(id).then((data) => 
             {
                 this.viewProfile = data;
@@ -56,20 +52,13 @@
                 if (this.viewProfile.age == 0) {
                     this.viewProfile.age = "-";
                 }
-                //console.log(data);
             });
         }
-        //getShortTrailList() {
-        //    //debugger;
-        //    this.backpackService.getShortTrailList().then((data) => {
-        //        this.shortbackpack = data;
-        //        console.log(data);
-        //    });
-        //}
-        getCompletedTrails() {
+        
+        getCompletedTrails() 
+        {
             this.backpackService.getCompletedTrails().then((data) => {
                 this.completedHikes = data;
-                //console.log(data);
             });
         }
     }
@@ -95,17 +84,14 @@
         GetProfile() 
         {
             let id = this.accountService.getUserId();
-            //console.log(id);
             this.profileService.getProfile(id).then((data) => 
             {
                 this.editProfile = data;
-                //console.log(data);
             });
         }
 
         save() 
         {
-            console.log(this.editProfile);
             this.profileToSave = {
                 firstName: this.editProfile.firstName,
                 lastName: this.editProfile.lastName,
@@ -115,7 +101,7 @@
                 displayName: this.editProfile.displayName,
                 expertise: this.editProfile.expertise
             };
-            console.log(this.profileToSave);
+
             this.profileService.editProfile(this.editProfile).then(() => 
             {
                 this.$state.go('viewprofile');
@@ -134,8 +120,6 @@
                 },
                
             }).result.then(() => {
-                //this.profileService.deleteProfile(profileId).then(() => {
-                //});
                     this.$state.go('home');
             });
         };
@@ -147,7 +131,6 @@
                 controller: Hiking.Controllers.ForgotPasswordController,
                 controllerAs: 'controller',
                 resolve: {
-                    
                 }
             });
         }
@@ -164,15 +147,14 @@
             public profileId: string,
             private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance) 
         {
-            //console.log("heythere");
         }
 
-        public ok() {
+        public ok() 
+        {
             this.profileService.deleteProfile(this.profileId).then(() => 
             {
                 this.$window.sessionStorage.clear();
                 this.$uibModalInstance.close();
-                //this.$state.go('home');
             });
             
         }

@@ -1,8 +1,4 @@
-﻿/*.login-page {
-    text-align: center;
-}*/
-
-.login-title-text {
+﻿.login-title-text {
     margin-top: -20px;
 }
 
@@ -14,44 +10,6 @@
     height: 400px;
 }
 
-/*.google-login {
-    background: #e0492f;
-}
-
-.facebook-login {
-    background: #395697;
-}*/
-
-/*.major-provider {
-    cursor: pointer;
-    border-radius: 3px;
-    width: 136px;
-    height: 38px;
-    line-height: 36px;
-    float: left;
-    margin: 8px 2px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    text-align: center;
-}
-
-.icon-container {
-    border-right: 1px solid rgba(0,0,0,0.1);
-    box-sizing: border-box;
-    width: 38px;
-    height: 100%;
-    line-height: 1;
-    padding: 10px 0;
-    float: left;
-}
-
-.major-provider .icon {
-    background: url('../img/openid/universal-login-sprite.svg?v=3ca03e653513');
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-}*/
-
 .icon{
     color: white;
 }
@@ -62,27 +20,6 @@
 
 .signin-buttons {
 }
-
-/*.or-container {
-}*/
-
-/*.or-hr {
-    margin-bottom: 0px;
-    position: relative;
-    top: 19px;
-    height: 0;
-    border: 0;
-    border-top: 1px solid #ccc;
-}*/
-
-/*#or {
-    padding: 10px;
-    background-color: white;
-    position: relative;
-    display: inline-block;
-    color: #555;
-    font-size: 12px;
-}*/
 
 #login-form {
     text-align: center;
@@ -119,15 +56,6 @@
     box-shadow: 7px 7px 7px #404040;
 }
 
-/*.forgot{
-    float: right;
-    position: relative;
-    top: -8px;
-    color: #ccc;
-    font-size: 11px;
-    font-weight: normal;
-}*/
-
 .login-button{
     float: right;
     text-align: center;
@@ -150,34 +78,37 @@
     color:white;
     background: #0077bb;
 }
+
 .modal-content{
     width: 100%;
 }
+
 .login-page {
     font-family: 'Merriweather', serif;
     padding: 30px;
     border: 10px solid rgba(140, 140, 140,0.40);
     height: 500px;
     text-align: center;
-    /*padding-top: -15px;*/
     background-color: rgb(191, 191, 191);
-    /*opacity: .5 !important;*/
     box-shadow: 10px 10px 10px #404040;
     border-radius: 5px;
     text-shadow: 2px 2px #333333;
     color: white;
-
 }
+
 .modalRow{
     height: 500px;
 }
+
 .mHeader{
   margin-top: -30px;
 }
+
 .mTitle{
   font-size: 35pt;
   font-weight: bold;
 }
+
 #loginCompass{
     margin-left: -40%;
     margin-top:-15px;

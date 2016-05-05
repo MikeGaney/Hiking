@@ -1,71 +1,69 @@
-﻿
-<div class="profileWindow">
-        <div id="bodydiv">
-                <div class="row">
+﻿<div class="profileWindow">
+    <div id="bodydiv">
+        <div class="row">
 
-                    <!-- Profile Pic and Display Name-->
-                    <div class="col-md-8">
-                        <div id="profilePic">
-                            <img src="{{controller.viewProfile.profilePic}}" class="image profImage" />
+            <!-- Profile Pic and Display Name-->
+            <div class="col-md-8">
+                <div id="profilePic">
+                    <img src="{{controller.viewProfile.profilePic}}" class="image profImage" />
+                </div>
+                <div id="name">{{controller.viewProfile.displayName}}</div>
+            </div>
+
+            <!--  Asides  -->
+            <div class="col-md-4">
+                <div id="asides">
+
+                    <!--  Links to BackPack and Edit Profile  -->
+                    <div id="profLinks" style="border: 10px solid rgba(0,0,0,.3);">
+
+                        <!--  Edit Profile Link  -->
+                        <div id="myTrails">
+                            <a href="/editprofile/{{controller.viewProfile.displayName}}" style="color: #004d8d" class="toEditbtn"><strong>Edit Your Profile Here</strong></a>
                         </div>
-                        <div id="name">{{controller.viewProfile.displayName}}</div>
+
+                        <!--BackPack link-->
+                        <div class="bkpkLink">
+                            <a href="/backpack/{{controller.viewProfile.displayName}}" style="color:  #004d8d"><strong>Check out your backpack</strong></a>
+                            <img src="http://iloominate.org/images/backpack_2551.png" id="bkpkIcon" />
+                        </div>
                     </div>
 
-                    <!--  Asides  -->
-                    <div class="col-md-4">
-                        <div id="asides">
+                    <!--    Trail Badges    -->
+                    <aside class="aside" id="aside2">
+                        <h3><strong>Trail Badges:</strong></h3>
+                        <div></div>
+                        <ul class="bkpkTable">
+                            <li ng-repeat="trail in controller.completedHikes" class="profBadges"><img src="http://image005.flaticon.com/1/svg/39/39536.svg" width="87" uib-tooltip="{{trail.name}}"></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
 
-                            <!--  Links to BackPack and Edit Profile  -->
-                            <div id="profLinks" style="border: 10px solid rgba(0,0,0,.3);">
+        <div class="row">
+            <!--    Expertise Circle    -->
+            <div class="col-md-12">
+                <div id="circle">
+                    <h3 style="color:firebrick"><strong>Expertise Level:</strong></h3>
+                    <h4>{{controller.viewProfile.expertise}}</h4>
+                    <h3 style="color:firebrick"><strong>Age:</strong></h3>
+                    <h4>{{controller.viewProfile.age}}</h4>
 
-                                <!--  Edit Profile Link  -->
-                                <div id="myTrails">
-                                    <a href="/editprofile/{{controller.viewProfile.displayName}}" style="color: #004d8d" class="toEditbtn"><strong>Edit Your Profile Here</strong></a>
-                                </div>
-
-                                <!--BackPack link-->
-                                <div class="bkpkLink">
-                                    <a href="/backpack/{{controller.viewProfile.displayName}}" style="color:  #004d8d"><strong>Check out your backpack</strong></a>
-                                    <img src="http://iloominate.org/images/backpack_2551.png" id="bkpkIcon" />
-                                </div>
-                            </div>
-
-                            <!--    Trail Badges    -->
-                            <aside class="aside" id="aside2">
-                                <h3><strong>Trail Badges:</strong></h3>                                
-                                <div></div>
-                                    <ul class="bkpkTable" >
-                                        <li ng-repeat="trail in controller.completedHikes" class="profBadges"><img src="http://image005.flaticon.com/1/svg/39/39536.svg" width="87" uib-tooltip="{{trail.name}}"></li>
-                                    </ul>                               
-                            </aside>
-                        </div>
+                    <!--  Compass  -->
+                    <div id="compassContainer">
+                        <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="compass" style="width: 270px" />
                     </div>
                 </div>
-          
-            <div class="row">
-                <!--    Expertise Circle    -->
-                <div class="col-md-12">
-                    <div id="circle">
-                        <h3 style="color:firebrick"><strong>Expertise Level:</strong></h3>
-                        <h4>{{controller.viewProfile.expertise}}</h4>
-                        <h3 style="color:firebrick"><strong>Age:</strong></h3>
-                        <h4>{{controller.viewProfile.age}}</h4>
 
-                        <!--  Compass  -->
-                        <div id="compassContainer">
-                            <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="compass" style="width: 270px" />
-                        </div>
+                <!--    About Me    -->
+                <div class="bioContainer">
+                    <div id="bio">
+                        <h3 style="color:firebrick"><strong>About Me:</strong></h3>
+                        <p>{{controller.viewProfile.bio}}</p>
                     </div>
-
-
-                    <!--    About Me    -->
-                    <div class="bioContainer">
-                        <div id="bio">
-                            <h3 style="color:firebrick"><strong>About Me:</strong></h3>
-                            <p>{{controller.viewProfile.bio}}</p>
-                        </div>
-                    </div>
-                    
-                </div>              
-            </div>       
-</div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

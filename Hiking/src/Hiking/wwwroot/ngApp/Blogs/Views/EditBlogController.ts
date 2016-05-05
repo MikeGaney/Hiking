@@ -16,7 +16,6 @@
             let blogID = this.$stateParams["id"];
             this.blogService.GetBlog(blogID).then((data) =>
             {
-                //console.log(data);
                 this.blog = data;
             });
         }

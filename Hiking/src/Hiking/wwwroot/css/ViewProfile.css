@@ -1,9 +1,7 @@
 ﻿.profileWindow {
     background-image: url(http://www.adventuresnw.com/wp-content/uploads/2015/07/5524EDIT-2.jpg);
     background-size: cover;
-    /*height: 2000px;*/
     background-repeat: no-repeat;
-    /*min-width: 1600px;*/
     margin-top: 54px;
     font-family: 'Merriweather', serif;
 }
@@ -38,7 +36,6 @@
     width: 70%;
     left: 7%;
     top: 550px;
-    /*background-color: rgba(115, 115, 115, .90);*/
     background-color: rgba(255, 255, 255, 0.80);
     color: firebrick;
     font-size: 60pt;
@@ -48,61 +45,33 @@
 }
 
 #circle {
-    /*background-color: rgba(115, 115, 115, .90);*/
     background-color: rgba(255, 255, 255, 0.80);
     border: 9px solid rgba(0,0,0,.2);
     position: relative;
     margin-left: 40px;
     margin-top: 80px;
     display: inline-block;
-    
     height: 300px;
     width: 300px;
     box-shadow: 7px 7px 7px #404040;
     border-radius: 100%;
     color: rgba(0, 0, 0, 0.80);
     text-align: center;
-    /*text-shadow: 2px 2px #333333;*/
     padding: 55px;
-}
-
-/*#compassContainer {
-    height: 270px;
-    width: 270px;
-    position: relative;
-    float: right;
-    margin-top: -350px;
-    margin-left: 240px;
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.80);
-    box-shadow: 0 10px 10px #404040;
-    transform: rotate(-13deg);
-    -webkit-transform: rotate(-13 deg); /* Chrome, Safari, Opera  */
 }
 
 #compass {
     position: relative;
-    /*float: right;*/
-
     height: 270px;
     width: 270px;
     margin-top: 50px;
     margin-left: 240px;
-    /*width: 10%;*/
     transform: rotate(-16deg);
     -webkit-transform: rotate(-16 deg);
     /* Chrome, Safari, Opera */
 }
 
-/*.bioContainer {
-    float: right;
-    /*width: 100%;*/
-    /*margin-bottom: 100px;
-   
-}*/
-
 #bio {
-    /*background-color:rgba(115, 115, 115, .70);*/
     background-color: rgba(255, 255, 255, 0.80);
     color: black;
     box-shadow: 7px 7px 7px #404040;
@@ -117,16 +86,12 @@
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
     padding: 10px;
-    /*text-shadow: 2px 2px #333333;*/
-    /*margin-left: 30px;*/
 }
 
-#asides { /*background-color: lightblue;*/
+#asides { 
     position: relative;
-    /*display: block;*/
     height: 35%;
     width: 100%;
-    /*right: -100px;*/
     margin-top: 5%;
     font-size: 16px;
     color: firebrick;
@@ -143,7 +108,6 @@
     right: -50px;
     top: 30px;
     background-color: rgba(255, 255, 255, 0.80);
-    /**border hard coded**/
     padding-left: 10px;
     padding-top: -10px;
 }
@@ -159,7 +123,6 @@
 }
 
 .toEditbtn {
-    /*background-color:rgba(115, 115, 115, 1.00);*/
     background-color: rgba(255, 255, 255, 1.00);
     float: right;
     margin-top: 23px;
@@ -181,26 +144,6 @@
     margin-right: 10px;
 }
 
-/*#aside1{
-    position: absolute;
-    display: block;
-    box-shadow: 7px 7px 7px #404040;
-    border: 10px solid rgba(0,0,0,.3);  
-    height: 225px;
-    width: 625px;
-    left: 0;
-    right: -50px;
-    top: 90px;
-    /*background-color:  rgba(153, 51, 0, 1.0);*/
-/*background-color:rgba(115, 115, 115, .90);*/
-/*background-color: rgba(255, 255, 255, 0.80);
-    border-top-style: solid ;
-    border-color: black;
-    border: 5px;
-    padding-left: 10px;
-    padding-top: -10px;*/
-/*text-shadow: 2px 2px #333333;*/
-
 #aside2 {
     position: absolute;
     display: block;
@@ -212,11 +155,9 @@
     left: 0;
     right: -50px;
     top: 250px;
-    /*background-color:rgba(115, 115, 115, .90);*/
     background-color: rgba(255, 255, 255, 0.80);
     padding-left: 10px;
     padding-top: -5px;
-    /*text-shadow: 2px 2px #333333;*/
 }
 
 .bkpkMtnIcon {
@@ -243,6 +184,5 @@
         display:block;
     }
     #name{
-        /*top: 0;*/
     }
 }

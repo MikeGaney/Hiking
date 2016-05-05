@@ -17,7 +17,6 @@
             let blogID = this.$stateParams["id"];
             this.blogService.GetBlog(blogID).then((data) =>
             {
-                //console.log(data);
                 this.blog = data;
             });
         }
@@ -26,17 +25,11 @@
         {
             this.comment.userID = this.accountService.getUserId();
             this.comment.blogID = this.$stateParams["id"];
-            //console.log(this.comment);
             this.blogService.AddComment(this.comment).then(() =>
             {
                 this.GetBlog();
                 this.comment.message = "";
             });
-        }
-
-        DeleteBlog()
-        {
-            console.log("You sure you want to delete the blog?");
         }
 
         public showDeleteConfirmationModal()
@@ -46,7 +39,6 @@
                 templateUrl: '/ngApp/Blogs/Views/deleteBlog.html',
                 controller: Hiking.Controllers.DeleteBlogController,
                 controllerAs: 'controller',
-                //size: "sm"
                 resolve: {
                     id: () => this.$stateParams["id"]
                 }
@@ -60,7 +52,6 @@
                 templateUrl: '/ngApp/Blogs/Views/deleteComment.html',
                 controller: Hiking.Controllers.DeleteCommentController,
                 controllerAs: 'controller',
-                //size: "sm"
                 resolve: {
                     id: () => id,
                     blogID: () => this.$stateParams["id"]
@@ -97,7 +88,6 @@
         constructor(private blogService: Hiking.Services.BlogService, private $location: ng.ILocationService, private blogID,
             private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance, private id, private $state: ng.ui.IStateService)
         {
-            console.log(this.id);
         }
 
         public OK()

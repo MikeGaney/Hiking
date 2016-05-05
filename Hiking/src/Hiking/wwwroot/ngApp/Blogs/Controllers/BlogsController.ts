@@ -6,7 +6,6 @@
 
         constructor(private blogService: Hiking.Services.BlogService)
         {
-            //console.log("blogs controller");
             this.blogs = this.blogService.ListBlogs();
         }
     }

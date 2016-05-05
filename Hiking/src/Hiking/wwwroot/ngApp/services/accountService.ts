@@ -50,7 +50,6 @@ namespace Hiking.Services
 
         public ChangePassword(data)
         {
-            console.log("changing password");
             this.$http.post('/api/account/resetPassword', data).then((result) =>
             {
                 console.log("password changed");

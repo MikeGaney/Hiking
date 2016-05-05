@@ -10,19 +10,23 @@
             this.getNewTrek();
 
         }
-        getNewTrek() {
+        getNewTrek() 
+        {
             let trekId = this.$stateParams["id"];
             this.treksService.getOneTrek( trekId ).then(( data ) => {
                 this.trek = data;
                 console.log( this.trek );
             });
         };
-        saveTrek() {
+
+        saveTrek() 
+        {
             // first loop thru the trails
-            for ( var i = 0; i < this.trails.length; i++ ) {
+            for (var i = 0; i < this.trails.length; i++) 
+            {
                 // check if the Id of the trail matches the id you were given (this.trek.trailId)
-                //console.log( this.trails[i] );
-                if ( this.trails[i].id == this.trek.trailId ) {
+                if (this.trails[i].id == this.trek.trailId)
+                {
                     this.trek.trailName = this.trails[i].name;
                 }
 
@@ -33,7 +37,9 @@
                 this.$state.go( 'treks' );
             });
         }
-        deleteTrek() {
+
+        deleteTrek()
+        {
             let trekId = this.$stateParams["id"];
             this.$uibModal.open( {
                 templateUrl: '/Dialogs/DeleteTrekModal.html',
@@ -50,13 +56,18 @@
             });
         }
     }
-    class DialogController {
-        public ok() {
+    class DialogController 
+    {
+        public ok() 
+        {
             this.$uibModalInstance.close();
         }
-        public cancel() {
+
+        public cancel() 
+        {
             this.$uibModalInstance.dismiss();
         }
+
         constructor( public trekId: string, private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance ) { }
     }
 }

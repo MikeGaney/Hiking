@@ -29,15 +29,12 @@
             this.data.gatherID = this.$stateParams["id"];
             this.gatheringService.IsUserInGathering(this.data).then((data) =>
             {
-                //console.log(data);
                 this.userInGather = data.check;
-                //console.log(this.userInGather);
             });
         }
 
         IsLoggedIn()
         {
-            //console.log(this.accountService.isLoggedIn());
             return this.accountService.isLoggedIn();
         }
 

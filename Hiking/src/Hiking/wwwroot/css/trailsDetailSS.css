@@ -22,7 +22,6 @@
 }
 
 .mobileHeaderLinksTrailsBrowse {
-    /*min-width: 150px;*/
     width: 100%;
     margin: 25px;
     background-color: #2d862d;
@@ -122,7 +121,6 @@
 .inputMM {
     border-radius: 0;
     margin-left: -25px;
-    /*width: 110%;*/
     height: 30px;
 }
 
@@ -294,10 +292,8 @@
 .detailsPage {
     background-image:url(https://upload.wikimedia.org/wikipedia/commons/b/b3/Elakala_Waterfalls_Swirling_Pool_Mossy_Rocks.jpg);
     background-size: cover;
-    /*height: 1500px;*/
     background-repeat: no-repeat;
 }
-
 
 .detailsLeftColumn {
    float: left;
@@ -312,7 +308,6 @@
    text-align: center;
    border-radius: 0;  
 }
-
 
 .detailsRightColumn {
    float: right;
@@ -347,7 +342,6 @@
     margin-top: 20px;
     text-align: center;
     overflow: hidden;
-    
 }
 
 .name {
@@ -388,7 +382,6 @@
 .trailSBtitles {
     color: firebrick;
     font-size: 25px;
-    /*background-color: rgba(255, 255, 255, 0.80);*/
     margin: 20px;
     padding: 20px;
 }
@@ -432,24 +425,22 @@
 }
 
 .weatherbtn {
-width: 100%;
-height: 50px;
-font-size: x-large;
+    width: 100%;
+    height: 50px;
+    font-size: x-large;
 }
 
 .saveToPack {
-width: 100%;
-height: 50px;
-font-size: inherit;
-font-weight: 700;
-color: white;
-background-color: #2d862d;
+    width: 100%;
+    height: 50px;
+    font-size: inherit;
+    font-weight: 700;
+    color: white;
+    background-color: #2d862d;
 }
 .ulLegend li {
     list-style-type:none;
     display:inline;
-    /*left:-75px;*/
-
 }
 
 .ulLegend {
@@ -463,7 +454,6 @@ background-color: #2d862d;
 }
 
 /*********************************/
-
 
 /******** Admin Page *************/
 
@@ -506,8 +496,3 @@ background-color: #2d862d;
     border-radius: 0;
     padding-bottom: inherit;
 }
-
-/*.adminCompass {
-    margin-left: 265px;
-}*/
-

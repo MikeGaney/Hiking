@@ -21,13 +21,10 @@
     box-shadow: 7px 7px 7px #404040;
     color: rgba(0, 0, 0, 1.0);
     position: relative;
-    /*display: inline-block;*/
-    /*height: 900px;*/
     height: 70%;
     width: 40%;
     border: 20px solid rgba(0,0,0,.2);
     font-size: 16pt;
-    /*padding:15px;*/
     margin-bottom: 75px;
     margin-top: 75px;
     margin-left: 5%;
@@ -38,9 +35,6 @@
     box-shadow: 7px 7px 7px #404040;
     color: rgba(0, 0, 0, 1.0);
     position: relative;
-    /*float: right;*/
-    /*display: inline-block;*/
-    /*height: 900px;*/
     height: 70%;
     width: 40%;
     border: 20px solid rgba(0,0,0,.2);
@@ -50,7 +44,6 @@
     margin-bottom: 75px;
     margin-top: 75px;
     justify-content: center;
-    
 }
 
 #profPic{
@@ -60,7 +53,6 @@
     border: solid #737373;
     border-width: 3px;
     overflow: hidden;
-    /*margin-top: 10px;*/
 }
 
 #profPicInput{
@@ -79,11 +71,6 @@
 
 #displayNameInput{
     margin-top: 10px;
-
-    /*margin-top: -150px;
-    margin-left: 75px;*/
-    /*display: inline-block;*/
-    /*position: relative;*/
 }
 
 #bioWrapper{
@@ -99,7 +86,6 @@
     width: 98%;
     height: 550px;
     padding: 5px;
-    /*margin-left: 50px;*/
     margin-bottom: 20px;
 }
 
@@ -112,37 +98,26 @@
     width: 40%;
     height: auto;
     margin-top: 45px;
-   
 }
 
 #submitWrapper{
     position:relative;
     display: inline-block;
-    /*background-color: lightblue;*/
     width: 40%;
-    /*height: 230px;*/
-    /*margin-right:0;*/
     float: right;
     margin-bottom: 40px;
-
 }
 
 #saveBtn{
     position:relative;
     width: 80%;
-    /*margin-bottom: 20px;*/
-    /*margin-top: 130px;*/
-    /*margin-left: 500px;*/
     box-shadow: 7px 7px 7px #404040;
     margin-top: 85px;
-    
 }
 
 #deleteBtn{
     position:relative;
     width: 80%;
-    /*margin-top: 175px;*/
-    /*margin-left: 500px;*/
     box-shadow: 7px 7px 7px #404040;
     margin-top: 30px;
 }

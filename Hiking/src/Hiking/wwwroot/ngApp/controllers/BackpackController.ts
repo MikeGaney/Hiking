@@ -23,7 +23,6 @@
             private $uibModal: ng.ui.bootstrap.IModalService,
             private trailService: Hiking.Services.TrailService) 
         {
-            //console.log("hey");
             this.completedHikes = {};
             this.delete = {};
             this.completed = {};
@@ -34,26 +33,17 @@
             //*** PAGINATION ***
             this.backpackService.getAllTrails().then((data) => {
                 this.numberTrls = data.length;
-                //console.log(this.numberTrls);
             });
 
-            //console.log(this.bkpkCurrentPage);
-            //this.backpackService.gettrlshortlist(this.bkpkCurrentPage).then((data) => {
-            //    this.tenTrls = data;
-            //    console.log(data);
-            //});
             this.bkpkNextPage()
-
         }
 
         getMyTrail()
         {
             let trailId = this.$stateParams["id"];
-            //console.log(id);
             this.backpackService.getMyTrail(trailId).then((data) => 
             {
                 this.backpack = data;
-                //console.log(data);
             });
         }
 
@@ -62,7 +52,6 @@
             this.backpackService.getAllTrails().then((data) =>
             {
                 this.backpack = data;
-                //console.log(data);
             });
         }
 
@@ -70,61 +59,37 @@
         {
             this.delete.trailId = id;
             this.delete.applicationUserId = this.accountService.getUserId();
-            //console.log(this.delete);
-            //console.log(id);
             this.backpackService.removeMyTrail(this.delete).then(() =>
             {
-                //console.log("Need to install confirmation modal.");
                 this.$state.reload();
             });
         }
 
         saveCompletedTrail(id, name)
         {
-            //let userId = this.accountService.getUserId();
             this.completed.trailId = id;
             this.completed.applicationUserId = this.accountService.getUserId();
             this.showRateModal(id, name);
-            //this.backpackService.saveCompletedTrail(this.completed).then(() =>
-            //{
-            //    this.getCompletedTrails();
-            //    this.getBackPack();
-            //});
         }
 
         public showRateModal(id, name)
         {
-            //console.log("Showing register modal");
             this.$uibModal.open({
                 templateUrl: '/ngApp/Users/Views/rateTrail.html',
                 controller: Hiking.Controllers.RateTrailController,
                 controllerAs: 'controller',
-                //size: "sm"
                 resolve: {
                     id: () => id,
                     name: () => name
                 }
             }).result.then(() =>
             {
-                console.log("Test");
                 this.backpackService.saveCompletedTrail(this.completed).then(() =>
                 {
                     this.getCompletedTrails();
                     this.getBackPack();
                 });
             });
-            //    (() =>
-            //{
-            //    this.backpackService.saveCompletedTrail(this.completed).then(() =>
-            //    {
-            //        //this.getCompletedTrails();
-            //        //this.getBackPack();
-            //        console.log("test");
-            //    });
-            //}).catch(() =>
-            //{
-            //    console.log("Canceled");
-            //});
         }
 
         getCompletedTrails()
@@ -132,7 +97,6 @@
             this.backpackService.getCompletedTrails().then((data) =>
             {
                 this.completedHikes = data;
-                //console.log(data);
             });
         };
 
@@ -149,14 +113,6 @@
         }
         //*** END PAGINATION
 
-        //trailSearch() {
-
-        //    console.log(this.search);
-        //    this.trailService.searchTrails(this.search).then((data) => {
-        //        this.trails = data;
-        //        console.log(data);
-        //    });
-        //};
     }
 
     export class RateTrailController
@@ -177,7 +133,6 @@
         public OK()
         {
             this.rate.trailId = this.trailId;
-            //console.log(this.rate);
             this.backpackService.RateTrails(this.rate).then(() =>
             {
                 this.$uibModalInstance.close();

@@ -3,7 +3,6 @@
         <div class="row">
             <div class="col-md-8 col-lg-offset-2">
 
-
                 <!--  Mobile Header  -->
                 <div class="col-md-6">
                     <div class="mobileHeaderTrailsBrowse">
@@ -19,7 +18,6 @@
                     </div>
                 </div>
                 <div class="row"></div>
-
 
                 <!--  SideBar  -->
                 <div class="col-md-4 trekSideBar">
@@ -52,34 +50,6 @@
 
                 </div>
 
-                <!--<div class="col-md-4 trekSideBar">
-
-                    <h1 class="sidebarTitle">TrekClub</h1>
-
-                    <div class="browseLegend">
-                        <h2 class="browseSBtitles">Gatherings</h2>
-                        <button class="browseSBbtns"><a href="#">Click Here</a></button>
-                    </div>
-
-                    <div class="browseLegend">
-                        <h2 class="browseSBtitles">Local Weather</h2>
-                        <button class="browseSBbtns"><a href="https://weather.com/weather/tenday/l/Seattle+WA+USWA0395:1:US">Click Here</a></button>
-                    </div>
-
-                    <div class="browseLegend">
-                        <h2 class="browseSBtitles">Need a Parking Pass</h2>
-                        <button class="browseSBbtns"><a href="http://discoverpass.wa.gov/">Click Here</a></button>
-                    </div>
-
-                    <div class="browseLegend">
-                        <h2 class="browseSBtitles">Fishing & Hunting Licenses</h2>
-                        <button class="browseSBbtns"><a href="https://fishhunt.dfw.wa.gov/wdfw/licenses.html">Click Here</a></button>
-                    </div>
-
-                </div>-->
-
-
-
                 <!------------------------------------->
                 <div class="col-md-8 treks">
                     <!--{{controller.gather}}-->
@@ -87,17 +57,12 @@
 
                     <div class="trekDetail container-fluid">
                         <div class="trekLeft">
-                            <!--<div class="form-group">
-                                <label>ID</label>
-                                <label>{{controller.gather.id}}</label>
-                            </div>-->
                             <div class="form-group" align="center">
-                                <!--<label>Name</label>-->
                                 <h1 class="trekTitle">{{controller.gather.name}}</h1>
                             </div>
                             <hr />
                             <div class="form-group">
-                                <label>Trail Name: </label> 
+                                <label>Trail Name: </label>
                                 <label><a href="/trailDetail/{{controller.gather.trailId}}" class="trekSC">{{controller.gather.trailName}}</a></label> - <label><a href="/trekChanges/{{controller.gather.id}}">Edit Trek</a></label>
                             </div>
                             <div class="form-group">
@@ -114,10 +79,6 @@
                                 <label>Time: </label>
                                 <label>{{controller.gather.time | date: 'MMM dd @ h:mma'}}</label>
                             </div>
-                            <!--<div class="form-group">
-                                <label>Owner: </label>
-                                <label>{{controller.gather.ownerId}}</label>
-                            </div>-->
                             <div class="form-group">
                                 <label>Description: </label>
                                 <label>{{controller.gather.description}}</label>
@@ -125,25 +86,19 @@
                             <h3 class="trekTitle">RSVP List</h3>
                             <table class="table">
                                 <tr class="trekSC">
-                                    <th >Name</th>
+                                    <th>Name</th>
                                     <th>Display Name</th>
-                                    <!--<th>UserId</th>-->
                                 </tr>
                                 <tr ng-repeat="user in controller.gather.users" class="trekSC">
                                     <td>{{user.firstName}} {{user.lastName}}</td>
                                     <td>{{user.displayName}}</td>
-                                    <!--<td>{{user.userId}}</td>-->
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
-                        <!----------------------------------------------------->
-
-
-
-                    </div>
-                </div>
             </div>
+        </div>
+    </div>
 </div>
 

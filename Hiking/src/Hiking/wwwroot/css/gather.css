@@ -1,8 +1,6 @@
 ﻿
 .gatherPage {
-    /*background-image: url('../images/nw27.jpg');*/
     background-image: url('../images/nw13.jpg');
-    /*background-image: url('../images/nw26.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 1500px;
@@ -22,7 +20,6 @@
      float: left;
     width: 18%;
     margin-top: 4%;
-    /*margin-left: 60px;*/
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -147,7 +144,6 @@
 .trekDetail {
     background-color:  rgba(255, 255, 255, 0.66);
     color:  #004D8D;
-
 }
 
 .trekSC {

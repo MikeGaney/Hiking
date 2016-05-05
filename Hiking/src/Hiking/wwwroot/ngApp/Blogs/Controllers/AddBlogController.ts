@@ -11,7 +11,6 @@
 
         AddBlog()
         {
-            console.log("Add new blog");
             this.blogService.SaveBlog(this.blogToAdd).then(() =>
             {
                 this.$state.go('blogs');
