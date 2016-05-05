@@ -1,6 +1,8 @@
 ﻿
 .gatherPage {
-    background-image: url('../images/nw27.jpg');
+    /*background-image: url('../images/nw27.jpg');*/
+    background-image: url('../images/nw13.jpg');
+    /*background-image: url('../images/nw26.jpg');*/
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 1500px;
@@ -9,7 +11,6 @@
 }
 
 .gatherDetailPage {
-    background-image: url(http://flygtf.com/images/Glacier.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 1500px;
