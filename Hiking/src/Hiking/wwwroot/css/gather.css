@@ -20,7 +20,7 @@
 .trekSideBar {
      float: left;
     width: 18%;
-    margin-top: 100px;
+    margin-top: 4%;
     /*margin-left: 60px;*/
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
@@ -46,7 +46,7 @@
 .trekSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 100px;
+    margin-top: 6.4%;
     margin-bottom: 25px;
     width: 65%;
     padding: 25px;
@@ -98,7 +98,7 @@
 
 .treks{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 100px;
+    margin-top: 6.3%;
     padding: 25px;
     float: right;
     width: 65%;

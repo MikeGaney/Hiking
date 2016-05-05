@@ -62,7 +62,7 @@
 .browseSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 70px;
+    margin-top: 6.6%;
     margin-bottom: 25px;
     width: 65%;
     padding: 25px;
@@ -188,7 +188,7 @@
 .browseSideBar {
     float: left;
     width: 18%;
-    margin-top: 70px;
+    margin-top: 1.6%;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
