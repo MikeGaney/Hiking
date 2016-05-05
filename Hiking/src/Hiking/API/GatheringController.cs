@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Hiking.Services;
 using Hiking.ViewModels.Gatherings;
+using System.Security.Claims;
+using Microsoft.AspNet.Authorization;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -74,8 +76,10 @@ namespace Hiking.API
 
         // POST api/values
         [HttpPost]
+        [Authorize]
         public IActionResult Post([FromBody]AddGatheringViewModel value)
         {
+            value.OwnerId = this.User.GetUserId();
             if (value.Id == 0)
             {
                 repo.AddGathering(value);

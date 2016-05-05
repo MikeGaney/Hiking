@@ -27,7 +27,7 @@
 
 
                 <!--  SideBar  -->
-                <div class="col-md-4 browseSideBar">
+                <div class="col-md-4 trekSideBar">
 
                     <h1 class="sidebarTitle">TrekClub</h1>
 
@@ -74,41 +74,41 @@
                             <hr />
                             <div class="form-group">
                                 <label>Trail Name: </label>
-                                <label><a href="/trailDetail/{{controller.gather.trailId}}">{{controller.gather.trailName}}</a></label>
+                                <label><a href="/trailDetail/{{controller.gather.trailId}}" class="trekSC">{{controller.gather.trailName}}</a></label>
                             </div>
                             <div class="form-group trekDtlImg">
-                                <a href="/trailDetail/{{trail.id}}"><img src="{{trail.image}}" width="280" alt="" class="trekImg img-responsive" /></a>
+                                <a href="/trailDetail/{{trail.id}}"><img src="{{trail.image}}" width="250" alt="" class="trekImg img-responsive" /></a>
                             </div>
                             <div class="form-group" ng-show="controller.IsLoggedIn() != null && controller.userInGather == false">
-                                <label><a ng-click="controller.AddToGathering()">Add self to gathering</a></label>
+                                <label><a ng-click="controller.AddToGathering()" class="trekSR">Add self to gathering</a></label>
                             </div>
                             <div class="form-group" ng-show="controller.userInGather == true">
                                 <label>You are already part of this Gathering - </label>
-                                <label><a ng-click="controller.RemoveFromGathering()">Remove self from Gathering</a></label>
+                                <label><a ng-click="controller.RemoveFromGathering()" class="trekSR">Remove self from Gathering</a></label>
                             </div>
                             <div class="form-group">
                                 <label>Time: </label>
                                 <label>{{controller.gather.time | date: 'MMM dd @ h:mma'}}</label>
                             </div>
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <label>Owner: </label>
                                 <label>{{controller.gather.ownerId}}</label>
-                            </div>
+                            </div>-->
                             <div class="form-group">
                                 <label>Description: </label>
                                 <label>{{controller.gather.description}}</label>
                             </div>
                             <h3 class="trekTitle">RSVP List</h3>
                             <table class="table">
-                                <tr>
-                                    <th>Name</th>
+                                <tr class="trekSC">
+                                    <th >Name</th>
                                     <th>Display Name</th>
-                                    <th>UserId</th>
+                                    <!--<th>UserId</th>-->
                                 </tr>
-                                <tr ng-repeat="user in controller.gather.users">
+                                <tr ng-repeat="user in controller.gather.users" class="trekSC">
                                     <td>{{user.firstName}} {{user.lastName}}</td>
                                     <td>{{user.displayName}}</td>
-                                    <td>{{user.userId}}</td>
+                                    <!--<td>{{user.userId}}</td>-->
                                 </tr>
                             </table>
                         </div>

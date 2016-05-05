@@ -17,6 +17,23 @@
     color: slategrey;
 }
 
+.trekSideBar {
+     float: left;
+    width: 18%;
+    margin-top: 100px;
+    /*margin-left: 60px;*/
+    background-color: rgba(255, 255, 255, 0.33);
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+}
+
+.inputTr {
+    border-radius: 0;
+}
+
+
 .trekTrlName {
     color: black;
     margin-top: 3%;
@@ -29,7 +46,7 @@
 .trekSearch {
     float: right;
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 70px;
+    margin-top: 100px;
     margin-bottom: 25px;
     width: 65%;
     padding: 25px;
@@ -45,8 +62,15 @@
 
 #searchTitleTrek {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     color: firebrick;
+}
+
+.trekStitles {
+    font-size: 18px;
+    text-align: center;
+    color: slategrey;
+    margin-top: 10px;
 }
 
 .inputMMtrek {
@@ -74,7 +98,7 @@
 
 .treks{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 70px;
+    margin-top: 100px;
     padding: 25px;
     float: right;
     width: 65%;
@@ -84,6 +108,7 @@
     width: 100%;
     display: inline-block;
     padding: inherit;
+    padding: 25px;
 }
 
 .trekTitle {
@@ -101,13 +126,14 @@
 }
 
 .trekImg {
-    height: 150px;
+    height: 130px;
     margin-top: 30px;
 }
 
 .trekDescription {
-    color: mediumblue;
+    color: #004D8D;
     font-size: small;
+    font-weight: 600;
     overflow: hidden;
     display: inline-block;
     float: right;
@@ -118,7 +144,14 @@
 
 .trekDetail {
     background-color:  rgba(255, 255, 255, 0.66);
-    color: mediumblue;
+    color:  #004D8D;
 
 }
 
+.trekSC {
+    color: #004D8D;
+}
+
+.trekSR {
+    color: firebrick;
+}
