@@ -127,6 +127,7 @@
             this.backpackService.addToBackpack(this.userTrail).then(() =>
             {
                 console.log("added to backpack");
+                this.$state.reload();
             });
         }
 
