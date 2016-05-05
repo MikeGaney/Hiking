@@ -27,7 +27,7 @@
 .browseSideBarBlogs {
     float: left;
     width: 18%;
-    margin-top: 20px;
+    margin-top: 70px;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -75,6 +75,8 @@
 }
 
 .blogTitleH4{
+    color: firebrick;
+    font-weight: bold;
     max-height: 19px;
     overflow: hidden;
 }
@@ -240,6 +242,7 @@
     min-height: 130px;
     max-height: 200px;
     margin-bottom: 20px;
+    padding: 15px;
 }
 
 .commentText{
@@ -271,7 +274,7 @@
 }
 
 .commentDetailsDate{
-    /*border: 1px solid black;*/
+   margin-top: 11px;
 }
 
 .addCommentBtn{

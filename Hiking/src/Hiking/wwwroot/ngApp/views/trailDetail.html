@@ -43,7 +43,7 @@
                         <!-- Weather Link -->
                         <div class="legend">
                             <h3 class="trailSBtitles">Local Weather</h3>
-                            <button class="weatherbtn"><a ng-click="controller.showWeatherModal()">Click Here</a></button>
+                            <button class="weatherbtn"><a ng-click="controller.showWeatherModal()" class="trekSC">Click Here</a></button>
                         </div>
 
                         <!-- Rating -->
@@ -54,12 +54,14 @@
                                 <uib-rating ng-model="controller.trail.rating" max="5" read-only="true" class="rating"></uib-rating>
                             </div>
                             <div>
-                                <h4>View Rating</h4>
+                                <h4 class="trekSC">View Rating</h4>
                                 <uib-rating ng-model="controller.trail.beautyRate" max="5" read-only="true" class="smallRating"></uib-rating>
                             </div>
                             <div>
-                                <h4>Family Friendly Rating</h4>
-                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating>
+                                <h4 class="trekSC">Family Friendly Rating</h4>
+                                <uib-rating ng-model="controller.trail.familyRate" max="5" read-only="true" class="smallRating"></uib-rating> 
+                                <hr />
+                                <p class="trekSC">To rate this trail you must have a user profile and complete the trail.</p>
                             </div>
                         </div>
 
@@ -81,7 +83,7 @@
                         </div>
 
                         <!-- Details -->
-                        <div class="sidebar">
+                        <div class="sidebar trekSC">
                             <input type="button" ng-click="controller.AddToBackpack()" onclick="this.value='Added to BackPack'" value="Add to BackPack" class="saveToPack btn" ng-show="!controller.backpack.isThere && controller.getUserName() != null"/>
                             <label ng-show="controller.backpack.isThere">Trail already in Backpack</label>
                             <label ng-show="controller.getUserName() == null">Log In to Add to Backpack</label>
@@ -101,15 +103,15 @@
 
                         </div>
                         <!-- Overview -->
-                        <div class="legend overview">
-                            <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}">Edit</a></button></h4>
+                        <div class="legend overview trekSC">
+                            <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}" class="trekSC">Edit</a></button></h4>
                         </div>
 
                         <!-- Gatherings -->
                         <div>
                             <h2 class="trailSBtitles">Upcoming Treks</h2>
                             {{controller.trail.gatherings[0]}}
-                            <table class="table">
+                            <table class="table trekSC">
                                 <tr>
                                     <th>Title</th>
                                     <th>User</th>
@@ -127,15 +129,15 @@
 
                         <!-- User Comments -->
                         <div>
-                            <h3 class="trailSBtitles">Comments</h3>
+                            <h3 class="trailSBtitles trekSC">Comments</h3>
                             <div class="comment" ng-repeat="comment in controller.trail.trailComments">
                                 <div class="commentText">
                                     <span>{{comment.message}}</span>
                                 </div>
                                 <div class="commentDetails">
-                                    <div class="commentDetailsUser">
+                                    <!--<div class="commentDetailsUser">
                                         <img src="http://thesocialmediamonthly.com/wp-content/uploads/2015/08/photo.png" alt="Profile Image" class="commentDetailsUserPic" />
-                                    </div>
+                                    </div>-->
                                     <div class="commentDetailsDate">
                                         <label>{{comment.creationDate | date:'MMM dd @ h:mma'}}</label>
                                     </div>
