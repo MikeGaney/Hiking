@@ -4,10 +4,11 @@
         <div class="row">
             <div class="col-md-8 col-lg-offset-2">
                 <div class="row">
-                    <div class="col-sm-4 detailsLeftColumn">
+                    <div class="col-sm-4 detailsLeftColumn trailDP">
 
                         <!--  -->
                         <!-- Legend -->
+                       
                         <div class="legend">
                              
                             <div class="row">
@@ -36,8 +37,6 @@
                                     <li ng-show="controller.trail.cougars"><img title="Cougars Sighted" src="../../images/cougar.png" width="30" /></li>
                                 </ul>
                             </div>
-
-
                         </div>
 
                         <!-- Weather Link -->
@@ -69,7 +68,7 @@
 
 
 
-
+                    <div class="container trailDP">
                     <div class="col-md-6 detailsRightColumn">
 
                         <!-- Trail Title -->
@@ -107,8 +106,10 @@
                             <h4>{{controller.trail.overview}} <br /><button><a href="/changes/{{controller.trail.id}}" class="trekSC">Edit</a></button></h4>
                         </div>
 
+
+
                         <!-- Gatherings -->
-                        <div>
+                        <div class="treksInTrails">
                             <h2 class="trailSBtitles">Upcoming Treks</h2>
                             <!--{{controller.trail.gatherings[0]}}-->
                             <table class="table trekSC">
@@ -129,9 +130,9 @@
 
                         <!-- User Comments -->
                         <div>
-                            <h3 class="trailSBtitles trekSC">Comments</h3>
+                            <h3 class="trailSBtitles">Comments</h3>
                             <div class="comment" ng-repeat="comment in controller.trail.trailComments">
-                                <div class="commentText">
+                                <div class="commentText trekSC">
                                     <span>{{comment.message}}</span>
                                 </div>
                                 <div class="commentDetails">
@@ -150,6 +151,7 @@
                         </div>
 
 
+                    </div>
                     </div>
 
                 </div>

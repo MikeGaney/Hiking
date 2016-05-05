@@ -33,6 +33,11 @@
         display: none;
     }
 
+    .trekSideBar{
+        position: static;
+        display: none;
+    }
+
     .mobileHeaderTrailsBrowse {
         display:block;
     }
@@ -42,8 +47,24 @@
         float: left !important;
     }
 
+    .treks {
+        margin-left: 0 !important;
+    }
+
+    .trailMobile {
+         margin-left: 0 !important;
+    }
+
+    .trailDP {
+        margin-left: 15px !important;
+    }
+
+    .detailsRightColumn {
+        margin-left: 15px !important;
+    }
+
     [class*="col-"] {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
@@ -387,6 +408,12 @@ background-color: #2d862d;
     padding-left:0;
 }
 
+.treksInTrails {
+    background-color: rgba(255, 255, 255, 0.80);
+    margin: 20px;
+    padding: 20px;
+}
+
 /*********************************/
 
 
@@ -426,3 +453,4 @@ background-color: #2d862d;
 .adminCompass {
     margin-left: 265px;
 }
+
