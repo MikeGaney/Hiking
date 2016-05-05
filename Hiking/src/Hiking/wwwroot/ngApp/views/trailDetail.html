@@ -119,7 +119,7 @@
                                     <th>Date</th>
                                 </tr>
                                 <tr ng-repeat="gathering in controller.trail.gatherings">
-                                    <td><a href="/gatheringDetails/{{gathering.id}}">{{gathering.name}}</a></td>
+                                    <td><a href="/treksDetails/{{gathering.id}}">{{gathering.name}}</a></td>
                                     <!--<td>{{gathering.ownerId}} - {{controller.getGatherUserName(gathering.ownerId)}}</td>-->
                                     <!--<td><a href="/trailDetail/{{gathering.trailId}}">{{gathering.trailName}}</a></td>-->
                                     <td>{{gathering.time | date: 'MMM dd @ h:mma'}}</td>
