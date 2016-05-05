@@ -40,7 +40,7 @@
         <div class="nav navbar-fixed-top">
             <ul>
                 <img src="~/ngapp/homeimages/mountain-peak-logo-no-clouds-.png"
-                     style="height:45px;float:left" />
+                     style="height:45px;float:left;margin-left:5px" />
                 <li id="home-title">TrekClub </li>
                 <li class="home"><a href="/"><strong>Home</strong></a></li>
                 <li class="about"><a href="about1"><strong>About</strong></a></li>
@@ -75,10 +75,10 @@
                     </div>
                 </li>
 
-                <li ng-show="!controller.isLoggedIn()"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
-                <li ng-show="!controller.isLoggedIn()"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()"style="margin-left:200px"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()"style="margin-left:0"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
 
-                <li ng-show="controller.getUserName() != null" class="pull-right" style="margin-right:35px">
+                <li ng-show="controller.getUserName() != null" class="pull-right navbarfix" style="margin-right:35px">
                     <div class="dropdown">
 
                         <button class="dropbtn" id="username">{{controller.getName()}}</button>
@@ -89,8 +89,12 @@
                         </div>
                     </div>
                 </li>
+</ul>
+            @*<ul class="nav navbar-nav navbar-right">
+                <li>Test</li>
 
 
+            </ul>*@
 
                 @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
 
@@ -109,7 +113,7 @@
                     </span>
 
                 </div>*@
-            </ul>
+      
 
 
 
@@ -131,10 +135,13 @@
         @*@*Footer*@
 
 
-            <div id="footer">
-                <img src="~/images/aboutpagepics/facebook.png"style="border-radius:50px; width:40px; margin-top:5px" />
-                <img src="~/images/aboutpagepics/instagram.png"style="border-radius:50px; width:40px; margin-top:5px" />
-                <img src="~/images/aboutpagepics/tumblr.png"style="border-radius:50px; width:40px; margin-top:5px" />
+            <div id="footer" class="navbar-fixed-bottom">
+                <a href="https://www.facebook.com/">
+                <img src="~/images/aboutpagepics/facebook.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
+                <a href="https://www.instagram.com/">
+                <img src="~/images/aboutpagepics/instagram.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
+                <a href="https://www.tumblr.com/">
+                <img src="~/images/aboutpagepics/tumblr.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
 
             </div>
     

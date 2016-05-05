@@ -27,7 +27,7 @@
 .browseSideBarBlogs {
     float: left;
     width: 18%;
-    margin-top: 70px;
+    margin-top: 1%;
     background-color: rgba(255, 255, 255, 0.33);
     padding-left: 25px;
     padding-bottom: 10px;
@@ -47,7 +47,7 @@
 
 .blogs{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 70px;
+    margin-top: 6.5%;
     padding-top: 12px;
     padding-right: 40px;
     padding-bottom: 15px;
@@ -61,8 +61,8 @@
     background-color: rgba(255, 255, 255, 0.66);
     /*border: 1px solid black;*/
     width: 100%;
-    max-height: 120px;
-    height: 120px;
+    /*max-height: 120px;*/
+    /*height: 120px;*/
     margin: 8px;
     padding: 10px;
     color: black;
@@ -72,6 +72,7 @@
     /*border: 1px solid black;*/
     width: 95%;
     display: inline-block;
+    margin-left: 10px;
 }
 
 .blogTitleH4{
@@ -168,7 +169,7 @@
 /*       Blog Details Page       */
 .details{
     background-color: rgba(255, 255, 255, 0.33);
-    margin-top: 70px;
+    margin-top: 6.7%;
     padding-top: 12px;
     padding-bottom: 15px;
     float: right;

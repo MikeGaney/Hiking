@@ -1,8 +1,8 @@
 ﻿<div class="fluid-container">
-    <div class="row">
+    <div class="row modalRow" >
         <div class="login-page">
             <div class="login-title-text">
-                <h3 class="mTitle">Log In to TrekClub</h3>
+                <h3 class="mTitle" style="color: firebrick">Log In to TrekClub</h3>
                 <h5 style="color:#2d862d; text-shadow:none">Go Green!</h5>
             </div>
             <!--<div class="login-form-container">
@@ -33,9 +33,9 @@
                 </div>-->
                 <form id="login-form" ng-submit="controller.login()">
                     <label for="email"><strong>Email</strong></label><br />
-                    <input type="text" class="form-control" id="email" placeholder="example@example.com" ng-model="controller.loginUser.email"style="color: #2a2a28;" /><br />
-                    <label for="password"><strong></strong>Password</label><br />
-                    <input type="password" id="password" class="form-control" placeholder="********" ng-model="controller.loginUser.password" style="color: #2a2a28;"/><br />
+                    <input type="text" class="form-control" id="loginEmail" placeholder="example@example.com" ng-model="controller.loginUser.email"style="color: #2a2a28;" /><br />
+                    <label for="password"><strong>Password</strong></label><br />
+                    <input type="password" id="loginPassword" class="form-control" placeholder="********" ng-model="controller.loginUser.password" style="color: #2a2a28;"/><br />
                     <!--<a ng-click="controller.ForgotPasword()" id="forgot-pw" class="forgot">forgot?</a><br />-->
                     <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="loginCompass" style="width: 160px" />
                     <input type="submit" id="submit-button" name="submit-button" value="Log in" class="btn login-button" />
