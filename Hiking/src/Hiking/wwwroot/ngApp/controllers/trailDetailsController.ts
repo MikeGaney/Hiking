@@ -82,7 +82,7 @@
                 templateUrl: '/ngApp/Trails/Views/TrailWeatherModal.html',
                 controller: Hiking.Controllers.TrailWeatherController,
                 controllerAs: 'controller',
-                //size: "sm"
+                size: "sm",
                 resolve: {
                     name: () => this.trail.name,
                     weather: () => this.weather

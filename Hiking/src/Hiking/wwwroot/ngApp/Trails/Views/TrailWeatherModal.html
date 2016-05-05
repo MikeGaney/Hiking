@@ -4,7 +4,7 @@
 <div class="modal-body">
     <ul>
         <li ng-repeat="wet in controller.weather.list">
-            {{controller.getDegrees(wet.deg) | number: 0}} &#8457; | {{wet.weather[0].description}} | <img src="{{controller.weatherIcon}}{{wet.weather[0].icon}}.png" alt="Icon" />
+            <!--{{controller.getDegrees(wet.deg) | number: 0}} &#8457; |--> {{wet.weather[0].description}} | <img src="{{controller.weatherIcon}}{{wet.weather[0].icon}}.png" alt="Icon" />
         </li>
     </ul>
 </div>
