@@ -71,7 +71,7 @@
 .browseSearch2 {
     background-color: rgba(255, 255, 255, 0.66);
     width:100%;
-    padding: 10px;
+    padding: 25px;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -85,7 +85,7 @@
 .inputMM {
     border-radius: 0;
     margin-left: -25px;
-    width: 82%;
+    /*width: 110%;*/
     height: 30px;
 }
 
@@ -98,7 +98,7 @@
     float: right;
     margin-top: -180px;
     border-style: outset;
-    width: 340px;
+    width: 50%;
     height: 165px;
     padding-top: 10px;
     padding-left: 50px;
@@ -106,7 +106,7 @@
 }
 
 .actLabel {
-    margin-left: 60px;
+    margin-left: 35px;
     font-size:large;
     font-weight:400;
 }
@@ -304,12 +304,12 @@
 .legend1 {
     background-color: rgba(255, 255, 255, 0.66);
     width:94%;
-    height: 60px;
+    height: 75px;
     margin: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
-  
+    overflow: hidden;
     
 }
 
@@ -317,7 +317,7 @@
     color: firebrick;
     font-size: 40px;
     font-weight: 200;
-    padding: 10px;
+   
 }
 
 .map {
