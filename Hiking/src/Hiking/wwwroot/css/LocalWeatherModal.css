@@ -1,0 +1,19 @@
+﻿.localWeatherModal {
+    font-family: 'Merriweather', serif;
+    padding: 30px;
+    border: 10px solid rgba(140, 140, 140,0.40);   
+    text-align: center;
+    background-color: rgb(191, 191, 191);
+    box-shadow: 10px 10px 10px #404040;
+    border-radius: 5px;
+    width: 115%;
+}
+.mHeader{
+  margin-top: -30px;
+}
+.weatherMTitle{
+  font-size: 35pt;
+  font-weight: bold;
+  color: firebrick;
+  text-shadow: 2px 2px #333333;
+}
