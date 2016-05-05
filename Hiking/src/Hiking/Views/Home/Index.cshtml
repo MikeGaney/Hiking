@@ -35,8 +35,8 @@
     <div class="container">
 
         @* start of Navbar *@
-       
-                        
+
+
         <div class="nav navbar-fixed-top">
             <ul>
                 <img src="~/ngapp/homeimages/mountain-peak-logo-no-clouds-.png"
@@ -75,28 +75,28 @@
                     </div>
                 </li>
 
-                <li ng-show="!controller.isLoggedIn()"style="margin-left:200px"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
-                <li ng-show="!controller.isLoggedIn()"style="margin-left:0"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()" class="pull-right"><a ng-click="controller.showLoginModal()"><strong>Login</strong></a></li>
+                <li ng-show="!controller.isLoggedIn()" class="pull-right"><a ng-click="controller.showRegisterModal()"><strong>Register</strong></a></li>
 
-                <li ng-show="controller.getUserName() != null" class="pull-right navbarfix" style="margin-right:35px">
+                <li ng-show="controller.getUserName() != null" class="pull-right navbarfix" style="margin-right:5px">
                     <div class="dropdown">
 
                         <button class="dropbtn" id="username">{{controller.getName()}}</button>
-                        <div class="dropdown-content">
+                        <div class="dropdown-content dropdown-menu-right">
                             <a href="/viewprofile">Profile</a>
                             <a href="/admin">Admin Page</a>
                             <a ng-click="controller.logout()">Logout</a>
                         </div>
                     </div>
                 </li>
-</ul>
+            </ul>
             @*<ul class="nav navbar-nav navbar-right">
-                <li>Test</li>
+                    <li>Test</li>
 
 
-            </ul>*@
+                </ul>*@
 
-                @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
+            @*<div class="nav navbar-nav navbar-right navBarMenu" ng-show="controller.getUserName() != null">
 
 
                     <span uib-dropdown on-toggle="toggled(open)">
@@ -113,40 +113,43 @@
                     </span>
 
                 </div>*@
-      
 
 
 
 
 
-        </div>
 
         </div>
 
+    </div>
 
-        @* end of navbar *@
+
+    @* end of navbar *@
 
 
-        <div class="container">
+    <div class="container">
         <ui-view class="view" autoscroll="true"></ui-view>
-        </div>
+    </div>
 
 
-        @*@*Footer*@
+    @*@*Footer*@
 
 
-            <div id="footer" class="navbar-fixed-bottom">
-                <a href="https://www.facebook.com/">
-                <img src="~/images/aboutpagepics/facebook.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
-                <a href="https://www.instagram.com/">
-                <img src="~/images/aboutpagepics/instagram.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
-                <a href="https://www.tumblr.com/">
-                <img src="~/images/aboutpagepics/tumblr.png"style="border-radius:50px; width:40px; margin-top:5px" /></a>
+    <div id="footer" class="navbar-fixed-bottom">
+        <a href="https://www.facebook.com/">
+            <img src="~/images/aboutpagepics/facebook.png" style="border-radius:50px; width:40px; margin-top:5px" />
+        </a>
+        <a href="https://www.instagram.com/">
+            <img src="~/images/aboutpagepics/instagram.png" style="border-radius:50px; width:40px; margin-top:5px" />
+        </a>
+        <a href="https://www.tumblr.com/">
+            <img src="~/images/aboutpagepics/tumblr.png" style="border-radius:50px; width:40px; margin-top:5px" />
+        </a>
 
-            </div>
-    
+    </div>
 
-        @* End of Footer *@
+
+    @* End of Footer *@
 
 
 
@@ -182,7 +185,7 @@
 
     @* Google Maps API Key *@
     @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDipwkGrC3bLZpUpEGaqcsIDKu5_AmT7C0&callback=initMap"
-            async defer></script>*@
+        async defer></script>*@
 
 </body>
 </html>
