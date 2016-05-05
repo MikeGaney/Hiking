@@ -1,12 +1,12 @@
 ﻿<div class="fluid-container">
-    <div class="row">
+    <div class="row modalRow">
         <div class="login-page">
             <div class="login-title-text">
-                <h3>Signup to TrekClub</h3>
-                <h5>Go Green!</h5>
+                <h3 class="mTitle" style="color: firebrick">Signup to TrekClub</h3>
+                <h5 style="color:#2d862d; text-shadow:none">Go Green!</h5>
             </div>
             <div class="signup-form-container">
-                <div class="signin-buttons">
+                <!--<div class="signin-buttons">
                     <div class="major-provider google-login">
                         <div class="icon-container">
                             <i class="fa fa-google icon"></i>
@@ -23,19 +23,19 @@
                             <span>Facebook</span>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <br />
-                <div class="or-container">
+                <!--<div class="or-container">
                     <hr class="or-hr" style="border: 1px solid #ccc;" />
                     <div id="or">OR</div>
-                </div>
+                </div>-->
                 <form id="login-form" ng-submit="controller.register()">
                     <label for="displayName">Trail Name</label><br />
                     <input type="text" name="displayName" id="displayName" placeholder="John Doe" ng-model="controller.registerUser.displayName" /><br />
                     <label for="email">Email</label><br />
-                    <input type="email" name="email" id="email" placeholder="you@example.org" ng-model="controller.registerUser.email" /><br />
+                    <input type="email" name="email" id="Email" placeholder="you@example.org" ng-model="controller.registerUser.email" /><br />
                     <label for="password">Password</label><br />
-                    <input type="password" id="password" name="password" placeholder="********" ng-model="controller.registerUser.password" /><br />
+                    <input type="password" id="Password" name="password" placeholder="********" ng-model="controller.registerUser.password" /><br />
                     <label for="reenterPassword">Reenter Password</label><br />
                     <input type="password" id="reenterPassword" name="reenterPassword" placeholder="********" ng-model="controller.registerUser.confirmPassword" /><br />
                     <input type="submit" id="submit-button" name="submit-button" value="Register" class="btn login-button" />

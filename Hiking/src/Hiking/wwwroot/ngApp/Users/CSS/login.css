@@ -86,9 +86,10 @@
 
 #login-form {
     text-align: center;
+    margin-top: 10px;
 }
 
-#email {
+#loginEmail {
     border: 1px solid #ccc;
     color: #2a2a28;
     width: 279px;
@@ -103,7 +104,7 @@
     box-shadow: 7px 7px 7px #404040;
 }
 
-#password {
+#loginPassword {
     border: 1px solid #ccc;
     color: #2a2a28;
     width: 279px;
@@ -141,6 +142,7 @@
     border: none;
     cursor: pointer;
     margin-bottom: 0 !important;
+    margin-right: 25px;
     box-shadow: 7px 7px 7px #404040;
 }
 
@@ -155,7 +157,7 @@
     font-family: 'Merriweather', serif;
     padding: 30px;
     border: 10px solid rgba(140, 140, 140,0.40);
-    height: 450px;
+    height: 500px;
     text-align: center;
     /*padding-top: -15px;*/
     background-color: rgb(191, 191, 191);
@@ -166,6 +168,9 @@
     color: white;
 
 }
+.modalRow{
+    height: 500px;
+}
 .mHeader{
   margin-top: -30px;
 }
@@ -174,8 +179,8 @@
   font-weight: bold;
 }
 #loginCompass{
-    margin-left: -55%;
-    margin-top:-40px;
+    margin-left: -40%;
+    margin-top:-15px;
     transform: rotate(-16deg);
     -webkit-transform: rotate(-16 deg);
 }
