@@ -29,7 +29,8 @@
                             <a ng-click="controller.removeAdmin(profile.userName)" ng-show="profile.isAdmin">(-) Admin</a>-->
 
                             <input type="checkbox" value="" ng-click="controller.addAdmin(profile.userName)" ng-model="profile.isAdmin" ng-show="!profile.isAdmin"/>
-                            <input type="checkbox" value="" ng-click="controller.removeAdmin(profile.userName)" ng-model="profile.isAdmin" ng-show="profile.isAdmin"/>
+                            <input type="checkbox" value="" ng-click="controller.removeAdmin(profile.userName)" ng-model="profile.isAdmin" ng-show="profile.isAdmin && controller.getUserName() != profile.userName"/>
+                            <label ng-show="controller.getUserName() == profile.userName">Cannot remove access from self!</label>
                         </td>
                     </tr>
                 </table>

@@ -25,6 +25,11 @@
 
         }
 
+        getUserName()
+        {
+            return this.accountService.getUserName();
+        }
+
         addAdmin(id) {
             console.log(id);
             this.accountService.addAdmin(id).then(() => {
