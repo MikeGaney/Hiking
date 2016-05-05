@@ -1,11 +1,9 @@
 ﻿
 <div class="profileWindow">
-    <!--<div class="row">-->
-
         <div id="bodydiv">
                 <div class="row">
 
-                    <!-- Profile Pic-->
+                    <!-- Profile Pic and Display Name-->
                     <div class="col-md-8">
                         <div id="profilePic">
                             <img src="{{controller.viewProfile.profilePic}}" class="image profImage" />
@@ -13,13 +11,18 @@
                         <div id="name">{{controller.viewProfile.displayName}}</div>
                     </div>
 
-                    <!-- Open Asides-->
+                    <!--  Asides  -->
                     <div class="col-md-4">
                         <div id="asides">
+
+                            <!--  Links to BackPack and Edit Profile  -->
                             <div id="profLinks" style="border: 10px solid rgba(0,0,0,.3);">
+
+                                <!--  Edit Profile Link  -->
                                 <div id="myTrails">
                                     <a href="/editprofile/{{controller.viewProfile.displayName}}" style="color: #004d8d" class="toEditbtn"><strong>Edit Your Profile Here</strong></a>
                                 </div>
+
                                 <!--BackPack link-->
                                 <div class="bkpkLink">
                                     <a href="/backpack/{{controller.viewProfile.displayName}}" style="color:  #004d8d"><strong>Check out your backpack</strong></a>
@@ -27,10 +30,9 @@
                                 </div>
                             </div>
 
-                            <!--Trails Completed Div-->
+                            <!--    Trail Badges    -->
                             <aside class="aside" id="aside2">
-                                <h3>Trail Badges:</h3>
-                                
+                                <h3><strong>Trail Badges:</strong></h3>                                
                                 <div></div>
                                     <ul class="bkpkTable" >
                                         <li ng-repeat="trail in controller.completedHikes" class="profBadges"><img src="http://image005.flaticon.com/1/svg/39/39536.svg" width="87" uib-tooltip="{{trail.name}}"></li>
@@ -38,28 +40,25 @@
                             </aside>
                         </div>
                     </div>
-                    <!--End Asides-->
-
                 </div>
-            <!--End Top Row-->
-            <!--Bottom Row-->
+          
             <div class="row">
-                <!--Expertise Circle Div-->
+                <!--    Expertise Circle    -->
                 <div class="col-md-12">
                     <div id="circle">
                         <h3 style="color:firebrick"><strong>Expertise Level:</strong></h3>
                         <h4>{{controller.viewProfile.expertise}}</h4>
                         <h3 style="color:firebrick"><strong>Age:</strong></h3>
                         <h4>{{controller.viewProfile.age}}</h4>
+
+                        <!--  Compass  -->
                         <div id="compassContainer">
                             <img src="http://worldartsme.com/images/compas-clipart-1.jpg" id="compass" style="width: 270px" />
-
-                            <!--<img src="https://cdn2.iconfinder.com/data/icons/map-location-set/512/632503-compass_wind_rose-512.png" id="compass"  />-->
-                            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Compass-icon_bb_NW.svg/1000px-Compass-icon_bb_NW.svg.png" alt="" id="compass" />-->
-
                         </div>
                     </div>
-                    <!--About Me Div-->
+
+
+                    <!--    About Me    -->
                     <div class="bioContainer">
                         <div id="bio">
                             <h3 style="color:firebrick"><strong>About Me:</strong></h3>
@@ -68,13 +67,5 @@
                     </div>
                     
                 </div>              
-            </div>
-            <!--End Bottom Row-->
-
-            
-       
-    </div><!--End BodyDiv-->
-   
-    
-
+            </div>       
 </div> 
