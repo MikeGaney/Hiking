@@ -5,6 +5,13 @@
 .navbarfix {
 }
 
+.aboutImg {
+    background-size:cover;
+    background-position:inherit;
+    background-repeat:no-repeat;
+    width: 100%;
+}
+
 #header {
     
     background-image: url('../images/aboutpagepics/fullscreen capture 542016 44134 pm.jpg');
